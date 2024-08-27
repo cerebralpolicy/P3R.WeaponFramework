@@ -1,0 +1,21 @@
+{
+  "ModId": "P3R.WeaponFramework",
+  "ModName": "Weapon Framework",
+  "ModAuthor": "CerebralPolicy",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Description",
+  "ModDll": "P3R.WeaponFramework.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/P3R.WeaponFramework.dll",
+  "ModR2RManagedDll64": "x64/P3R.WeaponFramework.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "P3R.WeaponFramework.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [ "reloaded.sharedlib.hooks" ],
+  "OptionalDependencies": [],
+  "SupportedAppId": [],
+  "ProjectUrl": ""
+}
