@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "X2vTBrrqnwMHmAPN7sXQ9S47UWapsFhLUzQMuV+0rvEznUf4ZXQSG8q7fdRrhspg/tWM6sfbpWMFWDxWkd28Nw==",
+  "dgSpecHash": "BcAOSzy4xJrp0JKddyZd2oLaQDakp59u0VA+fT7jzE9Kzo5ySsnDsX5goejVUJd9wrX6MjIW9P/u0+9fKdZCAw==",
   "success": true,
   "projectFilePath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.hooks.definitions\\1.11.0\\reloaded.hooks.definitions.1.11.0.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory.sigscan.definitions\\1.1.0\\reloaded.memory.sigscan.definitions.1.1.0.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory.sigscan.reloadedii.interfaces\\1.2.0\\reloaded.memory.sigscan.reloadedii.interfaces.1.2.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.mod.interfaces\\2.4.0\\reloaded.mod.interfaces.2.4.0.nupkg.sha512",
-    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.sharedlib.hooks\\1.9.0\\reloaded.sharedlib.hooks.1.9.0.nupkg.sha512",
-    "C:\\Users\\Cole\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\Cole\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\Cole\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
+    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.sharedlib.hooks\\1.9.0\\reloaded.sharedlib.hooks.1.9.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,4 +1,5 @@
 ﻿using P3R.WeaponFramework.Configuration;
+using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
@@ -8,7 +9,7 @@ namespace P3R.WeaponFramework
     /// <summary>
     /// Your mod logic goes here.
     /// </summary>
-    public class Mod : ModBase // <= Do not Remove.
+    public class Mod : ModBase, IExports // <= Do not Remove.
     {
         /// <summary>
         /// Provides access to the mod loader API.
@@ -50,6 +51,8 @@ namespace P3R.WeaponFramework
             _configuration = context.Configuration;
             _modConfig = context.ModConfig;
 
+            Log.Initialize(_modConfig.ModName, _logger, Color.White);
+            Log.LogLevel = _configuration.LogLevel;
 
             // For more information about this template, please see
             // https://reloaded-project.github.io/Reloaded-II/ModTemplate/
@@ -68,6 +71,8 @@ namespace P3R.WeaponFramework
             _configuration = configuration;
             _logger.WriteLine($"[{_modConfig.ModId}] Config Updated: Applying");
         }
+
+        public Type[] GetTypes() => [typeof(IWeaponApi)];
         #endregion
 
         #region For Exports, Serialization etc.
