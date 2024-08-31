@@ -1,0 +1,79 @@
+{
+	"type": "array",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "JSON schema generated with JSONBuddy https://www.json-buddy.com",
+	"items": {
+		"oneOf": [
+			{
+				"type": "object",
+				"properties": {
+					"Name": {
+						"type": "string"
+					},
+					"SortNum": {
+						"type": "integer"
+					},
+					"EquipID": {
+						"type": "integer"
+					},
+					"WeaponType": {
+						"type": "integer"
+					},
+					"WeaponStats": {
+						"type": "object",
+						"properties": {
+							"AttrID": {
+								"type": "integer"
+							},
+							"Rarity": {
+								"type": "integer"
+							},
+							"Tier": {
+								"type": "integer"
+							},
+							"Attack": {
+								"type": "integer"
+							},
+							"Accuracy": {
+								"type": "integer"
+							},
+							"Strength": {
+								"type": "integer"
+							},
+							"Magic": {
+								"type": "integer"
+							},
+							"Endurance": {
+								"type": "integer"
+							},
+							"Agility": {
+								"type": "integer"
+							},
+							"Luck": {
+								"type": "integer"
+							},
+							"SkillID": {
+								"type": "integer"
+							},
+							"Price": {
+								"type": "integer"
+							},
+							"SellPrice": {
+								"type": "integer"
+							}
+						}
+					},
+					"GetFLG": {
+						"type": "integer"
+					},
+					"ModelID": {
+						"type": "integer"
+					},
+					"Flags": {
+						"type": "integer"
+					}
+				}
+			}
+		]
+	}
+}

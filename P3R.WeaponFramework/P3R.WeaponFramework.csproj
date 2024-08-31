@@ -37,7 +37,7 @@
     <None Remove="BuildLinked.ps1" />
     <None Remove="Reloaded.Trimming.targets" />
     <None Remove="Reloaded.Checks.targets" />
-    <None Remove="Resources\EN\WeaponNames.json" />
+    <None Remove="Resources\EN\Descriptions.msg" />
     <None Remove="Resources\weapons.json" />
   </ItemGroup>
 
@@ -45,7 +45,7 @@
     <Content Include="ModConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Resources\EN\WeaponNames.json" />
+    <EmbeddedResource Include="Resources\EN\Descriptions.msg" />
     <EmbeddedResource Include="Resources\Weapons.json" />
     <None Update="Preview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "B/w/VpX2TLErLsdc474jdL8keCn7gAVMsE553P7ABYbJbQnPo6D00nQ/X+mxaIcnR7GFUDGQWt+bImNUacyGkg==",
+  "dgSpecHash": "itF+UVRp61U57VZhQeQgQcDLF0mfkn53R2BT/dhw7fIoH6Yfjo3EaU2raVS/TxeF+JfVpeIjIZq9Q8PpX5aMvw==",
   "success": true,
   "projectFilePath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Interfaces\\P3R.WeaponFramework.Interfaces.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Cole\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

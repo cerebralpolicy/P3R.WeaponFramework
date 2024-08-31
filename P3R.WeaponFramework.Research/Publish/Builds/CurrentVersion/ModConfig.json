@@ -1,0 +1,24 @@
+{
+  "ModId": "P3R.WeaponFramework.Research",
+  "ModName": "P3R Weapon Framework Dataminer",
+  "ModAuthor": "CerebralPolicy",
+  "ModVersion": "1.0.0",
+  "ModDescription": "The children yearn for the mines",
+  "ModDll": "P3R.WeaponFramework.Research.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/P3R.WeaponFramework.Research.dll",
+  "ModR2RManagedDll64": "x64/P3R.WeaponFramework.Research.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "P3R.WeaponFramework.Research.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [
+    "reloaded.sharedlib.hooks",
+    "Unreal.ObjectsEmitter.Reloaded"
+  ],
+  "OptionalDependencies": [],
+  "SupportedAppId": ["p3r.exe"],
+  "ProjectUrl": ""
+}

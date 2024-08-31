@@ -2,8 +2,15 @@
 
 internal class Weapon
 { 
-    private const string DEF_DESC = "[uf 0 5 65278][uf 2 1]Weapon added with Weapon Framework.[n][e]";
-
+    private const string DEF_DESC = "[f 2 1]A weapon added with Weapon Framework.[n][e]";
+    public Weapon(Character character, int modelId, int weaponId, string name, int attack, int accuracy, int strength = 0, int magic = 0, int endurance = 0, int agility = 0, int luck = 0, int price = 400, int sellPrice = 100)
+    {
+        Character = character;
+        ModelId = modelId;
+        WeaponId = weaponId;
+        Name = name;
+        WeaponStats = new(attack,accuracy, strength, magic, endurance, agility, luck, price, sellPrice);
+    }
     public Weapon(Character character, int modelId, int weaponId, string name)
     {
         Character = character;
@@ -29,26 +36,23 @@ internal class Weapon
     {
         Character = character;
         ModelId = modelId;
-        if (ModelId < 256)
-            WeaponId = modelId % 10;
     }
     public Weapon(int modelId)
     {
         ModelId = modelId;
-        if (ModelId < 256)
-            WeaponId = modelId % 10;
-            var charId = modelId / 10;
-            Character = (Character)Math.Floor((double)charId);
     }
 
     public int WeaponItemId { get; private set; }
-
-    public int WeaponId { get; private set; }
-    public int ModelId { get; set; }
-
+    public int WeaponId { get; set; }
     public bool IsEnabled { get; set; }
-
+    // Import
     public Character Character { get; set; } = Character.NONE;
+    public int ModelId { get; set; }
+    public WeaponStats WeaponStats { get; set; }
+
+
+
+
 
     public string Name { get; set; } = "Missing Name";
 
@@ -64,9 +68,9 @@ internal class Weapon
         Log.Debug($"{this.Name} set to Weapon Item ID: {this.WeaponItemId}");
     }
 
-    public static bool IsItemIdWeapon(int itemId) => itemId >= 0x0000 && itemId < 0x1000;
+    public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x7000;
 
-    public static int GetWeaponItemId(int itemId) => itemId;
+    public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
 
     public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != Character.NONE;
 }

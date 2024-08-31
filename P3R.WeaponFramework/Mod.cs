@@ -3,6 +3,8 @@ using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
+using System.Diagnostics;
+using System.Drawing;
 
 namespace P3R.WeaponFramework
 {
@@ -14,45 +16,49 @@ namespace P3R.WeaponFramework
         /// <summary>
         /// Provides access to the mod loader API.
         /// </summary>
-        private readonly IModLoader _modLoader;
+        private readonly IModLoader modLoader;
 
         /// <summary>
         /// Provides access to the Reloaded.Hooks API.
         /// </summary>
         /// <remarks>This is null if you remove dependency on Reloaded.SharedLib.Hooks in your mod.</remarks>
-        private readonly IReloadedHooks? _hooks;
+        private readonly IReloadedHooks? hooks;
 
         /// <summary>
         /// Provides access to the Reloaded logger.
         /// </summary>
-        private readonly ILogger _logger;
+        private readonly ILogger log;
 
         /// <summary>
         /// Entry point into the mod, instance that created this class.
         /// </summary>
-        private readonly IMod _owner;
+        private readonly IMod owner;
 
         /// <summary>
         /// Provides access to this mod's configuration.
         /// </summary>
-        private Config _configuration;
+        private Config config;
 
         /// <summary>
         /// The configuration of the currently executing mod.
         /// </summary>
-        private readonly IModConfig _modConfig;
+        private readonly IModConfig modConfig;
 
         public Mod(ModContext context)
         {
-            _modLoader = context.ModLoader;
-            _hooks = context.Hooks;
-            _logger = context.Logger;
-            _owner = context.Owner;
-            _configuration = context.Configuration;
-            _modConfig = context.ModConfig;
+            modLoader = context.ModLoader;
+            hooks = context.Hooks!;
+            log = context.Logger;
+            owner = context.Owner;
+            config = context.Configuration;
+            modConfig = context.ModConfig;
 
-            Log.Initialize(_modConfig.ModName, _logger, Color.White);
-            Log.LogLevel = _configuration.LogLevel;
+#if DEBUG
+            Debugger.Launch();
+#endif
+
+            Log.Initialize(modConfig.ModName, log, Color.White);
+            Log.LogLevel = config.LogLevel;
 
             // For more information about this template, please see
             // https://reloaded-project.github.io/Reloaded-II/ModTemplate/
@@ -68,8 +74,8 @@ namespace P3R.WeaponFramework
         {
             // Apply settings from configuration.
             // ... your code here.
-            _configuration = configuration;
-            _logger.WriteLine($"[{_modConfig.ModId}] Config Updated: Applying");
+            config = configuration;
+            log.WriteLine($"[{modConfig.ModId}] Config Updated: Applying");
         }
 
         public Type[] GetTypes() => [typeof(IWeaponApi)];

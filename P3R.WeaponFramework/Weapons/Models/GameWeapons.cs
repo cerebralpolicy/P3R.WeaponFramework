@@ -22,7 +22,6 @@ internal class GameWeapons: IReadOnlyList<Weapon>
         var gameWeaponNames = P3RWF_Dictionary<string, string>.LoadJson(assembly, weaponNamesResource);
         foreach (var charWeapons in gameWeapons)
         {
-            
             weapons.AddRange(charWeapons.Value);
         }
         // Enable all existing weapons.

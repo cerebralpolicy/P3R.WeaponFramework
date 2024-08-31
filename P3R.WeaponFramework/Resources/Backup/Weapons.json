@@ -110,7 +110,7 @@
     "Flags": 0
   },
   {
-    "ItemDef": "IT_WEA_SWORD_05_",
+    "ItemDef": "IT_WEA_SWORD_05_", // Nikkari Aoe
     "SortNum": 145,
     "WeaponType": 2,
     "EquipID": 2,
@@ -124,7 +124,7 @@
     "Endurance": 0,
     "Agility": 0,
     "Luck": 0,
-    "SkillID": 24,
+    "SkillID": 24, // High chance to inflict Fear status effect
     "Price": 14500,
     "SellPrice": 3630,
     "GetFLG": 0,
@@ -440,7 +440,7 @@
     "Flags": 0
   },
   {
-    "ItemDef": "IT_WEA_SWORD_20_",
+    "ItemDef": "IT_WEA_SWORD_20_", 
     "SortNum": 257,
     "WeaponType": 2,
     "EquipID": 2,
