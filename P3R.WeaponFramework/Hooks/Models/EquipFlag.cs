@@ -1,6 +1,6 @@
 ﻿namespace P3R.WeaponFramework.Hooks.Models;
 [Flags]
-public enum EquipFlag
+public enum EquipFlag : uint
 {
     NONE = 0,
     Player = 1 << 1,

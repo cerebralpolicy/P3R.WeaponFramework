@@ -7,17 +7,9 @@ internal class WeaponConfig
     public WeaponPartsData Base { get; set; } = new();
     public WeaponPartsData Mesh { get; set; } = new();
 
-    public ushort? Rarity { get; set; }
-    public ushort? Tier { get; set; }
-    public ushort? Attack { get; set; }
-    public ushort? Accuracy { get; set; }
-    public ushort? Strength { get; set; }
-    public ushort? Magic { get; set; }
-    public ushort? Endurance { get; set;}
-    public ushort? Agility { get; set; }
-    public ushort? Luck { get; set; }
+    public WeaponStats? Stats { get; set; } = new();
 
-    public ushort? SortNum => Attack;
+    public int? SortNum => Stats?.Attack;
 
     public string? GetAssetFile(WeaponAssetType assetType)
         => assetType switch

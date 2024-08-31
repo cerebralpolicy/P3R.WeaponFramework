@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mz/ho4U4RamuCgB/7PW+ZdKp0VQlSZUBiENw0cUIgsxc0qWqeIwjrP7A7ej8eGEtA65rcuIKJH1A5BIhydKA3g==",
+  "dgSpecHash": "tWYdXPlKJ9aPJKeAiGei/kwH+2RXokQZbL6LAreEZkufOWyZ0JQeaRmnDtWAVxqwjJv+NtsQoW79HIbojkR8gA==",
   "success": true,
   "projectFilePath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,8 @@
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory.sigscan.definitions\\1.1.0\\reloaded.memory.sigscan.definitions.1.1.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory.sigscan.reloadedii.interfaces\\1.2.0\\reloaded.memory.sigscan.reloadedii.interfaces.1.2.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.mod.interfaces\\2.4.0\\reloaded.mod.interfaces.2.4.0.nupkg.sha512",
-    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.sharedlib.hooks\\1.9.0\\reloaded.sharedlib.hooks.1.9.0.nupkg.sha512"
+    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.sharedlib.hooks\\1.9.0\\reloaded.sharedlib.hooks.1.9.0.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\yamldotnet\\16.0.0\\yamldotnet.16.0.0.nupkg.sha512"
   ],
   "logs": []
 }

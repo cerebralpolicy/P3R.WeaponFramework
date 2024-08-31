@@ -21,7 +21,7 @@ public unsafe struct FWeaponItemList
     [FieldOffset(0x002A)] public ushort Endurance;
     [FieldOffset(0x002C)] public ushort Agility;
     [FieldOffset(0x002E)] public ushort Luck;
-    [FieldOffset(0x0030)] public ushort SkillID;
+    [FieldOffset(0x0030)] public EItemSkillID SkillID;
     [FieldOffset(0x0034)] public uint Price;
     [FieldOffset(0x0038)] public uint SellPrice;
     [FieldOffset(0x003C)] public ushort GetFLG;

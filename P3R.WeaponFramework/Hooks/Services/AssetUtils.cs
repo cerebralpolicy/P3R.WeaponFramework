@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Hooks.Models;
 using P3R.WeaponFramework.Weapons;
+using P3R.WeaponFramework.Weapons.Models;
 
 namespace P3R.WeaponFramework.Hooks.Services;
 

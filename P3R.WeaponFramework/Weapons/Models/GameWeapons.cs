@@ -1,6 +1,8 @@
 ﻿using P3R.WeaponFramework.Types;
 using System.Collections;
+using System.IO;
 using System.Reflection;
+using System.Text.Json;
 
 namespace P3R.WeaponFramework.Weapons.Models;
 
@@ -13,13 +15,13 @@ internal class GameWeapons: IReadOnlyList<Weapon>
     public GameWeapons()
     {
         var assembly = Assembly.GetExecutingAssembly();
-        var weaponsResource = "P3R.WeaponFramework.Resources.Weapons.json";
-        var weaponNamesResource = "P3R.WeaponFramework.Resources.EN.WeaponNames.json";
+        var resourceName = "P3R.WeaponFramework.Resources.Weapons.json";
+        using var stream = assembly.GetManifestResourceStream(resourceName)!;
+        using var reader = new StreamReader(stream);
+        var json = reader.ReadToEnd();
 
-        
         // Import vanilla weapons
-        var gameWeapons = P3RWF_Dictionary<Character, Weapon[]>.LoadJson(assembly, weaponsResource);
-        var gameWeaponNames = P3RWF_Dictionary<string, string>.LoadJson(assembly, weaponNamesResource);
+        var gameWeapons = JsonSerializer.Deserialize<Dictionary<Character,Weapon[]>>(json)!;
         foreach (var charWeapons in gameWeapons)
         {
             weapons.AddRange(charWeapons.Value);
@@ -33,6 +35,7 @@ internal class GameWeapons: IReadOnlyList<Weapon>
         {
             var weaponId = BASE_MOD_WEAP_ID + i;
             var weapon = new Weapon(weaponId);
+            weapons.Add(weapon);
         }
     }
 

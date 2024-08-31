@@ -1,4 +1,4 @@
-﻿namespace P3R.WeaponFramework.Interfaces.Types;
+﻿namespace P3R.WeaponFramework.Weapons;
 [Flags]
 public enum EBtlDataAttr : ushort
 {

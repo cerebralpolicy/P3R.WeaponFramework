@@ -1,39 +1,14 @@
-﻿namespace P3R.WeaponFramework.Interfaces.Types;
+﻿namespace P3R.WeaponFramework.Weapons;
 
 public struct WeaponStats
 {
-    public int Rarity = 1;
-    public int Tier = 1;
-    public int Attack;
-    public int Accuracy;
-    public int Strength;
-    public int Magic;
-    public int Endurance;
-    public int Agility;
-    public int Luck;
-    public EItemSkill SkillID;
-    public int Price;
-    public int SellPrice;
-
     public WeaponStats()
     {
     }
 
-    public WeaponStats(int attack, int accuracy, int strength = 0, int magic = 0, int endurance = 0, int agility = 0, int luck = 0, EItemSkill skill = EItemSkill.None, int price = 400, int sellPrice = 100) : this()
+    public WeaponStats(EBtlDataAttr attrID, int rarity, int tier, int attack, int accuracy, int strength, int magic, int endurance, int agility, int luck, EItemSkillID skillID, int price, int sellPrice)
     {
-        Attack = attack;
-        Accuracy = accuracy;
-        Strength = strength;
-        Magic = magic;
-        Endurance = endurance;
-        Agility = agility;
-        Luck = luck;
-        Price = price;
-        SellPrice = sellPrice;
-    }
-
-    public WeaponStats(int rarity, int tier, int attack, int accuracy, int strength = 0, int magic = 0, int endurance = 0, int agility = 0, int luck = 0, int price = 400, int sellPrice = 100)
-    {
+        AttrID = attrID;
         Rarity = rarity;
         Tier = tier;
         Attack = attack;
@@ -43,7 +18,22 @@ public struct WeaponStats
         Endurance = endurance;
         Agility = agility;
         Luck = luck;
+        SkillID = skillID;
         Price = price;
         SellPrice = sellPrice;
     }
+
+    public EBtlDataAttr AttrID { get; set; }
+    public int Rarity { get; set; } = 1;
+    public int Tier { get; set; } = 1;
+    public int Attack { get; set; }
+    public int Accuracy { get; set; }
+    public int? Strength { get; set; } = 0;
+    public int? Magic { get; set; } = 0;
+    public int? Endurance { get; set; } = 0;
+    public int? Agility { get; set; } = 0;
+    public int? Luck { get; set; } = 0;
+    public EItemSkillID SkillID { get; set; } = 0;
+    public int Price { get; set; } = 400;
+    public int SellPrice { get; set; } = 100;
 }

@@ -3,14 +3,7 @@
 internal class Weapon
 { 
     private const string DEF_DESC = "[f 2 1]A weapon added with Weapon Framework.[n][e]";
-    public Weapon(Character character, int modelId, int weaponId, string name, int attack, int accuracy, int strength = 0, int magic = 0, int endurance = 0, int agility = 0, int luck = 0, int price = 400, int sellPrice = 100)
-    {
-        Character = character;
-        ModelId = modelId;
-        WeaponId = weaponId;
-        Name = name;
-        WeaponStats = new(attack,accuracy, strength, magic, endurance, agility, luck, price, sellPrice);
-    }
+    
     public Weapon(Character character, int modelId, int weaponId, string name)
     {
         Character = character;
@@ -42,19 +35,24 @@ internal class Weapon
         ModelId = modelId;
     }
 
+    public Weapon(Character character, string name, int modelId, int weaponId, WeaponStats weaponStats)
+    {
+        Character = character;
+        Name = name;
+        ModelId = modelId;
+        WeaponId = weaponId;
+        WeaponStats = weaponStats;
+    }
+
     public int WeaponItemId { get; private set; }
-    public int WeaponId { get; set; }
     public bool IsEnabled { get; set; }
     // Import
     public Character Character { get; set; } = Character.NONE;
-    public int ModelId { get; set; }
-    public WeaponStats WeaponStats { get; set; }
-
-
-
-
-
     public string Name { get; set; } = "Missing Name";
+    public int ModelId { get; set; }
+    public int WeaponId { get; set; }
+
+    public WeaponStats WeaponStats { get; set; }
 
     public string Description { get; set; } = DEF_DESC;
 

@@ -73,6 +73,19 @@
           }
         }
       },
+      "YamlDotNet/16.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "P3R.WeaponFramework.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -99,6 +112,16 @@
         },
         "runtime": {
           "bin/placeholder/Project.Utils.dll": {}
+        }
+      },
+      "Unreal.AtlusScript.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Unreal.AtlusScript.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unreal.AtlusScript.Interfaces.dll": {}
         }
       },
       "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
@@ -192,6 +215,30 @@
         "reloaded.sharedlib.hooks.nuspec"
       ]
     },
+    "YamlDotNet/16.0.0": {
+      "sha512": "kZ4jR5ltFhnjaUqK9x81zXRIUTH4PTXTTEmJDNQdkDLQhcv+2Nl19r0dCSvPW1mstOYBfXTnjdieRbUO6gHMDw==",
+      "type": "package",
+      "path": "yamldotnet/16.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "images/yamldotnet.png",
+        "lib/net47/YamlDotNet.dll",
+        "lib/net47/YamlDotNet.xml",
+        "lib/net6.0/YamlDotNet.dll",
+        "lib/net6.0/YamlDotNet.xml",
+        "lib/net8.0/YamlDotNet.dll",
+        "lib/net8.0/YamlDotNet.xml",
+        "lib/netstandard2.0/YamlDotNet.dll",
+        "lib/netstandard2.0/YamlDotNet.xml",
+        "lib/netstandard2.1/YamlDotNet.dll",
+        "lib/netstandard2.1/YamlDotNet.xml",
+        "yamldotnet.16.0.0.nupkg.sha512",
+        "yamldotnet.nuspec"
+      ]
+    },
     "P3R.WeaponFramework.Interfaces/1.0.0": {
       "type": "project",
       "path": "../P3R.WeaponFramework.Interfaces/P3R.WeaponFramework.Interfaces.csproj",
@@ -201,6 +248,11 @@
       "type": "project",
       "path": "../Submodules/Project.Utils/Project.Utils.csproj",
       "msbuildProject": "../Submodules/Project.Utils/Project.Utils.csproj"
+    },
+    "Unreal.AtlusScript.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Submodules/Unreal.AtlusScript/Unreal.AtlusScript.Interfaces/Unreal.AtlusScript.Interfaces.csproj",
+      "msbuildProject": "../Submodules/Unreal.AtlusScript/Unreal.AtlusScript.Interfaces/Unreal.AtlusScript.Interfaces.csproj"
     },
     "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
       "type": "project",
@@ -214,7 +266,9 @@
       "Project.Utils >= 1.0.0",
       "Reloaded.Mod.Interfaces >= 2.4.0",
       "Reloaded.SharedLib.Hooks >= 1.9.0",
-      "Unreal.ObjectsEmitter.Interfaces >= 1.0.0"
+      "Unreal.AtlusScript.Interfaces >= 1.0.0",
+      "Unreal.ObjectsEmitter.Interfaces >= 1.0.0",
+      "YamlDotNet >= 16.0.0"
     ]
   },
   "packageFolders": {
@@ -255,6 +309,9 @@
             "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj": {
               "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj"
             },
+            "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.AtlusScript\\Unreal.AtlusScript.Interfaces\\Unreal.AtlusScript.Interfaces.csproj": {
+              "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.AtlusScript\\Unreal.AtlusScript.Interfaces\\Unreal.AtlusScript.Interfaces.csproj"
+            },
             "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj": {
               "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj"
             }
@@ -284,6 +341,10 @@
           "Reloaded.SharedLib.Hooks": {
             "target": "Package",
             "version": "[1.9.0, )"
+          },
+          "YamlDotNet": {
+            "target": "Package",
+            "version": "[16.0.0, )"
           }
         },
         "imports": [

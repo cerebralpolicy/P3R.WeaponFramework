@@ -1,10 +1,14 @@
 ﻿using P3R.WeaponFramework.Configuration;
 using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
+using P3R.WeaponFramework.Weapons;
 using Reloaded.Hooks.ReloadedII.Interfaces;
+using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using System.Diagnostics;
 using System.Drawing;
+using Unreal.AtlusScript.Interfaces;
+using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework
 {
@@ -44,6 +48,10 @@ namespace P3R.WeaponFramework
         /// </summary>
         private readonly IModConfig modConfig;
 
+        private readonly WeaponService weapons;
+        private readonly WeaponRegistry weaponRegistry;
+        private readonly WeaponDescService weaponDescService;
+
         public Mod(ModContext context)
         {
             modLoader = context.ModLoader;
@@ -57,16 +65,15 @@ namespace P3R.WeaponFramework
             Debugger.Launch();
 #endif
 
-            Log.Initialize(modConfig.ModName, log, Color.White);
+            Log.Initialize(modConfig.ModName, log, Color.PaleVioletRed);
             Log.LogLevel = config.LogLevel;
 
-            // For more information about this template, please see
-            // https://reloaded-project.github.io/Reloaded-II/ModTemplate/
+            this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
+            this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
+            this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
+            this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
 
-            // If you want to implement e.g. unload support in your mod,
-            // and some other neat features, override the methods in ModBase.
-
-            // TODO: Implement some mod logic
+            this.weaponRegistry = new();
         }
 
         #region Standard Overrides
