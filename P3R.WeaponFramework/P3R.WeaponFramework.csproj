@@ -33,7 +33,6 @@
 
   <ItemGroup>
     <None Remove="ModConfig.json" />
-    <None Remove="Publish.ps1" />
     <None Remove="BuildLinked.ps1" />
     <None Remove="Reloaded.Trimming.targets" />
     <None Remove="Reloaded.Checks.targets" />
@@ -63,6 +62,11 @@
     <ProjectReference Include="..\Submodules\Project.Utils\Project.Utils.csproj" />
     <ProjectReference Include="..\Submodules\Unreal.AtlusScript\Unreal.AtlusScript.Interfaces\Unreal.AtlusScript.Interfaces.csproj" />
     <ProjectReference Include="..\Submodules\Unreal.ObjectsEmitter\Unreal.ObjectsEmitter.Interfaces\Unreal.ObjectsEmitter.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Hooks\Services\" />
+    <Folder Include="Resources\New\" />
   </ItemGroup>
 
 </Project>

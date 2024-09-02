@@ -5,6 +5,7 @@ using P3R.WeaponFramework.Weapons;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
+using Reloaded.Mod.Interfaces.Internal;
 using System.Diagnostics;
 using System.Drawing;
 using Unreal.AtlusScript.Interfaces;
@@ -17,6 +18,7 @@ namespace P3R.WeaponFramework
     /// </summary>
     public class Mod : ModBase, IExports // <= Do not Remove.
     {
+        public const string NAME = "P3R.WeaponFramework";
         /// <summary>
         /// Provides access to the mod loader API.
         /// </summary>
@@ -61,10 +63,6 @@ namespace P3R.WeaponFramework
             config = context.Configuration;
             modConfig = context.ModConfig;
 
-#if DEBUG
-            Debugger.Launch();
-#endif
-
             Log.Initialize(modConfig.ModName, log, Color.PaleVioletRed);
             Log.LogLevel = config.LogLevel;
 
@@ -74,6 +72,21 @@ namespace P3R.WeaponFramework
             this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
 
             this.weaponRegistry = new();
+            this.weaponDescService = new(atlusAssets!);
+            this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
+
+            modLoader.ModLoaded += OnModLoaded;
+        }
+
+        private void OnModLoaded(IModV1 mod, IModConfigV1 config)
+        {
+            if (!config.ModDependencies.Contains(this.modConfig.ModId))
+            {
+                return;
+            }
+
+            var modDir = this.modLoader.GetDirectoryForModId(config.ModId);
+            this.weaponRegistry.RegisterMod(config.ModId, modDir);
         }
 
         #region Standard Overrides

@@ -1,0 +1,21 @@
+{
+  "ModId": "P3R.WeaponFramework.Hockey",
+  "ModName": "Weapon Framework Hockey Sticks Test",
+  "ModAuthor": "CerebralPolicy",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Description",
+  "ModDll": "P3R.WeaponFramework.Hockey.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/P3R.WeaponFramework.Hockey.dll",
+  "ModR2RManagedDll64": "x64/P3R.WeaponFramework.Hockey.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "P3R.WeaponFramework.Hockey.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [ "reloaded.sharedlib.hooks", "UnrealEssentials", "P3R.WeaponFramework" ],
+  "OptionalDependencies": [],
+  "SupportedAppId": ["p3r.exe"],
+  "ProjectUrl": ""
+}

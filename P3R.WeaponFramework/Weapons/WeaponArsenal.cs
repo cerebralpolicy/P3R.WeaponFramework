@@ -19,43 +19,62 @@ namespace P3R.WeaponFramework.Weapons
 
         public Weapon? Create(WeaponMod mod, string weaponDir, Character character) 
         {
-            var weapon = GetAvaliableWeapon();
+            var config = GetWeaponConfig(weaponDir);
+            var weapon = this.CreateOrFindWeapon(character, config.Name ?? Path.GetFileName(weaponDir));
             if (weapon == null)
             {
                 return null;
             }
 
-            weapon.Name = Path.GetFileName(weaponDir);
-            weapon.IsEnabled = true;
             weapon.OwnerModId = mod.ModId;
-            weapon.Character = character;
 
-            ProcessWeapon(mod, weapon, weaponDir);
+            ApplyWeaponConfig(weapon, config);
+            LoadWeaponFiles(mod, weapon, weaponDir);
             Log.Information($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponId}\nFolder: {weaponDir}");
             return weapon;
         }
 
-
-        private void ProcessWeapon(WeaponMod mod, Weapon weapon, string weaponDir)
+        private void ApplyWeaponConfig(Weapon weapon, WeaponConfig config)
         {
-            LoadWeaponData(mod,weapon, weaponDir);
+            ModUtils.IfNotNull(config.Name, str => weapon.Config.Name = str);
+            ModUtils.IfNotNull(config.Base.MeshPath, str => weapon.Config.Base.MeshPath = str);
+            ModUtils.IfNotNull(config.Mesh.MeshPath, str => weapon.Config.Mesh.MeshPath = str);
+            ModUtils.IfNotNull(config.Stats, stats => weapon.Config.Stats = stats);
         }
 
-        private void LoadWeaponData(WeaponMod mod, Weapon weapon, string weaponDir)
+        private Weapon? CreateOrFindWeapon(Character character, string name)
         {
-            SetWeaponFile(mod, Path.Join(weaponDir, "config.yaml"), path => 
+            var existingWeapon = weapons.Values.FirstOrDefault(x => x.Name == name && x.Character == character);
+            if (existingWeapon != null) 
             { 
-                var config = YamlSerializer.DeserializeFile<WeaponConfig>(path);
-                if (config.Name != null) weapon.Config.Name = config.Name;
-                if (config.Base.MeshPath != null) weapon.Config.Base.MeshPath = config.Base.MeshPath;
-                if (config.Mesh.MeshPath != null) weapon.Config.Mesh.MeshPath = config.Mesh.MeshPath;
-                if (config.Stats != null)
-                {
-                    weapon.Config.Stats = config.Stats;
-                    weapon.WeaponStats = weapon.Config.Stats.Value;
-                }
+                return existingWeapon;
+            }
+            var newWeapon = weapons.Values.FirstOrDefault(x => x.IsVanilla == false && x.WeaponItemId > 999);
+            if (newWeapon != null)
+            {
+                newWeapon.Name = name;
+                newWeapon.Character = character;
+                newWeapon.IsEnabled = true;
+            }
+            else
+            {
+                Log.Warning("No available weapon slot.");
+            }
+            return newWeapon;
+        }
 
-            }, SetType.Full);
+        private static WeaponConfig GetWeaponConfig(string weaponDir)
+        {
+            var configFile = Path.Join(weaponDir, "config.yaml");
+            if (File.Exists(configFile))
+            {
+                return YamlSerializer.DeserializeFile<WeaponConfig>(configFile);
+            }
+
+            return new();
+        }
+        private void LoadWeaponFiles(WeaponMod mod, Weapon weapon, string weaponDir)
+        {
             SetWeaponFile(mod, Path.Join(weaponDir, "base-mesh.uasset"), path => weapon.Config.Base.MeshPath = path);
             SetWeaponFile(mod, Path.Join(weaponDir, "base-anim.uasset"), path => weapon.Config.Base.MeshPath = path);
 
@@ -79,7 +98,7 @@ namespace P3R.WeaponFramework.Weapons
         }
         private Weapon? GetAvaliableWeapon()
         {
-            var weapon = weapons.FirstOrDefault(x => x.Character == Character.NONE);
+            var weapon = weapons.Values.FirstOrDefault(x => x.Character == Character.NONE);
             if (weapon == null)
             {
                 Log.Warning("No available weapon slot.");

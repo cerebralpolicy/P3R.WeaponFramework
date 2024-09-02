@@ -1,0 +1,15 @@
+﻿name: Wood Stick
+stats:
+  attr_id: 0 #Damage attribute SEE NOTES
+  rarity: 1 #[OPTIONAL]
+  tier: 1 #[OPTIONAL]
+  attack: 30 #Damage output
+  accuracy: 95 #Accuracy modifier
+  strength: 0 #[OPTIONAL]
+  magic: 0 #[OPTIONAL]
+  endurance: 0 #[OPTIONAL]
+  agility: 0 #[OPTIONAL]
+  luck: 0 #[OPTIONAL]
+  skill_id: 0 #[OPTIONAL]
+  price: 400 #[OPTIONAL]
+  sell_price: 100 #[OPTIONAL]

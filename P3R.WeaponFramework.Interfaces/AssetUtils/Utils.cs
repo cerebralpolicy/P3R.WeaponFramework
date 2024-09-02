@@ -15,7 +15,7 @@ public static class Constants
     public const string WeaponNamesData = "DatItemWeaponNameDataAsset";
 }
 
-public static partial class AssetUtils
+public static partial class Assets
 {
     public static Dictionary<uint, uint> ModelPairsUInt = new Dictionary<uint, uint>()
     {

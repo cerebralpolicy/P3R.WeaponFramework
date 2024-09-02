@@ -14,6 +14,4 @@ public enum Character
     Koromaru,
     Shinjiro,
     Metis,
-
-    FEMC = 999,
 }

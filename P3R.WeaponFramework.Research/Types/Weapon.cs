@@ -19,7 +19,7 @@ namespace P3R.WeaponFramework.Research.Types
         { 
             Character = weaponItemList.EquipID.GetCharacter();
             ModelId = weaponItemList.ModelID;
-            WeaponModelId = AssetUtils.ModelPairsUInt[ModelId];
+            WeaponModelId = Assets.ModelPairsUInt[ModelId];
             Stats = new(weaponItemList);
         }
 

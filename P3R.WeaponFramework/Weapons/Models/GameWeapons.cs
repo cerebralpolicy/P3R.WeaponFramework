@@ -1,16 +1,17 @@
 ﻿using P3R.WeaponFramework.Types;
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Reflection;
 using System.Text.Json;
 
 namespace P3R.WeaponFramework.Weapons.Models;
 
-internal class GameWeapons: IReadOnlyList<Weapon>
+internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
 {
     public const int BASE_MOD_WEAP_ID = 1000;
     private const int NUM_MOD_WEAPS = 100;
-    private readonly List<Weapon> weapons = [];
+    private readonly Dictionary<int, Weapon> weapons = [];
     
     public GameWeapons()
     {
@@ -24,25 +25,54 @@ internal class GameWeapons: IReadOnlyList<Weapon>
         var gameWeapons = JsonSerializer.Deserialize<Dictionary<Character,Weapon[]>>(json)!;
         foreach (var charWeapons in gameWeapons)
         {
-            weapons.AddRange(charWeapons.Value);
+            foreach (var weapon in charWeapons.Value)
+            {
+                //Log.Debug($"Weapon: {weapon.Name}");
+                var id = weapon.WeaponId;
+                weapons.Add(id, weapon);
+            }
         }
         // Enable all existing weapons.
-        foreach (var weapon in weapons)
+        foreach (var weapon in weapons.Values)
         {
             weapon.IsEnabled = true;
         }
         for (int i = 0; i < NUM_MOD_WEAPS; i++)
         {
             var weaponId = BASE_MOD_WEAP_ID + i;
+            Log.Debug($"New slot {weaponId}");
             var weapon = new Weapon(weaponId);
-            weapons.Add(weapon);
+            weapons.Add(weaponId, weapon);
+            continue;
         }
     }
 
-    public Weapon this[int index] => weapons[index];
+    public Weapon this[int key] => throw new NotImplementedException();
+
+    public IEnumerable<int> Keys => weapons.Keys;
+
+    public IEnumerable<Weapon> Values => weapons.Values;
 
     public int Count => weapons.Count;
 
-    public IEnumerator<Weapon> GetEnumerator() => weapons.GetEnumerator();
+    public bool ContainsKey(int key) => weapons.ContainsKey(key);
+
+    public bool TryGetValue(int key, [MaybeNullWhen(false)] out Weapon value)
+    {
+        if (ContainsKey(key))
+        {
+            value = weapons[key];
+            return true;
+        }
+        else
+        value = null;
+        return false;
+    }
+
     IEnumerator IEnumerable.GetEnumerator() => weapons.GetEnumerator();
+
+    IEnumerator<KeyValuePair<int, Weapon>> IEnumerable<KeyValuePair<int, Weapon>>.GetEnumerator()
+    {
+        throw new NotImplementedException();
+    }
 }

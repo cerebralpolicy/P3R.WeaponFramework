@@ -2,12 +2,13 @@
   "1": [
     {
       "Character": 1,
+      "WeaponId": 1,
       "Name": "Shortsword",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 4,
         "Tier": 2,
         "Attack": 38,
@@ -17,19 +18,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 2000,
         "SellPrice": 500
       }
     },
     {
       "Character": 1,
+      "WeaponId": 2,
       "Name": "Long Wakizashi",
       "WeaponType": 2,
       "ModelId": 14,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 4,
         "Tier": 10,
         "Attack": 65,
@@ -39,19 +41,20 @@
         "Endurance": 0,
         "Agility": 1,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 5000,
         "SellPrice": 1250
       }
     },
     {
       "Character": 1,
+      "WeaponId": 3,
       "Name": "Saber",
       "WeaponType": 2,
       "ModelId": 12,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 4,
         "Tier": 10,
         "Attack": 60,
@@ -61,19 +64,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 3200,
         "SellPrice": 800
       }
     },
     {
       "Character": 1,
+      "WeaponId": 4,
       "Name": "Gladius",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 4,
         "Tier": 2,
         "Attack": 45,
@@ -83,19 +87,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 1,
+        "SkillId": 0,
         "Price": 2600,
         "SellPrice": 650
       }
     },
     {
       "Character": 1,
+      "WeaponId": 5,
       "Name": "Nikkari Aoe",
       "WeaponType": 2,
       "ModelId": 14,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 145,
@@ -105,19 +110,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 24,
+        "SkillId": 0,
         "Price": 14500,
         "SellPrice": 3630
       }
     },
     {
       "Character": 1,
+      "WeaponId": 6,
       "Name": "Fudo Masamune",
       "WeaponType": 2,
       "ModelId": 14,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 88,
@@ -127,19 +133,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 7500,
         "SellPrice": 1880
       }
     },
     {
       "Character": 1,
+      "WeaponId": 7,
       "Name": "Iron Edge",
       "WeaponType": 2,
       "ModelId": 12,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 71,
@@ -149,19 +156,20 @@
         "Endurance": 1,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 6100,
         "SellPrice": 1530
       }
     },
     {
       "Character": 1,
+      "WeaponId": 9,
       "Name": "Silver Saber",
       "WeaponType": 2,
       "ModelId": 12,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 99,
@@ -171,19 +179,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 8150,
         "SellPrice": 2040
       }
     },
     {
       "Character": 1,
+      "WeaponId": 10,
       "Name": "Legendary Cleaver",
       "WeaponType": 2,
       "ModelId": 17,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 130,
@@ -193,19 +202,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 42,
+        "SkillId": 0,
         "Price": 480,
         "SellPrice": 120
       }
     },
     {
       "Character": 1,
+      "WeaponId": 11,
       "Name": "Steel Pipe",
       "WeaponType": 2,
       "ModelId": 16,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 110,
@@ -215,19 +225,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 21,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 1,
+      "WeaponId": 12,
       "Name": "Aroundight",
       "WeaponType": 2,
       "ModelId": 12,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 122,
@@ -237,19 +248,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 7,
+        "SkillId": 0,
         "Price": 10900,
         "SellPrice": 2730
       }
     },
     {
       "Character": 1,
+      "WeaponId": 13,
       "Name": "Tizona",
       "WeaponType": 2,
       "ModelId": 12,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 138,
@@ -259,19 +271,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 13200,
         "SellPrice": 3300
       }
     },
     {
       "Character": 1,
+      "WeaponId": 14,
       "Name": "Kaneshige",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 300,
@@ -281,19 +294,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 54,
+        "SkillId": 0,
         "Price": 39200,
         "SellPrice": 9800
       }
     },
     {
       "Character": 1,
+      "WeaponId": 15,
       "Name": "Sin Blade",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 188,
@@ -303,19 +317,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 23800,
         "SellPrice": 5950
       }
     },
     {
       "Character": 1,
+      "WeaponId": 16,
       "Name": "Shishiou",
       "WeaponType": 2,
       "ModelId": 14,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 166,
@@ -325,19 +340,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 18400,
         "SellPrice": 4600
       }
     },
     {
       "Character": 1,
+      "WeaponId": 17,
       "Name": "Omokage",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 173,
@@ -347,19 +363,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 133,
+        "SkillId": 0,
         "Price": 20300,
         "SellPrice": 5080
       }
     },
     {
       "Character": 1,
+      "WeaponId": 18,
       "Name": "Kogarasumaru",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 223,
@@ -369,19 +386,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 28600,
         "SellPrice": 7150
       }
     },
     {
       "Character": 1,
+      "WeaponId": 19,
       "Name": "Tajikarao Sword",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 240,
@@ -391,19 +409,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 29400,
         "SellPrice": 7350
       }
     },
     {
       "Character": 1,
+      "WeaponId": 20,
       "Name": "Qi Xing Dao",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 257,
@@ -413,19 +432,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 34000,
         "SellPrice": 8500
       }
     },
     {
       "Character": 1,
+      "WeaponId": 21,
       "Name": "Pulsing Blade",
       "WeaponType": 2,
       "ModelId": 13,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 200,
@@ -435,19 +455,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 3,
+        "SkillId": 0,
         "Price": 25300,
         "SellPrice": 6330
       }
     },
     {
       "Character": 1,
+      "WeaponId": 22,
       "Name": "Gimlet",
       "WeaponType": 2,
       "ModelId": 13,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 313,
@@ -457,19 +478,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 46500,
         "SellPrice": 11630
       }
     },
     {
       "Character": 1,
+      "WeaponId": 23,
       "Name": "Excalibur",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 330,
@@ -479,19 +501,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 12,
+        "SkillId": 0,
         "Price": 52000,
         "SellPrice": 13000
       }
     },
     {
       "Character": 1,
+      "WeaponId": 24,
       "Name": "Deus Xiphos",
       "WeaponType": 2,
       "ModelId": 18,
       "WeaponModelId": 60,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 360,
@@ -501,19 +524,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 234,
+        "SkillId": 0,
         "Price": 71200,
         "SellPrice": 17800
       }
     },
     {
       "Character": 1,
+      "WeaponId": 25,
       "Name": "Lucifer's Blade",
       "WeaponType": 2,
       "ModelId": 19,
       "WeaponModelId": 61,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 425,
@@ -523,19 +547,20 @@
         "Endurance": 7,
         "Agility": 7,
         "Luck": 7,
-        "SkillID": 254,
+        "SkillId": 0,
         "Price": 90000,
         "SellPrice": 22500
       }
     },
     {
       "Character": 1,
+      "WeaponId": 27,
       "Name": "Nameless Katana",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 130,
@@ -545,19 +570,20 @@
         "Endurance": 1,
         "Agility": 1,
         "Luck": 1,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 12400,
         "SellPrice": 3100
       }
     },
     {
       "Character": 1,
+      "WeaponId": 29,
       "Name": "Holy Knight Sword",
       "WeaponType": 2,
       "ModelId": 11,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 8,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 30,
@@ -567,19 +593,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 12000,
         "SellPrice": 3000
       }
     },
     {
       "Character": 1,
+      "WeaponId": 31,
       "Name": "Dual Sword",
       "WeaponType": 2,
       "ModelId": 13,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 295,
@@ -589,19 +616,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 9,
+        "SkillId": 0,
         "Price": 41700,
         "SellPrice": 10430
       }
     },
     {
       "Character": 1,
+      "WeaponId": 32,
       "Name": "Yggdrasword",
       "WeaponType": 2,
       "ModelId": 12,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 151,
@@ -611,19 +639,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 97,
+        "SkillId": 0,
         "Price": 15200,
         "SellPrice": 3800
       }
     },
     {
       "Character": 1,
+      "WeaponId": 33,
       "Name": "Translucent Blade",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 282,
@@ -633,19 +662,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 39800,
         "SellPrice": 9950
       }
     },
     {
       "Character": 1,
+      "WeaponId": 34,
       "Name": "Envenomed Blade",
       "WeaponType": 2,
       "ModelId": 14,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 269,
@@ -655,19 +685,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 35,
+        "SkillId": 0,
         "Price": 35900,
         "SellPrice": 8980
       }
     },
     {
       "Character": 1,
+      "WeaponId": 35,
       "Name": "Onimaru Kunitsuna",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
         "Attack": 125,
@@ -677,19 +708,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 37,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 1,
+      "WeaponId": 280,
       "Name": "SEES Sword",
       "WeaponType": 2,
       "ModelId": 10,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 108,
@@ -699,19 +731,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 1,
+      "WeaponId": 290,
       "Name": "Myohou Muramasa",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 9,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 300,
@@ -721,19 +754,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 194,
+        "SkillId": 0,
         "Price": 40000,
         "SellPrice": 10000
       }
     },
     {
       "Character": 1,
+      "WeaponId": 291,
       "Name": "Myoho Masamura",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 100,
@@ -743,19 +777,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 33,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 1,
+      "WeaponId": 292,
       "Name": "Outenta Mitsuyo",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 177,
@@ -765,19 +800,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 53,
+        "SkillId": 0,
         "Price": 21300,
         "SellPrice": 5330
       }
     },
     {
       "Character": 1,
+      "WeaponId": 293,
       "Name": "Fatal Blade",
       "WeaponType": 2,
       "ModelId": 13,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 230,
@@ -787,19 +823,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 38,
+        "SkillId": 0,
         "Price": 29000,
         "SellPrice": 7250
       }
     },
     {
       "Character": 1,
+      "WeaponId": 294,
       "Name": "Amakuni",
       "WeaponType": 2,
       "ModelId": 15,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 8,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 200,
@@ -809,7 +846,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 26800,
         "SellPrice": 6700
       }
@@ -818,12 +855,13 @@
   "2": [
     {
       "Character": 2,
+      "WeaponId": 36,
       "Name": "Practice Bow",
       "WeaponType": 4,
       "ModelId": 24,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 30,
@@ -833,19 +871,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 2000,
         "SellPrice": 500
       }
     },
     {
       "Character": 2,
+      "WeaponId": 37,
       "Name": "Short Bow",
       "WeaponType": 4,
       "ModelId": 22,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 48,
@@ -855,19 +894,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 3000,
         "SellPrice": 750
       }
     },
     {
       "Character": 2,
+      "WeaponId": 38,
       "Name": "Siren's Song",
       "WeaponType": 4,
       "ModelId": 22,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 65,
@@ -877,19 +917,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 19,
+        "SkillId": 0,
         "Price": 5700,
         "SellPrice": 1430
       }
     },
     {
       "Character": 2,
+      "WeaponId": 39,
       "Name": "Shigetou-yumi",
       "WeaponType": 4,
       "ModelId": 24,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 80,
@@ -899,19 +940,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 6800,
         "SellPrice": 1700
       }
     },
     {
       "Character": 2,
+      "WeaponId": 40,
       "Name": "RainBow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
         "Attack": 35,
@@ -921,19 +963,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 2400,
         "SellPrice": 600
       }
     },
     {
       "Character": 2,
+      "WeaponId": 41,
       "Name": "Uta",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 115,
@@ -943,19 +986,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 2,
+        "SkillId": 0,
         "Price": 9750,
         "SellPrice": 2440
       }
     },
     {
       "Character": 2,
+      "WeaponId": 42,
       "Name": "Pleiades",
       "WeaponType": 4,
       "ModelId": 22,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 89,
@@ -965,19 +1009,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 88,
+        "SkillId": 0,
         "Price": 7700,
         "SellPrice": 1930
       }
     },
     {
       "Character": 2,
+      "WeaponId": 43,
       "Name": "Bow of Affection",
       "WeaponType": 4,
       "ModelId": 24,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 170,
@@ -987,19 +1032,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 30,
+        "SkillId": 0,
         "Price": 19300,
         "SellPrice": 4830
       }
     },
     {
       "Character": 2,
+      "WeaponId": 44,
       "Name": "Toy Bow",
       "WeaponType": 4,
       "ModelId": 26,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 100,
@@ -1009,19 +1055,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 33,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 2,
+      "WeaponId": 45,
       "Name": "Kamatha",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 129,
@@ -1031,19 +1078,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 11900,
         "SellPrice": 2980
       }
     },
     {
       "Character": 2,
+      "WeaponId": 46,
       "Name": "Poison Arrow Bow",
       "WeaponType": 4,
       "ModelId": 22,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 59,
@@ -1053,19 +1101,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 35,
+        "SkillId": 0,
         "Price": 5000,
         "SellPrice": 1250
       }
     },
     {
       "Character": 2,
+      "WeaponId": 47,
       "Name": "Bold Bow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 114,
@@ -1075,19 +1124,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 26,
+        "SkillId": 0,
         "Price": 9000,
         "SellPrice": 2250
       }
     },
     {
       "Character": 2,
+      "WeaponId": 48,
       "Name": "Higo-yumi",
       "WeaponType": 4,
       "ModelId": 24,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 157,
@@ -1097,19 +1147,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 16800,
         "SellPrice": 4200
       }
     },
     {
       "Character": 2,
+      "WeaponId": 49,
       "Name": "Heavenly Windbow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 140,
@@ -1119,19 +1170,20 @@
         "Endurance": 0,
         "Agility": 3,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 14100,
         "SellPrice": 3530
       }
     },
     {
       "Character": 2,
+      "WeaponId": 50,
       "Name": "Composite Bow",
       "WeaponType": 4,
       "ModelId": 23,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 179,
@@ -1141,19 +1193,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 20800,
         "SellPrice": 5200
       }
     },
     {
       "Character": 2,
+      "WeaponId": 51,
       "Name": "Magic Bow",
       "WeaponType": 4,
       "ModelId": 23,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 164,
@@ -1163,19 +1216,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 18100,
         "SellPrice": 4530
       }
     },
     {
       "Character": 2,
+      "WeaponId": 52,
       "Name": "Great Bow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 215,
@@ -1185,19 +1239,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 26100,
         "SellPrice": 6530
       }
     },
     {
       "Character": 2,
+      "WeaponId": 53,
       "Name": "Lightning Bow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 191,
@@ -1207,19 +1262,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 16,
+        "SkillId": 0,
         "Price": 22200,
         "SellPrice": 5550
       }
     },
     {
       "Character": 2,
+      "WeaponId": 54,
       "Name": "Hero's Bow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 242,
@@ -1229,19 +1285,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 31500,
         "SellPrice": 7880
       }
     },
     {
       "Character": 2,
+      "WeaponId": 55,
       "Name": "Bow of Serenity",
       "WeaponType": 4,
       "ModelId": 25,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 228,
@@ -1251,19 +1308,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 3,
+        "SkillId": 0,
         "Price": 27900,
         "SellPrice": 6980
       }
     },
     {
       "Character": 2,
+      "WeaponId": 56,
       "Name": "Yoichi's Bow",
       "WeaponType": 4,
       "ModelId": 25,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 303,
@@ -1273,19 +1331,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 41900,
         "SellPrice": 10480
       }
     },
     {
       "Character": 2,
+      "WeaponId": 57,
       "Name": "Dhanush",
       "WeaponType": 4,
       "ModelId": 23,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 284,
@@ -1295,19 +1354,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 20,
+        "SkillId": 0,
         "Price": 37700,
         "SellPrice": 9430
       }
     },
     {
       "Character": 2,
+      "WeaponId": 58,
       "Name": "Maki's Resolve",
       "WeaponType": 4,
       "ModelId": 25,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 314,
@@ -1317,19 +1377,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 18,
+        "SkillId": 0,
         "Price": 48000,
         "SellPrice": 12000
       }
     },
     {
       "Character": 2,
+      "WeaponId": 59,
       "Name": "Sarnga",
       "WeaponType": 4,
       "ModelId": 27,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 8,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 370,
@@ -1339,19 +1400,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 39,
+        "SkillId": 0,
         "Price": 58600,
         "SellPrice": 14650
       }
     },
     {
       "Character": 2,
+      "WeaponId": 60,
       "Name": "Quintessence Bow",
       "WeaponType": 4,
       "ModelId": 28,
       "WeaponModelId": 60,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 400,
@@ -1361,19 +1423,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 251,
+        "SkillId": 0,
         "Price": 68000,
         "SellPrice": 17000
       }
     },
     {
       "Character": 2,
+      "WeaponId": 61,
       "Name": "Source Yumi",
       "WeaponType": 4,
       "ModelId": 24,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 135,
@@ -1383,19 +1446,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 42,
+        "SkillId": 0,
         "Price": 13200,
         "SellPrice": 3300
       }
     },
     {
       "Character": 2,
+      "WeaponId": 64,
       "Name": "Dreadnought",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 273,
@@ -1405,19 +1469,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 36300,
         "SellPrice": 9080
       }
     },
     {
       "Character": 2,
+      "WeaponId": 65,
       "Name": "Kishin Bow",
       "WeaponType": 4,
       "ModelId": 25,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 259,
@@ -1427,19 +1492,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 41,
+        "SkillId": 0,
         "Price": 32500,
         "SellPrice": 8130
       }
     },
     {
       "Character": 2,
+      "WeaponId": 66,
       "Name": "Circe's Bow",
       "WeaponType": 4,
       "ModelId": 23,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 260,
@@ -1449,19 +1515,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 34000,
         "SellPrice": 8500
       }
     },
     {
       "Character": 2,
+      "WeaponId": 67,
       "Name": "Whirlwind Bow",
       "WeaponType": 4,
       "ModelId": 23,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 225,
@@ -1471,19 +1538,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 75,
+        "SkillId": 0,
         "Price": 27000,
         "SellPrice": 6750
       }
     },
     {
       "Character": 2,
+      "WeaponId": 68,
       "Name": "Gale Bow",
       "WeaponType": 4,
       "ModelId": 21,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 6,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 120,
@@ -1493,19 +1561,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 38400,
         "SellPrice": 9600
       }
     },
     {
       "Character": 2,
+      "WeaponId": 70,
       "Name": "Calamity Bow",
       "WeaponType": 4,
       "ModelId": 25,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 260,
@@ -1515,19 +1584,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 38,
+        "SkillId": 0,
         "Price": 35400,
         "SellPrice": 8850
       }
     },
     {
       "Character": 2,
+      "WeaponId": 281,
       "Name": "SEES Longbow",
       "WeaponType": 4,
       "ModelId": 20,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 101,
@@ -1537,7 +1607,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
@@ -1546,12 +1616,13 @@
   "3": [
     {
       "Character": 3,
+      "WeaponId": 71,
       "Name": "Imitation Katana",
       "WeaponType": 8,
       "ModelId": 34,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 45,
@@ -1561,19 +1632,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 2400,
         "SellPrice": 600
       }
     },
     {
       "Character": 3,
+      "WeaponId": 72,
       "Name": "Bastard Sword",
       "WeaponType": 8,
       "ModelId": 32,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 67,
@@ -1583,19 +1655,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 3500,
         "SellPrice": 880
       }
     },
     {
       "Character": 3,
+      "WeaponId": 73,
       "Name": "Kishido Blade",
       "WeaponType": 8,
       "ModelId": 31,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 54,
@@ -1605,19 +1678,20 @@
         "Endurance": 1,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 3000,
         "SellPrice": 750
       }
     },
     {
       "Character": 3,
+      "WeaponId": 74,
       "Name": "Great Sword",
       "WeaponType": 8,
       "ModelId": 31,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 95,
@@ -1627,19 +1701,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 8000,
         "SellPrice": 2000
       }
     },
     {
       "Character": 3,
+      "WeaponId": 75,
       "Name": "Raikou",
       "WeaponType": 8,
       "ModelId": 34,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 76,
@@ -1649,19 +1724,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 16,
+        "SkillId": 0,
         "Price": 6500,
         "SellPrice": 1630
       }
     },
     {
       "Character": 3,
+      "WeaponId": 76,
       "Name": "Two-Handed Sword",
       "WeaponType": 8,
       "ModelId": 32,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 157,
@@ -1671,19 +1747,20 @@
         "Endurance": 3,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 16300,
         "SellPrice": 4080
       }
     },
     {
       "Character": 3,
+      "WeaponId": 77,
       "Name": "All-Purpose Katana",
       "WeaponType": 8,
       "ModelId": 34,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 103,
@@ -1693,19 +1770,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 2,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 9000,
         "SellPrice": 2250
       }
     },
     {
       "Character": 3,
+      "WeaponId": 79,
       "Name": "Spiked Bat",
       "WeaponType": 8,
       "ModelId": 36,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 120,
@@ -1715,19 +1793,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 24,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 3,
+      "WeaponId": 80,
       "Name": "Zanbatou",
       "WeaponType": 8,
       "ModelId": 32,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 142,
@@ -1737,19 +1816,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 14150,
         "SellPrice": 3540
       }
     },
     {
       "Character": 3,
+      "WeaponId": 81,
       "Name": "Assassin's Blade",
       "WeaponType": 8,
       "ModelId": 31,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 126,
@@ -1759,19 +1839,20 @@
         "Endurance": 0,
         "Agility": 3,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 12000,
         "SellPrice": 3000
       }
     },
     {
       "Character": 3,
+      "WeaponId": 82,
       "Name": "Tsubaki-maru",
       "WeaponType": 8,
       "ModelId": 34,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 171,
@@ -1781,19 +1862,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 19700,
         "SellPrice": 4930
       }
     },
     {
       "Character": 3,
+      "WeaponId": 84,
       "Name": "Buster Blade",
       "WeaponType": 8,
       "ModelId": 31,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 194,
@@ -1803,19 +1885,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 24150,
         "SellPrice": 6040
       }
     },
     {
       "Character": 3,
+      "WeaponId": 85,
       "Name": "Mikazuki Munechika",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 235,
@@ -1825,19 +1908,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 74,
+        "SkillId": 0,
         "Price": 33900,
         "SellPrice": 8480
       }
     },
     {
       "Character": 3,
+      "WeaponId": 86,
       "Name": "Kaketsushinto",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 231,
@@ -1847,19 +1931,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 28900,
         "SellPrice": 7230
       }
     },
     {
       "Character": 3,
+      "WeaponId": 87,
       "Name": "Deathbringer",
       "WeaponType": 8,
       "ModelId": 33,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 210,
@@ -1869,19 +1954,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 103,
+        "SkillId": 0,
         "Price": 25700,
         "SellPrice": 6430
       }
     },
     {
       "Character": 3,
+      "WeaponId": 88,
       "Name": "Caladbolg",
       "WeaponType": 8,
       "ModelId": 33,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 265,
@@ -1891,19 +1977,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 36100,
         "SellPrice": 9030
       }
     },
     {
       "Character": 3,
+      "WeaponId": 89,
       "Name": "Apocalypse",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 248,
@@ -1913,19 +2000,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 22,
+        "SkillId": 0,
         "Price": 30700,
         "SellPrice": 7680
       }
     },
     {
       "Character": 3,
+      "WeaponId": 90,
       "Name": "Tobi-botaru",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 328,
@@ -1935,19 +2023,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 48800,
         "SellPrice": 12200
       }
     },
     {
       "Character": 3,
+      "WeaponId": 91,
       "Name": "Elixir Sword",
       "WeaponType": 8,
       "ModelId": 31,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 303,
@@ -1957,19 +2046,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 44000,
         "SellPrice": 11000
       }
     },
     {
       "Character": 3,
+      "WeaponId": 92,
       "Name": "Orochito",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 180,
@@ -1979,19 +2069,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 34,
+        "SkillId": 0,
         "Price": 22700,
         "SellPrice": 5680
       }
     },
     {
       "Character": 3,
+      "WeaponId": 93,
       "Name": "Balmung",
       "WeaponType": 8,
       "ModelId": 38,
       "WeaponModelId": 60,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 395,
@@ -2001,19 +2092,20 @@
         "Endurance": 0,
         "Agility": 7,
         "Luck": 0,
-        "SkillID": 234,
+        "SkillId": 0,
         "Price": 57300,
         "SellPrice": 14330
       }
     },
     {
       "Character": 3,
+      "WeaponId": 94,
       "Name": "Laevateinn",
       "WeaponType": 8,
       "ModelId": 37,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 3,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 300,
@@ -2023,19 +2115,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 46,
+        "SkillId": 0,
         "Price": 43100,
         "SellPrice": 10780
       }
     },
     {
       "Character": 3,
+      "WeaponId": 95,
       "Name": "Masakado's Katana",
       "WeaponType": 8,
       "ModelId": 39,
       "WeaponModelId": 61,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 440,
@@ -2045,19 +2138,20 @@
         "Endurance": 5,
         "Agility": 5,
         "Luck": 5,
-        "SkillID": 204,
+        "SkillId": 0,
         "Price": 71000,
         "SellPrice": 17750
       }
     },
     {
       "Character": 3,
+      "WeaponId": 97,
       "Name": "Claymore",
       "WeaponType": 8,
       "ModelId": 32,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 128,
@@ -2067,19 +2161,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 233,
+        "SkillId": 0,
         "Price": 13200,
         "SellPrice": 3300
       }
     },
     {
       "Character": 3,
+      "WeaponId": 99,
       "Name": "Juzumaru",
       "WeaponType": 8,
       "ModelId": 34,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 107,
@@ -2089,19 +2184,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 40,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 3,
+      "WeaponId": 100,
       "Name": "Dojigiri Yasutsuna",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 300,
@@ -2111,19 +2207,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 43,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 3,
+      "WeaponId": 101,
       "Name": "Berserker",
       "WeaponType": 8,
       "ModelId": 33,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 288,
@@ -2133,19 +2230,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 42300,
         "SellPrice": 10580
       }
     },
     {
       "Character": 3,
+      "WeaponId": 102,
       "Name": "Crimson Greatsword",
       "WeaponType": 8,
       "ModelId": 33,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 277,
@@ -2155,19 +2253,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 37800,
         "SellPrice": 9450
       }
     },
     {
       "Character": 3,
+      "WeaponId": 103,
       "Name": "Blazing Greatsword",
       "WeaponType": 8,
       "ModelId": 31,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 3,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 90,
@@ -2177,19 +2276,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 20500,
         "SellPrice": 5130
       }
     },
     {
       "Character": 3,
+      "WeaponId": 104,
       "Name": "Qingdi Blade",
       "WeaponType": 8,
       "ModelId": 35,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 270,
@@ -2199,19 +2299,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 42,
+        "SkillId": 0,
         "Price": 37200,
         "SellPrice": 9300
       }
     },
     {
       "Character": 3,
+      "WeaponId": 282,
       "Name": "SEES Greatsword",
       "WeaponType": 8,
       "ModelId": 30,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 111,
@@ -2221,7 +2322,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
@@ -2230,12 +2331,13 @@
   "4": [
     {
       "Character": 4,
+      "WeaponId": 106,
       "Name": "Brass Gloves",
       "WeaponType": 16,
       "ModelId": 42,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 51,
@@ -2245,19 +2347,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 4000,
         "SellPrice": 1000
       }
     },
     {
       "Character": 4,
+      "WeaponId": 107,
       "Name": "Bladefist",
       "WeaponType": 16,
       "ModelId": 44,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 83,
@@ -2267,19 +2370,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 7200,
         "SellPrice": 1800
       }
     },
     {
       "Character": 4,
+      "WeaponId": 108,
       "Name": "Sonic Fist",
       "WeaponType": 16,
       "ModelId": 42,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 67,
@@ -2289,19 +2393,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 22,
+        "SkillId": 0,
         "Price": 5850,
         "SellPrice": 1460
       }
     },
     {
       "Character": 4,
+      "WeaponId": 109,
       "Name": "Kaiser Knuckles",
       "WeaponType": 16,
       "ModelId": 42,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 200,
@@ -2311,19 +2416,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 204,
+        "SkillId": 0,
         "Price": 24600,
         "SellPrice": 6150
       }
     },
     {
       "Character": 4,
+      "WeaponId": 110,
       "Name": "Beast Fangs",
       "WeaponType": 16,
       "ModelId": 44,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 94,
@@ -2333,19 +2439,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 1,
+        "SkillId": 0,
         "Price": 8300,
         "SellPrice": 2080
       }
     },
     {
       "Character": 4,
+      "WeaponId": 111,
       "Name": "Champion Gloves",
       "WeaponType": 16,
       "ModelId": 42,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 172,
@@ -2355,19 +2462,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 200,
+        "SkillId": 0,
         "Price": 20000,
         "SellPrice": 5000
       }
     },
     {
       "Character": 4,
+      "WeaponId": 112,
       "Name": "Jack's Gloves",
       "WeaponType": 16,
       "ModelId": 46,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 145,
@@ -2377,19 +2485,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 30,
+        "SkillId": 0,
         "Price": 3200,
         "SellPrice": 800
       }
     },
     {
       "Character": 4,
+      "WeaponId": 113,
       "Name": "Meteor Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 132,
@@ -2399,19 +2508,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 12500,
         "SellPrice": 3130
       }
     },
     {
       "Character": 4,
+      "WeaponId": 114,
       "Name": "Gusto Gloves",
       "WeaponType": 16,
       "ModelId": 42,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 118,
@@ -2421,19 +2531,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 60,
+        "SkillId": 0,
         "Price": 10250,
         "SellPrice": 2560
       }
     },
     {
       "Character": 4,
+      "WeaponId": 115,
       "Name": "Fists of Fury",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 125,
@@ -2443,19 +2554,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 44,
+        "SkillId": 0,
         "Price": 11000,
         "SellPrice": 2750
       }
     },
     {
       "Character": 4,
+      "WeaponId": 116,
       "Name": "Wicked Cestus",
       "WeaponType": 16,
       "ModelId": 45,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 160,
@@ -2465,19 +2577,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 17400,
         "SellPrice": 4350
       }
     },
     {
       "Character": 4,
+      "WeaponId": 117,
       "Name": "Blood Baghnakh",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 144,
@@ -2487,19 +2600,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 14600,
         "SellPrice": 3650
       }
     },
     {
       "Character": 4,
+      "WeaponId": 118,
       "Name": "Titanic Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 184,
@@ -2509,19 +2623,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 21450,
         "SellPrice": 5360
       }
     },
     {
       "Character": 4,
+      "WeaponId": 119,
       "Name": "Pugilist's Fists",
       "WeaponType": 16,
       "ModelId": 43,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 168,
@@ -2531,19 +2646,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 40,
+        "SkillId": 0,
         "Price": 18000,
         "SellPrice": 4500
       }
     },
     {
       "Character": 4,
+      "WeaponId": 120,
       "Name": "Crusher Fist",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 221,
@@ -2553,19 +2669,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 26500,
         "SellPrice": 6630
       }
     },
     {
       "Character": 4,
+      "WeaponId": 121,
       "Name": "Wings of Vanth",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 195,
@@ -2575,19 +2692,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 3,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 23200,
         "SellPrice": 5800
       }
     },
     {
       "Character": 4,
+      "WeaponId": 122,
       "Name": "Supreme Gloves",
       "WeaponType": 16,
       "ModelId": 43,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 247,
@@ -2597,19 +2715,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 31900,
         "SellPrice": 7980
       }
     },
     {
       "Character": 4,
+      "WeaponId": 123,
       "Name": "Diamond Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 233,
@@ -2619,19 +2738,20 @@
         "Endurance": 3,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 27900,
         "SellPrice": 6980
       }
     },
     {
       "Character": 4,
+      "WeaponId": 124,
       "Name": "Golden Gloves",
       "WeaponType": 16,
       "ModelId": 43,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 310,
@@ -2641,19 +2761,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 43100,
         "SellPrice": 10780
       }
     },
     {
       "Character": 4,
+      "WeaponId": 125,
       "Name": "Dragon Fangs",
       "WeaponType": 16,
       "ModelId": 45,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 289,
@@ -2663,19 +2784,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 222,
+        "SkillId": 0,
         "Price": 38600,
         "SellPrice": 9650
       }
     },
     {
       "Character": 4,
+      "WeaponId": 126,
       "Name": "Double Ziggurat",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 300,
@@ -2685,19 +2807,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 187,
+        "SkillId": 0,
         "Price": 53200,
         "SellPrice": 13300
       }
     },
     {
       "Character": 4,
+      "WeaponId": 127,
       "Name": "Sabazios",
       "WeaponType": 16,
       "ModelId": 47,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 4,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 350,
@@ -2707,19 +2830,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 7,
-        "SkillID": 15,
+        "SkillId": 0,
         "Price": 65400,
         "SellPrice": 16350
       }
     },
     {
       "Character": 4,
+      "WeaponId": 128,
       "Name": "Evil Gloves",
       "WeaponType": 16,
       "ModelId": 48,
       "WeaponModelId": 60,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 410,
@@ -2729,19 +2853,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 252,
+        "SkillId": 0,
         "Price": 15900,
         "SellPrice": 3980
       }
     },
     {
       "Character": 4,
+      "WeaponId": 129,
       "Name": "Root Cestus",
       "WeaponType": 16,
       "ModelId": 44,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 150,
@@ -2751,19 +2876,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 232,
+        "SkillId": 0,
         "Price": 9800,
         "SellPrice": 2450
       }
     },
     {
       "Character": 4,
+      "WeaponId": 132,
       "Name": "Heaven's Fists",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 279,
@@ -2773,19 +2899,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 37000,
         "SellPrice": 9250
       }
     },
     {
       "Character": 4,
+      "WeaponId": 133,
       "Name": "Spirit Gloves",
       "WeaponType": 16,
       "ModelId": 43,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 263,
@@ -2795,19 +2922,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 9,
+        "SkillId": 0,
         "Price": 33200,
         "SellPrice": 8300
       }
     },
     {
       "Character": 4,
+      "WeaponId": 134,
       "Name": "Rapid Bands",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 213,
@@ -2817,19 +2945,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 118,
+        "SkillId": 0,
         "Price": 25000,
         "SellPrice": 6250
       }
     },
     {
       "Character": 4,
+      "WeaponId": 135,
       "Name": "Thunder Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 5,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 120,
@@ -2839,19 +2968,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 17600,
         "SellPrice": 4400
       }
     },
     {
       "Character": 4,
+      "WeaponId": 136,
       "Name": "Jack's Gauntlets",
       "WeaponType": 16,
       "ModelId": 46,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 270,
@@ -2861,19 +2991,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 39,
+        "SkillId": 0,
         "Price": 40000,
         "SellPrice": 10000
       }
     },
     {
       "Character": 4,
+      "WeaponId": 283,
       "Name": "SEES Knuckles",
       "WeaponType": 16,
       "ModelId": 40,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 105,
@@ -2883,7 +3014,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
@@ -2892,12 +3023,13 @@
   "5": [
     {
       "Character": 5,
+      "WeaponId": 141,
       "Name": "SEES Rapier",
       "WeaponType": 32,
       "ModelId": 50,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 115,
@@ -2907,19 +3039,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 5,
+      "WeaponId": 142,
       "Name": "Quarter Pike",
       "WeaponType": 32,
       "ModelId": 54,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 96,
@@ -2929,19 +3062,20 @@
         "Endurance": 0,
         "Agility": 2,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 8000,
         "SellPrice": 2000
       }
     },
     {
       "Character": 5,
+      "WeaponId": 143,
       "Name": "Flamberge",
       "WeaponType": 32,
       "ModelId": 52,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 157,
@@ -2951,19 +3085,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 75,
+        "SkillId": 0,
         "Price": 17800,
         "SellPrice": 4450
       }
     },
     {
       "Character": 5,
+      "WeaponId": 145,
       "Name": "Night Falcon",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 9,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 100,
@@ -2973,19 +3108,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 12000,
         "SellPrice": 3000
       }
     },
     {
       "Character": 5,
+      "WeaponId": 146,
       "Name": "Elegant Fleuret",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 170,
@@ -2995,19 +3131,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 116,
+        "SkillId": 0,
         "Price": 19600,
         "SellPrice": 4900
       }
     },
     {
       "Character": 5,
+      "WeaponId": 147,
       "Name": "Ga Boo",
       "WeaponType": 32,
       "ModelId": 54,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 134,
@@ -3017,19 +3154,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 13000,
         "SellPrice": 3250
       }
     },
     {
       "Character": 5,
+      "WeaponId": 148,
       "Name": "Malice Mary",
       "WeaponType": 32,
       "ModelId": 52,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 120,
@@ -3039,19 +3177,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 35,
+        "SkillId": 0,
         "Price": 10600,
         "SellPrice": 2650
       }
     },
     {
       "Character": 5,
+      "WeaponId": 149,
       "Name": "Serpent Sword",
       "WeaponType": 32,
       "ModelId": 52,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 163,
@@ -3061,19 +3200,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 18000,
         "SellPrice": 4500
       }
     },
     {
       "Character": 5,
+      "WeaponId": 150,
       "Name": "Skrep",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 149,
@@ -3083,19 +3223,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 20,
+        "SkillId": 0,
         "Price": 14950,
         "SellPrice": 3740
       }
     },
     {
       "Character": 5,
+      "WeaponId": 151,
       "Name": "Ithuriel Spear",
       "WeaponType": 32,
       "ModelId": 55,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 185,
@@ -3105,19 +3246,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 23250,
         "SellPrice": 5810
       }
     },
     {
       "Character": 5,
+      "WeaponId": 152,
       "Name": "Espada Ropera",
       "WeaponType": 32,
       "ModelId": 53,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 266,
@@ -3127,19 +3269,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 26,
+        "SkillId": 0,
         "Price": 34550,
         "SellPrice": 8640
       }
     },
     {
       "Character": 5,
+      "WeaponId": 153,
       "Name": "Noble Saber",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 220,
@@ -3149,19 +3292,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 27900,
         "SellPrice": 6980
       }
     },
     {
       "Character": 5,
+      "WeaponId": 154,
       "Name": "Main Gauche",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 197,
@@ -3171,19 +3315,20 @@
         "Endurance": 3,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 25100,
         "SellPrice": 6280
       }
     },
     {
       "Character": 5,
+      "WeaponId": 155,
       "Name": "Witch Saber",
       "WeaponType": 32,
       "ModelId": 52,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 237,
@@ -3193,19 +3338,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 29400,
         "SellPrice": 7350
       }
     },
     {
       "Character": 5,
+      "WeaponId": 156,
       "Name": "Rose Flamberge",
       "WeaponType": 32,
       "ModelId": 53,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 254,
@@ -3215,19 +3361,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 33100,
         "SellPrice": 8280
       }
     },
     {
       "Character": 5,
+      "WeaponId": 157,
       "Name": "Damascus Rapier",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 310,
@@ -3237,19 +3384,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 44850,
         "SellPrice": 11210
       }
     },
     {
       "Character": 5,
+      "WeaponId": 158,
       "Name": "Brionac",
       "WeaponType": 32,
       "ModelId": 55,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 270,
@@ -3259,19 +3407,20 @@
         "Endurance": 0,
         "Agility": 5,
         "Luck": 0,
-        "SkillID": 47,
+        "SkillId": 0,
         "Price": 36400,
         "SellPrice": 9100
       }
     },
     {
       "Character": 5,
+      "WeaponId": 159,
       "Name": "Longinus",
       "WeaponType": 32,
       "ModelId": 55,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 290,
@@ -3281,19 +3430,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 73,
+        "SkillId": 0,
         "Price": 40000,
         "SellPrice": 10000
       }
     },
     {
       "Character": 5,
+      "WeaponId": 160,
       "Name": "Kokuseki Senjin",
       "WeaponType": 32,
       "ModelId": 56,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 425,
@@ -3303,19 +3453,20 @@
         "Endurance": 5,
         "Agility": 5,
         "Luck": 5,
-        "SkillID": 254,
+        "SkillId": 0,
         "Price": 67900,
         "SellPrice": 16980
       }
     },
     {
       "Character": 5,
+      "WeaponId": 161,
       "Name": "Snow Queen Whip",
       "WeaponType": 32,
       "ModelId": 57,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 4,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 377,
@@ -3325,19 +3476,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 190,
+        "SkillId": 0,
         "Price": 52500,
         "SellPrice": 13130
       }
     },
     {
       "Character": 5,
+      "WeaponId": 162,
       "Name": "Cocytus",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 150,
@@ -3347,19 +3499,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 14,
+        "SkillId": 0,
         "Price": 16500,
         "SellPrice": 4130
       }
     },
     {
       "Character": 5,
+      "WeaponId": 168,
       "Name": "Ice Saber",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 140,
@@ -3369,19 +3522,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 206,
+        "SkillId": 0,
         "Price": 14800,
         "SellPrice": 3700
       }
     },
     {
       "Character": 5,
+      "WeaponId": 169,
       "Name": "Charlotte",
       "WeaponType": 32,
       "ModelId": 55,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 277,
@@ -3391,19 +3545,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 38800,
         "SellPrice": 9700
       }
     },
     {
       "Character": 5,
+      "WeaponId": 170,
       "Name": "Illuminati",
       "WeaponType": 32,
       "ModelId": 53,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 292,
@@ -3413,19 +3568,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 41,
+        "SkillId": 0,
         "Price": 40200,
         "SellPrice": 10050
       }
     },
     {
       "Character": 5,
+      "WeaponId": 171,
       "Name": "Aristocracy",
       "WeaponType": 32,
       "ModelId": 51,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 231,
@@ -3435,19 +3591,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 9,
+        "SkillId": 0,
         "Price": 28600,
         "SellPrice": 7150
       }
     },
     {
       "Character": 5,
+      "WeaponId": 173,
       "Name": "Erinys",
       "WeaponType": 32,
       "ModelId": 55,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 9,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 100,
@@ -3457,7 +3614,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 35,
+        "SkillId": 0,
         "Price": 21000,
         "SellPrice": 5250
       }
@@ -3466,12 +3623,13 @@
   "6": [
     {
       "Character": 6,
+      "WeaponId": 276,
       "Name": "No equipment",
       "WeaponType": 0,
       "ModelId": 0,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 65535,
+        "AttrId": 0,
         "Rarity": 0,
         "Tier": 0,
         "Attack": 0,
@@ -3481,7 +3639,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 100,
         "SellPrice": 30
       }
@@ -3490,12 +3648,13 @@
   "7": [
     {
       "Character": 7,
+      "WeaponId": 176,
       "Name": "Albireo",
       "WeaponType": 64,
       "ModelId": 326,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 110,
@@ -3505,19 +3664,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 10000,
         "SellPrice": 2500
       }
     },
     {
       "Character": 7,
+      "WeaponId": 177,
       "Name": "Six-Shot",
       "WeaponType": 64,
       "ModelId": 326,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 145,
@@ -3527,19 +3687,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 14500,
         "SellPrice": 3630
       }
     },
     {
       "Character": 7,
+      "WeaponId": 178,
       "Name": "Grenade Launcher",
       "WeaponType": 64,
       "ModelId": 586,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 125,
@@ -3549,19 +3710,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 40,
+        "SkillId": 0,
         "Price": 11750,
         "SellPrice": 2940
       }
     },
     {
       "Character": 7,
+      "WeaponId": 179,
       "Name": "Orgone Rifle",
       "WeaponType": 64,
       "ModelId": 584,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 170,
@@ -3571,19 +3733,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 20000,
         "SellPrice": 5000
       }
     },
     {
       "Character": 7,
+      "WeaponId": 180,
       "Name": "Heavy Cannon X",
       "WeaponType": 64,
       "ModelId": 586,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 156,
@@ -3593,19 +3756,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 16500,
         "SellPrice": 4130
       }
     },
     {
       "Character": 7,
+      "WeaponId": 181,
       "Name": "Ingels Cannon",
       "WeaponType": 64,
       "ModelId": 586,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 196,
@@ -3615,19 +3779,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 24600,
         "SellPrice": 6150
       }
     },
     {
       "Character": 7,
+      "WeaponId": 182,
       "Name": "Five-Barrel Medusa",
       "WeaponType": 64,
       "ModelId": 326,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 182,
@@ -3637,19 +3802,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 34,
+        "SkillId": 0,
         "Price": 22000,
         "SellPrice": 5500
       }
     },
     {
       "Character": 7,
+      "WeaponId": 183,
       "Name": "Railgun",
       "WeaponType": 64,
       "ModelId": 587,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 233,
@@ -3659,19 +3825,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 31000,
         "SellPrice": 7750
       }
     },
     {
       "Character": 7,
+      "WeaponId": 184,
       "Name": "Supersonic Minigun",
       "WeaponType": 64,
       "ModelId": 327,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 213,
@@ -3681,19 +3848,20 @@
         "Endurance": 0,
         "Agility": 3,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 26700,
         "SellPrice": 6680
       }
     },
     {
       "Character": 7,
+      "WeaponId": 185,
       "Name": "Rocket Punch",
       "WeaponType": 64,
       "ModelId": 588,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 200,
@@ -3703,19 +3871,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 21,
+        "SkillId": 0,
         "Price": 25200,
         "SellPrice": 6300
       }
     },
     {
       "Character": 7,
+      "WeaponId": 186,
       "Name": "Maxima Sniper",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 267,
@@ -3725,19 +3894,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 37300,
         "SellPrice": 9330
       }
     },
     {
       "Character": 7,
+      "WeaponId": 187,
       "Name": "Angel Shot",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 245,
@@ -3747,19 +3917,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 29,
+        "SkillId": 0,
         "Price": 32700,
         "SellPrice": 8180
       }
     },
     {
       "Character": 7,
+      "WeaponId": 188,
       "Name": "Infanterie",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 308,
@@ -3769,19 +3940,20 @@
         "Endurance": 1,
         "Agility": 1,
         "Luck": 1,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 45200,
         "SellPrice": 11300
       }
     },
     {
       "Character": 7,
+      "WeaponId": 189,
       "Name": "Megido Fire",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 335,
@@ -3791,19 +3963,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 50500,
         "SellPrice": 12630
       }
     },
     {
       "Character": 7,
+      "WeaponId": 190,
       "Name": "Antimatter Cannon",
       "WeaponType": 64,
       "ModelId": 587,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 345,
@@ -3813,19 +3986,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 45,
+        "SkillId": 0,
         "Price": 53100,
         "SellPrice": 13280
       }
     },
     {
       "Character": 7,
+      "WeaponId": 191,
       "Name": "Metatronius",
       "WeaponType": 64,
       "ModelId": 589,
       "WeaponModelId": 60,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 450,
@@ -3835,19 +4009,20 @@
         "Endurance": 5,
         "Agility": 5,
         "Luck": 5,
-        "SkillID": 202,
+        "SkillId": 0,
         "Price": 73000,
         "SellPrice": 18250
       }
     },
     {
       "Character": 7,
+      "WeaponId": 192,
       "Name": "Flash Grenade",
       "WeaponType": 64,
       "ModelId": 587,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 177,
@@ -3857,19 +4032,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 26,
+        "SkillId": 0,
         "Price": 21000,
         "SellPrice": 5250
       }
     },
     {
       "Character": 7,
+      "WeaponId": 193,
       "Name": "Kiss of Athena",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 295,
@@ -3879,19 +4055,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 43650,
         "SellPrice": 10910
       }
     },
     {
       "Character": 7,
+      "WeaponId": 194,
       "Name": "Frigid Grenade",
       "WeaponType": 64,
       "ModelId": 587,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 274,
@@ -3901,19 +4078,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 14,
+        "SkillId": 0,
         "Price": 38800,
         "SellPrice": 9700
       }
     },
     {
       "Character": 7,
+      "WeaponId": 195,
       "Name": "Blast Magnum",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 230,
@@ -3923,19 +4101,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 233,
+        "SkillId": 0,
         "Price": 28700,
         "SellPrice": 7180
       }
     },
     {
       "Character": 7,
+      "WeaponId": 196,
       "Name": "Pandemonium",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 400,
@@ -3945,19 +4124,20 @@
         "Endurance": 0,
         "Agility": 7,
         "Luck": 0,
-        "SkillID": 234,
+        "SkillId": 0,
         "Price": 68100,
         "SellPrice": 17030
       }
     },
     {
       "Character": 7,
+      "WeaponId": 197,
       "Name": "Nucleus Rifle",
       "WeaponType": 64,
       "ModelId": 584,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 170,
@@ -3967,19 +4147,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 20500,
         "SellPrice": 5130
       }
     },
     {
       "Character": 7,
+      "WeaponId": 200,
       "Name": "Kyriotes",
       "WeaponType": 64,
       "ModelId": 585,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 270,
@@ -3989,7 +4170,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 221,
+        "SkillId": 0,
         "Price": 38100,
         "SellPrice": 9530
       }
@@ -3998,12 +4179,13 @@
   "8": [
     {
       "Character": 8,
+      "WeaponId": 226,
       "Name": "SEES Longspear",
       "WeaponType": 128,
       "ModelId": 80,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 130,
@@ -4013,19 +4195,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 8,
+      "WeaponId": 227,
       "Name": "Omega Spear",
       "WeaponType": 128,
       "ModelId": 81,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 270,
@@ -4035,19 +4218,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 73,
+        "SkillId": 0,
         "Price": 35400,
         "SellPrice": 8850
       }
     },
     {
       "Character": 8,
+      "WeaponId": 228,
       "Name": "Glaive",
       "WeaponType": 128,
       "ModelId": 84,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 169,
@@ -4057,19 +4241,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 18600,
         "SellPrice": 4650
       }
     },
     {
       "Character": 8,
+      "WeaponId": 229,
       "Name": "Sexy Lance",
       "WeaponType": 128,
       "ModelId": 82,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 154,
@@ -4079,19 +4264,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 29,
+        "SkillId": 0,
         "Price": 15780,
         "SellPrice": 3950
       }
     },
     {
       "Character": 8,
+      "WeaponId": 230,
       "Name": "Rhongowennan",
       "WeaponType": 128,
       "ModelId": 82,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 192,
@@ -4101,19 +4287,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 23000,
         "SellPrice": 5750
       }
     },
     {
       "Character": 8,
+      "WeaponId": 231,
       "Name": "Lance of Death",
       "WeaponType": 128,
       "ModelId": 81,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 176,
@@ -4123,19 +4310,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 23,
+        "SkillId": 0,
         "Price": 19700,
         "SellPrice": 4930
       }
     },
     {
       "Character": 8,
+      "WeaponId": 232,
       "Name": "Scrub Brush",
       "WeaponType": 128,
       "ModelId": 86,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 170,
@@ -4145,19 +4333,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 38,
+        "SkillId": 0,
         "Price": 480,
         "SellPrice": 120
       }
     },
     {
       "Character": 8,
+      "WeaponId": 233,
       "Name": "Ranseur",
       "WeaponType": 128,
       "ModelId": 83,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 227,
@@ -4167,19 +4356,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 28500,
         "SellPrice": 7130
       }
     },
     {
       "Character": 8,
+      "WeaponId": 234,
       "Name": "Ningen Mukotsu",
       "WeaponType": 128,
       "ModelId": 81,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 203,
@@ -4189,19 +4379,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 24300,
         "SellPrice": 6080
       }
     },
     {
       "Character": 8,
+      "WeaponId": 235,
       "Name": "Ote-gine",
       "WeaponType": 128,
       "ModelId": 83,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 200,
@@ -4211,19 +4402,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 42,
+        "SkillId": 0,
         "Price": 23600,
         "SellPrice": 5900
       }
     },
     {
       "Character": 8,
+      "WeaponId": 236,
       "Name": "Voulge",
       "WeaponType": 128,
       "ModelId": 85,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 260,
@@ -4233,19 +4425,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 34200,
         "SellPrice": 8550
       }
     },
     {
       "Character": 8,
+      "WeaponId": 237,
       "Name": "Poison Glaive",
       "WeaponType": 128,
       "ModelId": 84,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 244,
@@ -4255,19 +4448,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 35,
+        "SkillId": 0,
         "Price": 29700,
         "SellPrice": 7430
       }
     },
     {
       "Character": 8,
+      "WeaponId": 238,
       "Name": "Nihon-gou",
       "WeaponType": 128,
       "ModelId": 83,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 319,
@@ -4277,19 +4471,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 46550,
         "SellPrice": 11640
       }
     },
     {
       "Character": 8,
+      "WeaponId": 239,
       "Name": "Romulus's Spear",
       "WeaponType": 128,
       "ModelId": 85,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 298,
@@ -4299,19 +4494,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 5,
+        "SkillId": 0,
         "Price": 41700,
         "SellPrice": 10430
       }
     },
     {
       "Character": 8,
+      "WeaponId": 240,
       "Name": "Tonbo-kiri",
       "WeaponType": 128,
       "ModelId": 83,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 330,
@@ -4321,19 +4517,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 196,
+        "SkillId": 0,
         "Price": 52600,
         "SellPrice": 13150
       }
     },
     {
       "Character": 8,
+      "WeaponId": 241,
       "Name": "Gae Bolg",
       "WeaponType": 128,
       "ModelId": 87,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 8,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 200,
@@ -4343,19 +4540,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 50,
+        "SkillId": 0,
         "Price": 38900,
         "SellPrice": 9730
       }
     },
     {
       "Character": 8,
+      "WeaponId": 242,
       "Name": "Gungnir",
       "WeaponType": 128,
       "ModelId": 88,
       "WeaponModelId": 60,
       "Stats": {
-        "AttrID": 5,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 400,
@@ -4365,19 +4563,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 191,
+        "SkillId": 0,
         "Price": 62500,
         "SellPrice": 15630
       }
     },
     {
       "Character": 8,
+      "WeaponId": 243,
       "Name": "Pinaka",
       "WeaponType": 128,
       "ModelId": 89,
       "WeaponModelId": 61,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 440,
@@ -4387,19 +4586,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 248,
+        "SkillId": 0,
         "Price": 69700,
         "SellPrice": 17430
       }
     },
     {
       "Character": 8,
+      "WeaponId": 247,
       "Name": "King Spear",
       "WeaponType": 128,
       "ModelId": 81,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 285,
@@ -4409,19 +4609,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 40000,
         "SellPrice": 10000
       }
     },
     {
       "Character": 8,
+      "WeaponId": 248,
       "Name": "Bolt Lance",
       "WeaponType": 128,
       "ModelId": 83,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 272,
@@ -4431,19 +4632,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 17,
+        "SkillId": 0,
         "Price": 35800,
         "SellPrice": 8950
       }
     },
     {
       "Character": 8,
+      "WeaponId": 249,
       "Name": "Warlock Lance",
       "WeaponType": 128,
       "ModelId": 85,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 235,
@@ -4453,19 +4655,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 9,
+        "SkillId": 0,
         "Price": 31000,
         "SellPrice": 7750
       }
     },
     {
       "Character": 8,
+      "WeaponId": 250,
       "Name": "Blessed Lance",
       "WeaponType": 128,
       "ModelId": 81,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 8,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 80,
@@ -4475,19 +4678,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 12100,
         "SellPrice": 3030
       }
     },
     {
       "Character": 8,
+      "WeaponId": 271,
       "Name": "Fauchard",
       "WeaponType": 128,
       "ModelId": 85,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 2,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 235,
@@ -4497,7 +4701,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 174,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
@@ -4506,12 +4710,13 @@
   "9": [
     {
       "Character": 9,
+      "WeaponId": 201,
       "Name": "SEES Knife",
       "WeaponType": 256,
       "ModelId": 90,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 125,
@@ -4521,19 +4726,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 9,
+      "WeaponId": 202,
       "Name": "Bone",
       "WeaponType": 256,
       "ModelId": 96,
       "WeaponModelId": 50,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 250,
@@ -4543,19 +4749,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 42,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 9,
+      "WeaponId": 203,
       "Name": "Blitz Kunai",
       "WeaponType": 256,
       "ModelId": 92,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 162,
@@ -4565,19 +4772,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 17000,
         "SellPrice": 4250
       }
     },
     {
       "Character": 9,
+      "WeaponId": 204,
       "Name": "Lucky Knife",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 146,
@@ -4587,19 +4795,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 3,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 14350,
         "SellPrice": 3590
       }
     },
     {
       "Character": 9,
+      "WeaponId": 205,
       "Name": "Silver Moon",
       "WeaponType": 256,
       "ModelId": 94,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 181,
@@ -4609,19 +4818,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 20850,
         "SellPrice": 5210
       }
     },
     {
       "Character": 9,
+      "WeaponId": 206,
       "Name": "Karasu-maru",
       "WeaponType": 256,
       "ModelId": 92,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 168,
@@ -4631,19 +4841,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 109,
+        "SkillId": 0,
         "Price": 18600,
         "SellPrice": 4650
       }
     },
     {
       "Character": 9,
+      "WeaponId": 207,
       "Name": "Sword Breaker",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 215,
@@ -4653,19 +4864,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 26150,
         "SellPrice": 6540
       }
     },
     {
       "Character": 9,
+      "WeaponId": 208,
       "Name": "Raven Claw",
       "WeaponType": 256,
       "ModelId": 92,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 193,
@@ -4675,19 +4887,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 133,
+        "SkillId": 0,
         "Price": 22300,
         "SellPrice": 5580
       }
     },
     {
       "Character": 9,
+      "WeaponId": 209,
       "Name": "Shadowrend",
       "WeaponType": 256,
       "ModelId": 93,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 250,
@@ -4697,19 +4910,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 31000,
         "SellPrice": 7750
       }
     },
     {
       "Character": 9,
+      "WeaponId": 210,
       "Name": "Pesh Kabz",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 235,
@@ -4719,19 +4933,20 @@
         "Endurance": 0,
         "Agility": 3,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 27800,
         "SellPrice": 6950
       }
     },
     {
       "Character": 9,
+      "WeaponId": 211,
       "Name": "Howl",
       "WeaponType": 256,
       "ModelId": 95,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 272,
@@ -4741,19 +4956,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 36400,
         "SellPrice": 9100
       }
     },
     {
       "Character": 9,
+      "WeaponId": 212,
       "Name": "Athame",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 305,
@@ -4763,19 +4979,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 42600,
         "SellPrice": 10650
       }
     },
     {
       "Character": 9,
+      "WeaponId": 213,
       "Name": "Full Moon Kunai",
       "WeaponType": 256,
       "ModelId": 93,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 288,
@@ -4785,19 +5002,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 43,
+        "SkillId": 0,
         "Price": 38100,
         "SellPrice": 9530
       }
     },
     {
       "Character": 9,
+      "WeaponId": 214,
       "Name": "Grand Slasher",
       "WeaponType": 256,
       "ModelId": 95,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 192,
@@ -4807,19 +5025,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 230,
+        "SkillId": 0,
         "Price": 21400,
         "SellPrice": 5350
       }
     },
     {
       "Character": 9,
+      "WeaponId": 215,
       "Name": "Vajra",
       "WeaponType": 256,
       "ModelId": 97,
       "WeaponModelId": 51,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 410,
@@ -4829,19 +5048,20 @@
         "Endurance": 9,
         "Agility": 9,
         "Luck": 9,
-        "SkillID": 171,
+        "SkillId": 0,
         "Price": 67400,
         "SellPrice": 16850
       }
     },
     {
       "Character": 9,
+      "WeaponId": 216,
       "Name": "Elementary Mask",
       "WeaponType": 256,
       "ModelId": 94,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 240,
@@ -4851,19 +5071,20 @@
         "Endurance": 0,
         "Agility": 5,
         "Luck": 0,
-        "SkillID": 51,
+        "SkillId": 0,
         "Price": 29800,
         "SellPrice": 7450
       }
     },
     {
       "Character": 9,
+      "WeaponId": 219,
       "Name": "Carnage Knife",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 155,
@@ -4873,19 +5094,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 73,
+        "SkillId": 0,
         "Price": 16000,
         "SellPrice": 4000
       }
     },
     {
       "Character": 9,
+      "WeaponId": 220,
       "Name": "Dagger of Protection",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 263,
@@ -4895,19 +5117,20 @@
         "Endurance": 3,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 32700,
         "SellPrice": 8180
       }
     },
     {
       "Character": 9,
+      "WeaponId": 221,
       "Name": "Rai Kunimitsu",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 266,
@@ -4917,19 +5140,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 169,
+        "SkillId": 0,
         "Price": 400,
         "SellPrice": 100
       }
     },
     {
       "Character": 9,
+      "WeaponId": 222,
       "Name": "Underworld Kunai",
       "WeaponType": 256,
       "ModelId": 93,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 9,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 330,
@@ -4939,19 +5163,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 194,
+        "SkillId": 0,
         "Price": 53200,
         "SellPrice": 13300
       }
     },
     {
       "Character": 9,
+      "WeaponId": 223,
       "Name": "Hazakura",
       "WeaponType": 256,
       "ModelId": 95,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 6,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 130,
@@ -4961,19 +5186,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 21500,
         "SellPrice": 5380
       }
     },
     {
       "Character": 9,
+      "WeaponId": 224,
       "Name": "Paring Knife",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 185,
@@ -4983,19 +5209,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 38,
+        "SkillId": 0,
         "Price": 1520,
         "SellPrice": 380
       }
     },
     {
       "Character": 9,
+      "WeaponId": 225,
       "Name": "Tyrant's Knife",
       "WeaponType": 256,
       "ModelId": 91,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 0,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 285,
@@ -5005,7 +5232,7 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 51,
+        "SkillId": 0,
         "Price": 37200,
         "SellPrice": 9300
       }
@@ -5014,12 +5241,13 @@
   "10": [
     {
       "Character": 10,
+      "WeaponId": 251,
       "Name": "SEES Battle-Axe",
       "WeaponType": 512,
       "ModelId": 100,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 144,
@@ -5029,19 +5257,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 29200,
         "SellPrice": 7300
       }
     },
     {
       "Character": 10,
+      "WeaponId": 252,
       "Name": "Ogre Hammer",
       "WeaponType": 512,
       "ModelId": 102,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 174,
@@ -5051,19 +5280,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 19800,
         "SellPrice": 4950
       }
     },
     {
       "Character": 10,
+      "WeaponId": 253,
       "Name": "Night Stalker",
       "WeaponType": 512,
       "ModelId": 101,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 159,
@@ -5073,19 +5303,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 40,
+        "SkillId": 0,
         "Price": 16200,
         "SellPrice": 4050
       }
     },
     {
       "Character": 10,
+      "WeaponId": 254,
       "Name": "Bus Stop Sign",
       "WeaponType": 512,
       "ModelId": 103,
       "WeaponModelId": 11,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 180,
@@ -5095,19 +5326,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 27,
+        "SkillId": 0,
         "Price": 880,
         "SellPrice": 220
       }
     },
     {
       "Character": 10,
+      "WeaponId": 255,
       "Name": "Guillotine Axe",
       "WeaponType": 512,
       "ModelId": 100,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 200,
@@ -5117,19 +5349,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 24500,
         "SellPrice": 6130
       }
     },
     {
       "Character": 10,
+      "WeaponId": 256,
       "Name": "Megaton Rod",
       "WeaponType": 512,
       "ModelId": 101,
       "WeaponModelId": 1,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 185,
@@ -5139,19 +5372,20 @@
         "Endurance": 3,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 0,
+        "SkillId": 0,
         "Price": 21250,
         "SellPrice": 5310
       }
     },
     {
       "Character": 10,
+      "WeaponId": 260,
       "Name": "Charun's Hammer",
       "WeaponType": 512,
       "ModelId": 102,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 190,
@@ -5161,19 +5395,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 222,
+        "SkillId": 0,
         "Price": 23200,
         "SellPrice": 5800
       }
     },
     {
       "Character": 10,
+      "WeaponId": 261,
       "Name": "Gaea's Grace",
       "WeaponType": 512,
       "ModelId": 102,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 220,
@@ -5183,19 +5418,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 232,
+        "SkillId": 0,
         "Price": 28700,
         "SellPrice": 7180
       }
     },
     {
       "Character": 10,
+      "WeaponId": 263,
       "Name": "Celtis",
       "WeaponType": 512,
       "ModelId": 100,
       "WeaponModelId": 0,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 220,
@@ -5205,19 +5441,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 44,
+        "SkillId": 0,
         "Price": 31400,
         "SellPrice": 7850
       }
     },
     {
       "Character": 10,
+      "WeaponId": 264,
       "Name": "Golden Crusher",
       "WeaponType": 512,
       "ModelId": 102,
       "WeaponModelId": 10,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 300,
@@ -5227,19 +5464,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 187,
+        "SkillId": 0,
         "Price": 35700,
         "SellPrice": 8930
       }
     },
     {
       "Character": 10,
+      "WeaponId": 265,
       "Name": "Mjolnir",
       "WeaponType": 512,
       "ModelId": 105,
       "WeaponModelId": 21,
       "Stats": {
-        "AttrID": 5,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 350,
@@ -5249,19 +5487,20 @@
         "Endurance": 0,
         "Agility": 0,
         "Luck": 0,
-        "SkillID": 18,
+        "SkillId": 0,
         "Price": 57800,
         "SellPrice": 14450
       }
     },
     {
       "Character": 10,
+      "WeaponId": 266,
       "Name": "Corpse Rod",
       "WeaponType": 512,
       "ModelId": 104,
       "WeaponModelId": 20,
       "Stats": {
-        "AttrID": 1,
+        "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
         "Attack": 450,
@@ -5271,7 +5510,7 @@
         "Endurance": 0,
         "Agility": 15,
         "Luck": 0,
-        "SkillID": 250,
+        "SkillId": 0,
         "Price": 71200,
         "SellPrice": 17800
       }

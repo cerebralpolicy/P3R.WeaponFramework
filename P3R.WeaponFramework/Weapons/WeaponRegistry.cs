@@ -21,12 +21,20 @@ namespace P3R.WeaponFramework.Weapons
         public GameWeapons Weapons { get; }
 
         public Weapon[] GetActiveWeapons() =>
-            this.Weapons.Where(IsActiveWeapon).ToArray();
+            this.Weapons.Values.Where(IsActiveWeapon).ToArray();
+
+        public bool TryGetWeaponById(int id, [NotNullWhen(true)] out Weapon? weapon)
+        {
+            Weapons.TryGetValue(id, out weapon);
+            if (weapon != null && !weapon.IsEnabled)
+                weapon = null;
+            return weapon != null;
+        }
 
         public bool TryGetWeaponByItemId(int itemId, [NotNullWhen(true)] out Weapon? weapon)
         {
             var weaponItemId = Weapon.GetWeaponItemId(itemId);
-            weapon = Weapons.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
+            weapon = Weapons.Values.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
             return weapon != null;
         }
 

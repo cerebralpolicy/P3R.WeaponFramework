@@ -1,58 +1,50 @@
-﻿namespace P3R.WeaponFramework.Weapons.Models;
+﻿using P3R.WeaponFramework.Hooks.Models;
+using P3R.WeaponFramework.Interfaces;
+using System.Text.Json.Serialization;
 
-internal class Weapon
+namespace P3R.WeaponFramework.Weapons.Models;
+
+internal class Weapon: IWeapon, IEquatable<Weapon?>
 { 
     private const string DEF_DESC = "[f 2 1]A weapon added with Weapon Framework.[n][e]";
     
-    public Weapon(Character character, int modelId, int weaponId, string name)
+    public Weapon() { }
+
+    public Weapon(int weaponItemId)
+    {
+        WeaponItemId = weaponItemId;
+    }
+    [JsonConstructor]
+    public Weapon(Character character, int weaponItemId, string name, EquipFlag weaponType, int modelId, WeaponModelSet weaponModelId, WeaponStats stats)
     {
         Character = character;
-        ModelId = modelId;
-        WeaponId = weaponId;
+        WeaponItemId = weaponItemId;
         Name = name;
-    }
-    public Weapon(Character character, int modelId, string name)
-    {
-        Character = character;
+        WeaponType = weaponType;
         ModelId = modelId;
-        Name = name;
-        if (ModelId < 256)
-            WeaponId = modelId % 10;
-    }
-    public Weapon(Character character, int modelId, int weaponId)
-    {
-        Character = character;
-        ModelId = modelId;
-        WeaponId = weaponId;
-    }
-    public Weapon(Character character, int modelId)
-    {
-        Character = character;
-        ModelId = modelId;
-    }
-    public Weapon(int modelId)
-    {
-        ModelId = modelId;
+        WeaponModelId = weaponModelId;
+        Stats = stats;
     }
 
-    public Weapon(Character character, string name, int modelId, int weaponId, WeaponStats weaponStats)
-    {
-        Character = character;
-        Name = name;
-        ModelId = modelId;
-        WeaponId = weaponId;
-        WeaponStats = weaponStats;
-    }
-
-    public int WeaponItemId { get; private set; }
+    public bool IsVanilla { get; set; } = true;
     public bool IsEnabled { get; set; }
     // Import
+    [JsonPropertyOrder(0)]
     public Character Character { get; set; } = Character.NONE;
-    public string Name { get; set; } = "Missing Name";
-    public int ModelId { get; set; }
+    [JsonPropertyOrder(1)]
     public int WeaponId { get; set; }
+    [JsonPropertyOrder(2)]
+    public string Name { get; set; } = "Missing Name";
+    [JsonPropertyOrder(3)]
+    public EquipFlag WeaponType { get; set; } = EquipFlag.NONE;
+    [JsonPropertyOrder(4)]
+    public int ModelId { get; set; }
+    [JsonPropertyOrder(5)]
+    public WeaponModelSet WeaponModelId { get; set; }
+    [JsonPropertyOrder(6)]
+    public WeaponStats Stats { get; set; }
+    public int WeaponItemId { get; set; }
 
-    public WeaponStats WeaponStats { get; set; }
 
     public string Description { get; set; } = DEF_DESC;
 
@@ -71,4 +63,38 @@ internal class Weapon
     public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
 
     public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != Character.NONE;
+
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as Weapon);
+    }
+
+    public bool Equals(Weapon? other)
+    {
+        return other is not null &&
+               Character == other.Character &&
+               Stats.Equals(other.Stats);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Character, Stats);
+    }
+
+    public bool Equals(WeaponItem? other)
+    {
+        return other is not null &&
+               Character == other.Character &&
+               Stats.Equals(other.Stats);
+    }
+
+    public static bool operator ==(Weapon? left, Weapon? right)
+    {
+        return EqualityComparer<Weapon>.Default.Equals(left, right);
+    }
+
+    public static bool operator !=(Weapon? left, Weapon? right)
+    {
+        return !(left == right);
+    }
 }

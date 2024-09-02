@@ -152,7 +152,7 @@
 #>
 [cmdletbinding()]
 param (
-    $IsPrerelease=$False, 
+    $IsPrerelease=$True, 
     $MakeDelta=$False, 
     $ChangelogPath="",
     $ReadmePath="",
@@ -185,8 +185,8 @@ param (
     $NuGetAllowUnlisted = $False,
 
     ## => User: Publish Config
-    $PublishGeneric    = $True,
-    $PublishNuGet      = $True,
+    $PublishGeneric    = $False,
+    $PublishNuGet      = $False,
     $PublishGameBanana = $True
 )
 
