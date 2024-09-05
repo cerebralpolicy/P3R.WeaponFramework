@@ -17,15 +17,26 @@
       },
       "P3R.WeaponFramework.Interfaces/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Unreal.ObjectsEmitter.Interfaces": "1.0.0"
+          "Unreal.ObjectsEmitter.Interfaces": "1.0.0",
+          "p3rpc.nativetypes.Interfaces": "1.5.1"
         },
         "compile": {
           "bin/placeholder/P3R.WeaponFramework.Interfaces.dll": {}
         },
         "runtime": {
           "bin/placeholder/P3R.WeaponFramework.Interfaces.dll": {}
+        }
+      },
+      "p3rpc.nativetypes.Interfaces/1.5.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/p3rpc.nativetypes.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/p3rpc.nativetypes.Interfaces.dll": {}
         }
       },
       "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
@@ -69,6 +80,11 @@
       "type": "project",
       "path": "../../P3R.WeaponFramework.Interfaces/P3R.WeaponFramework.Interfaces.csproj",
       "msbuildProject": "../../P3R.WeaponFramework.Interfaces/P3R.WeaponFramework.Interfaces.csproj"
+    },
+    "p3rpc.nativetypes.Interfaces/1.5.1": {
+      "type": "project",
+      "path": "../../Submodules/p3rpc.nativetypes/p3rpc.nativetypes.Interfaces/p3rpc.nativetypes.Interfaces.csproj",
+      "msbuildProject": "../../Submodules/p3rpc.nativetypes/p3rpc.nativetypes.Interfaces/p3rpc.nativetypes.Interfaces.csproj"
     },
     "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
       "type": "project",

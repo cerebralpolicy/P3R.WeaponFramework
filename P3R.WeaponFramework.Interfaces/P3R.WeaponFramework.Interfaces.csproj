@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>12.0</LangVersion>
@@ -9,7 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Submodules\p3rpc.nativetypes\p3rpc.nativetypes.Interfaces\p3rpc.nativetypes.Interfaces.csproj" />
     <ProjectReference Include="..\Submodules\Unreal.ObjectsEmitter\Unreal.ObjectsEmitter.Interfaces\Unreal.ObjectsEmitter.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="InteropService\" />
+    <Folder Include="Methods\" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,17 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
+    "net8.0": {
+      "p3rpc.nativetypes.Interfaces/1.5.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/p3rpc.nativetypes.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/p3rpc.nativetypes.Interfaces.dll": {}
+        }
+      },
       "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "p3rpc.nativetypes.Interfaces/1.5.1": {
+      "type": "project",
+      "path": "../Submodules/p3rpc.nativetypes/p3rpc.nativetypes.Interfaces/p3rpc.nativetypes.Interfaces.csproj",
+      "msbuildProject": "../Submodules/p3rpc.nativetypes/p3rpc.nativetypes.Interfaces/p3rpc.nativetypes.Interfaces.csproj"
+    },
     "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
       "type": "project",
       "path": "../Submodules/Unreal.ObjectsEmitter/Unreal.ObjectsEmitter.Interfaces/Unreal.ObjectsEmitter.Interfaces.csproj",
@@ -22,8 +37,9 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0": [
-      "Unreal.ObjectsEmitter.Interfaces >= 1.0.0"
+    "net8.0": [
+      "Unreal.ObjectsEmitter.Interfaces >= 1.0.0",
+      "p3rpc.nativetypes.Interfaces >= 1.5.1"
     ]
   },
   "packageFolders": {
@@ -47,7 +63,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net8.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -55,9 +71,12 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {
+            "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj": {
+              "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj"
+            },
             "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj": {
               "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj"
             }
@@ -76,8 +95,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "imports": [
           "net461",
           "net462",
@@ -89,26 +108,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.16, 7.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

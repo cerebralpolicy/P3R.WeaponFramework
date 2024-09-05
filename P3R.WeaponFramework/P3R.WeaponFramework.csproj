@@ -66,6 +66,7 @@
 
   <ItemGroup>
     <Folder Include="Hooks\Services\" />
+    <Folder Include="Core\" />
     <Folder Include="Resources\New\" />
   </ItemGroup>
 

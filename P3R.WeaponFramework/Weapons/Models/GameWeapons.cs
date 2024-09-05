@@ -9,7 +9,7 @@ namespace P3R.WeaponFramework.Weapons.Models;
 
 internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
 {
-    public const int BASE_MOD_WEAP_ID = 1000;
+    public const int BASE_MOD_WEAP_ID = 700;
     private const int NUM_MOD_WEAPS = 100;
     private readonly Dictionary<int, Weapon> weapons = [];
     
@@ -39,10 +39,14 @@ internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
         }
         for (int i = 0; i < NUM_MOD_WEAPS; i++)
         {
-            var weaponId = BASE_MOD_WEAP_ID + i;
-            Log.Debug($"New slot {weaponId}");
-            var weapon = new Weapon(weaponId);
-            weapons.Add(weaponId, weapon);
+            var weaponItemId = BASE_MOD_WEAP_ID + i;
+            Log.Debug($"New slot {weaponItemId}");
+            var weapon = new Weapon(weaponItemId) 
+            { 
+                IsVanilla = false,
+                WeaponId = weaponItemId,
+            };
+            weapons.Add(weaponItemId, weapon);
             continue;
         }
     }

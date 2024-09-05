@@ -30,7 +30,7 @@ namespace P3R.WeaponFramework.Weapons
 
             ApplyWeaponConfig(weapon, config);
             LoadWeaponFiles(mod, weapon, weaponDir);
-            Log.Information($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponId}\nFolder: {weaponDir}");
+            Log.Information($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponItemId}\nFolder: {weaponDir}");
             return weapon;
         }
 
@@ -49,7 +49,7 @@ namespace P3R.WeaponFramework.Weapons
             { 
                 return existingWeapon;
             }
-            var newWeapon = weapons.Values.FirstOrDefault(x => x.IsVanilla == false && x.WeaponItemId > 999);
+            var newWeapon = weapons.Values.FirstOrDefault(x => x.IsVanilla == false && x.WeaponItemId > 999); // FAILSAFE
             if (newWeapon != null)
             {
                 newWeapon.Name = name;

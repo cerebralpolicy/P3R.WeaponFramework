@@ -1,0 +1,1 @@
+﻿global using p3rpc.nativetypes.Interfaces;

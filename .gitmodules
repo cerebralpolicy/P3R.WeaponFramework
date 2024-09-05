@@ -7,3 +7,6 @@
 [submodule "Submodules/Unreal.AtlusScript"]
 	path = Submodules/Unreal.AtlusScript
 	url = https://github.com/RyoTune/Unreal.AtlusScript.git
+[submodule "submodules/p3rpc.commonmodutils"]
+	path = submodules/p3rpc.commonmodutils
+	url = https://github.com/rirurin/p3rpc.commonmodutils.git
