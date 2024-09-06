@@ -1,4 +1,6 @@
-﻿namespace P3R.WeaponFramework.Hooks;
+﻿using Project.Utils;
+
+namespace P3R.WeaponFramework.Hooks;
 
 internal unsafe class ItemEquipHooks
 {

@@ -2,10 +2,9 @@
 using P3R.WeaponFramework.Types;
 using P3R.WeaponFramework.Weapons;
 using P3R.WeaponFramework.Weapons.Models;
+using Project.Utils;
 using Reloaded.Hooks.Definitions;
 using Reloaded.Hooks.Definitions.X64;
-using Unreal.ObjectsEmitter.Interfaces;
-using Unreal.ObjectsEmitter.Interfaces.Types;
 using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
 
 namespace P3R.WeaponFramework.Hooks;
@@ -21,22 +20,19 @@ internal unsafe class WeaponHooks
     private IReverseWrapper<SetWeaponId>? setWeaponWrapper;
     private IAsmHook? setWeaponHook;
 
-    private readonly IUnreal unreal;
-    private readonly IUObjects uobjects;
+    private readonly Core core;
     private readonly WeaponRegistry registry;
     private readonly WeaponDescService weaponDesc;
     private ItemEquipHooks itemEquip;
     private readonly Dictionary<Character, WeaponConfig> defaultWeapons = [];
 
     public WeaponHooks(
-        IUnreal unreal, 
-        IUObjects uobjects, 
+        Core core, 
         WeaponRegistry registry, 
         WeaponDescService weaponDesc, 
         ItemEquipHooks itemEquip)
     {
-        this.unreal = unreal;
-        this.uobjects = uobjects;
+        this.core = core;
         this.registry = registry;
         this.weaponDesc = weaponDesc;
         this.itemEquip = itemEquip;
@@ -48,7 +44,7 @@ internal unsafe class WeaponHooks
             defaultWeapons[character] = new DefaultWeapon(character);
         }
 
-        uobjects.FindObject("DatItemWeaponDataAsset", SetWeaponData);
+        core.FindObjectAsync("DatItemWeaponDataAsset", SetWeaponData);
 
         ScanHooks.Add(
             nameof(UAppCharacterComp_Update),
@@ -71,11 +67,11 @@ internal unsafe class WeaponHooks
             });
     }
 
-    private void SetWeaponData(UnrealObject obj)
+    private void SetWeaponData(nint obj)
     {
-        var weaponItemList = (UWeaponItemListTable*)obj.Self;
+        var weaponItemList = (UWeaponItemListTable*)obj.ToPointer();
 
-        Log.Debug("Manually generating list of valid weapons.");
+        core.Utils.Log("Manually generating list of valid weapons.", LogLevel.Debug);
         Dictionary<int, FWeaponItemList> weaponLookupTable = [];
         for (int i = 0; i < weaponItemList->Count; i++)
         {
@@ -84,7 +80,7 @@ internal unsafe class WeaponHooks
             continue;
         }
 
-        Log.Debug("Setting weapon data.");
+        core.Utils.Log("Setting weapon data.");
 
         var itemId = 0;
         foreach (var weaponEntry in weaponLookupTable)
@@ -98,7 +94,7 @@ internal unsafe class WeaponHooks
                 itemId++;
             }
         }
-        var newItemIndex = 600;
+        var newItemIndex = core.NewItemIndex;
         foreach (var weapon in registry.GetActiveWeapons())
         {
             if (weapon.WeaponId != default)
@@ -115,8 +111,8 @@ internal unsafe class WeaponHooks
             if (weapon.WeaponId >= GameWeapons.BASE_MOD_WEAP_ID)
             {
                 this.SetWeaponPaths(weapon);
-                Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
-                newItem++;
+                core.Utils.Log($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
+                core.NewItemIndex++;
             }
             
         }
@@ -137,13 +133,13 @@ internal unsafe class WeaponHooks
 
         if (ogAssetFile == null)
         {
-            Log.Debug($"Asset has no original: {assetType} || Weapon: {weapon.Name}");
+            core.Utils.Log($"Asset has no original: {assetType} || Weapon: {weapon.Name}", LogLevel.Debug);
             return;
         }
 
         if (currentAssetFile == null)
         {
-            Log.Debug($"Asset has no default or new: {assetType} || Weapon: {weapon.Name}");
+            core.Utils.Log($"Asset has no default or new: {assetType} || Weapon: {weapon.Name}", LogLevel.Debug);
             return;
         }
 
@@ -155,8 +151,8 @@ internal unsafe class WeaponHooks
         var ogAssetFNames = new AssetFNames(ogAssetFile);
         var newAssetFNames = new AssetFNames(currentAssetFile);
 
-        this.unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetPath, newAssetFNames.AssetPath);
-        this.unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetName, newAssetFNames.AssetName);
+        core.Unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetPath, newAssetFNames.AssetPath);
+        core.Unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetName, newAssetFNames.AssetName);
     }
 
     private string? GetDefaultAsset(Character character, WeaponAssetType assetType)

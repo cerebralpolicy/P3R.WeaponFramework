@@ -10,3 +10,15 @@
 [submodule "submodules/p3rpc.commonmodutils"]
 	path = submodules/p3rpc.commonmodutils
 	url = https://github.com/rirurin/p3rpc.commonmodutils.git
+[submodule "submodules/p3rpc.nativetypes"]
+	path = submodules/p3rpc.nativetypes
+	url = https://github.com/rirurin/p3rpc.nativetypes.git
+[submodule "submodule/SharedScans"]
+	path = submodule/SharedScans
+	url = https://github.com/rirurin/SharedScans.git
+[submodule "submodules/SharedScans"]
+	path = submodules/SharedScans
+	url = https://github.com/rirurin/SharedScans.git
+[submodule "submodules/p3rpc.classconstructor"]
+	path = submodules/p3rpc.classconstructor
+	url = https://github.com/rirurin/p3rpc.classconstructor.git

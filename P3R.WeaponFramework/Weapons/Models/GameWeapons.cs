@@ -9,12 +9,14 @@ namespace P3R.WeaponFramework.Weapons.Models;
 
 internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
 {
-    public const int BASE_MOD_WEAP_ID = 700;
+    public const int BASE_MOD_WEAP_ID = 1000;
     private const int NUM_MOD_WEAPS = 100;
     private readonly Dictionary<int, Weapon> weapons = [];
-    
-    public GameWeapons()
+    private readonly Utils utils;
+
+    public GameWeapons(Utils utils)
     {
+        this.utils = utils;
         var assembly = Assembly.GetExecutingAssembly();
         var resourceName = "P3R.WeaponFramework.Resources.Weapons.json";
         using var stream = assembly.GetManifestResourceStream(resourceName)!;
@@ -40,11 +42,12 @@ internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
         for (int i = 0; i < NUM_MOD_WEAPS; i++)
         {
             var weaponItemId = BASE_MOD_WEAP_ID + i;
-            Log.Debug($"New slot {weaponItemId}");
+            utils.Log($"New slot {weaponItemId}",LogLevel.Debug);
             var weapon = new Weapon(weaponItemId) 
             { 
                 IsVanilla = false,
                 WeaponId = weaponItemId,
+                ModelId = weaponItemId,
             };
             weapons.Add(weaponItemId, weapon);
             continue;
