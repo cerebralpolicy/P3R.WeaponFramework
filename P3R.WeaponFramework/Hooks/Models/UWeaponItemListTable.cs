@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Runtime.InteropServices;
-using Unreal.ObjectsEmitter.Interfaces.Types;
 
 namespace P3R.WeaponFramework.Hooks.Models;
 
@@ -10,9 +9,9 @@ public unsafe struct UWeaponItemListTable : IEnumerable<FWeaponItemList>, IReadO
     //[FieldOffset(0x0000)] public UAppDataAsset baseObj;
     [FieldOffset(0x0030)] public TArray<FWeaponItemList> Data;
 
-    public FWeaponItemList this[int index] => Data.AllocatorInstance[index];
+    public FWeaponItemList this[int index] => Data.allocator_instance[index];
 
-    public readonly int Count => Data.Num;
+    public readonly int Count => Data.arr_num;
 
     public readonly IEnumerator<FWeaponItemList> GetEnumerator() => new TArrayWrapper<FWeaponItemList>(Data).GetEnumerator();
 

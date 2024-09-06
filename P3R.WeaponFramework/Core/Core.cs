@@ -33,7 +33,7 @@ namespace P3R.WeaponFramework
             AtlusAssets = atlusAssets;
             Unreal = unreal;
         }
-
+        public const int NEWITEMSTART = 1000;
         public int NewItemIndex = 1000;
         public long BaseAddress { get; init; }
         public string ModLocation { get; init; }
@@ -72,19 +72,8 @@ namespace P3R.WeaponFramework
         // CUSTOM
         public unsafe void NotifyOnNewObject<T>(Action<nint> cb) where T : unmanaged => ObjectMethods.NotifyOnNewObject<T>(cb);
         public unsafe void FindObject<T>(string targetObject) where T : unmanaged => ObjectMethods.FindObject<T>(targetObject);
-        
-        public unsafe FString MakeFString(string str)
-        {
-            var charArray = str.ToCharArray();
-            var fString = new FString();
-            var data = fString.text;
-            data.arr_max = str.Length + 1;
-            data.arr_num = data.arr_max;
-            data.allocator_instance = (nint*)(char*)Marshal.StringToHGlobalUni(str);
-            return fString;
-        }
 
-        public unsafe void InsertWeaponModel(Weapon weapon, int armatureIndex = 1)
+        public unsafe void AddNewWeapon(Weapon weapon, int armatureIndex = 1)
         {
             var config = weapon.Config;
             var mesh = config.Mesh.MeshPath;
@@ -97,8 +86,12 @@ namespace P3R.WeaponFramework
             var BP = ObjectMethods.FindObject<AAppCharWeaponBase>(BPName!);
             var map = BP->WeaponTbl.Data;
 
+            var nameTable = ObjectMethods.FindObject<UItemNameListTable>("DatItemWeaponNameDataAsset")->Data;
+            MemoryMethods.TArray_Insert(&nameTable, weapon.Name.MakeFString());
+
             var id = weapon.ModelId;
             MemoryMethods.TMap_Insert(&map, id, meshData);
+            NewItemIndex++;
         }
     }
 }

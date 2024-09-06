@@ -13,3 +13,6 @@ bin/*
 *.cache
 *.nuget.cache
 *.csproj.nuget.dgspec.json
+*.vsidx
+*.v2
+/.vs/P3R.WeaponFramework/v17/.suo

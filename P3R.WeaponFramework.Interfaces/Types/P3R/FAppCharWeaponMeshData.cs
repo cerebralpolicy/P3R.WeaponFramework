@@ -7,12 +7,12 @@ namespace P3R.WeaponFramework.Interfaces.Types;
 public unsafe struct FAppCharWeaponMeshData : IEquatable<FAppCharWeaponMeshData>
 {
     //[FieldOffset(0x00)] public FSoftObjectPtr<USkeletalMesh>* Mesh;
-    [FieldOffset(0x00)] public FSoftObjectPtr<FName>* Mesh;
+    [FieldOffset(0x00)] public FSoftObjectPtr* Mesh;
     [FieldOffset(0x28)] public bool MultiEquip;
 
     public FAppCharWeaponMeshData(FName meshName)
     {
-        var objectPtr = new FSoftObjectPtr<FName>();
+        var objectPtr = new FSoftObjectPtr();
         Mesh = &objectPtr;
     }
 

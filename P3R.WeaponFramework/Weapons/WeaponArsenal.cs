@@ -1,4 +1,4 @@
-﻿using static P3R.WeaponFramework.Utils;
+﻿    using static P3R.WeaponFramework.Utils;
 using P3R.WeaponFramework.Weapons.Models;
 using System;
 using System.Collections.Generic;
@@ -31,7 +31,7 @@ namespace P3R.WeaponFramework.Weapons
 
             ApplyWeaponConfig(weapon, config);
             LoadWeaponFiles(mod, weapon, weaponDir);
-            core.InsertWeaponModel(weapon);       
+            core.AddNewWeapon(weapon);       
             core.Utils.Log($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponItemId}\nFolder: {weaponDir}");
             return weapon;
         }

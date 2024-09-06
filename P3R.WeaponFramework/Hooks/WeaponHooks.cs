@@ -102,7 +102,7 @@ internal unsafe class WeaponHooks
                 continue;
             }
 
-            var newItem = &weaponItemList->Data.AllocatorInstance[newItemIndex];
+            var newItem = &weaponItemList->Data.allocator_instance[newItemIndex];
             newItem->ModelID = (ushort)weapon.ModelId;
             newItem->EquipID = (uint)AssetUtils.GetEquipFromChar(weapon.Character);
             weapon.SetWeaponItemId(newItemIndex);

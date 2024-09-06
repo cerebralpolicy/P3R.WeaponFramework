@@ -4,13 +4,13 @@
 namespace P3R.WeaponFramework.Interfaces.Types;
 
 [StructLayout(LayoutKind.Sequential)]
-public struct FSoftObjectPtr<T> where T : unmanaged
+public struct FSoftObjectPtr
 {
-    public TPersistentObjectPtr<FSoftObjectPath<T>> baseObj;
+    public TPersistentObjectPtr<FSoftObjectPath> baseObj;
 }
 
 [StructLayout(LayoutKind.Sequential)]
-public struct TSoftClassProperty<T> where T : unmanaged
+public struct TSoftClassProperty
 {
-    public FSoftObjectPath<T> baseObj;
+    public FSoftObjectPath baseObj;
 }

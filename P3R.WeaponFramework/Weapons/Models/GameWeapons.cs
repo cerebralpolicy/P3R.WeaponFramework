@@ -10,7 +10,7 @@ namespace P3R.WeaponFramework.Weapons.Models;
 internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
 {
     public const int BASE_MOD_WEAP_ID = 1000;
-    private const int NUM_MOD_WEAPS = 100;
+    private const int NUM_MOD_WEAPS = 10;
     private readonly Dictionary<int, Weapon> weapons = [];
     private readonly Utils utils;
 
@@ -49,6 +49,8 @@ internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
                 WeaponId = weaponItemId,
                 ModelId = weaponItemId,
             };
+            if (weapon is null)
+                break;
             weapons.Add(weaponItemId, weapon);
             continue;
         }

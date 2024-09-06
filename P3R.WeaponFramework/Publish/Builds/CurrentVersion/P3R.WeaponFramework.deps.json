@@ -10,21 +10,34 @@
         "dependencies": {
           "P3R.WeaponFramework.Interfaces": "1.0.0",
           "Project.Utils": "1.0.0",
+          "Reloaded.Memory": "9.4.2",
+          "Reloaded.Memory.SigScan.ReloadedII.Interfaces": "1.2.0",
           "Reloaded.Mod.Interfaces": "2.4.0",
           "Reloaded.SharedLib.Hooks": "1.9.0",
+          "SharedScans.Interfaces": "1.0.0",
           "Unreal.AtlusScript.Interfaces": "1.0.0",
           "Unreal.ObjectsEmitter.Interfaces": "1.0.0",
-          "YamlDotNet": "16.0.0"
+          "YamlDotNet": "16.0.0",
+          "p3rpc.classconstructor.Interfaces": "1.2.1",
+          "p3rpc.nativetypes.Interfaces": "1.5.1"
         },
         "runtime": {
           "P3R.WeaponFramework.dll": {}
         }
       },
-      "Reloaded.Hooks.Definitions/1.11.0": {
+      "Reloaded.Hooks.Definitions/1.15.0": {
         "runtime": {
           "lib/net6.0/Reloaded.Hooks.Definitions.dll": {
-            "assemblyVersion": "1.11.0.0",
-            "fileVersion": "1.11.0.0"
+            "assemblyVersion": "1.15.0.0",
+            "fileVersion": "1.15.0.0"
+          }
+        }
+      },
+      "Reloaded.Memory/9.4.2": {
+        "runtime": {
+          "lib/net8.0/Reloaded.Memory.dll": {
+            "assemblyVersion": "9.4.2.0",
+            "fileVersion": "9.4.2.0"
           }
         }
       },
@@ -50,7 +63,7 @@
       "Reloaded.Mod.Interfaces/2.4.0": {},
       "Reloaded.SharedLib.Hooks/1.9.0": {
         "dependencies": {
-          "Reloaded.Hooks.Definitions": "1.11.0"
+          "Reloaded.Hooks.Definitions": "1.15.0"
         },
         "runtime": {
           "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.dll": {
@@ -69,10 +82,24 @@
       },
       "P3R.WeaponFramework.Interfaces/1.0.0": {
         "dependencies": {
-          "Unreal.ObjectsEmitter.Interfaces": "1.0.0"
+          "p3rpc.classconstructor.Interfaces": "1.2.1",
+          "p3rpc.nativetypes.Interfaces": "1.5.1"
         },
         "runtime": {
           "P3R.WeaponFramework.Interfaces.dll": {}
+        }
+      },
+      "p3rpc.classconstructor.Interfaces/1.2.1": {
+        "dependencies": {
+          "p3rpc.nativetypes.Interfaces": "1.5.1"
+        },
+        "runtime": {
+          "p3rpc.classconstructor.Interfaces.dll": {}
+        }
+      },
+      "p3rpc.nativetypes.Interfaces/1.5.1": {
+        "runtime": {
+          "p3rpc.nativetypes.Interfaces.dll": {}
         }
       },
       "Project.Utils/1.0.0": {
@@ -83,6 +110,14 @@
         },
         "runtime": {
           "Project.Utils.dll": {}
+        }
+      },
+      "SharedScans.Interfaces/1.0.0": {
+        "dependencies": {
+          "Reloaded.Hooks.Definitions": "1.15.0"
+        },
+        "runtime": {
+          "SharedScans.Interfaces.dll": {}
         }
       },
       "Unreal.AtlusScript.Interfaces/1.0.0": {
@@ -103,12 +138,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Reloaded.Hooks.Definitions/1.11.0": {
+    "Reloaded.Hooks.Definitions/1.15.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/z0AwcCvVTQHlQ9SMMMBqKEIrm5t/yBFPylySW2Rnr7uRGV9jGfoACFe79KZKF976dhtkyy2xl0HIXz5hRUkng==",
-      "path": "reloaded.hooks.definitions/1.11.0",
-      "hashPath": "reloaded.hooks.definitions.1.11.0.nupkg.sha512"
+      "sha512": "sha512-bLY20vYB0fS2xwu6RDQVwlJxt2//KXLigYrCsCuzt5QFQqkvft4abq9FWPeCJYcvEeg/GQpJ3LC+108/4I2l+g==",
+      "path": "reloaded.hooks.definitions/1.15.0",
+      "hashPath": "reloaded.hooks.definitions.1.15.0.nupkg.sha512"
+    },
+    "Reloaded.Memory/9.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yrjimngdXs7evlk/ZFbzP0uppTf0Og+LFFonITgpzZ94HmVOi8b+29YFfYdWTbf68qUzGP0D4s0VsMhaGerg5g==",
+      "path": "reloaded.memory/9.4.2",
+      "hashPath": "reloaded.memory.9.4.2.nupkg.sha512"
     },
     "Reloaded.Memory.Sigscan.Definitions/1.1.0": {
       "type": "package",
@@ -150,7 +192,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "p3rpc.classconstructor.Interfaces/1.2.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "p3rpc.nativetypes.Interfaces/1.5.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Project.Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharedScans.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

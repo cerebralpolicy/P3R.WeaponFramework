@@ -366,7 +366,9 @@
       "SharedScans.Interfaces >= 1.0.0",
       "Unreal.AtlusScript.Interfaces >= 1.0.0",
       "Unreal.ObjectsEmitter.Interfaces >= 1.0.0",
-      "YamlDotNet >= 16.0.0"
+      "YamlDotNet >= 16.0.0",
+      "p3rpc.classconstructor.Interfaces >= 1.2.1",
+      "p3rpc.nativetypes.Interfaces >= 1.5.1"
     ]
   },
   "packageFolders": {
@@ -403,6 +405,12 @@
           "projectReferences": {
             "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Interfaces\\P3R.WeaponFramework.Interfaces.csproj": {
               "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Interfaces\\P3R.WeaponFramework.Interfaces.csproj"
+            },
+            "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.classconstructor\\p3rpc.classconstructor.Interfaces\\p3rpc.classconstructor.Interfaces.csproj": {
+              "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.classconstructor\\p3rpc.classconstructor.Interfaces\\p3rpc.classconstructor.Interfaces.csproj"
+            },
+            "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj": {
+              "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj"
             },
             "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj": {
               "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj"
