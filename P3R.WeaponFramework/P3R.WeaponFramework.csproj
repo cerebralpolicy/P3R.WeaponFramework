@@ -61,7 +61,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\P3R.WeaponFramework.Interfaces\P3R.WeaponFramework.Interfaces.csproj" />
-    <ProjectReference Include="..\Submodules\p3rpc.classconstructor\p3rpc.classconstructor.Interfaces\p3rpc.classconstructor.Interfaces.csproj" />
     <ProjectReference Include="..\Submodules\p3rpc.nativetypes\p3rpc.nativetypes.Interfaces\p3rpc.nativetypes.Interfaces.csproj" />
     <ProjectReference Include="..\Submodules\Project.Utils\Project.Utils.csproj" />
     <ProjectReference Include="..\Submodules\SharedScans\SharedScans.Interfaces\SharedScans.Interfaces.csproj" />

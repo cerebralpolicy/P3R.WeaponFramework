@@ -1,14 +1,12 @@
-﻿using P3R.WeaponFramework.Configuration;
+using P3R.WeaponFramework.Configuration;
 using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
 using P3R.WeaponFramework.Weapons;
-using p3rpc.classconstructor.Interfaces;
+using p3rpc.nativetypes.Interfaces;
 using Reloaded.Hooks.ReloadedII.Interfaces;
-using Reloaded.Memory;
 using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
-using SharedScans.Interfaces;
 using System.Diagnostics;
 using System.Drawing;
 using Unreal.AtlusScript.Interfaces;
@@ -53,7 +51,6 @@ namespace P3R.WeaponFramework
         /// </summary>
         private readonly IModConfig modConfig;
 
-        private readonly Core core;
         private readonly WeaponService weapons;
         private readonly WeaponRegistry weaponRegistry;
         private readonly WeaponDescService weaponDescService;
@@ -67,32 +64,18 @@ namespace P3R.WeaponFramework
             config = context.Configuration;
             modConfig = context.ModConfig;
 
+            Log.Initialize(modConfig.ModName, log, Color.PaleVioletRed);
+            Log.LogLevel = config.LogLevel;
 
-            var mainModule = Process.GetCurrentProcess().MainModule ?? throw new Exception($"[{modConfig.ModId}] Could not get main module");
             this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
-            if (scanner == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Startup Scans");
-            this.modLoader.GetController<ISharedScans>().TryGetTarget(out var sharedScans);
-            if (sharedScans == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Shared Scans");
-            this.modLoader.GetController<IMemoryMethods>().TryGetTarget(out var memoryMethods);
-            if (memoryMethods == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Memory Methods");
-            this.modLoader.GetController<IClassMethods>().TryGetTarget(out var classMethods);
-            if (classMethods == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Class Methods");
-            this.modLoader.GetController<IObjectMethods>().TryGetTarget(out var objectMethods);
-            if (objectMethods == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Object Methods");
+            this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
             this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
-            if (unreal == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Unreal Object Emitter");
+            this.modLoader.GetController<IMemoryMethods>().TryGetTarget(out var memory);
             this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
-            if (atlusAssets == null) throw new Exception($"[{modConfig.ModId}] Could not get controller for Atlus Script Assets");
-            var utils = new Utils(scanner, log, hooks, mainModule.BaseAddress, modConfig.ModId, Color.AliceBlue, config.LogLevel);
-            Memory memory = new();
 
-            core = new(mainModule.BaseAddress, modLoader.GetDirectoryForModId(modConfig.ModId), config, log, scanner, hooks, utils, memory, sharedScans, classMethods, objectMethods, memoryMethods, atlusAssets, unreal);
-
-            this.weaponRegistry = new(core);
-            this.weaponDescService = new(atlusAssets);
-            this.weapons = new(core, weaponRegistry, weaponDescService);
-
-     
+            this.weaponRegistry = new();
+            this.weaponDescService = new(atlusAssets!);
+            this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
 
             modLoader.ModLoaded += OnModLoaded;
         }
