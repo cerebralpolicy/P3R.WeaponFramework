@@ -11,14 +11,13 @@ internal unsafe class WeaponService
     private readonly ItemEquipHooks itemEquipHooks;
 
     public WeaponService(
-        IUObjects uObjects,
-        IUnreal unreal,
+        Core core,
         WeaponRegistry registry,
         WeaponDescService weaponDesc)
     {
         itemEquipHooks = new();
-        weaponHooks = new(unreal, uObjects, registry, weaponDesc, itemEquipHooks);
+        weaponHooks = new(core, registry, weaponDesc, itemEquipHooks);
         itemCountHook = new(registry);
-        weaponNameHook = new(uObjects, registry);
+        weaponNameHook = new(core, registry);
     }
 }

@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace P3R.WeaponFramework.Weapons.Models;
 
-internal class Weapon: IWeapon, IEquatable<Weapon?>
+public class Weapon: IWeapon, IEquatable<Weapon?>
 { 
     private const string DEF_DESC = "[f 2 1]A weapon added with Weapon Framework.[n][e]";
     
@@ -55,10 +55,9 @@ internal class Weapon: IWeapon, IEquatable<Weapon?>
     public void SetWeaponItemId(int weaponItemId)
     {
         this.WeaponItemId = weaponItemId;
-        Log.Debug($"{this.Name} set to Weapon Item ID: {this.WeaponItemId}");
     }
 
-    public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x7000;
+    public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x8000;
 
     public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
 

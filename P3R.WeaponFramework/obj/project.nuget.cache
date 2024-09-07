@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tWYdXPlKJ9aPJKeAiGei/kwH+2RXokQZbL6LAreEZkufOWyZ0JQeaRmnDtWAVxqwjJv+NtsQoW79HIbojkR8gA==",
+  "dgSpecHash": "MdjHc45RTViOFxl5yXSAVgyxVDw9DBg2FSS7jkaP5wgd/5g4KmlMGJOOeS8wT4ghFUhvUTsApG+M/U/2ts/Uxw==",
   "success": true,
   "projectFilePath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.hooks.definitions\\1.11.0\\reloaded.hooks.definitions.1.11.0.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.hooks.definitions\\1.15.0\\reloaded.hooks.definitions.1.15.0.nupkg.sha512",
+    "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory\\9.4.2\\reloaded.memory.9.4.2.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory.sigscan.definitions\\1.1.0\\reloaded.memory.sigscan.definitions.1.1.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory.sigscan.reloadedii.interfaces\\1.2.0\\reloaded.memory.sigscan.reloadedii.interfaces.1.2.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.mod.interfaces\\2.4.0\\reloaded.mod.interfaces.2.4.0.nupkg.sha512",

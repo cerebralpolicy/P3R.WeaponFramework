@@ -20,7 +20,7 @@ public unsafe struct DataTableString
     {
         if (newString.Length > MAX_LENGTH)
         {
-            Log.Warning($"New data table string longer than max length: {MAX_LENGTH}\nString: {newString}");
+            Console.WriteLine($"New data table string longer than max length: {MAX_LENGTH}\nString: {newString}");
             return;
         }
 

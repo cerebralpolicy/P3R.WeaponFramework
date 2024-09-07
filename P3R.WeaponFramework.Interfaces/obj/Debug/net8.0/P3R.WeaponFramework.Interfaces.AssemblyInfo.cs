@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P3R.WeaponFramework.Interfaces")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+741dcce3626325fc495146b769638633a2281393")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa5dc77963723e405b6a55dc7cdec86006256f86")]
 [assembly: System.Reflection.AssemblyProductAttribute("P3R.WeaponFramework.Interfaces")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P3R.WeaponFramework.Interfaces")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

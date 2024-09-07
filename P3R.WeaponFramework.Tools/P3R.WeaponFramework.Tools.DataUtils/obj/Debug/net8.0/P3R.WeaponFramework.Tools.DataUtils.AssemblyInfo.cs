@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P3R.WeaponFramework.Tools.DataUtils")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbd5ae60e5c7ef7270e78e58c0ed492e963e3148")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+440c78f6d72ff762efa3a246a27183fd23593fe1")]
 [assembly: System.Reflection.AssemblyProductAttribute("P3R.WeaponFramework.Tools.DataUtils")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P3R.WeaponFramework.Tools.DataUtils")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

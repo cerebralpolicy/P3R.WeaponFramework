@@ -1,4 +1,5 @@
 ﻿using P3R.WeaponFramework.Weapons.Models;
+using System.Runtime.InteropServices;
 
 namespace P3R.WeaponFramework.Weapons;
 
@@ -18,6 +19,22 @@ internal static class AssetUtils
         };
         return assetFile;
     }
+
+    public static unsafe FString MakeFString(this string str)
+    {
+        var charArray = str.ToCharArray();
+        var fString = new FString();
+        var data = fString.text;
+        data.arr_max = str.Length + 1;
+        data.arr_num = data.arr_max;
+        data.allocator_instance = (nint*)(char*)Marshal.StringToHGlobalUni(str);
+        return fString;
+    }
+
+
+    public static string? GetWeaponBP(Character chara, int armatureIndex) => $"BP_Wp{chara.Format()}_{armatureIndex.ToString("00")}";
+    public static string? GetWeaponBPFull(Character chara, int armatureIndex) => GetAssetPath($"/Game/Xrd777/Blueprints/Equipments/BP_Wp{chara.Format()}_{armatureIndex.ToString("00")}");
+
     public static Dictionary<uint, uint> ModelPairsUInt = new Dictionary<uint, uint>()
     {
         { 0 , 0 }, // So Fuuka doesn't fail

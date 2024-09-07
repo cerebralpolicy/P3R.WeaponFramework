@@ -1,4 +1,4 @@
-﻿using P3R.WeaponFramework.Utils;
+﻿    using static P3R.WeaponFramework.Utils;
 using P3R.WeaponFramework.Weapons.Models;
 using System;
 using System.Collections.Generic;
@@ -11,10 +11,11 @@ namespace P3R.WeaponFramework.Weapons
     internal class WeaponArsenal
     {
         private readonly GameWeapons weapons;
-
-        public WeaponArsenal(GameWeapons weapons)
+        private readonly Core core;
+        public WeaponArsenal(GameWeapons weapons, Core core)
         {
             this.weapons = weapons;
+            this.core = core;
         }
 
         public Weapon? Create(WeaponMod mod, string weaponDir, Character character) 
@@ -30,16 +31,17 @@ namespace P3R.WeaponFramework.Weapons
 
             ApplyWeaponConfig(weapon, config);
             LoadWeaponFiles(mod, weapon, weaponDir);
-            Log.Information($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponId}\nFolder: {weaponDir}");
+            core.AddNewWeapon(weapon);       
+            core.Utils.Log($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponItemId}\nFolder: {weaponDir}");
             return weapon;
         }
 
         private void ApplyWeaponConfig(Weapon weapon, WeaponConfig config)
         {
-            ModUtils.IfNotNull(config.Name, str => weapon.Config.Name = str);
-            ModUtils.IfNotNull(config.Base.MeshPath, str => weapon.Config.Base.MeshPath = str);
-            ModUtils.IfNotNull(config.Mesh.MeshPath, str => weapon.Config.Mesh.MeshPath = str);
-            ModUtils.IfNotNull(config.Stats, stats => weapon.Config.Stats = stats);
+            StaticUtils.IfNotNull(config.Name, str => weapon.Config.Name = str);
+            StaticUtils.IfNotNull(config.Base.MeshPath, str => weapon.Config.Base.MeshPath = str);
+            StaticUtils.IfNotNull(config.Mesh.MeshPath, str => weapon.Config.Mesh.MeshPath = str);
+            StaticUtils.IfNotNull(config.Stats, stats => weapon.Config.Stats = stats);
         }
 
         private Weapon? CreateOrFindWeapon(Character character, string name)
@@ -49,7 +51,7 @@ namespace P3R.WeaponFramework.Weapons
             { 
                 return existingWeapon;
             }
-            var newWeapon = weapons.Values.FirstOrDefault(x => x.IsVanilla == false && x.WeaponItemId > 999);
+            var newWeapon = weapons.Values.FirstOrDefault(x => x.IsVanilla == false && x.WeaponItemId > 999); // FAILSAFE
             if (newWeapon != null)
             {
                 newWeapon.Name = name;
@@ -58,7 +60,7 @@ namespace P3R.WeaponFramework.Weapons
             }
             else
             {
-                Log.Warning("No available weapon slot.");
+                core.Utils.Log("No available weapon slot.", LogLevel.Warning);
             }
             return newWeapon;
         }
@@ -101,7 +103,7 @@ namespace P3R.WeaponFramework.Weapons
             var weapon = weapons.Values.FirstOrDefault(x => x.Character == Character.NONE);
             if (weapon == null)
             {
-                Log.Warning("No available weapon slot.");
+                core.Utils.Log("No available weapon slot.", LogLevel.Warning);
             }
 
             return weapon;

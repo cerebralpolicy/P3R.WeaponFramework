@@ -16,9 +16,12 @@
   "IsUniversalMod": false,
   "ModDependencies": [
     "Reloaded.Memory.SigScan.ReloadedII",
+    "p3rpc.classconstructor",
     "reloaded.sharedlib.hooks",
     "Unreal.AtlusScript.Reloaded",
-    "Unreal.ObjectsEmitter.Reloaded"
+    "Unreal.ObjectsEmitter.Reloaded",
+    "p3rpc.nativetypes",
+    "SharedScans.Reloaded"
   ],
   "OptionalDependencies": [],
   "SupportedAppId": [

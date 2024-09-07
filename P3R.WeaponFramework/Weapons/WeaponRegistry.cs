@@ -11,11 +11,12 @@ namespace P3R.WeaponFramework.Weapons
     internal class WeaponRegistry
     {
         private readonly WeaponArsenal arsenal;
-
-        public WeaponRegistry()
+        private readonly Core core;
+        public WeaponRegistry(Core core)
         {
-            Weapons = new();
-            arsenal = new(this.Weapons);
+            Weapons = new(core.Utils);
+            arsenal = new(this.Weapons, core);
+            this.core = core;
         }
 
         public GameWeapons Weapons { get; }
@@ -62,7 +63,7 @@ namespace P3R.WeaponFramework.Weapons
                     }
                     catch (Exception ex)
                     {
-                        Log.Error(ex, $"Failed to create weapon from folder.\nFolder: {weaponDir}");
+                        core.Utils.Log($"{ex.Message} - Failed to create weapon from folder.\nFolder: {weaponDir}", LogLevel.Error);
                     }
                 }
             }

@@ -1,4 +1,4 @@
-﻿using P3R.WeaponFramework.Configuration;
+using P3R.WeaponFramework.Configuration;
 using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
 using P3R.WeaponFramework.Weapons;

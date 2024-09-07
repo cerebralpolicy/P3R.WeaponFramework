@@ -1,6 +1,5 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text.Json.Serialization;
-using Unreal.ObjectsEmitter.Interfaces.Types;
 
 namespace P3R.WeaponFramework.Interfaces.Types;
 

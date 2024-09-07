@@ -536,6 +536,6 @@ internal static partial class WeaponExtensions
     }
     public static FString GetFString(this WeaponItemDef weaponItem)
     {
-        return new(weaponItem.ToString());
+        return weaponItem.GetNameString().MakeFString();
     }
 }
