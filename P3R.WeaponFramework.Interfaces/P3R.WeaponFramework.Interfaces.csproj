@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Submodules\p3rpc.nativetypes\p3rpc.nativetypes.Interfaces\p3rpc.nativetypes.Interfaces.csproj" />
     <ProjectReference Include="..\Submodules\Unreal.ObjectsEmitter\Unreal.ObjectsEmitter.Interfaces\Unreal.ObjectsEmitter.Interfaces.csproj" />
   </ItemGroup>
 

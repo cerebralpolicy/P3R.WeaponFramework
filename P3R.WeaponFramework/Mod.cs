@@ -2,6 +2,7 @@
 using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
 using P3R.WeaponFramework.Weapons;
+using p3rpc.nativetypes.Interfaces;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
@@ -69,6 +70,7 @@ namespace P3R.WeaponFramework
             this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
             this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
             this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
+            this.modLoader.GetController<IMemoryMethods>().TryGetTarget(out var memory);
             this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
 
             this.weaponRegistry = new();
