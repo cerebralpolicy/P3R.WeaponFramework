@@ -4,8 +4,12 @@ public class WeaponConfig
 {
     public string? Name { get; set; }
 
-    public WeaponPartsData Base { get; set; } = new();
-    public WeaponPartsData Mesh { get; set; } = new();
+    public EArmatureType? Armature { get; set; }
+
+    public bool? HasMultipleModels { get; set; }
+
+    public WeaponPartsData? Base { get; set; } = new();
+    public WeaponPartsData? Mesh { get; set; } = new();
 
     public WeaponStats? Stats { get; set; } = new();
 
@@ -14,14 +18,21 @@ public class WeaponConfig
     public string? GetAssetFile(WeaponAssetType assetType)
         => assetType switch
         {
-            WeaponAssetType.Base_Mesh => Base.MeshPath,
-            WeaponAssetType.Weapon_Mesh => Mesh.MeshPath,
+            WeaponAssetType.Base_Mesh => Base?.MeshPath1,
+            WeaponAssetType.Weapon_Mesh => Mesh?.MeshPath1,
+            WeaponAssetType.Weapon_Mesh2 => Mesh?.MeshPath2,
             _ => throw new NotImplementedException(),
         };
+}
 
-    public class WeaponPartsData
-    {
-        public string? MeshPath { get; set; }
-        public string? AnimPath { get; set; }
-    }
+public class WeaponPartsData
+{
+    public string? MeshPath1 { get; set; }
+    public string? MeshPath2 { get; set; }
+    public string? AnimPath { get; set; }
+}
+
+public class WeaponPart
+{
+
 }

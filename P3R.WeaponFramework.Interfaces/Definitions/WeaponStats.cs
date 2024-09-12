@@ -26,16 +26,16 @@ public struct WeaponStats : IEquatable<WeaponStats>
     public EBtlDataAttr AttrId { get; set; }
     public int Rarity { get; set; } = 1;
     public int Tier { get; set; } = 1;
-    public int Attack { get; set; }
-    public int Accuracy { get; set; }
+    public int Attack { get; set; } = 30;
+    public int Accuracy { get; set; } = 85;
     public int? Strength { get; set; } = 0;
     public int? Magic { get; set; } = 0;
     public int? Endurance { get; set; } = 0;
     public int? Agility { get; set; } = 0;
     public int? Luck { get; set; } = 0;
     public EItemSkillId SkillId { get; set; } = 0;
-    public int Price { get; set; } = 400;
-    public int SellPrice { get; set; } = 100;
+    public int? Price { get; set; } = 400;
+    public int? SellPrice { get; set; } = 100;
 
     public override bool Equals(object? obj)
     {

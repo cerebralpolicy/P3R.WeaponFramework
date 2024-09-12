@@ -2,18 +2,25 @@
 
 public interface IWeapon : IEquatable<WeaponItem>
 {
-    Character Character { get; set; }
-    WeaponConfig Config { get; set; }
-    string Description { get; set; }
+    #region Status
     bool IsVanilla { get; set; }
     bool IsEnabled { get; set; }
-    int ModelId { get; set; }
-    string Name { get; set; }
-    string? OwnerModId { get; set; }
-    WeaponStats Stats { get; set; }
+    #endregion
+    #region Weapon Table Entry
+    Character Character { get; set; }
     int WeaponId { get; set; }
-    int WeaponItemId { get; set; }
-    WeaponModelSet WeaponModelId { get; set; }
+    string? Name { get; set; }
+    int ModelId { get; set; }
+    EWeaponModelSet WeaponModelId { get; set; }
+    WeaponConfig Config { get; set; }
+    WeaponStats Stats { get; set; }
+    #endregion
     EquipFlag WeaponType { get; set; }
+    string? OwnerModId { get; set; }
+    string Description { get; set; }
+    int WeaponItemId { get; set; }
+
+    EArmatureType? TargetArmature { get; }
+
     void SetWeaponItemId(int weaponItemId);
 }

@@ -1,10 +1,12 @@
 ﻿using P3R.WeaponFramework.Hooks.Models;
+using P3R.WeaponFramework.Interfaces.Definitions;
 using P3R.WeaponFramework.Types;
 using P3R.WeaponFramework.Weapons;
 using P3R.WeaponFramework.Weapons.Models;
-using Project.Utils;
 using Reloaded.Hooks.Definitions;
 using Reloaded.Hooks.Definitions.X64;
+using Unreal.ObjectsEmitter.Interfaces;
+using Unreal.ObjectsEmitter.Interfaces.Types;
 using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
 
 namespace P3R.WeaponFramework.Hooks;
@@ -20,31 +22,34 @@ internal unsafe class WeaponHooks
     private IReverseWrapper<SetWeaponId>? setWeaponWrapper;
     private IAsmHook? setWeaponHook;
 
-    private readonly Core core;
+    private readonly IUnreal unreal;
+    private readonly IUObjects uobjects;
     private readonly WeaponRegistry registry;
     private readonly WeaponDescService weaponDesc;
     private ItemEquipHooks itemEquip;
     private readonly Dictionary<Character, WeaponConfig> defaultWeapons = [];
 
     public WeaponHooks(
-        Core core, 
-        WeaponRegistry registry, 
-        WeaponDescService weaponDesc, 
+        IUnreal unreal,
+        IUObjects uobjects,
+        WeaponRegistry registry,
+        WeaponDescService weaponDesc,
         ItemEquipHooks itemEquip)
     {
-        this.core = core;
+        this.unreal = unreal;
+        this.uobjects = uobjects;
         this.registry = registry;
         this.weaponDesc = weaponDesc;
         this.itemEquip = itemEquip;
 
-        foreach (var character in Enum.GetValues<Character>()) 
-        { 
+        foreach (var character in Enum.GetValues<Character>())
+        {
             if (character == Character.Fuuka) continue;
             if (character > Character.Shinjiro) break;
             defaultWeapons[character] = new DefaultWeapon(character);
         }
 
-        core.FindObjectAsync("DatItemWeaponDataAsset", SetWeaponData);
+        uobjects.FindObject("DatItemWeaponDataAsset", SetWeaponData);
 
         ScanHooks.Add(
             nameof(UAppCharacterComp_Update),
@@ -53,7 +58,8 @@ internal unsafe class WeaponHooks
             {
                 this.characterCompUpdate = hooks.CreateWrapper<UAppCharacterComp_Update>(result, out _);
 
-                var setWeaponAddress = result + 0x26B; // Costumes = 0x255
+                // UAppCharacterComp::Update + 0x254 is FF in release (call to vtable), but 75 in episode aigis (jump)
+                var setWeaponAddress = result + (*(byte*)(result + 0x254) == 0x75 ? 0x183 : 0x255);
                 var setWeaponPatch = new string[]
                 {
                     "use64",
@@ -67,11 +73,11 @@ internal unsafe class WeaponHooks
             });
     }
 
-    private void SetWeaponData(nint obj)
+    private void SetWeaponData(UnrealObject obj)
     {
-        var weaponItemList = (UWeaponItemListTable*)obj.ToPointer();
+        var weaponItemList = (UWeaponItemListTable*)obj.Self;
 
-        core.Utils.Log("Manually generating list of valid weapons.", LogLevel.Debug);
+        Log.Debug("Manually generating list of valid weapons.");
         Dictionary<int, FWeaponItemList> weaponLookupTable = [];
         for (int i = 0; i < weaponItemList->Count; i++)
         {
@@ -80,7 +86,7 @@ internal unsafe class WeaponHooks
             continue;
         }
 
-        core.Utils.Log("Setting weapon data.");
+        Log.Debug("Setting weapon data.");
 
         var itemId = 0;
         foreach (var weaponEntry in weaponLookupTable)
@@ -94,7 +100,7 @@ internal unsafe class WeaponHooks
                 itemId++;
             }
         }
-        var newItemIndex = core.NewItemIndex;
+        var newItemIndex = 600;
         foreach (var weapon in registry.GetActiveWeapons())
         {
             if (weapon.WeaponId != default)
@@ -111,10 +117,10 @@ internal unsafe class WeaponHooks
             if (weapon.WeaponId >= GameWeapons.BASE_MOD_WEAP_ID)
             {
                 this.SetWeaponPaths(weapon);
-                core.Utils.Log($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
-                core.NewItemIndex++;
+                Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
+                newItem++;
             }
-            
+
         }
     }
 
@@ -133,13 +139,13 @@ internal unsafe class WeaponHooks
 
         if (ogAssetFile == null)
         {
-            core.Utils.Log($"Asset has no original: {assetType} || Weapon: {weapon.Name}", LogLevel.Debug);
+            Log.Debug($"Asset has no original: {assetType} || Weapon: {weapon.Name}");
             return;
         }
 
         if (currentAssetFile == null)
         {
-            core.Utils.Log($"Asset has no default or new: {assetType} || Weapon: {weapon.Name}", LogLevel.Debug);
+            Log.Debug($"Asset has no default or new: {assetType} || Weapon: {weapon.Name}");
             return;
         }
 
@@ -151,8 +157,8 @@ internal unsafe class WeaponHooks
         var ogAssetFNames = new AssetFNames(ogAssetFile);
         var newAssetFNames = new AssetFNames(currentAssetFile);
 
-        core.Unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetPath, newAssetFNames.AssetPath);
-        core.Unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetName, newAssetFNames.AssetName);
+        this.unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetPath, newAssetFNames.AssetPath);
+        this.unreal.AssignFName(Mod.NAME, ogAssetFNames.AssetName, newAssetFNames.AssetName);
     }
 
     private string? GetDefaultAsset(Character character, WeaponAssetType assetType)

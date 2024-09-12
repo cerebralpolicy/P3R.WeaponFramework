@@ -1,11 +1,4 @@
-﻿using P3R.WeaponFramework.Interfaces.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace P3R.WeaponFramework.Interfaces;
+﻿namespace P3R.WeaponFramework.Interfaces;
 
 public static class Constants
 {
@@ -99,6 +92,7 @@ public static partial class Assets
         { 588, 6 },
         { 589, 8 },
     };
+
     public static Dictionary<int, int> ModelPairsInt = new Dictionary<int, int>()
     {
         { 0, 0 }, // So Fuuka doesn't fail
@@ -181,6 +175,7 @@ public static partial class Assets
         { 588, 50 },
         { 589, 60 },
     };
+
     public static Dictionary<string, string> NamePairs = new Dictionary<string, string>()
     {
         {"IT_WEA_BLANK", "Unused"},

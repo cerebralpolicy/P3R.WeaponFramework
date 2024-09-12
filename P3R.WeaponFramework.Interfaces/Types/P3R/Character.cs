@@ -14,4 +14,5 @@ public enum Character
     Koromaru,
     Shinjiro,
     Metis,
+    AigisProtag,
 }

@@ -5,20 +5,18 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons
 {
     internal class WeaponRegistry
     {
         private readonly WeaponArsenal arsenal;
-        private readonly Core core;
-        public WeaponRegistry(Core core)
+        public WeaponRegistry(IMemoryMethods memoryMethods, IUObjects uObjects)
         {
-            Weapons = new(core.Utils);
-            arsenal = new(this.Weapons, core);
-            this.core = core;
+            Weapons = new();
+            arsenal = new(memoryMethods,uObjects,this.Weapons);
         }
-
         public GameWeapons Weapons { get; }
 
         public Weapon[] GetActiveWeapons() =>
@@ -63,7 +61,7 @@ namespace P3R.WeaponFramework.Weapons
                     }
                     catch (Exception ex)
                     {
-                        core.Utils.Log($"{ex.Message} - Failed to create weapon from folder.\nFolder: {weaponDir}", LogLevel.Error);
+                        Log.Error($"{ex.Message} - Failed to create weapon from folder.\nFolder: {weaponDir}");
                     }
                 }
             }

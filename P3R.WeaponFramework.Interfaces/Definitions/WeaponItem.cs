@@ -7,7 +7,7 @@ namespace P3R.WeaponFramework.Interfaces.Types;
 [JsonSerializable(typeof(FWeaponItemList))]
 public class WeaponItem : IEquatable<WeaponItem?>
 {
-    //[FieldOffset(0x0000)] public FString ItemDef;
+    [FieldOffset(0x0000)] public FString ItemDef;
     [FieldOffset(0x0010)] public ushort SortNum;
     [FieldOffset(0x0014)] public uint WeaponType;
     [FieldOffset(0x0018)] public EquipFlag EquipID;
@@ -22,14 +22,60 @@ public class WeaponItem : IEquatable<WeaponItem?>
     [FieldOffset(0x002C)] public ushort Agility;
     [FieldOffset(0x002E)] public ushort Luck;
     [FieldOffset(0x0030)] public EItemSkillId SkillID;
-    [FieldOffset(0x0034)] public uint Price;
-    [FieldOffset(0x0038)] public uint SellPrice;
+    [FieldOffset(0x0034)] public uint? Price;
+    [FieldOffset(0x0038)] public uint? SellPrice;
     [FieldOffset(0x003C)] public ushort GetFLG;
     [FieldOffset(0x003E)] public ushort ModelID;
     [FieldOffset(0x0040)] public uint Flags;
 
     public WeaponItem()
     {
+    }
+    public WeaponItem(string itemDef, ushort sortNum, uint weaponType, EquipFlag equipID, EBtlDataAttr attrID, ushort rarity, ushort tier, ushort attack, ushort accuracy, ushort strength, ushort magic, ushort endurance, ushort agility, ushort luck, EItemSkillId skillID, uint? price, uint? sellPrice, ushort getFLG, ushort modelID, uint flags)
+    {
+        ItemDef = WFMemoryHandler.MakeFString(itemDef);
+        SortNum = sortNum;
+        WeaponType = weaponType;
+        EquipID = equipID;
+        AttrID = attrID;
+        Rarity = rarity;
+        Tier = tier;
+        Attack = attack;
+        Accuracy = accuracy;
+        Strength = strength;
+        Magic = magic;
+        Endurance = endurance;
+        Agility = agility;
+        Luck = luck;
+        SkillID = skillID;
+        Price = price ?? (uint)PriceUtils.GetBuyPrice(attack, accuracy);
+        SellPrice = sellPrice ?? (uint)PriceUtils.GetSellPrice(attack, accuracy);
+        GetFLG = getFLG;
+        ModelID = modelID;
+        Flags = flags;
+    }
+    public WeaponItem(FString itemDef, ushort sortNum, uint weaponType, EquipFlag equipID, EBtlDataAttr attrID, ushort rarity, ushort tier, ushort attack, ushort accuracy, ushort strength, ushort magic, ushort endurance, ushort agility, ushort luck, EItemSkillId skillID, uint? price, uint? sellPrice, ushort getFLG, ushort modelID, uint flags)
+    {
+        ItemDef = itemDef;
+        SortNum = sortNum;
+        WeaponType = weaponType;
+        EquipID = equipID;
+        AttrID = attrID;
+        Rarity = rarity;
+        Tier = tier;
+        Attack = attack;
+        Accuracy = accuracy;
+        Strength = strength;
+        Magic = magic;
+        Endurance = endurance;
+        Agility = agility;
+        Luck = luck;
+        SkillID = skillID;
+        Price = price ?? (uint)PriceUtils.GetBuyPrice(attack,accuracy);
+        SellPrice = sellPrice ?? (uint)PriceUtils.GetSellPrice(attack,accuracy);
+        GetFLG = getFLG;
+        ModelID = modelID;
+        Flags = flags;
     }
 
     public Character Character => Enum.Parse<Character>(EquipID.ToString());
@@ -47,8 +93,8 @@ public class WeaponItem : IEquatable<WeaponItem?>
         Agility = Agility,
         Luck = Luck,
         SkillId = SkillID,
-        Price = (int)Price,
-        SellPrice = (int)SellPrice,
+        Price = (int?)Price ?? PriceUtils.GetBuyPrice(Attack, Accuracy),
+        SellPrice = (int?)SellPrice ?? PriceUtils.GetSellPrice(Attack, Accuracy),
     };
 
     public override bool Equals(object? obj)
@@ -81,6 +127,7 @@ public class WeaponItem : IEquatable<WeaponItem?>
     {
         return new()
         {
+            ItemDef = fWeaponItem.ItemDef,
             SortNum = fWeaponItem.SortNum,
             WeaponType = fWeaponItem.WeaponType,
             EquipID = (EquipFlag)fWeaponItem.EquipID,

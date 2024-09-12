@@ -2,11 +2,10 @@
 using System.Runtime.InteropServices;
 
 namespace P3R.WeaponFramework.Weapons;
-
 internal static class AssetUtils
 {
 
-    public static string? GetAssetFile(Character chara, WeaponModelSet model, WeaponAssetType type)
+    public static string? GetAssetFile(Character chara, EWeaponModelSet model, WeaponAssetType type)
     {
         string? assetFile = type switch
         {
@@ -18,17 +17,6 @@ internal static class AssetUtils
             _ => throw new Exception(),
         };
         return assetFile;
-    }
-
-    public static unsafe FString MakeFString(this string str)
-    {
-        var charArray = str.ToCharArray();
-        var fString = new FString();
-        var data = fString.text;
-        data.arr_max = str.Length + 1;
-        data.arr_num = data.arr_max;
-        data.allocator_instance = (nint*)(char*)Marshal.StringToHGlobalUni(str);
-        return fString;
     }
 
 
@@ -200,7 +188,7 @@ internal static class AssetUtils
         { 589, 60 },
     };
     public static string Format(this Character character) => ((int)character).ToString("0000");
-    public static string Format(this WeaponModelSet weaponModelSet) => ((int)weaponModelSet).ToString("000");
+    public static string Format(this EWeaponModelSet weaponModelSet) => ((int)weaponModelSet).ToString("000");
     public static string FormatAssetPath(string assetPath)
     {
         var formattedPath = assetPath.Replace("\\", "/").Replace(".uasset", string.Empty);

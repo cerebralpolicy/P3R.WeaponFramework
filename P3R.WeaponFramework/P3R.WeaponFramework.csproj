@@ -17,8 +17,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Hooks\Services\**" />
+    <Compile Remove="Publish\**" />
     <Compile Remove="Resources\Excel\**" />
+    <EmbeddedResource Remove="Hooks\Services\**" />
+    <EmbeddedResource Remove="Publish\**" />
     <EmbeddedResource Remove="Resources\Excel\**" />
+    <None Remove="Hooks\Services\**" />
+    <None Remove="Publish\**" />
     <None Remove="Resources\Excel\**" />
   </ItemGroup>
 
@@ -56,6 +62,7 @@
     <PackageReference Include="Reloaded.Memory.SigScan.ReloadedII.Interfaces" Version="1.2.0" />
     <PackageReference Include="Reloaded.Mod.Interfaces" Version="2.4.0" ExcludeAssets="runtime" />
     <PackageReference Include="Reloaded.SharedLib.Hooks" Version="1.9.0" />
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
     <PackageReference Include="YamlDotNet" Version="16.0.0" />
   </ItemGroup>
 
@@ -69,7 +76,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Hooks\Services\" />
     <Folder Include="Resources\New\" />
   </ItemGroup>
 

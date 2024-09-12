@@ -16,3 +16,17 @@ bin/*
 *.vsidx
 *.v2
 /.vs/P3R.WeaponFramework/v17/.suo
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc01.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc01_FemC.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc02.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc03.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc03_cowardvariant.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc04.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc05.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc07.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc08.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc09.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc10.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc11.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc11_FR.uasset
+/Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc12.uasset

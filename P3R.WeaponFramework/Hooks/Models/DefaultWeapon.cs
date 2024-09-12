@@ -1,5 +1,5 @@
-﻿using P3R.WeaponFramework.Weapons;
-using P3R.WeaponFramework.Weapons.Models;
+﻿using P3R.WeaponFramework.Interfaces.Definitions;
+using P3R.WeaponFramework.Weapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +12,8 @@ internal class DefaultWeapon : WeaponConfig
 {
     public DefaultWeapon(Character character)
     {
-        Base.MeshPath = AssetUtils.GetAssetFile(character, WeaponModelSet.Base, WeaponAssetType.Base_Mesh);
-        Base.AnimPath = AssetUtils.GetAssetFile(character, WeaponModelSet.Base, WeaponAssetType.Base_Anim);
-        Mesh.MeshPath = AssetUtils.GetAssetFile(character, WeaponModelSet.Base, WeaponAssetType.Weapon_Mesh);
+        Base.MeshPath1 = AssetUtils.GetAssetFile(character, EWeaponModelSet.Base, WeaponAssetType.Base_Mesh);
+        Base.AnimPath = AssetUtils.GetAssetFile(character, EWeaponModelSet.Base, WeaponAssetType.Base_Anim);
+        Mesh.MeshPath1 = AssetUtils.GetAssetFile(character, EWeaponModelSet.Base, WeaponAssetType.Weapon_Mesh);
     }
 }

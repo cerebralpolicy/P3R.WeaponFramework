@@ -9,4 +9,12 @@ public struct TPersistentObjectPtr<T> where T : unmanaged
     public FWeakObjectPtr WeakPtr;
     public int TagAtLastTest;
     public T ObjectId;
+
+    public TPersistentObjectPtr(T obj)
+    {
+        ObjectId = obj;
+        WeakPtr = new FWeakObjectPtr(obj);
+    }
+    public TPersistentObjectPtr()
+    {}
 }

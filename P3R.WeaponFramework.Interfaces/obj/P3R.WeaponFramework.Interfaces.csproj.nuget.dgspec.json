@@ -37,6 +37,12 @@
               },
               "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj": {
                 "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj"
+              },
+              "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj": {
+                "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj"
+              },
+              "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj": {
+                "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj"
               }
             }
           }
@@ -55,6 +61,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Collections.NonGeneric": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -152,7 +168,7 @@
       }
     },
     "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj": {
-      "version": "1.5.1",
+      "version": "1.6.1",
       "restore": {
         "projectUniqueName": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj",
         "projectName": "p3rpc.nativetypes.Interfaces",
@@ -203,6 +219,202 @@
               "version": "[3.3.4, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj",
+        "projectName": "Project.Utils",
+        "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\Project.Utils.csproj",
+        "packagesPath": "C:\\Users\\Cole\\.nuget\\packages\\",
+        "outputPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Project.Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework\\v4.8": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Reloaded.Memory.SigScan.ReloadedII.Interfaces": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Reloaded.Mod.Interfaces": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Reloaded.SharedLib.Hooks": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj": {
+      "version": "1.2.3",
+      "restore": {
+        "projectUniqueName": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj",
+        "projectName": "Unreal.ObjectsEmitter.Interfaces",
+        "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\Unreal.ObjectsEmitter.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Cole\\.nuget\\packages\\",
+        "outputPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\Unreal.ObjectsEmitter\\Unreal.ObjectsEmitter.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Cole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0",
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework\\v4.8": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          },
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.16, 7.0.16]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        },
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",

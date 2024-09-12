@@ -22,3 +22,6 @@
 [submodule "submodules/p3rpc.classconstructor"]
 	path = submodules/p3rpc.classconstructor
 	url = https://github.com/rirurin/p3rpc.classconstructor.git
+[submodule "REF/P3R.CostumeFramework"]
+	path = REF/P3R.CostumeFramework
+	url = https://github.com/RyoTune/P3R.CostumeFramework.git
