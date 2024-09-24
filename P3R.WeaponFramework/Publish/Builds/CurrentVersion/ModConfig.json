@@ -20,6 +20,7 @@
     "reloaded.sharedlib.hooks",
     "Unreal.AtlusScript.Reloaded",
     "Unreal.ObjectsEmitter.Reloaded",
+    "UnrealEssentials",
     "p3rpc.nativetypes",
     "SharedScans.Reloaded"
   ],

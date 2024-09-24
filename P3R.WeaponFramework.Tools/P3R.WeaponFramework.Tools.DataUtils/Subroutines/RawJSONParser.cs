@@ -42,9 +42,10 @@ internal static partial class Subroutines {
             var json = reader.ReadToEnd();
             return JsonSerializer.Deserialize<T>(json)!;
         }
-        public static void SerializeFile<T>(string path, T obj)
+        public static void SerializeFile<T>(string path, T obj, string? name = null)
         {
-            var outputFile = Path.Join(path, $"{nameof(obj)}.json");
+            var fileName = name ?? nameof(obj);
+            var outputFile = Path.Join(path, $"{fileName}.json");
             if (File.Exists(outputFile))
             {
                 File.Delete(outputFile);

@@ -1,0 +1,722 @@
+
+// 
+// FlowScript decompiled using Atlus Script Tools by TGE (2017-2021)
+// In the unfortunate case of any bugs, please report them back to me.
+// 
+
+
+// 
+// Procedure declarations
+// 
+
+// Procedure Index: 0
+void EveryMorning()
+{
+    RECOVERY_ALL();
+    MAIN_FlagSetting();
+    MAIN_CounterSetting();
+    MAIN_Facility();
+    MAIN_GARDENING();
+    MAIN_GO_TartarosOK();
+    MAIN_LOUNGE_NOT_NAVI();
+    MAIN_Battle_and_Field();
+    MAIN_StrayCat();
+    
+    if ( BIT_CHK( ( 24 + 0x40000000 ) ) == 1 )
+    {
+        MAIN_CommuMall_HOLIDAY();
+    }
+
+}
+
+
+// Procedure Index: 1
+void MAIN_FlagSetting()
+{
+    BIT_OFF( ( 72 + 0x20000000 ) );
+    BIT_OFF( ( 272 + 0x10000000 ) );
+    BIT_OFF( ( 273 + 0x10000000 ) );
+    BIT_OFF( ( 274 + 0x10000000 ) );
+    BIT_OFF( ( 275 + 0x10000000 ) );
+    BIT_OFF( ( 34 + 0x20000000 ) );
+    BIT_OFF( ( 35 + 0x20000000 ) );
+    BIT_OFF( ( 36 + 0x20000000 ) );
+    BIT_OFF( ( 329 + 0x10000000 ) );
+    BIT_OFF( ( 253 + 0x20000000 ) );
+    BIT_OFF( ( 31 + 0 ) );
+    BIT_OFF( ( 153 + 0 ) );
+    BIT_OFF( ( 154 + 0 ) );
+    BIT_OFF( ( 155 + 0 ) );
+    BIT_OFF( ( 156 + 0 ) );
+    BIT_OFF( ( 157 + 0 ) );
+    BIT_OFF( ( 74 + 0x20000000 ) );
+    BIT_OFF( ( 75 + 0x20000000 ) );
+    BIT_OFF( ( 77 + 0x20000000 ) );
+    BIT_OFF( ( 81 + 0x40000000 ) );
+    BIT_OFF( ( 446 + 0x20000000 ) );
+    BIT_OFF( ( 177 + 0 ) );
+    BIT_OFF( ( 70 + 0x40000000 ) );
+    BIT_OFF( ( 13 + 0 ) );
+    BIT_OFF( ( 304 + 0x20000000 ) );
+    BIT_OFF( ( 174 + 0 ) );
+    BIT_OFF( ( 514 + 0x20000000 ) );
+    BIT_OFF( ( 53 + 0x20000000 ) );
+    BIT_OFF( ( 571 + 0x20000000 ) );
+    BIT_OFF( ( 629 + 0x20000000 ) );
+    BIT_OFF( ( 636 + 0x20000000 ) );
+    BIT_OFF( ( 635 + 0x20000000 ) );
+    BIT_OFF( ( 325 + 0x20000000 ) );
+    BIT_OFF( ( 326 + 0x20000000 ) );
+    BIT_OFF( ( 327 + 0x20000000 ) );
+    BIT_OFF( ( 328 + 0x20000000 ) );
+    BIT_OFF( ( 329 + 0x20000000 ) );
+    BIT_OFF( ( 330 + 0x20000000 ) );
+    BIT_OFF( ( 331 + 0x20000000 ) );
+    BIT_OFF( ( 332 + 0x20000000 ) );
+    BIT_OFF( ( 333 + 0x20000000 ) );
+    BIT_OFF( ( 90 + 0x20000000 ) );
+    BIT_OFF( ( 91 + 0x20000000 ) );
+    BIT_OFF( ( 92 + 0x20000000 ) );
+    BIT_OFF( ( 93 + 0x20000000 ) );
+    BIT_OFF( ( 94 + 0x20000000 ) );
+    BIT_OFF( ( 97 + 0x20000000 ) );
+    BIT_OFF( ( 3481 + 0x20000000 ) );
+    BIT_OFF( ( 3472 + 0x20000000 ) );
+    BIT_OFF( ( 3490 + 0x20000000 ) );
+    BIT_OFF( ( 662 + 0x20000000 ) );
+    
+    if ( CHK_DAYS_STARTEND( 4, 1, 6, 15 ) )
+    {
+        BIT_ON( ( 86 + 0x20000000 ) );
+        BIT_OFF( ( 87 + 0x20000000 ) );
+        BIT_OFF( ( 88 + 0x20000000 ) );
+    }
+    else 
+    {
+        BIT_ON( ( 88 + 0x20000000 ) );
+        BIT_ON( ( 87 + 0x20000000 ) );
+        BIT_OFF( ( 86 + 0x20000000 ) );
+    }
+
+    
+    if ( BIT_CHK( ( 5 + 0 ) ) == 1 )
+    {
+        BIT_ON( ( 4 + 0 ) );
+        FLD_NPC_FLAG_OFF( ( 47 + 0 ) );
+    }
+
+    BIT_OFF( ( 5 + 0 ) );
+    
+    if ( CHK_DAYS_STARTEND( 11, 5, 11, 13 ) )
+    {
+        BIT_ON( ( 167 + 0 ) );
+    }
+    else 
+    {
+        BIT_OFF( ( 167 + 0 ) );
+    }
+
+    
+    if ( CHK_DAY( 4, 18 ) )
+    {
+        BIT_ON( ( 310 + 0x20000000 ) );
+    }
+    else 
+    {
+        BIT_OFF( ( 310 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 6, 18 ) )
+    {
+        BIT_OFF( ( 3733 + 0x20000000 ) );
+    }
+    else 
+    {
+        BIT_ON( ( 3733 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAYS_STARTEND( 4, 6, 6, 17 ) )
+    {
+        BIT_OFF( ( 3732 + 0x20000000 ) );
+    }
+
+    
+    if ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( CHK_DAY( 4, 26 ) || CHK_DAY( 5, 10 ) ) || CHK_DAY( 5, 24 ) ) || CHK_DAY( 6, 14 ) ) || CHK_DAY( 6, 28 ) ) || CHK_DAY( 7, 12 ) ) || CHK_DAY( 7, 26 ) ) || CHK_DAY( 8, 9 ) ) || CHK_DAY( 8, 23 ) ) || CHK_DAY( 9, 13 ) ) || CHK_DAY( 9, 27 ) ) || CHK_DAY( 10, 11 ) ) || CHK_DAY( 10, 25 ) ) || CHK_DAY( 11, 8 ) ) || CHK_DAY( 11, 22 ) ) || CHK_DAY( 12, 13 ) ) || CHK_DAY( 12, 27 ) ) || CHK_DAY( 1, 10 ) ) || CHK_DAY( 1, 24 ) )
+    {
+        BIT_ON( ( 594 + 0x20000000 ) );
+    }
+    else 
+    {
+        BIT_OFF( ( 594 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAYS_STARTEND( 4, 6, 4, 24 ) || ( GET_DAYOFWEEK() == 1 ) )
+    {
+        BIT_ON( ( 664 + 0x20000000 ) );
+    }
+    else 
+    {
+        BIT_OFF( ( 664 + 0x20000000 ) );
+    }
+
+    BIT_OFF( ( 235 + 0x10000000 ) );
+}
+
+
+// Procedure Index: 2
+void MAIN_Facility()
+{
+    BIT_OFF( ( 301 + 0x20000000 ) );
+    BIT_OFF( ( 302 + 0x20000000 ) );
+    BIT_OFF( ( 303 + 0x20000000 ) );
+    BIT_OFF( ( 82 + 0x20000000 ) );
+    BIT_OFF( ( 83 + 0x20000000 ) );
+    
+    if ( GET_DAYOFWEEK() == 1 )
+    {
+        BIT_ON( ( 82 + 0x20000000 ) );
+    }
+    else if ( GET_DAYOFWEEK() == 6 )
+    {
+        BIT_ON( ( 83 + 0x20000000 ) );
+    }
+
+    
+    if ( BIT_CHK( ( 447 + 0x20000000 ) ) == 1 )
+    {
+        BIT_OFF( ( 49 + 805306368 ) );
+    }
+
+}
+
+
+// Procedure Index: 3
+void MAIN_OnlineShopping()
+{
+}
+
+
+// Procedure Index: 4
+void MAIN_SkillCard()
+{
+}
+
+
+// Procedure Index: 5
+void MAIN_ReverseCMM()
+{
+}
+
+
+// Procedure Index: 6
+void MAIN_GARDENING()
+{
+    
+    if ( GET_COUNT( ( 110 + 0 ) ) > 0 )
+    {
+        SET_COUNT( ( 110 + 0 ), ( GET_COUNT( ( 110 + 0 ) ) - 1 ) );
+    }
+
+}
+
+
+// Procedure Index: 7
+void MAIN_GO_TartarosOK()
+{
+    BIT_OFF( ( 52 + 0x40000000 ) );
+    
+    if ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( CHK_DAYS_STARTEND( 4, 1, 4, 19 ) == 1 ) || ( CHK_DAY( 4, 29 ) == 1 ) ) || ( CHK_DAY( 5, 5 ) == 1 ) ) || ( CHK_DAY( 5, 9 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 5, 0x10, 5, 22 ) == 1 ) ) || ( CHK_DAY( 5, 25 ) == 1 ) ) || ( CHK_DAY( 5, 30 ) == 1 ) ) || ( CHK_DAY( 6, 1 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 6, 8, 6, 12 ) == 1 ) ) || ( CHK_DAY( 6, 21 ) == 1 ) ) || ( CHK_DAY( 6, 28 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 7, 7, 7, 9 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 7, 10, 7, 17 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 7, 19, 7, 23 ) == 1 ) ) || ( CHK_DAY( 7, 29 ) == 1 ) ) || ( CHK_DAY( 8, 2 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 8, 6, 8, 7 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 8, 10, 8, 0x10 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 9, 5, 9, 9 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 9, 18, 9, 20 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 10, 4, 10, 6 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 10, 12, 10, 0x10 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 11, 3, 11, 5 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 11, 17, 11, 20 ) == 1 ) ) || ( CHK_DAY( 11, 22 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 11, 24, 11, 26 ) == 1 ) ) || ( CHK_DAY( 11, 30 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 12, 2, 12, 9 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 12, 13, 12, 18 ) == 1 ) ) || ( CHK_DAY( 12, 31 ) == 1 ) ) || ( CHK_DAY( 1, 31 ) == 1 ) ) || ( CHK_DAYS_STARTEND( 2, 1, 3, 5 ) == 1 ) )
+    {
+        BIT_ON( ( 52 + 0x40000000 ) );
+    }
+
+}
+
+
+// Procedure Index: 8
+void MAIN_CommuMall_HOLIDAY()
+{
+    
+    if ( ( BIT_CHK( ( 24 + 0x40000000 ) ) == 1 ) || ( BIT_CHK( ( 0x20 + 0x40000000 ) ) == 1 ) )
+    {
+        BIT_ON( ( 329 + 0x10000000 ) );
+    }
+
+}
+
+
+// Procedure Index: 9
+void MAIN_CounterSetting()
+{
+    SET_COUNT( ( 154 + 0 ), ( GET_COUNT( ( 154 + 0 ) ) + 1 ) );
+    
+    if ( GET_COUNT( ( 108 + 0 ) ) > 0 )
+    {
+        SET_COUNT( ( 108 + 0 ), ( GET_COUNT( ( 108 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( GET_COUNT( ( 166 + 0 ) ) == 1000 )
+    {
+        SET_COUNT( ( 166 + 0 ), 0 );
+    }
+
+    
+    if ( BIT_CHK( ( 254 + 0x20000000 ) ) == 1 )
+    {
+        SET_COUNT( ( 166 + 0 ), ( GET_COUNT( ( 166 + 0 ) ) + 1 ) );
+    }
+
+    SET_COUNT( ( 150 + 0 ), 0 );
+}
+
+
+// Procedure Index: 10
+void MAIN_Battle_and_Field()
+{
+    BTL_SHUFFLE_CLEAN_FLAG_ALL();
+    BTL_SHUFFLE_DECIDE_MAJORARCANA();
+    SET_TP( 1, 0 );
+    SET_TP( 2, 0 );
+    SET_TP( 3, 0 );
+    SET_TP( 4, 0 );
+    SET_TP( 5, 0 );
+    SET_TP( 6, 0 );
+    SET_TP( 7, 0 );
+    SET_TP( 8, 0 );
+    SET_TP( 9, 0 );
+    SET_TP( 10, 0 );
+    
+    if ( CHECK_NEW_QUEST_EXIST() == 1 )
+    {
+        BIT_ON( ( 3485 + 0x20000000 ) );
+    }
+    else 
+    {
+        BIT_OFF( ( 3485 + 0x20000000 ) );
+    }
+
+    
+    if ( BIT_CHK( ( 3328 + 0x20000000 ) ) == 1 )
+    {
+        SET_COUNT( ( 356 + 0 ), ( GET_COUNT( ( 356 + 0 ) ) + 1 ) );
+    }
+
+}
+
+
+// Procedure Index: 11
+void MAIN_StrayCat()
+{
+    STRAY_CAT_STARTFLG();
+    STRAY_CAT_COUNTER_SETTING();
+    STRAY_CAT_END_SETTING1();
+    STRAY_CAT_END_SETTING2();
+}
+
+
+// Procedure Index: 12
+void MAIN_LOUNGE_NOT_NAVI()
+{
+    BIT_OFF( ( 65 + 0x20000000 ) );
+    BIT_OFF( ( 66 + 0x20000000 ) );
+    BIT_OFF( ( 67 + 0x20000000 ) );
+    BIT_OFF( ( 68 + 0x20000000 ) );
+    
+    if ( CHK_DAY( 4, 25 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 5, 3 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 5, 4 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 5, 9 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 5, 30 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 6, 21 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 6, 28 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 6, 29 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 7, 8 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 68 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 7, 9 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 67 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 7, 19 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 7, 26 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 7, 30 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 7 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 9 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 20 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 22 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 23 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 25 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 8, 28 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 9, 13 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 9, 22 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 9, 23 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 9, 27 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 10, 6 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 67 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 10, 21 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 10, 22 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 11, 8 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 11, 12 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 11, 0x10 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 11, 17 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 11, 18 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 11, 19 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 12, 6 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 1, 14 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 1, 11 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+    else if ( CHK_DAY( 1, 31 ) )
+    {
+        BIT_ON( ( 65 + 0x20000000 ) );
+        BIT_ON( ( 66 + 0x20000000 ) );
+    }
+
+}
+
+
+// Procedure Index: 13
+void STRAY_CAT_STARTFLG()
+{
+    
+    if ( CHK_DAY( 7, 24 ) == 1 )
+    {
+        BIT_ON( ( 516 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 8, 25 ) == 1 )
+    {
+        BIT_ON( ( 522 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 9, 26 ) == 1 )
+    {
+        BIT_ON( ( 528 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 10, 18 ) == 1 )
+    {
+        BIT_ON( ( 534 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 11, 10 ) == 1 )
+    {
+        BIT_ON( ( 540 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 12, 20 ) == 1 )
+    {
+        BIT_ON( ( 546 + 0x20000000 ) );
+    }
+
+    
+    if ( CHK_DAY( 1, 19 ) == 1 )
+    {
+        BIT_ON( ( 552 + 0x20000000 ) );
+    }
+
+}
+
+
+// Procedure Index: 14
+void STRAY_CAT_COUNTER_SETTING()
+{
+    
+    if ( ( BIT_CHK( ( 519 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 158 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 158 + 0 ), ( GET_COUNT( ( 158 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 525 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 159 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 159 + 0 ), ( GET_COUNT( ( 159 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 531 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 160 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 160 + 0 ), ( GET_COUNT( ( 160 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 537 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 161 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 161 + 0 ), ( GET_COUNT( ( 161 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 543 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 162 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 162 + 0 ), ( GET_COUNT( ( 162 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 549 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 163 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 163 + 0 ), ( GET_COUNT( ( 163 + 0 ) ) - 1 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 555 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 164 + 0 ) ) > 0 ) )
+    {
+        SET_COUNT( ( 164 + 0 ), ( GET_COUNT( ( 164 + 0 ) ) - 1 ) );
+    }
+
+}
+
+
+// Procedure Index: 15
+void STRAY_CAT_END_SETTING1()
+{
+    
+    if ( ( BIT_CHK( ( 519 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 158 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 519 + 0x20000000 ) );
+        BIT_ON( ( 518 + 0x20000000 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 525 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 159 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 525 + 0x20000000 ) );
+        BIT_ON( ( 524 + 0x20000000 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 531 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 160 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 531 + 0x20000000 ) );
+        BIT_ON( ( 530 + 0x20000000 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 537 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 161 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 537 + 0x20000000 ) );
+        BIT_ON( ( 536 + 0x20000000 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 543 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 162 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 543 + 0x20000000 ) );
+        BIT_ON( ( 542 + 0x20000000 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 549 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 163 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 549 + 0x20000000 ) );
+        BIT_ON( ( 548 + 0x20000000 ) );
+    }
+
+    
+    if ( ( BIT_CHK( ( 555 + 0x20000000 ) ) == 1 ) && ( GET_COUNT( ( 164 + 0 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 555 + 0x20000000 ) );
+        BIT_ON( ( 554 + 0x20000000 ) );
+    }
+
+}
+
+
+// Procedure Index: 16
+void STRAY_CAT_END_SETTING2()
+{
+    
+    if ( ( CHK_DAY( 8, 31 ) == 1 ) && ( BIT_CHK( ( 518 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 519 + 0x20000000 ) );
+        BIT_ON( ( 518 + 0x20000000 ) );
+    }
+
+    
+    if ( ( CHK_DAY( 9, 30 ) == 1 ) && ( BIT_CHK( ( 524 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 525 + 0x20000000 ) );
+        BIT_ON( ( 524 + 0x20000000 ) );
+    }
+
+    
+    if ( ( CHK_DAY( 10, 31 ) == 1 ) && ( BIT_CHK( ( 530 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 531 + 0x20000000 ) );
+        BIT_ON( ( 530 + 0x20000000 ) );
+    }
+
+    
+    if ( ( CHK_DAY( 11, 30 ) == 1 ) && ( BIT_CHK( ( 536 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 537 + 0x20000000 ) );
+        BIT_ON( ( 536 + 0x20000000 ) );
+    }
+
+    
+    if ( ( CHK_DAY( 12, 31 ) == 1 ) && ( BIT_CHK( ( 542 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 543 + 0x20000000 ) );
+        BIT_ON( ( 542 + 0x20000000 ) );
+    }
+
+    
+    if ( ( CHK_DAY( 1, 31 ) == 1 ) && ( BIT_CHK( ( 548 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 549 + 0x20000000 ) );
+        BIT_ON( ( 548 + 0x20000000 ) );
+    }
+
+    
+    if ( ( CHK_DAY( 1, 31 ) == 1 ) && ( BIT_CHK( ( 554 + 0x20000000 ) ) == 0 ) )
+    {
+        BIT_OFF( ( 555 + 0x20000000 ) );
+        BIT_ON( ( 554 + 0x20000000 ) );
+    }
+
+}
+

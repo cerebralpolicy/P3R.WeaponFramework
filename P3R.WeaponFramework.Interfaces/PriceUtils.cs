@@ -4,9 +4,9 @@ namespace P3R.WeaponFramework.Interfaces;
 
 public static class PriceUtils
 {
-    const double slope = 0.0107551847067;
-    const double power = 1.48371044743807;
-    const double stDev = 5875.6458611555441;
+    const double slope = 0.0156893071491;
+    const double power = 1.44199142635;
+    const double stDev = 12864.4951913;
     const double tolerance = 0.25;
 
     public static void VerifyPrices<T>(this T weapon)
@@ -28,6 +28,15 @@ public static class PriceUtils
         var actualPrice = stats.Price;
         var window = tolerance * stDev;
         return actualPrice <= (expectedPrice + window) && actualPrice >= (expectedPrice - window);
+    }
+    public static void SetConfigPrices(this WeaponConfig config)
+    {
+        var configStats = config.Stats;
+        if (!configStats.HasValue)
+            return;
+        var stats = configStats.Value;
+        stats.Price = stats.GetBuyPrice();
+        stats.SellPrice = stats.GetSellPrice();
     }
     public static void SetConfigPrices<T>(this T weapon)
         where T : IWeapon
@@ -65,7 +74,7 @@ public static class PriceUtils
         var result = Math.Floor(raw);
         return (int)(result - (result % 20));
     }
-    private static int GetBuyPrice(this WeaponStats weaponStats) => GetBuyPrice(weaponStats.Attack, weaponStats.Accuracy);
     public static int GetSellPrice(int attack, int accuracy) => GetBuyPrice(attack, accuracy)/4;
+    private static int GetBuyPrice(this WeaponStats weaponStats) => GetBuyPrice(weaponStats.Attack, weaponStats.Accuracy);
     private static int GetSellPrice(this WeaponStats weaponStats) => GetSellPrice(weaponStats.Attack, weaponStats.Accuracy);
 }

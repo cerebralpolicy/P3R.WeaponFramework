@@ -1,0 +1,259 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Wp0005_01_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WeaponBase_C'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.12"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Wp0005_01_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Wp0005_01_C'Default__BP_Wp0005_01_C'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.1"
+    }
+  },
+  {
+    "Type": "BP_Wp0005_01_C",
+    "Name": "Default__BP_Wp0005_01_C",
+    "Class": "BlueprintGeneratedClass'/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.BP_Wp0005_01_C'",
+    "Template": {
+      "ObjectName": "BP_WeaponBase_C'Default__BP_WeaponBase_C'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.13"
+    },
+    "Properties": {
+      "PlayerID": 5,
+      "Root": {
+        "ObjectName": "SceneComponent'Default__BP_Wp0005_01_C:Root'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.3"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Wp0005_01_C:WeaponMesh'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.6"
+      },
+      "WeaponTbl": {
+        "Data": [
+          {
+            "Key": "-1",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "50",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "51",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_001.SK_Wp0005_001",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "52",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_010.SK_Wp0005_010",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "53",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_011.SK_Wp0005_011",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "54",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_020.SK_Wp0005_020",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "55",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_021.SK_Wp0005_021",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "56",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_060.SK_Wp0005_060",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "57",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_061.SK_Wp0005_061",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "58",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "59",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "0",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_999.SK_Wp0005_999",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          }
+        ],
+        "Anim": {
+          "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/ABP_Wp0005.ABP_Wp0005_C",
+          "SubPathString": ""
+        },
+        "AnimAsset": [
+          {
+            "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+            "Asset": {
+              "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0005_01_AnimBtl.DA_Wp0005_01_AnimBtl",
+              "SubPathString": ""
+            }
+          },
+          {
+            "UsageEnv": "AppCharWeaponUsageEnv::Field",
+            "Asset": {
+              "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0005_01_AnimFld.DA_Wp0005_01_AnimFld",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      "AttachSocketName": "Soc_R_AttachHand00_00",
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Wp0005_01_C:Root'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Wp0005_01_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Outer": "Default__BP_Wp0005_01_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_WeaponBase_C:Root'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.15"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Wp0005_01_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.2"
+      },
+      "VariableGuid": "F9220E74-4D3EEFE8-E096EE81-8937D287",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Wp0005_01_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Wp0005_01_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.4"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "WeaponMesh",
+    "Outer": "Default__BP_Wp0005_01_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_WeaponBase_C:WeaponMesh'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.18"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Wp0005_01_C:Root'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0005_01.3"
+      }
+    }
+  }
+]

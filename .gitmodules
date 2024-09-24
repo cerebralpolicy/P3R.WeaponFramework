@@ -1,12 +1,3 @@
-[submodule "Submodules/Project.Utils"]
-	path = Submodules/Project.Utils
-	url = https://github.com/T-PoseRatkechi/Project.Utils.git
-[submodule "Submodules/Unreal.ObjectsEmitter"]
-	path = Submodules/Unreal.ObjectsEmitter
-	url = https://github.com/RyoTune/Unreal.ObjectsEmitter.git
-[submodule "Submodules/Unreal.AtlusScript"]
-	path = Submodules/Unreal.AtlusScript
-	url = https://github.com/RyoTune/Unreal.AtlusScript.git
 [submodule "submodules/p3rpc.commonmodutils"]
 	path = submodules/p3rpc.commonmodutils
 	url = https://github.com/rirurin/p3rpc.commonmodutils.git
@@ -25,3 +16,9 @@
 [submodule "REF/P3R.CostumeFramework"]
 	path = REF/P3R.CostumeFramework
 	url = https://github.com/RyoTune/P3R.CostumeFramework.git
+[submodule "Tools/Atlus-Script-Tools"]
+	path = Tools/Atlus-Script-Tools
+	url = https://github.com/tge-was-taken/Atlus-Script-Tools.git
+[submodule "REF/p3rpc.nativetypes"]
+	path = REF/p3rpc.nativetypes
+	url = https://github.com/rirurin/p3rpc.nativetypes.git

@@ -1,39 +1,305 @@
+# EXAMPLE
+# [Optional] Specifies the name displayed in P3R
 name: Your Weapon Name
-base:
-  mesh_path: #[OPTIONAL] Path to base weapon skeleton
-  anim_path: #[OPTIONAL] Path to weapon animations? If they have anims?
-mesh:
-  mesh_path: #[OPTIONAL] Path to weapon mesh not in the weapon folder
+# Specifies the shell type used by the new weapon.
+shell: Player
+# Specifies the model being used by the new weapon.
+model:
+  # Path to a model not inside the weapon folder.
+  mesh_path1: ''
+  # Path to a model not inside the weapon folder. Only need if adding a weapon to Akihiko or a dual-wield weapon to Aigis.
+  mesh_path2: ''
+# Defines the stats for the weapon.
 stats:
-  attr_id: 0 #Damage attribute SEE NOTES
-  rarity: 1 #[OPTIONAL]
-  tier: 1 #[OPTIONAL]
-  attack: 30 #Damage output
-  accuracy: 95 #Accuracy modifier
-  strength: 0 #[OPTIONAL]
-  magic: 0 #[OPTIONAL]
-  endurance: 0 #[OPTIONAL]
-  agility: 0 #[OPTIONAL]
-  luck: 0 #[OPTIONAL]
-  skill_id: 0 #[OPTIONAL]
-  price: 400 #[OPTIONAL]
-  sell_price: 100 #[OPTIONAL]
+  attr_id: BTL_DATA_ATTR_SLASH
+  rarity: 1
+  tier: 1
+  attack: 30
+  accuracy: 95
+  strength: 0
+  magic: 0
+  endurance: 0
+  agility: 0
+  luck: 0
+  skill_id: None
+  price: 400
+  sell_price: 100
 
-#NOTES
-    #Anything marked [OPTIONAL] is not needed and will fall back to a default value
-    
-    #RE: DAMAGE ATTRIBUTES
-    #The possible attributes are as follows
-        #PHYSICAL 
-            #0 = Slash
-            #1 = Strike 
-            #2 = Pierce
-        #ELEMENTAL
-            #3 = Fire
-            #4 = Ice
-            #5 = Electric
-            #6 = Wind
-            #7 = Almighty
-            #8 = Light/Bless
-            #9 = Dark/Curse
-    #Do not go any higher
+# NOTES
+	# SHELL TYPES
+		# shell: Player                     One handed swords used by the protagonist.
+		# shell: Yukari                     Bows used by Yukari.
+		# shell: Stupei                     Two handed swords used by Junpei
+		# shell: Akihiko                    Gloves/Knuckles used by Akihiko [NEEDS 2 MODELS]
+		# shell: Mitsuru                    Sabres/Rapiers used by Mitsuru.
+		# shell: Aigis_SmallArms            Aigis' FN 5.7x24mm finger cannons - that's what makes the most sense. [NEEDS 2 MODELS]
+		# shell: Aigis_LongArms             Aigis' long/heavy firearms.
+		# shell: Ken                        Spears/Nagitanas used by Ken.
+		# shell: Koromaru                   Whatever will fit in Koro's mouth, go wild.
+		# shell: Shinjiro                   Shinji's arsenal, brought to you by MC Hammer.
+		# shell: Metis                      Axes and handmedowns from Shinji, now utilized by Metis
+		# shell: Aigis_SmallArms_Astrea     Aigis' FN 5.7x24mm finger cannons - animations have changed to allow player control. [NEEDS 2 MODELS]
+		# shell: Aigis_LongArms_Astrea      Aigis' long/heavy firearms.
+	# ATTR_ID TYPES
+		# skill_id: BTL_DATA_ATTR_SLASH     (idx: 0)
+		# skill_id: BTL_DATA_ATTR_STRIKE    (idx: 1)
+		# skill_id: BTL_DATA_ATTR_PIERCE    (idx: 2)
+		# skill_id: BTL_DATA_ATTR_FIRE      (idx: 3)
+		# skill_id: BTL_DATA_ATTR_ICE       (idx: 4)
+		# skill_id: BTL_DATA_ATTR_ELECTRIC  (idx: 5)
+		# skill_id: BTL_DATA_ATTR_WIND      (idx: 6)
+		# skill_id: BTL_DATA_ATTR_ALMIGHTY  (idx: 7)
+		# skill_id: BTL_DATA_ATTR_LIGHT     (idx: 8)
+		# skill_id: BTL_DATA_ATTR_DARK      (idx: 9)
+		# skill_id: BTL_DATA_ATTR_CHARM     (idx: 10)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_POISON    (idx: 11)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_UPSET     (idx: 12)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_PANIC     (idx: 13)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_FEAR      (idx: 14)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_ANGER     (idx: 15)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_RECOVERY  (idx: 16)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_SUPPORT   (idx: 17)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_SPECIAL   (idx: 18)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_NON       (idx: 19)I recommend against using this
+		# skill_id: BTL_DATA_ATTR_MAX       (idx: 20)I recommend against using this
+	# SKILL_ID TYPES
+		# skill_id: None                    (idx: 0)
+		# skill_id: HP_10                   (idx: 1)
+		# skill_id: HP_20                   (idx: 2)
+		# skill_id: HP_30                   (idx: 3)
+		# skill_id: HP_40                   (idx: 4)
+		# skill_id: HP_50                   (idx: 5)
+		# skill_id: HP_100                  (idx: 6)
+		# skill_id: SP_10                   (idx: 7)
+		# skill_id: SP_20                   (idx: 8)
+		# skill_id: SP_30                   (idx: 9)
+		# skill_id: SP_40                   (idx: 10)
+		# skill_id: SP_50                   (idx: 11)
+		# skill_id: SP_100                  (idx: 12)
+		# skill_id: Freeze_Low              (idx: 13)
+		# skill_id: Freeze_Med              (idx: 14)
+		# skill_id: Freeze_High             (idx: 15)
+		# skill_id: Shock_Low               (idx: 16)
+		# skill_id: Shock_Med               (idx: 17)
+		# skill_id: Shock_High              (idx: 18)
+		# skill_id: Confuse_Low             (idx: 19)
+		# skill_id: Confuse_Med             (idx: 20)
+		# skill_id: Confuse_High            (idx: 21)
+		# skill_id: Fear_Low                (idx: 22)
+		# skill_id: Fear_Med                (idx: 23)
+		# skill_id: Fear_High               (idx: 24)
+		# skill_id: Distress_Low            (idx: 25)
+		# skill_id: Distress_Med            (idx: 26)
+		# skill_id: Distress_High           (idx: 27)
+		# skill_id: Charm_Low               (idx: 28)
+		# skill_id: Charm_Med               (idx: 29)
+		# skill_id: Charm_High              (idx: 30)
+		# skill_id: Rage_Low                (idx: 31)
+		# skill_id: Rage_Med                (idx: 32)
+		# skill_id: Rage_High               (idx: 33)
+		# skill_id: Poison_Low              (idx: 34)
+		# skill_id: Poison_Med              (idx: 35)
+		# skill_id: Poison_High             (idx: 36)
+		# skill_id: Random_Ailment_Low      (idx: 37)
+		# skill_id: Random_Ailment_Med      (idx: 38)
+		# skill_id: Random_Ailment_High     (idx: 39)
+		# skill_id: Critical_Rate_Up_Low    (idx: 40)
+		# skill_id: Critical_Rate_Up_Med    (idx: 41)
+		# skill_id: Critical_Rate_Up_High   (idx: 42)
+		# skill_id: Slash_Boost             (idx: 43)
+		# skill_id: Strike_Boost            (idx: 44)
+		# skill_id: Pierce_Boost            (idx: 45)
+		# skill_id: Fire_Boost              (idx: 46)
+		# skill_id: Ice_Boost               (idx: 47)
+		# skill_id: Elec_Boost              (idx: 48)
+		# skill_id: Wind_Boost              (idx: 49)
+		# skill_id: Light_Boost             (idx: 50)
+		# skill_id: Dark_Boost              (idx: 51)
+		# skill_id: Counter                 (idx: 52)
+		# skill_id: Counterstrike           (idx: 53)
+		# skill_id: High_Counter            (idx: 54)
+		# skill_id: Resist_Freeze           (idx: 55)
+		# skill_id: Resist_Shock            (idx: 56)
+		# skill_id: Resist_Confuse          (idx: 57)
+		# skill_id: Resist_Fear             (idx: 58)
+		# skill_id: Resist_Distress         (idx: 59)
+		# skill_id: Resist_Charm            (idx: 60)
+		# skill_id: Resist_Rage             (idx: 61)
+		# skill_id: Resist_Poison           (idx: 62)
+		# skill_id: Resist_Dizzy            (idx: 63)
+		# skill_id: Null_Freeze             (idx: 64)
+		# skill_id: Null_Shock              (idx: 65)
+		# skill_id: Null_Confuse            (idx: 66)
+		# skill_id: Null_Fear               (idx: 67)
+		# skill_id: Null_Distress           (idx: 68)
+		# skill_id: Null_Charm              (idx: 69)
+		# skill_id: Null_Rage               (idx: 70)
+		# skill_id: Null_Poison             (idx: 71)
+		# skill_id: Null_Dizzy              (idx: 72)
+		# skill_id: Auto_Tarukaja           (idx: 73)
+		# skill_id: Auto_Rakukaja           (idx: 74)
+		# skill_id: Auto_Sukukaja           (idx: 75)
+		# skill_id: Reduce_Slash_Dmg_Low    (idx: 76)
+		# skill_id: Reduce_Slash_Dmg_Med    (idx: 77)
+		# skill_id: Reduce_Slash_Dmg_High   (idx: 78)
+		# skill_id: Reduce_Strike_Dmg_Low   (idx: 79)
+		# skill_id: Reduce_Strike_Dmg_Med   (idx: 80)
+		# skill_id: Reduce_Strike_Dmg_High  (idx: 81)
+		# skill_id: Reduce_Pierce_Dmg_Low   (idx: 82)
+		# skill_id: Reduce_Pierce_Dmg_Med   (idx: 83)
+		# skill_id: Reduce_Pierce_Dmg_High  (idx: 84)
+		# skill_id: Reduce_Phys_Dmg_Low     (idx: 85)
+		# skill_id: Reduce_Phys_Dmg_Med     (idx: 86)
+		# skill_id: Reduce_Phys_Dmg_High    (idx: 87)
+		# skill_id: Reduce_Fire_Dmg_Low     (idx: 88)
+		# skill_id: Reduce_Fire_Dmg_Med     (idx: 89)
+		# skill_id: Reduce_Fire_Dmg_High    (idx: 90)
+		# skill_id: Reduce_Ice_Dmg_Low      (idx: 91)
+		# skill_id: Reduce_Ice_Dmg_Med      (idx: 92)
+		# skill_id: Reduce_Ice_Dmg_High     (idx: 93)
+		# skill_id: Reduce_Elec_Dmg_Low     (idx: 94)
+		# skill_id: Reduce_Elec_Dmg_Med     (idx: 95)
+		# skill_id: Reduce_Elec_Dmg_High    (idx: 96)
+		# skill_id: Reduce_Wind_Dmg_Low     (idx: 97)
+		# skill_id: Reduce_Wind_Dmg_Med     (idx: 98)
+		# skill_id: Reduce_Wind_Dmg_High    (idx: 99)
+		# skill_id: Reduce_Light_Dmg_Low    (idx: 100)
+		# skill_id: Reduce_Light_Dmg_Med    (idx: 101)
+		# skill_id: Reduce_Light_Dmg_High   (idx: 102)
+		# skill_id: Reduce_Dark_Dmg_Low     (idx: 103)
+		# skill_id: Reduce_Dark_Dmg_Med     (idx: 104)
+		# skill_id: Reduce_Dark_Dmg_High    (idx: 105)
+		# skill_id: Reduce_Magic_Dmg_Low    (idx: 106)
+		# skill_id: Reduce_Magic_Dmg_Med    (idx: 107)
+		# skill_id: Reduce_Magic_Dmg_High   (idx: 108)
+		# skill_id: Slash_Evasion_Low       (idx: 109)
+		# skill_id: Slash_Evasion_Med       (idx: 110)
+		# skill_id: Slash_Evasion_High      (idx: 111)
+		# skill_id: Strike_Evasion_Low      (idx: 112)
+		# skill_id: Strike_Evasion_Med      (idx: 113)
+		# skill_id: Strike_Evasion_High     (idx: 114)
+		# skill_id: Pierce_Evasion_Low      (idx: 115)
+		# skill_id: Pierce_Evasion_Med      (idx: 116)
+		# skill_id: Pierce_Evasion_High     (idx: 117)
+		# skill_id: Physical_Evasion_Low    (idx: 118)
+		# skill_id: Physical_Evasion_Med    (idx: 119)
+		# skill_id: Physical_Evasion_High   (idx: 120)
+		# skill_id: Fire_Evasion_Low        (idx: 121)
+		# skill_id: Fire_Evasion_Med        (idx: 122)
+		# skill_id: Fire_Evasion_High       (idx: 123)
+		# skill_id: Ice_Evasion_Low         (idx: 124)
+		# skill_id: Ice_Evasion_Med         (idx: 125)
+		# skill_id: Ice_Evasion_High        (idx: 126)
+		# skill_id: Electricity_Evasion_Low (idx: 127)
+		# skill_id: Electricity_Evasion_Med (idx: 128)
+		# skill_id: Electricity_Evasion_High(idx: 129)
+		# skill_id: Wind_Evasion_Low        (idx: 130)
+		# skill_id: Wind_Evasion_Med        (idx: 131)
+		# skill_id: Wind_Evasion_High       (idx: 132)
+		# skill_id: Light_Evasion_Low       (idx: 133)
+		# skill_id: Light_Evasion_Med       (idx: 134)
+		# skill_id: Light_Evasion_High      (idx: 135)
+		# skill_id: Dark_Evasion_Low        (idx: 136)
+		# skill_id: Dark_Evasion_Med        (idx: 137)
+		# skill_id: Dark_Evasion_High       (idx: 138)
+		# skill_id: Magic_Evasion_Low       (idx: 139)
+		# skill_id: Magic_Evasion_Med       (idx: 140)
+		# skill_id: Magic_Evasion_High      (idx: 141)
+		# skill_id: Exp_x150                (idx: 142)
+		# skill_id: Exp_x115                (idx: 143)
+		# skill_id: Slash_Damage_Up         (idx: 144)
+		# skill_id: Strike_Damage_Up        (idx: 145)
+		# skill_id: Pierce_Damage_Up        (idx: 146)
+		# skill_id: Fire_Damage_Up          (idx: 147)
+		# skill_id: Ice_Damage_Up           (idx: 148)
+		# skill_id: Electricity_Damage_Up   (idx: 149)
+		# skill_id: Wind_Damage_Up          (idx: 150)
+		# skill_id: Light_Damage_Up         (idx: 151)
+		# skill_id: Dark_Damage_Up          (idx: 152)
+		# skill_id: Slash_Defense_Up        (idx: 153)
+		# skill_id: Strike_Defense_Up       (idx: 154)
+		# skill_id: Pierce_Defense_Up       (idx: 155)
+		# skill_id: Fire_Defense_Up         (idx: 156)
+		# skill_id: Ice_Defense_Up          (idx: 157)
+		# skill_id: Electricity_Defense_Up  (idx: 158)
+		# skill_id: Wind_Defense_Up         (idx: 159)
+		# skill_id: Light_Defense_Up        (idx: 160)
+		# skill_id: Dark_Defense_Up         (idx: 161)
+		# skill_id: Attack_When_Enraged     (idx: 162)
+		# skill_id: Regenerate_1            (idx: 163)
+		# skill_id: Regenerate_2            (idx: 164)
+		# skill_id: Regenerate_3            (idx: 165)
+		# skill_id: Invigorate_1            (idx: 166)
+		# skill_id: Invigorate_2            (idx: 167)
+		# skill_id: Invigorate_3            (idx: 168)
+		# skill_id: Null_Light_Instakill    (idx: 169)
+		# skill_id: Null_Dark_Instakill     (idx: 170)
+		# skill_id: Ali_Dance               (idx: 171)
+		# skill_id: Null_All_Except_Almighty(idx: 172)
+		# skill_id: Firm_Stance             (idx: 173)
+		# skill_id: Soul_Chain              (idx: 174)
+		# skill_id: All_Out_Attack_Dmg_Up   (idx: 175)
+		# skill_id: Null_Slash              (idx: 177)
+		# skill_id: Null_Strike             (idx: 178)
+		# skill_id: Null_Pierce             (idx: 179)
+		# skill_id: Null_Fire               (idx: 180)
+		# skill_id: Null_Ice                (idx: 181)
+		# skill_id: Null_Elec               (idx: 182)
+		# skill_id: Null_Wind               (idx: 183)
+		# skill_id: Null_Light              (idx: 184)
+		# skill_id: Null_Dark               (idx: 185)
+		# skill_id: Slash_Amp               (idx: 186)
+		# skill_id: Strike_Amp              (idx: 187)
+		# skill_id: Pierce_Amp              (idx: 188)
+		# skill_id: Fire_Amp                (idx: 189)
+		# skill_id: Ice_Amp                 (idx: 190)
+		# skill_id: Elec_Amp                (idx: 191)
+		# skill_id: Wind_Amp                (idx: 192)
+		# skill_id: Light_Amp               (idx: 193)
+		# skill_id: Dark_Amp                (idx: 194)
+		# skill_id: Resist_Ailments         (idx: 195)
+		# skill_id: Unshaken_Will           (idx: 196)
+		# skill_id: Fast_Heal               (idx: 197)
+		# skill_id: Insta_Heal              (idx: 198)
+		# skill_id: Life_Aid                (idx: 199)
+		# skill_id: Endure                  (idx: 200)
+		# skill_id: Enduring_Soul           (idx: 201)
+		# skill_id: Arms_Master             (idx: 202)
+		# skill_id: Spell_Master            (idx: 203)
+		# skill_id: Apt_Pupil               (idx: 204)
+		# skill_id: Sharp_Student           (idx: 205)
+		# skill_id: Freeze_Boost            (idx: 206)
+		# skill_id: Shock_Boost             (idx: 207)
+		# skill_id: Confuse_Boost           (idx: 208)
+		# skill_id: Fear_Boost              (idx: 209)
+		# skill_id: Distress_Boost          (idx: 210)
+		# skill_id: Charm_Boost             (idx: 211)
+		# skill_id: Rage_Boost              (idx: 212)
+		# skill_id: Poison_Boost            (idx: 213)
+		# skill_id: Survive_Light           (idx: 214)
+		# skill_id: Endure_Light            (idx: 215)
+		# skill_id: Survive_Dark            (idx: 216)
+		# skill_id: Endure_Dark             (idx: 217)
+		# skill_id: Survival_Trick          (idx: 218)
+		# skill_id: Auto_Mataru             (idx: 219)
+		# skill_id: Auto_Maraku             (idx: 220)
+		# skill_id: Auto_Masuku             (idx: 221)
+		# skill_id: Auto_Rebellion          (idx: 222)
+		# skill_id: Anti_Fire_Master        (idx: 223)
+		# skill_id: Anti_Ice_Master         (idx: 224)
+		# skill_id: Anti_Electric_Master    (idx: 225)
+		# skill_id: Anti_Wind_Master        (idx: 226)
+		# skill_id: Soul_Shift              (idx: 227)
+		# skill_id: Soul_Link               (idx: 229)
+		# skill_id: Shift_Boost             (idx: 230)
+		# skill_id: Shift_Amp               (idx: 231)
+		# skill_id: Dmg_On_Downed_Enemy     (idx: 232)
+		# skill_id: Dizzy_Boost             (idx: 233)
+		# skill_id: Ignore_Enemy_Resistances(idx: 234)
+		# skill_id: Orgia_Duration_1_Turn   (idx: 235)
+		# skill_id: Faster_Overheat_Recovery(idx: 236)
+		# skill_id: SP_HP_100_100           (idx: 248)
+		# skill_id: Auto_Tarukabellion      (idx: 249)
+		# skill_id: Auto_Charge             (idx: 250)
+		# skill_id: Auto_Concentrate        (idx: 251)
+		# skill_id: Auto_Heat_Riser         (idx: 252)

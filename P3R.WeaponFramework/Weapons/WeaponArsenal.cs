@@ -27,22 +27,26 @@ namespace P3R.WeaponFramework.Weapons
             {
                 return null;
             }
-
             ApplyWeaponConfig(weapon, config);
             LoadWeaponFiles(mod, weapon, weaponDir);
-            Log.Information($"Weapon created: {weapon.Character} || Weapon ID: {weapon.WeaponId}\nFolder: {weaponDir}");
             return weapon;
         }
         private void ApplyWeaponConfig(Weapon weapon, WeaponConfig config)
         {
             ModUtils.IfNotNull(config.Name, str => weapon.Name = str);
-            ModUtils.IfNotNull(config.Base.MeshPath1, str => weapon.Config.Base!.MeshPath1 = str);
-            ModUtils.IfNotNull(config.Mesh.MeshPath1, str => weapon.Config.Mesh!.MeshPath1 = str);
-            ModUtils.IfNotNull(config.Mesh.MeshPath2, str => weapon.Config.Mesh!.MeshPath2 = str);
+            ModUtils.IfNotNull(config.Model.MeshPath1, str => weapon.Config.Model!.MeshPath1 = str);
+            ModUtils.IfNotNull(config.Model.MeshPath2, str => weapon.Config.Model!.MeshPath2 = str);
             ModUtils.IfNotNull(config.Stats, stats =>
             {
                 weapon.Config.Stats = stats;
                 weapon.VerifyPrices();
+            });
+            ModUtils.IfNotNull(config.Shell, shell =>
+            {
+                weapon.Config.Shell = shell;
+                var shellType = ShellType.FromValue(shell);
+                weapon.ShellTarget = shellType;
+                weapon.ModelId = shellType.ShellModelID;        
             });
         }
 
@@ -53,22 +57,9 @@ namespace P3R.WeaponFramework.Weapons
 //            SetWeaponFile(mod, Path.Join(weaponDir, "base-mesh.uasset"), path => weapon.Config.Base.MeshPath = path);
 //            SetWeaponFile(mod, Path.Join(weaponDir, "base-anim.uasset"), path => weapon.Config.Base.MeshPath = path);
 
-            SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh2.uasset"), path => weapon.Config.Mesh!.MeshPath2 = path);
-            SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh.uasset"), path =>
-            {
-                weapon.Config.Mesh!.MeshPath1 = path;
-                weapon.AddToDT();
-            });
+            SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh2.uasset"), path => weapon.Config.Model!.MeshPath2 = path);
+            SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh.uasset"), path => weapon.Config.Model!.MeshPath1 = path);
             SetWeaponFile(mod, Path.Join(weaponDir, "description.msg"), path => weapon.Description = File.ReadAllText(path), SetType.Full);
-        }
-
-        private unsafe void AddWeaponToBP(Weapon weapon)
-        {
-            if (weapon.Config.Base == null || weapon.Config.Mesh == null)
-                return;
-            var basePath = weapon.Config.Base.MeshPath1;
-            var baseId = Path.GetFileNameWithoutExtension(basePath)?.Substring(3);
-            
         }
         private static void SetWeaponFile(WeaponMod mod, string modFile, Action<string> setFile, SetType type = SetType.Relative)
         {
@@ -86,20 +77,30 @@ namespace P3R.WeaponFramework.Weapons
         }
         public Weapon? CreateOrFindWeapon(string ownerId, Character character, string name)
         {
-            var existingWeapon = weapons.Values.FirstOrDefault(x => x.Character == character && x.Name == name);
+            var existingWeapon = weapons.FirstOrDefault(x => x.Character == character && x.Name == name);
             if (existingWeapon != null)
             {
                 return existingWeapon;
             }
 
-            var newWeapon = weapons.Values.FirstOrDefault(x => x.Character == Character.NONE && x.WeaponItemId > DataUtils.MAX_VANILLA_ID);
+            var newWeapon = weapons.FirstOrDefault(x => x.Character == Character.NONE && x.WeaponItemId > DataUtils.MAX_VANILLA_ID);
             if (newWeapon != null)
             {
+                EpisodeFlag flag = EpisodeFlag.Both;
+                if (Characters.AstreaOnly.Contains(character))
+                {
+                    flag = EpisodeFlag.Astrea;
+                }
+                else if (Characters.VanillaOnly.Contains(character))
+                {
+                    flag = EpisodeFlag.Vanilla;
+                }
                 newWeapon.Name = name;
                 newWeapon.Character = character;
                 newWeapon.IsVanilla = false;
                 newWeapon.IsEnabled = true;
                 newWeapon.OwnerModId = ownerId;
+                newWeapon.EpisodeFlag = flag;
             }
             else
             {
@@ -107,8 +108,6 @@ namespace P3R.WeaponFramework.Weapons
             }
             return newWeapon;
         }
-
-
         private static WeaponConfig GetWeaponConfig(string weaponDir)
         {
             var configFile = Path.Join(weaponDir, "config.yaml");

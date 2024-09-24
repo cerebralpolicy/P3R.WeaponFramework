@@ -5,23 +5,8 @@ namespace P3R.WeaponFramework.Weapons;
 internal static class AssetUtils
 {
 
-    public static string? GetAssetFile(Character chara, EWeaponModelSet model, WeaponAssetType type)
-    {
-        string? assetFile = type switch
-        {
-            WeaponAssetType.Base_Mesh => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/SKEL_Wp{chara.Format()}"),
-            WeaponAssetType.Weapon_Mesh => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{model.Format()}"),
-
-            WeaponAssetType.Base_Anim => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/SKEL_Wp{chara.Format()}"),
-            WeaponAssetType.Weapon_Anim => null,
-            _ => throw new Exception(),
-        };
-        return assetFile;
-    }
-
-
-    public static string? GetWeaponBP(Character chara, int armatureIndex) => $"BP_Wp{chara.Format()}_{armatureIndex.ToString("00")}";
-    public static string? GetWeaponBPFull(Character chara, int armatureIndex) => GetAssetPath($"/Game/Xrd777/Blueprints/Equipments/BP_Wp{chara.Format()}_{armatureIndex.ToString("00")}");
+    public static string? GetWeaponBP(ECharacter chara, int armatureIndex) => $"BP_Wp{chara.Format()}_{armatureIndex.ToString("00")}";
+    public static string? GetWeaponBPFull(ECharacter chara, int armatureIndex) => GetAssetPath($"/Game/Xrd777/Blueprints/Equipments/BP_Wp{chara.Format()}_{armatureIndex.ToString("00")}");
 
     public static Dictionary<uint, uint> ModelPairsUInt = new Dictionary<uint, uint>()
     {
@@ -187,34 +172,8 @@ internal static class AssetUtils
         { 588, 50 },
         { 589, 60 },
     };
-    public static string Format(this Character character) => ((int)character).ToString("0000");
-    public static string Format(this EWeaponModelSet weaponModelSet) => ((int)weaponModelSet).ToString("000");
-    public static string FormatAssetPath(string assetPath)
-    {
-        var formattedPath = assetPath.Replace("\\", "/").Replace(".uasset", string.Empty);
-        if (!formattedPath.StartsWith("/Game/"))
-        {
-            formattedPath = $"/Game/{formattedPath}";
-        }
-        return formattedPath;
-    }
-    public static string GetAssetPath(string assetFile)
-    {
-        var adjustedPath = assetFile.Replace('\\', '/').Replace(".uasset", string.Empty);
 
-        if (adjustedPath.IndexOf("Content") is int contentIndex && contentIndex > -1)
-        {
-            adjustedPath = adjustedPath.Substring(contentIndex + 8);
-        }
-
-        if (!adjustedPath.StartsWith("/Game/"))
-        {
-            adjustedPath = $"/Game/{adjustedPath}";
-        }
-        return adjustedPath;
-    }
-
-    public static Character GetCharFromEpuip(EquipFlag flag) => Enum.Parse<Character>(flag.ToString());
-    public static EquipFlag GetEquipFromChar(Character character) => Enum.Parse<EquipFlag>(character.ToString());
-    public static string GetCharIDString(Character character) => character.Format();
+    public static ECharacter GetCharFromEpuip(EquipFlag flag) => Enum.Parse<ECharacter>(flag.ToString());
+    public static EquipFlag GetEquipFromChar(ECharacter character) => Enum.Parse<EquipFlag>(character.ToString());
+    public static string GetCharIDString(ECharacter character) => character.Format();
 }

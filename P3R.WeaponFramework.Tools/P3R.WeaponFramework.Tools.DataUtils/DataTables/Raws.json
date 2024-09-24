@@ -1,0 +1,1592 @@
+﻿[
+  {
+    "Name": "BP_Wp0003_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_000.SK_Wp0003_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "3",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_999.SK_Wp0003_999",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "230",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_999.SK_Wp0003_999",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "30",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_000.SK_Wp0003_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "31",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_001.SK_Wp0003_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "32",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_010.SK_Wp0003_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "33",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_011.SK_Wp0003_011",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "34",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_020.SK_Wp0003_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "35",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_021.SK_Wp0003_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "36",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_050.SK_Wp0003_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "37",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_060.SK_Wp0003_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "38",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_061.SK_Wp0003_061",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "39",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_062.SK_Wp0003_062",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_000.SK_Wp0003_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0003/ABP_Wp0003.ABP_Wp0003_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0003_01_AnimBtl.DA_Wp0003_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0003_01_AnimFld.DA_Wp0003_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0004_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "40",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "41",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_001.SK_Wp0004_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "42",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_010.SK_Wp0004_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "43",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_011.SK_Wp0004_011",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "44",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_020.SK_Wp0004_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "45",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_021.SK_Wp0004_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "46",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_050.SK_Wp0004_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "47",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_060.SK_Wp0004_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "48",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_061.SK_Wp0004_061",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "49",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/ABP_Wp0004_000.ABP_Wp0004_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_01_AnimBtl.DA_Wp0004_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_01_AnimFld.DA_Wp0004_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0004_02",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "40",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "41",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_201.SK_Wp0004_201",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "42",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_210.SK_Wp0004_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "43",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_211.SK_Wp0004_211",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "44",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_220.SK_Wp0004_220",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "45",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_221.SK_Wp0004_221",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "46",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_250.SK_Wp0004_250",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "47",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_260.SK_Wp0004_260",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "48",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_261.SK_Wp0004_261",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "49",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0004/ABP_Wp0004_000.ABP_Wp0004_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_02_AnimBtl.DA_Wp0004_02_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_02_AnimFld.DA_Wp0004_02_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0005_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "50",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "51",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_001.SK_Wp0005_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "52",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_010.SK_Wp0005_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "53",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_011.SK_Wp0005_011",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "54",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_020.SK_Wp0005_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "55",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_021.SK_Wp0005_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "56",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_060.SK_Wp0005_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "57",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_061.SK_Wp0005_061",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "58",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "59",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_999.SK_Wp0005_999",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0005/ABP_Wp0005.ABP_Wp0005_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0005_01_AnimBtl.DA_Wp0005_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0005_01_AnimFld.DA_Wp0005_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0007_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "70",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "71",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_011.SK_Wp0007_011",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_01_AnimBtl.DA_Wp0007_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_01_AnimFld.DA_Wp0007_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0007_02",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "70",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "71",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_211.SK_Wp0007_211",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_02_AnimBtl.DA_Wp0007_02_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_02_AnimFld.DA_Wp0007_02_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0007_03",
+    "Data": [
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_999.SK_Wp0007_999",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "72",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "73",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_001.SK_Wp0007_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "74",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_020.SK_Wp0007_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "75",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_021.SK_Wp0007_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "76",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_050.SK_Wp0007_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "77",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_060.SK_Wp0007_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "78",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "79",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_03_AnimBtl.DA_Wp0007_03_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_03_AnimFld.DA_Wp0007_03_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0008_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_000.SK_Wp0008_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "80",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_000.SK_Wp0008_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "81",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_001.SK_Wp0008_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "82",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_010.SK_Wp0008_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "83",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_011.SK_Wp0008_011",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "84",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_020.SK_Wp0008_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "85",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_021.SK_Wp0008_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "86",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_050.SK_Wp0008_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "87",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_060.SK_Wp0008_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "88",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_061.SK_Wp0008_061",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "89",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_062.SK_Wp0008_062",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_000.SK_Wp0008_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0008/ABP_Wp0008.ABP_Wp0008_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0008_01_AnimBtl.DA_Wp0008_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0008_01_AnimFld.DA_Wp0008_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0009_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "90",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "91",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_001.SK_Wp0009_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "92",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_010.SK_Wp0009_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "93",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_011_.SK_Wp0009_011_",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "94",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_020.SK_Wp0009_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "95",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_021.SK_Wp0009_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "96",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_050.SK_Wp0009_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "97",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_060.SK_Wp0009_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "98",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "99",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0009/ABP_Wp0009.ABP_Wp0009_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0009_01_AnimBtl.DA_Wp0009_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0009_01_AnimFld.DA_Wp0009_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0010_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_000.SK_Wp0010_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "100",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_000.SK_Wp0010_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "101",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_010.SK_Wp0010_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "102",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_020.SK_Wp0010_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "103",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_050.SK_Wp0010_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "104",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_060.SK_Wp0010_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "105",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_061.SK_Wp0010_061",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_000.SK_Wp0010_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0010/ABP_Wp0010.ABP_Wp0010_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0010_01_AnimBtl.DA_Wp0010_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0010_01_AnimFld.DA_Wp0010_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0011_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_000.SK_Wp0011_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "100",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_000.SK_Wp0011_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "101",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_010.SK_Wp0011_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "102",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_020.SK_Wp0011_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "103",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_050.SK_Wp0011_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "104",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_060.SK_Wp0011_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "105",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_061.SK_Wp0011_061",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "106",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_001.SK_Wp0011_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0011/ABP_Wp0011.ABP_Wp0011_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0011_01_AnimBtl.DA_Wp0011_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0011_01_AnimFld.DA_Wp0011_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0012_01",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "70",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "71",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_011.SK_Wp0007_011",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_01_AnimBtl.DA_Wp0012_01_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_01_AnimFld.DA_Wp0012_01_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0012_02",
+    "Data": [
+      {
+        "Key": "-1",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "70",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "71",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_211.SK_Wp0007_211",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      },
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+            "SubPathString": ""
+          },
+          "MultiEquip": true
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_02_AnimBtl.DA_Wp0012_02_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_02_AnimFld.DA_Wp0012_02_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0012_03",
+    "Data": [
+      {
+        "Key": "0",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_999.SK_Wp0007_999",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "72",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "73",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_001.SK_Wp0007_001",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "74",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_020.SK_Wp0007_020",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "75",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_021.SK_Wp0007_021",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "76",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_050.SK_Wp0007_050",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "77",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_060.SK_Wp0007_060",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "78",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      },
+      {
+        "Key": "79",
+        "Value": {
+          "Mesh": {
+            "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+            "SubPathString": ""
+          },
+          "MultiEquip": false
+        }
+      }
+    ],
+    "Anim": {
+      "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+      "SubPathString": ""
+    },
+    "AnimAsset": [
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_03_AnimBtl.DA_Wp0012_03_AnimBtl",
+          "SubPathString": ""
+        }
+      },
+      {
+        "UsageEnv": "AppCharWeaponUsageEnv::Field",
+        "Asset": {
+          "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_03_AnimFld.DA_Wp0012_03_AnimFld",
+          "SubPathString": ""
+        }
+      }
+    ]
+  }
+]

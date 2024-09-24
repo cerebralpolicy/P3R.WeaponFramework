@@ -1,3 +1,4 @@
+using Ardalis.SmartEnum;
 using P3R.WeaponFramework.Configuration;
 using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
@@ -12,6 +13,8 @@ using System.Diagnostics;
 using System.Drawing;
 using Unreal.AtlusScript.Interfaces;
 using Unreal.ObjectsEmitter.Interfaces;
+using UnrealEssentials.Interfaces;
+using YamlDotNet.Serialization;
 
 namespace P3R.WeaponFramework
 {
@@ -66,24 +69,30 @@ namespace P3R.WeaponFramework
             config = context.Configuration;
             modConfig = context.ModConfig;
 
-            Log.Initialize(modConfig.ModName, log, Color.PaleVioletRed);
-            Log.LogLevel = config.LogLevel;
+            
 
+            Project.Init(modConfig, modLoader, log);
+            this.modLoader.GetController<IUnrealEssentials>().TryGetTarget(out var essentials);
             this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
-            this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
             this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
+            this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
             this.modLoader.GetController<IDataTables>().TryGetTarget(out var tables);
             this.modLoader.GetController<IMemoryMethods>().TryGetTarget(out var memory);
             this.modLoader.GetController<IObjectMethods>().TryGetTarget(out var objectMethods);
             this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
 
-            WFMemoryHandler.InitHandler(unreal!, tables!, memory!, objectMethods!);
-
+            //if (essentials == null) throw new NullReferenceException(nameof(essentials));
+            // INIT DATA //
+            LoadUnrealComponent(essentials!, UnrealComponent.Data);
+            // INIT BP //
+            if (config.BPFlow)
+                LoadUnrealComponent(essentials!, UnrealComponent.Blueprints);
             this.weaponRegistry = new();
             this.weaponDescService = new(atlusAssets!);
-            this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
+            this.weapons = new(tables!, uobjects!, unreal!, weaponRegistry, weaponDescService, config.BPFlow);
 
             modLoader.ModLoaded += OnModLoaded;
+            Project.Start();
         }
 
         private void OnModLoaded(IModV1 mod, IModConfigV1 config)
@@ -97,16 +106,38 @@ namespace P3R.WeaponFramework
             this.weaponRegistry.RegisterMod(config.ModId, modDir);
         }
 
+
+        public enum UnrealComponent
+        {
+            Data,
+            Blueprints
+        }
+        private void LoadUnrealComponent(IUnrealEssentials essentials, UnrealComponent component)
+        {
+            Log.Information($"Loading {component}...");
+            var modFolder = Path.Join(modLoader.GetDirectoryForModId(modConfig.ModId),"Core");
+            if (modFolder == null)
+                return;
+            essentials.AddFromFolder(Path.Join(modFolder, $"{component}"));
+            Log.Information($"Loaded {component}");
+        }
+
+
         #region Standard Overrides
         public override void ConfigurationUpdated(Config configuration)
         {
             // Apply settings from configuration.
             // ... your code here.
             config = configuration;
+            weapons.UpdateMode(configuration.BPFlow);
             log.WriteLine($"[{modConfig.ModId}] Config Updated: Applying");
         }
 
-        public Type[] GetTypes() => [typeof(IWeaponApi)];
+        public Type[] GetTypes() => [
+            typeof(IWeaponApi),
+            typeof(ISmartEnum),
+            typeof(IYamlConvertible)
+            ];
         #endregion
 
         #region For Exports, Serialization etc.

@@ -78,7 +78,7 @@ public class WeaponItem : IEquatable<WeaponItem?>
         Flags = flags;
     }
 
-    public Character Character => Enum.Parse<Character>(EquipID.ToString());
+    public ECharacter Character => Enum.Parse<ECharacter>(EquipID.ToString());
 
     public WeaponStats Stats => new() 
     { 

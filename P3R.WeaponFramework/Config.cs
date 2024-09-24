@@ -28,6 +28,10 @@ namespace P3R.WeaponFramework.Configuration
         [DisplayName("Log Level")]
         [DefaultValue(LogLevel.Information)]
         public LogLevel LogLevel { get; set; } = LogLevel.Information;
+
+        [DisplayName("Use Modified Blueprint Flow")]
+        [DefaultValue(false)]
+        public bool BPFlow { get; set; } = false;
     }
 
     /// <summary>

@@ -9,20 +9,53 @@
       "P3R.WeaponFramework/1.0.0": {
         "dependencies": {
           "P3R.WeaponFramework.Interfaces": "1.0.0",
-          "Project.Utils": "1.0.0",
           "Reloaded.Memory": "9.4.2",
           "Reloaded.Memory.SigScan.ReloadedII.Interfaces": "1.2.0",
           "Reloaded.Mod.Interfaces": "2.4.0",
           "Reloaded.SharedLib.Hooks": "1.9.0",
-          "SharedScans.Interfaces": "1.0.0",
-          "Unreal.AtlusScript.Interfaces": "1.0.0",
-          "Unreal.ObjectsEmitter.Interfaces": "1.0.0",
-          "YamlDotNet": "16.0.0",
-          "p3rpc.classconstructor.Interfaces": "1.2.1",
-          "p3rpc.nativetypes.Interfaces": "1.5.1"
+          "RyoTune.Reloaded": "1.0.1",
+          "SharedScans.Interfaces": "1.1.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "Unreal.AtlusScript.Interfaces": "1.1.0",
+          "Unreal.ObjectsEmitter.Interfaces": "1.2.3",
+          "UnrealEssentials.Interfaces": "1.0.0",
+          "YamlDotNet": "16.1.2",
+          "p3rpc.nativetypes.Interfaces": "1.6.1"
         },
         "runtime": {
           "P3R.WeaponFramework.dll": {}
+        }
+      },
+      "Ardalis.SmartEnum/8.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Ardalis.SmartEnum.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "p3rpc.classconstructor.Interfaces/1.2.0": {
+        "dependencies": {
+          "p3rpc.nativetypes.Interfaces": "1.6.1"
+        },
+        "runtime": {
+          "lib/net8.0/p3rpc.classconstructor.Interfaces.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "p3rpc.nativetypes.Interfaces/1.6.1": {
+        "runtime": {
+          "lib/net8.0/p3rpc.nativetypes.Interfaces.dll": {
+            "assemblyVersion": "1.6.1.0",
+            "fileVersion": "1.6.1.0"
+          }
         }
       },
       "Reloaded.Hooks.Definitions/1.15.0": {
@@ -72,62 +105,166 @@
           }
         }
       },
-      "YamlDotNet/16.0.0": {
-        "runtime": {
-          "lib/net8.0/YamlDotNet.dll": {
-            "assemblyVersion": "16.0.0.0",
-            "fileVersion": "16.0.0.0"
-          }
-        }
-      },
-      "P3R.WeaponFramework.Interfaces/1.0.0": {
-        "dependencies": {
-          "p3rpc.classconstructor.Interfaces": "1.2.1",
-          "p3rpc.nativetypes.Interfaces": "1.5.1"
-        },
-        "runtime": {
-          "P3R.WeaponFramework.Interfaces.dll": {}
-        }
-      },
-      "p3rpc.classconstructor.Interfaces/1.2.1": {
-        "dependencies": {
-          "p3rpc.nativetypes.Interfaces": "1.5.1"
-        },
-        "runtime": {
-          "p3rpc.classconstructor.Interfaces.dll": {}
-        }
-      },
-      "p3rpc.nativetypes.Interfaces/1.5.1": {
-        "runtime": {
-          "p3rpc.nativetypes.Interfaces.dll": {}
-        }
-      },
-      "Project.Utils/1.0.0": {
+      "RyoTune.Reloaded/1.0.1": {
         "dependencies": {
           "Reloaded.Memory.SigScan.ReloadedII.Interfaces": "1.2.0",
           "Reloaded.Mod.Interfaces": "2.4.0",
           "Reloaded.SharedLib.Hooks": "1.9.0"
         },
         "runtime": {
-          "Project.Utils.dll": {}
+          "lib/net8.0/RyoTune.Reloaded.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
         }
       },
-      "SharedScans.Interfaces/1.0.0": {
+      "SharedScans.Interfaces/1.1.0": {
         "dependencies": {
           "Reloaded.Hooks.Definitions": "1.15.0"
         },
         "runtime": {
-          "SharedScans.Interfaces.dll": {}
+          "lib/net8.0/SharedScans.Interfaces.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
         }
       },
-      "Unreal.AtlusScript.Interfaces/1.0.0": {
-        "runtime": {
-          "Unreal.AtlusScript.Interfaces.dll": {}
+      "System.Collections.NonGeneric/4.3.0": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
         }
       },
-      "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
+      "System.ComponentModel.Annotations/5.0.0": {},
+      "System.Diagnostics.Debug/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Globalization/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Resources.ResourceManager/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Globalization": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.Extensions/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "Unreal.AtlusScript.Interfaces/1.1.0": {
         "runtime": {
-          "Unreal.ObjectsEmitter.Interfaces.dll": {}
+          "lib/net8.0/Unreal.AtlusScript.Interfaces.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "Unreal.ObjectsEmitter.Interfaces/1.2.3": {
+        "runtime": {
+          "lib/net8.0/Unreal.ObjectsEmitter.Interfaces.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
+      },
+      "UnrealEssentials.Interfaces/1.0.0": {
+        "runtime": {
+          "lib/net7.0/UnrealEssentials.Interfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "YamlDotNet/16.1.2": {
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.1.2.0"
+          }
+        }
+      },
+      "P3R.WeaponFramework.Interfaces/1.0.0": {
+        "dependencies": {
+          "Ardalis.SmartEnum": "8.0.0",
+          "RyoTune.Reloaded": "1.0.1",
+          "System.Collections.NonGeneric": "4.3.0",
+          "Unreal.ObjectsEmitter.Interfaces": "1.2.3",
+          "YamlDotNet": "16.1.2",
+          "p3rpc.classconstructor.Interfaces": "1.2.0",
+          "p3rpc.nativetypes.Interfaces": "1.6.1"
+        },
+        "runtime": {
+          "P3R.WeaponFramework.Interfaces.dll": {}
         }
       }
     }
@@ -137,6 +274,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Ardalis.SmartEnum/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qGIfpKhSQeLouycBLosGD4qFqgPa5NKzzkH/59oSHyfs3FSbaO6JChpNEMnkslOyQRLbRXj2ImkA0uZdX19IZA==",
+      "path": "ardalis.smartenum/8.0.0",
+      "hashPath": "ardalis.smartenum.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "p3rpc.classconstructor.Interfaces/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PlP3jjxUqYlZJSgGLP/+PdiEMZYiraenal61osjmrCvaEZPT3CFsyaHXqz+SOmN/jJj46cTkor+BaR/nxJiseg==",
+      "path": "p3rpc.classconstructor.interfaces/1.2.0",
+      "hashPath": "p3rpc.classconstructor.interfaces.1.2.0.nupkg.sha512"
+    },
+    "p3rpc.nativetypes.Interfaces/1.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qVdOB/Hgr5Cspuk3IMiEz8GR/TjxwstGH3TISQaieiv08WO5fgr7jOteiD7AhY/5ELkcr3OEgsGTDst2hBJSxg==",
+      "path": "p3rpc.nativetypes.interfaces/1.6.1",
+      "hashPath": "p3rpc.nativetypes.interfaces.1.6.1.nupkg.sha512"
     },
     "Reloaded.Hooks.Definitions/1.15.0": {
       "type": "package",
@@ -180,44 +352,140 @@
       "path": "reloaded.sharedlib.hooks/1.9.0",
       "hashPath": "reloaded.sharedlib.hooks.1.9.0.nupkg.sha512"
     },
-    "YamlDotNet/16.0.0": {
+    "RyoTune.Reloaded/1.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kZ4jR5ltFhnjaUqK9x81zXRIUTH4PTXTTEmJDNQdkDLQhcv+2Nl19r0dCSvPW1mstOYBfXTnjdieRbUO6gHMDw==",
-      "path": "yamldotnet/16.0.0",
-      "hashPath": "yamldotnet.16.0.0.nupkg.sha512"
+      "sha512": "sha512-x+Br4ryab3sW29mgJ1oygNLJT+5HHOJVYL8+UxcmeMovhESygwIddTFRffOAcujnAAk1YN+WQAiWCKTsG6zdyA==",
+      "path": "ryotune.reloaded/1.0.1",
+      "hashPath": "ryotune.reloaded.1.0.1.nupkg.sha512"
+    },
+    "SharedScans.Interfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q5ryWCZTR2syRBcYoBm94R1D7AXhx2a7pg7hndd4CzLW8oArZSR1GAoawHoKLz/gV1HrjSudK26+w67c30mKgg==",
+      "path": "sharedscans.interfaces/1.1.0",
+      "hashPath": "sharedscans.interfaces.1.1.0.nupkg.sha512"
+    },
+    "System.Collections.NonGeneric/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "path": "system.collections.nongeneric/4.3.0",
+      "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+      "path": "system.componentmodel.annotations/5.0.0",
+      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Debug/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
+      "path": "system.diagnostics.debug/4.3.0",
+      "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
+    },
+    "System.Globalization/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kYdVd2f2PAdFGblzFswE4hkNANJBKRmsfa2X5LG2AcWE1c7/4t0pYae1L8vfZ5xvE2nK/R9JprtToA61OSHWIg==",
+      "path": "system.globalization/4.3.0",
+      "hashPath": "system.globalization.4.3.0.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Resources.ResourceManager/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/zrcPkkWdZmI4F92gL/TPumP98AVDu/Wxr3CSJGQQ+XN6wbRZcyfSKVoPo17ilb3iOr0cCRqJInGwNMolqhS8A==",
+      "path": "system.resources.resourcemanager/4.3.0",
+      "hashPath": "system.resources.resourcemanager.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
+      "path": "system.runtime.extensions/4.3.0",
+      "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VkUS0kOBcUf3Wwm0TSbrevDDZ6BlM+b/HRiapRFWjM5O0NS0LviG0glKmFK+hhPDd1XFeSdU1GmlLhb2CoVpIw==",
+      "path": "system.threading/4.3.0",
+      "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "Unreal.AtlusScript.Interfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8GKV3iRlYX8M9keWd62JKNmQYX8kXuWKvSpS1zcw22+/eW2SsRI7nCnQx0Jtucfr0Cex/q4Q4aV63wU5diRBeg==",
+      "path": "unreal.atlusscript.interfaces/1.1.0",
+      "hashPath": "unreal.atlusscript.interfaces.1.1.0.nupkg.sha512"
+    },
+    "Unreal.ObjectsEmitter.Interfaces/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-whL0beBUFr4F4cBSj+AfkPT1/kdG2vzN8zFiWb9CVol6Dz3xoqHc7J1ZPdQPLNChelEvRQkhGiLW3Mqh8Ku2YQ==",
+      "path": "unreal.objectsemitter.interfaces/1.2.3",
+      "hashPath": "unreal.objectsemitter.interfaces.1.2.3.nupkg.sha512"
+    },
+    "UnrealEssentials.Interfaces/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w8/KkU/+hTDXrCXy8o7cZEs3tYVIVleMDP1uOf/hOG17aONyVJEzEOs+qWPaSTY8OvW4CuId2w6vJKnaE7NHYQ==",
+      "path": "unrealessentials.interfaces/1.0.0",
+      "hashPath": "unrealessentials.interfaces.1.0.0.nupkg.sha512"
+    },
+    "YamlDotNet/16.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VHBamNzHIKqkdWgYrGk48mEos+lVDFHzJyk0JiFYydoViSiCNIdoDTL3kaqAh+exQ2m2ZgZQphBgaOngR1fYjg==",
+      "path": "yamldotnet/16.1.2",
+      "hashPath": "yamldotnet.16.1.2.nupkg.sha512"
     },
     "P3R.WeaponFramework.Interfaces/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "p3rpc.classconstructor.Interfaces/1.2.1": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "p3rpc.nativetypes.Interfaces/1.5.1": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Project.Utils/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SharedScans.Interfaces/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unreal.AtlusScript.Interfaces/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unreal.ObjectsEmitter.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

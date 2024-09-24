@@ -1,0 +1,736 @@
+[
+  {
+    "Name": "BP_Wp0003_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_000.SK_Wp0003_000",
+        "MultiEpuip": false
+      },
+      "3": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_999.SK_Wp0003_999",
+        "MultiEpuip": false
+      },
+      "30": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_000.SK_Wp0003_000",
+        "MultiEpuip": false
+      },
+      "31": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_001.SK_Wp0003_001",
+        "MultiEpuip": false
+      },
+      "32": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_010.SK_Wp0003_010",
+        "MultiEpuip": false
+      },
+      "33": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_011.SK_Wp0003_011",
+        "MultiEpuip": false
+      },
+      "34": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_020.SK_Wp0003_020",
+        "MultiEpuip": false
+      },
+      "35": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_021.SK_Wp0003_021",
+        "MultiEpuip": false
+      },
+      "36": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_050.SK_Wp0003_050",
+        "MultiEpuip": false
+      },
+      "37": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_060.SK_Wp0003_060",
+        "MultiEpuip": false
+      },
+      "38": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_061.SK_Wp0003_061",
+        "MultiEpuip": false
+      },
+      "39": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_062.SK_Wp0003_062",
+        "MultiEpuip": false
+      },
+      "230": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_999.SK_Wp0003_999",
+        "MultiEpuip": false
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0003/Models/SK_Wp0003_000.SK_Wp0003_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0003/ABP_Wp0003.ABP_Wp0003_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0003_01_AnimBtl.DA_Wp0003_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0003_01_AnimFld.DA_Wp0003_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0004_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+        "MultiEpuip": true
+      },
+      "40": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+        "MultiEpuip": true
+      },
+      "41": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_001.SK_Wp0004_001",
+        "MultiEpuip": true
+      },
+      "42": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_010.SK_Wp0004_010",
+        "MultiEpuip": true
+      },
+      "43": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_011.SK_Wp0004_011",
+        "MultiEpuip": true
+      },
+      "44": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_020.SK_Wp0004_020",
+        "MultiEpuip": true
+      },
+      "45": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_021.SK_Wp0004_021",
+        "MultiEpuip": true
+      },
+      "46": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_050.SK_Wp0004_050",
+        "MultiEpuip": true
+      },
+      "47": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_060.SK_Wp0004_060",
+        "MultiEpuip": true
+      },
+      "48": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_061.SK_Wp0004_061",
+        "MultiEpuip": true
+      },
+      "49": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+        "MultiEpuip": true
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_000.SK_Wp0004_000",
+        "MultiEpuip": true
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0004/ABP_Wp0004_000.ABP_Wp0004_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_01_AnimBtl.DA_Wp0004_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_01_AnimFld.DA_Wp0004_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0004_02",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+        "MultiEpuip": true
+      },
+      "40": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+        "MultiEpuip": true
+      },
+      "41": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_201.SK_Wp0004_201",
+        "MultiEpuip": true
+      },
+      "42": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_210.SK_Wp0004_210",
+        "MultiEpuip": true
+      },
+      "43": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_211.SK_Wp0004_211",
+        "MultiEpuip": true
+      },
+      "44": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_220.SK_Wp0004_220",
+        "MultiEpuip": true
+      },
+      "45": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_221.SK_Wp0004_221",
+        "MultiEpuip": true
+      },
+      "46": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_250.SK_Wp0004_250",
+        "MultiEpuip": true
+      },
+      "47": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_260.SK_Wp0004_260",
+        "MultiEpuip": true
+      },
+      "48": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_261.SK_Wp0004_261",
+        "MultiEpuip": true
+      },
+      "49": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+        "MultiEpuip": true
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0004/Models/SK_Wp0004_200.SK_Wp0004_200",
+        "MultiEpuip": true
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0004/ABP_Wp0004_000.ABP_Wp0004_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_02_AnimBtl.DA_Wp0004_02_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0004_02_AnimFld.DA_Wp0004_02_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0005_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_999.SK_Wp0005_999",
+        "MultiEpuip": false
+      },
+      "50": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+        "MultiEpuip": false
+      },
+      "51": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_001.SK_Wp0005_001",
+        "MultiEpuip": false
+      },
+      "52": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_010.SK_Wp0005_010",
+        "MultiEpuip": false
+      },
+      "53": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_011.SK_Wp0005_011",
+        "MultiEpuip": false
+      },
+      "54": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_020.SK_Wp0005_020",
+        "MultiEpuip": false
+      },
+      "55": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_021.SK_Wp0005_021",
+        "MultiEpuip": false
+      },
+      "56": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_060.SK_Wp0005_060",
+        "MultiEpuip": false
+      },
+      "57": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_061.SK_Wp0005_061",
+        "MultiEpuip": false
+      },
+      "58": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+        "MultiEpuip": false
+      },
+      "59": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+        "MultiEpuip": false
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0005/Models/SK_Wp0005_000.SK_Wp0005_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0005/ABP_Wp0005.ABP_Wp0005_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0005_01_AnimBtl.DA_Wp0005_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0005_01_AnimFld.DA_Wp0005_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0007_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+        "MultiEpuip": true
+      },
+      "70": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+        "MultiEpuip": true
+      },
+      "71": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_011.SK_Wp0007_011",
+        "MultiEpuip": true
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+        "MultiEpuip": true
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_01_AnimBtl.DA_Wp0007_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_01_AnimFld.DA_Wp0007_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0007_02",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+        "MultiEpuip": true
+      },
+      "70": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+        "MultiEpuip": true
+      },
+      "71": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_211.SK_Wp0007_211",
+        "MultiEpuip": true
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+        "MultiEpuip": true
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_02_AnimBtl.DA_Wp0007_02_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_02_AnimFld.DA_Wp0007_02_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0007_03",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_999.SK_Wp0007_999",
+        "MultiEpuip": false
+      },
+      "72": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+        "MultiEpuip": false
+      },
+      "73": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_001.SK_Wp0007_001",
+        "MultiEpuip": false
+      },
+      "74": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_020.SK_Wp0007_020",
+        "MultiEpuip": false
+      },
+      "75": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_021.SK_Wp0007_021",
+        "MultiEpuip": false
+      },
+      "76": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_050.SK_Wp0007_050",
+        "MultiEpuip": false
+      },
+      "77": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_060.SK_Wp0007_060",
+        "MultiEpuip": false
+      },
+      "78": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+        "MultiEpuip": false
+      },
+      "79": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_03_AnimBtl.DA_Wp0007_03_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_03_AnimFld.DA_Wp0007_03_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0008_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_000.SK_Wp0008_000",
+        "MultiEpuip": false
+      },
+      "80": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_000.SK_Wp0008_000",
+        "MultiEpuip": false
+      },
+      "81": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_001.SK_Wp0008_001",
+        "MultiEpuip": false
+      },
+      "82": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_010.SK_Wp0008_010",
+        "MultiEpuip": false
+      },
+      "83": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_011.SK_Wp0008_011",
+        "MultiEpuip": false
+      },
+      "84": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_020.SK_Wp0008_020",
+        "MultiEpuip": false
+      },
+      "85": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_021.SK_Wp0008_021",
+        "MultiEpuip": false
+      },
+      "86": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_050.SK_Wp0008_050",
+        "MultiEpuip": false
+      },
+      "87": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_060.SK_Wp0008_060",
+        "MultiEpuip": false
+      },
+      "88": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_061.SK_Wp0008_061",
+        "MultiEpuip": false
+      },
+      "89": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_062.SK_Wp0008_062",
+        "MultiEpuip": false
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0008/Models/SK_Wp0008_000.SK_Wp0008_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0008/ABP_Wp0008.ABP_Wp0008_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0008_01_AnimBtl.DA_Wp0008_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0008_01_AnimFld.DA_Wp0008_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0009_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+        "MultiEpuip": false
+      },
+      "90": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+        "MultiEpuip": false
+      },
+      "91": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_001.SK_Wp0009_001",
+        "MultiEpuip": false
+      },
+      "92": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_010.SK_Wp0009_010",
+        "MultiEpuip": false
+      },
+      "93": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_011_.SK_Wp0009_011_",
+        "MultiEpuip": false
+      },
+      "94": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_020.SK_Wp0009_020",
+        "MultiEpuip": false
+      },
+      "95": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_021.SK_Wp0009_021",
+        "MultiEpuip": false
+      },
+      "96": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_050.SK_Wp0009_050",
+        "MultiEpuip": false
+      },
+      "97": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_060.SK_Wp0009_060",
+        "MultiEpuip": false
+      },
+      "98": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+        "MultiEpuip": false
+      },
+      "99": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+        "MultiEpuip": false
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0009/Models/SK_Wp0009_000.SK_Wp0009_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0009/ABP_Wp0009.ABP_Wp0009_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0009_01_AnimBtl.DA_Wp0009_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0009_01_AnimFld.DA_Wp0009_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0010_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_000.SK_Wp0010_000",
+        "MultiEpuip": false
+      },
+      "100": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_000.SK_Wp0010_000",
+        "MultiEpuip": false
+      },
+      "101": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_010.SK_Wp0010_010",
+        "MultiEpuip": false
+      },
+      "102": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_020.SK_Wp0010_020",
+        "MultiEpuip": false
+      },
+      "103": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_050.SK_Wp0010_050",
+        "MultiEpuip": false
+      },
+      "104": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_060.SK_Wp0010_060",
+        "MultiEpuip": false
+      },
+      "105": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_061.SK_Wp0010_061",
+        "MultiEpuip": false
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0010/Models/SK_Wp0010_000.SK_Wp0010_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0010/ABP_Wp0010.ABP_Wp0010_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0010_01_AnimBtl.DA_Wp0010_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0010_01_AnimFld.DA_Wp0010_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0011_01",
+    "Data": {
+      "100": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_000.SK_Wp0011_000",
+        "MultiEpuip": false
+      },
+      "101": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_010.SK_Wp0011_010",
+        "MultiEpuip": false
+      },
+      "102": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_020.SK_Wp0011_020",
+        "MultiEpuip": false
+      },
+      "103": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_050.SK_Wp0011_050",
+        "MultiEpuip": false
+      },
+      "104": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_060.SK_Wp0011_060",
+        "MultiEpuip": false
+      },
+      "105": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_061.SK_Wp0011_061",
+        "MultiEpuip": false
+      },
+      "106": {
+
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_001.SK_Wp0011_001",
+        "MultiEpuip": false
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0011/Models/SK_Wp0011_000.SK_Wp0011_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0011/ABP_Wp0011.ABP_Wp0011_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0011_01_AnimBtl.DA_Wp0011_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0011_01_AnimFld.DA_Wp0011_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0012_01",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+        "MultiEpuip": true
+      },
+      "70": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+        "MultiEpuip": true
+      },
+      "71": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_011.SK_Wp0007_011",
+        "MultiEpuip": true
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_010.SK_Wp0007_010",
+        "MultiEpuip": true
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_01_AnimBtl.DA_Wp0012_01_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_01_AnimFld.DA_Wp0012_01_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0012_02",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+        "MultiEpuip": true
+      },
+      "70": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+        "MultiEpuip": true
+      },
+      "71": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_211.SK_Wp0007_211",
+        "MultiEpuip": true
+      },
+      "-1": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_210.SK_Wp0007_210",
+        "MultiEpuip": true
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_02_AnimBtl.DA_Wp0012_02_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_02_AnimFld.DA_Wp0012_02_AnimFld"
+      }
+    ]
+  },
+  {
+    "Name": "BP_Wp0012_03",
+    "Data": {
+      "0": {
+       "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_999.SK_Wp0007_999",
+        "MultiEpuip": false
+      },
+      "72": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+        "MultiEpuip": false
+      },
+      "73": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_001.SK_Wp0007_001",
+        "MultiEpuip": false
+      },
+      "74": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_020.SK_Wp0007_020",
+        "MultiEpuip": false
+      },
+      "75": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_021.SK_Wp0007_021",
+        "MultiEpuip": false
+      },
+      "76": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_050.SK_Wp0007_050",
+        "MultiEpuip": false
+      },
+      "77": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_060.SK_Wp0007_060",
+        "MultiEpuip": false
+      },
+      "78": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+        "MultiEpuip": false
+      },
+      "79": {
+        "Mesh": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+        "MultiEpuip": false
+      }
+    },
+    "Anim": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+    "AnimAsset": [
+      {
+        "UsageEnv": "Battle",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_03_AnimBtl.DA_Wp0012_03_AnimBtl"
+      },
+      {
+        "UsageEnv": "Field",
+        "Asset": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0012_03_AnimFld.DA_Wp0012_03_AnimFld"
+      }
+    ]
+  }
+]

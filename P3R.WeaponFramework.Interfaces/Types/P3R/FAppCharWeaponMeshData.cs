@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using Unreal.ObjectsEmitter.Interfaces;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace P3R.WeaponFramework.Interfaces.Types;
@@ -8,32 +9,29 @@ namespace P3R.WeaponFramework.Interfaces.Types;
 public unsafe struct FAppCharWeaponMeshData : IEquatable<FAppCharWeaponMeshData>
 {
     //[FieldOffset(0x00)] public FSoftObjectPtr<USkeletalMesh>* Mesh;
-    [FieldOffset(0x00)] public TSoftObjectPtr<UObject>* Mesh;
+    [FieldOffset(0x00)] public TSoftObjectPtr<USkeletalMesh> Mesh;
     [FieldOffset(0x28)] public bool MultiEquip;
 
-    public FAppCharWeaponMeshData(TSoftObjectPtr<UObject>* meshPtr)
+    public override readonly bool Equals(object? obj)
     {
-        Mesh = meshPtr;
+        return obj is FAppCharWeaponMeshData data && Equals(data);
+    }
+    public readonly bool Equals(FAppCharWeaponMeshData other)
+        => EqualityComparer<TSoftObjectPtr<USkeletalMesh>>.Default.Equals(Mesh, other.Mesh) &&
+               MultiEquip == other.MultiEquip;
+
+    public static bool operator ==(FAppCharWeaponMeshData left, FAppCharWeaponMeshData right)
+    {
+        return left.Equals(right);
     }
 
-    public FAppCharWeaponMeshData(IUObjects uObjects, string name)
+    public static bool operator !=(FAppCharWeaponMeshData left, FAppCharWeaponMeshData right)
     {
-        uObjects.FindObject(name, SetMesh);
+        return !(left == right);
     }
 
-    public FAppCharWeaponMeshData(TSoftObjectPtr<UObject>* mesh, bool multiEquip) : this(mesh)
+    public override readonly int GetHashCode()
     {
-        MultiEquip = multiEquip;
-    }
-
-    private unsafe void SetMesh(Emitter.UnrealObject obj)
-    {
-        TSoftObjectPtr<Emitter.UObject> ptr = new(obj.Self);
-        Mesh = (TSoftObjectPtr<UObject>*)&ptr;
-    }
-
-    public bool Equals(FAppCharWeaponMeshData other)
-    {
-        return (nint)Mesh == (nint)other.Mesh;
+        return Mesh.GetHashCode() + MultiEquip.GetHashCode();
     }
 }

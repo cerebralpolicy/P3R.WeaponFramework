@@ -8,10 +8,12 @@ internal static partial class Subroutines {
     {
         private static readonly IDeserializer deserializer = new DeserializerBuilder()
             .WithNamingConvention(UnderscoredNamingConvention.Instance)
+            .EnablePrivateConstructors()
             .Build();
 
         private static readonly ISerializer serializer = new SerializerBuilder()
             .WithNamingConvention(UnderscoredNamingConvention.Instance)
+            .EnsureRoundtrip()
             .Build();
 
         public static T DeserializeFile<T>(string file)
@@ -19,6 +21,10 @@ internal static partial class Subroutines {
 
         public static void SerializeFile<T>(string file, T obj)
             => File.WriteAllText(file, serializer.Serialize(obj));
+
+        public static string? SerializeObject<T>(T obj)
+            => serializer.Serialize(obj);
+        public static void SerializeObject<T>(T obj, TextWriter writer) => serializer.Serialize(writer, obj);
     }
 } 
 

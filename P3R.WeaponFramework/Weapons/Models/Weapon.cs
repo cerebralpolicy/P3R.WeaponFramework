@@ -1,4 +1,7 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Collections;
+using System.Diagnostics.CodeAnalysis;
+using System.Text.Json.Serialization;
+using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons.Models;
 
@@ -12,7 +15,7 @@ public class Weapon: IWeapon, IEquatable<Weapon?>
         WeaponItemId = weaponItemId;
     }
     [JsonConstructor]
-    public Weapon(Character character, int weaponItemId, string name, EquipFlag weaponType, int modelId, EWeaponModelSet weaponModelId, WeaponStats stats)
+    public Weapon(ECharacter character, int weaponItemId, string name, EquipFlag weaponType, int modelId, EWeaponModelSet weaponModelId, WeaponStats stats)
     {
         Character = character;
         WeaponItemId = weaponItemId;
@@ -30,7 +33,7 @@ public class Weapon: IWeapon, IEquatable<Weapon?>
     #region Weapon Table Entry
     // Import
     [JsonPropertyOrder(0)]
-    public Character Character { get; set; } = Character.NONE;
+    public ECharacter Character { get; set; } = ECharacter.NONE;
     [JsonPropertyOrder(1)]
     public int WeaponId { get; set; }
     [JsonPropertyOrder(2)]
@@ -52,38 +55,64 @@ public class Weapon: IWeapon, IEquatable<Weapon?>
     public string Description { get; set; } = DEF_DESC;
     public WeaponConfig Config { get; set; } = new();
     public string? OwnerModId { get; set; }
-    public EArmatureType? TargetArmature => Config.Armature;
+    public ShellType ShellTarget { get; set; } = ShellType.Player;
+    public EpisodeFlag EpisodeFlag { get; set; } = EpisodeFlag.None;
     #endregion
     #region Utilities
-    public bool AddToDT()
-    {
-        const string DT = "DT_WeaponFramework";
-        if (TargetArmature == null)
-            return false;
-        ArmatureType type = TargetArmature;
-        if (type == null) return false;
-        var req = type.RequiredMeshes;
-        var meshes = Config.Mesh;
-        if (meshes == null || meshes.MeshPath1 == null) return false;
-        // If the armature type requires multiple meshes, add to both of the corresponding DTs
-        if (req == 2 && meshes.MeshPath2 != null)
-        {
-                   type.Value[1].AddMesh(WeaponItemId, meshes.MeshPath2, true, DT);
-            return type.Value[0].AddMesh(WeaponItemId, meshes.MeshPath1, true, DT);
-        }
-        // Otherwise only add the first mesh
-        return type.Value.First().AddMesh(WeaponItemId, meshes.MeshPath1, false, DT);
-    }
     public void SetWeaponItemId(int weaponItemId)
     {
         this.WeaponItemId = weaponItemId;
+    }
+    private List<string> GetPaths()
+    {
+        List<string> strings = [];
+        ModUtils.IfNotNull(Config.Model.MeshPath1, path =>
+        { strings.Add(path!); });
+        ModUtils.IfNotNull(Config.Model.MeshPath2, path =>
+        { strings.Add(path!); });
+        return strings;
+    }
+    public bool TryGetPaths([NotNullWhen(true)] out List<string>? paths)
+    {
+        List<string> strings = GetPaths();
+        var check = strings.Count > 0;
+        paths = check ? strings : null;
+        return check;
+    }
+    public bool TryGetPath(WeaponAssetType assetType,[NotNullWhen(true)] out string? path)
+    {
+        path = null;
+        if (!TryGetPaths(out List<string>? paths)) { return false; }
+        string? str = assetType switch
+        {
+            WeaponAssetType.Base_Mesh => paths.FirstOrDefault(),
+            WeaponAssetType.Base_Mesh2 => paths.LastOrDefault(),
+            _ => throw new NotImplementedException(),
+        };
+        if (str == null) { return false; }
+        path = str;
+        return true;
+    }
+    public bool ActivatePaths(IUnreal unreal, string idName) {  
+        List<string> bases = ShellTarget.GetBasePaths();
+        if (!TryGetPaths(out List<string>? paths)) { return false; }
+        if (paths.Count != bases.Count) { return false; }
+        for (int i = 0; i < bases.Count; i++)
+        {
+            var oldPath = bases[i];
+            var newPath = paths[i];
+            if (newPath == oldPath) { return false; }
+            unreal.AssignFName(idName, oldPath, newPath);
+            continue;
+        }
+        return true;
     }
 
     public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x8000;
 
     public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
 
-    public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != Character.NONE;
+    public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != ECharacter.NONE;
     #endregion
     #region Comparisons
     public override bool Equals(object? obj)

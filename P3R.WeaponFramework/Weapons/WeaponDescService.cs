@@ -25,7 +25,7 @@ internal class WeaponDescService
             sb.AppendLine($"[f 2 1]{this.descEntries[i]}[n][e]");
         }
 
-        this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", sb.ToString(), AssetType.BMD);
+        this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", sb.ToString(), AssetType.BMD, AssetMode.Both);
     }
     public void SetWeaponDesc(int weaponItemId, string weaponDesc)
     => this.descEntries[weaponItemId] = weaponDesc;

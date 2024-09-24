@@ -1,4 +1,5 @@
-﻿using P3R.WeaponFramework.Weapons.Models;
+﻿using P3R.WeaponFramework.Hooks;
+using P3R.WeaponFramework.Weapons.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -12,31 +13,29 @@ namespace P3R.WeaponFramework.Weapons
     internal class WeaponRegistry
     {
         private readonly WeaponArsenal arsenal;
-        public WeaponRegistry(IMemoryMethods memoryMethods, IUObjects uObjects)
+        public WeaponRegistry()
         {
             Weapons = new();
-            arsenal = new(memoryMethods,uObjects,this.Weapons);
+            arsenal = new(this.Weapons);
         }
         public GameWeapons Weapons { get; }
 
         public Weapon[] GetActiveWeapons() =>
-            this.Weapons.Values.Where(IsActiveWeapon).ToArray();
+            this.Weapons.Where(IsActiveWeapon).ToArray();
 
-        public bool TryGetWeaponById(int id, [NotNullWhen(true)] out Weapon? weapon)
+        public bool TryGetWeapon(Character character, int weaponId, [NotNullWhen(true)] out Weapon? weapon)
         {
-            Weapons.TryGetValue(id, out weapon);
-            if (weapon != null && !weapon.IsEnabled)
-                weapon = null;
+            weapon = Weapons.FirstOrDefault(x => IsRequestedWeapon(x, character, weaponId));
             return weapon != null;
         }
 
         public bool TryGetWeaponByItemId(int itemId, [NotNullWhen(true)] out Weapon? weapon)
         {
             var weaponItemId = Weapon.GetWeaponItemId(itemId);
-            weapon = Weapons.Values.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
+            weapon = Weapons.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
             return weapon != null;
         }
-
+        
         public void RegisterMod(string modId, string modDir)
         {
             var mod = new WeaponMod(modId, modDir);
@@ -44,9 +43,9 @@ namespace P3R.WeaponFramework.Weapons
             {
                 return;
             }
-            foreach (var character in Enum.GetValues<Character>())
+            foreach (var character in Character.List)
             {
-                var characterDir = Path.Join(mod.WeaponsDir, character.ToString());
+                var characterDir = Path.Join(mod.WeaponsDir, character.Name);
                 if (!Directory.Exists(characterDir))
                 {
                     continue;
@@ -58,6 +57,10 @@ namespace P3R.WeaponFramework.Weapons
                     try
                     {
                         arsenal.Create(mod, weaponDir, character);
+                        if (character == Character.Aigis)
+                        {
+                            arsenal.Create(mod, weaponDir, Character.Aigis12);
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -67,8 +70,12 @@ namespace P3R.WeaponFramework.Weapons
             }
         }
 
+        private static bool IsRequestedWeapon(Weapon weapon, ECharacter character, int weaponId)
+            => weapon.Character == character && weapon.WeaponId == weaponId && IsActiveWeapon(weapon);
+
         private static bool IsActiveWeapon(Weapon weapon) 
             => weapon.IsEnabled
-            && weapon.Character != Character.NONE;
+            && weapon.Character != ECharacter.NONE;
+       
     }
 }

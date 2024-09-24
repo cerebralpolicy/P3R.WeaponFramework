@@ -6,11 +6,14 @@ namespace P3R.WeaponFramework.Tools.DataUtils;
 
 internal static partial class Subroutines
 {
-    internal static List<Weapon> GetWeaponRaws()
+    public const string WeaponsPath = "P3R.WeaponFramework.Tools.DataUtils.RawResources.Weapons.json";
+    public const string WeaponsPath_Astrea = "P3R.WeaponFramework.Tools.DataUtils.RawResources.Weapons_Astrea.json";
+    public const string NamesPath = "P3R.WeaponFramework.Tools.DataUtils.RawResources.Names.json";
+    public const string NamesPath_Astrea = "P3R.WeaponFramework.Tools.DataUtils.RawResources.Names_Astrea.json";
+    internal static List<Weapon> GetWeaponRaws(Episode episode = Episode.Journey)
     {
         var assembly = Assembly.GetExecutingAssembly();
-        var weapFile = "P3R.WeaponFramework.Tools.DataUtils.RawResources.Weapons.json";
-        using var weapStream = assembly.GetManifestResourceStream(weapFile)!;
+        using var weapStream = assembly.GetManifestResourceStream(episode == Episode.Astrea ? WeaponsPath_Astrea : WeaponsPath)!;
         using var weapReader = new StreamReader(weapStream);
         var weapJson = weapReader.ReadToEnd();
         var weaponRaws = JsonSerializer.Deserialize<WeaponRaw[]>(weapJson)!;
@@ -19,22 +22,21 @@ internal static partial class Subroutines
         foreach ( var weapon in weaponRaws )
         {
             index++;
-            weapons.Add(weapon.Cook(index));
+            weapons.Add(weapon.Cook(index,episode));
         }
-        var weaponArray = weapons.Where(w => (w.WeaponType != 0 && w.Character != Character.Fuuka) || w.Character == Character.Fuuka).ToList();
+        var weaponArray = weapons.Where(w => (w.WeaponType != 0 && w.Character != ECharacter.Fuuka) || w.Character == ECharacter.Fuuka).ToList();
         return weaponArray;
     }
 
-    internal static Dictionary<string, string> GetRawNameKeys()
+    internal static Dictionary<string, string> GetRawNameKeys(Episode episode = Episode.Journey)
     {
         var assembly = Assembly.GetExecutingAssembly();
-        var nameFile = "P3R.WeaponFramework.Tools.DataUtils.RawResources.Names.json";
-        using var nameStream = assembly.GetManifestResourceStream(nameFile)!;
+        using var nameStream = assembly.GetManifestResourceStream(episode == Episode.Astrea ? NamesPath_Astrea : NamesPath)!;
         using var nameReader = new StreamReader(nameStream);
         var nameJson = nameReader.ReadToEnd();
         var namePairs = JsonSerializer.Deserialize<KeyValuePair<string, string>[]>(nameJson)!;
 
-        Dictionary<string, string> keyMap = new Dictionary<string, string>();
+        Dictionary<string, string> keyMap = [];
         foreach (var pair in namePairs)
         {
             keyMap.Add(pair.Key, pair.Value);
@@ -42,51 +44,81 @@ internal static partial class Subroutines
         return keyMap;
     }
 
-    internal static Dictionary<int, Weapon[]> GetCharaWeapons()
+    internal static Dictionary<int, Weapon[]> GetCharaWeapons(Episode episode = Episode.Journey)
     {
-        Dictionary<int, Weapon[]> pairs = new Dictionary<int, Weapon[]>();
-        for (int i = 1; i <= (int)Character.Shinjiro; i++)
+        Console.WriteLine($"Processing {Enum.GetName(episode)}");
+
+        Dictionary<int, Weapon[]> pairs = [];
+        for (int i = 1; i <= (episode == Episode.Astrea ? 11 : 10); i++)
         {
-            var charWeaps = WeaponList.Where(w => w.Character == (Character)i);
+            var charWeaps = WeaponList(episode).Where(w => w.Character == (ECharacter)i);
             if (charWeaps.Count() > 1)
             {
-                Console.WriteLine($"{Enum.GetName((Character)i)} has {charWeaps.Count()} weapons.");
+                Console.WriteLine($"{Enum.GetName((ECharacter)i)} has {charWeaps.Count()} weapons.");
                 pairs.Add(i, charWeaps.ToArray());
             }
             else if (charWeaps.Count() > 0)
             {
-                Console.WriteLine($"{Enum.GetName((Character)i)} has {charWeaps.Count()} weapon.");
+                Console.WriteLine($"{Enum.GetName((ECharacter)i)} has {charWeaps.Count()} weapon.");
                 pairs.Add(i, charWeaps.ToArray());
             }
         }
         return pairs;
     }
-    private static Character GetCharacter(this EquipFlag flag)
+    private static ECharacter GetCharacter(this EquipFlag flag)
     {
         var val = (int)flag;
         var log = Math.Log2(val);
-        return (Character)log;
+        return (ECharacter)log;
     }
 
-    private static Weapon Cook(this WeaponRaw weaponRaw, int index)
+    private static Weapon Cook(this WeaponRaw weaponRaw, int index, Episode episode)
     {
         var chara = weaponRaw.EquipID.GetCharacter();
-        string name;
-        if (!RawNameKeys.ContainsKey(weaponRaw.Name))
-            name = weaponRaw.Name;
-        else
-            name = RawNameKeys[weaponRaw.Name];
+        var rawNames = RawNameKeys(episode);
+        rawNames.TryGetValue(weaponRaw.Name, out var weaponEnName);
+        var name = weaponEnName ?? weaponRaw.Name;
         var uniqueIndex = index;
-        int weaponModelID;
-        if (!Assets.ModelPairsInt.ContainsKey(weaponRaw.ModelID))
-            weaponModelID = weaponRaw.ModelID;
-        else
-            weaponModelID = Assets.ModelPairsInt[weaponRaw.ModelID];
-        var weapon = new Weapon(chara, uniqueIndex, name,weaponRaw.WeaponType, weaponRaw.ModelID, weaponModelID, weaponRaw.WeaponStats);
+        int weaponModelID = !IAssetUtils.ModelPairsInt.TryGetValue(weaponRaw.ModelID, out int value) ? weaponRaw.ModelID : value;
+        var weapon = new Weapon(chara, uniqueIndex, name , weaponRaw.WeaponType, weaponRaw.ModelID, weaponModelID, weaponRaw.WeaponStats);
         return weapon;
     }
 
-    private static List<Weapon> WeaponList => GetWeaponRaws();
-    private static Dictionary<string, string> RawNameKeys => GetRawNameKeys();
-    private static Dictionary<int, Weapon[]> CharaWeapons => GetCharaWeapons();
+
+
+    private static List<Weapon> WeaponList(Episode episode = Episode.Journey)
+        => episode switch
+        {
+            Episode.Journey => WeaponList_Xrd777,
+            Episode.Astrea => WeaponList_Astrea,
+            _ => throw new NotImplementedException()
+        };
+    private static List<Weapon> WeaponList_Xrd777 => GetWeaponRaws();
+    private static List<Weapon> WeaponList_Astrea => GetWeaponRaws(Episode.Astrea);
+    private static Dictionary<string, string> RawNameKeys(Episode episode = Episode.Journey)
+        => episode switch
+        {
+            Episode.Journey => RawNameKeys_Xrd777,
+            Episode.Astrea => RawNameKeys_Astrea,
+            _ => throw new NotImplementedException()
+        };
+    private static Dictionary<string, string> RawNameKeys_Xrd777 => GetRawNameKeys();
+    private static Dictionary<string, string> RawNameKeys_Astrea => GetRawNameKeys(Episode.Astrea);
+    private static Dictionary<int, Weapon[]> CharaWeapons(Episode episode = Episode.Journey)
+        => episode switch
+        {
+            Episode.Journey => CharaWeapons_Xrd777,
+            Episode.Astrea => CharaWeapons_Astrea,
+            _ => throw new NotImplementedException()
+        };
+    private static Dictionary<int, Weapon[]> CharaWeapons_Xrd777 => GetCharaWeapons();
+    private static Dictionary<int, Weapon[]> CharaWeapons_Astrea => GetCharaWeapons(Episode.Astrea);
+
+    private static string GetResource(JsonFile filetype, Episode episode)
+    {
+        bool usesuffix = (episode.Equals(Episode.Astrea));
+        string? listtype = Enum.GetName(typeof(JsonFile), filetype);
+        string suffix = episode.Equals(Episode.Astrea) ? "_Astrea" : string.Empty;
+        return $"P3R.WeaponFramework.Tools.DataUtils.RawResources.{listtype}{suffix}.json";
+    }
 }

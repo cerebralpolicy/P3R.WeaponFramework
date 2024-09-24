@@ -11,25 +11,42 @@
 
   <ItemGroup>
     <None Remove="RawResources\Names.json" />
+    <None Remove="RawResources\Names_Astrea.json" />
     <None Remove="RawResources\Weapons.json" />
+    <None Remove="RawResources\Weapons_Astrea.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="RawResources\Names_Astrea.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="RawResources\Names.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="RawResources\Weapons.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="RawResources\Weapons_Astrea.json" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
-    <PackageReference Include="YamlDotNet" Version="16.0.0" />
+    <PackageReference Include="YamlDotNet" Version="16.1.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\P3R.WeaponFramework.Interfaces\P3R.WeaponFramework.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Tools\Atlus-Script-Tools\Source\AtlusScriptLibrary\AtlusScriptLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="RawResources\Names_Astrea_Raw.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dump\" />
   </ItemGroup>
 
 </Project>

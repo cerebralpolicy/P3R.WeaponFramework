@@ -1,5 +1,4 @@
 ﻿namespace P3R.WeaponFramework.Interfaces.Types;
-
 public enum EBtlDataAttr : ushort
 {
     /// <summary>

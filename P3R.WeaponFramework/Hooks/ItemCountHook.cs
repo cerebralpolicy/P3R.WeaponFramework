@@ -1,5 +1,4 @@
 ﻿using P3R.WeaponFramework.Weapons;
-using Project.Utils;
 using Reloaded.Hooks.Definitions;
 using Reloaded.Hooks.Definitions.X64;
 

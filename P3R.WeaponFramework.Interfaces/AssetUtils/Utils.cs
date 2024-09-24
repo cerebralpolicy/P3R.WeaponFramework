@@ -1,4 +1,6 @@
-﻿namespace P3R.WeaponFramework.Interfaces;
+﻿using P3R.WeaponFramework.Interfaces.Types;
+
+namespace P3R.WeaponFramework.Interfaces;
 
 public static class Constants
 {
@@ -8,8 +10,52 @@ public static class Constants
     public const string WeaponNamesData = "DatItemWeaponNameDataAsset";
 }
 
-public static partial class Assets
+public static partial class IAssetUtils
 {
+    public static string? GetAssetFile(ECharacter chara, EWeaponModelSet model, WeaponAssetType type)
+    {
+        string? assetFile = type switch
+        {
+            WeaponAssetType.Base_Mesh => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/SKEL_Wp{chara.Format()}"),
+            WeaponAssetType.Weapon_Mesh => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{model.Format()}"),
+
+            WeaponAssetType.Base_Anim => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/SKEL_Wp{chara.Format()}"),
+            WeaponAssetType.Weapon_Anim => null,
+            _ => throw new Exception(),
+        };
+        return assetFile;
+    }
+    public static string GetUnrealAssetPath(string assetFile)
+    {
+        var assetPath = GetAssetPath(assetFile);
+        return $"{assetPath}.{Path.GetFileName(assetPath)}";
+    }
+    public static string Format(this ECharacter character) => ((int)character).ToString("0000");
+    public static string Format(this EWeaponModelSet weaponModelSet) => ((int)weaponModelSet).ToString("000");
+    public static string FormatAssetPath(string assetPath)
+    {
+        var formattedPath = assetPath.Replace("\\", "/").Replace(".uasset", string.Empty);
+        if (!formattedPath.StartsWith("/Game/"))
+        {
+            formattedPath = $"/Game/{formattedPath}";
+        }
+        return formattedPath;
+    }
+    public static string GetAssetPath(string assetFile)
+    {
+        var adjustedPath = assetFile.Replace('\\', '/').Replace(".uasset", string.Empty);
+
+        if (adjustedPath.IndexOf("Content") is int contentIndex && contentIndex > -1)
+        {
+            adjustedPath = adjustedPath.Substring(contentIndex + 8);
+        }
+
+        if (!adjustedPath.StartsWith("/Game/"))
+        {
+            adjustedPath = $"/Game/{adjustedPath}";
+        }
+        return adjustedPath;
+    }
     public static Dictionary<uint, uint> ModelPairsUInt = new Dictionary<uint, uint>()
     {
         { 0 , 0 }, // So Fuuka doesn't fail
@@ -142,6 +188,16 @@ public static partial class Assets
         { 55, 21 },
         { 56, 50 },
         { 57, 51 },
+        { 70, 0 },
+        { 71, 1 },
+        { 72, 10 },
+        { 73, 11 },
+        { 74, 20 },
+        { 75, 21 },
+        { 76, 50 },
+        { 77, 51 },
+        { 78, 60 },
+        { 79, 61 },
         { 80, 0 },
         { 81, 1 },
         { 82, 10 },
@@ -166,6 +222,16 @@ public static partial class Assets
         { 103, 11 },
         { 104, 20 },
         { 105, 21 },
+        { 110, 0 },
+        { 111, 1 },
+        { 112, 10 },
+        { 113, 11 },
+        { 114, 20 },
+        { 115, 21 },
+        { 116, 50 },
+        { 117, 51 },
+        { 118, 60 },
+        { 119, 61 },
         { 326, 0 },
         { 327, 1 },
         { 584, 10 },

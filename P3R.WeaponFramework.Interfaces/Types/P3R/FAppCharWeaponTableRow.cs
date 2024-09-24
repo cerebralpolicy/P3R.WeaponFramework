@@ -17,6 +17,19 @@ public unsafe struct FAppCharWeaponTableRow: IEnumerable<TMapElement<int, FAppCh
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
 
+[StructLayout(LayoutKind.Explicit, Size = 0x38)]
+public unsafe struct FAppCharWeaponAnimAssetTypeData
+{
+    [FieldOffset(0x00)] public AppCharWeaponUsageEnv UsageEnv;
+    [FieldOffset(0x08)] public TSoftObjectPtr<UObject>* Asset;
+}
+
+public enum AppCharWeaponUsageEnv : ushort
+{
+    Battle,
+    Field
+}
+
 public unsafe class TMapWrapper<KeyType, ValueType> : IEnumerable<TMapElement<KeyType, ValueType>>, IEnumerator<TMapElement<KeyType, ValueType>>
     where ValueType : unmanaged, IEquatable<ValueType>
     where KeyType : unmanaged, IEquatable<KeyType>

@@ -8,7 +8,7 @@ namespace P3R.WeaponFramework.Tools.DataUtils;
 
 public struct Weapon
 {
-    public Weapon(Character character, int uniqueID, string name, int weaponType, int modelId, int weaponModelId, WeaponStats stats)
+    public Weapon(ECharacter character, int uniqueID, string name, int weaponType, int modelId, int weaponModelId, WeaponStats stats)
     {
         Character = character;
         UniqueID = uniqueID;
@@ -19,7 +19,7 @@ public struct Weapon
         Stats = stats;
     }
 
-    public Character Character { get; set; }
+    public ECharacter Character { get; set; }
     public int UniqueID { get; set; }
     public string Name { get; set; }
     public int WeaponType { get; set; }

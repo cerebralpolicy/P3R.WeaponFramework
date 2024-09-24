@@ -1,0 +1,432 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Wp0007_03",
+    "Outer": "BP_Wp0007_03_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAttachParent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SkeletalMeshComponentFromObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAnimInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsABP_Wp_0007_000",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass'ABP_Wp0007_000_C'",
+          "ObjectPath": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_Wp0007_03_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_WeaponBase_C:ReceiveTick'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Wp0007_03_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Wp0007_03_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WeaponBase_C'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.12"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Wp0007_03_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Wp0007_03_C:ExecuteUbergraph_BP_Wp0007_03'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.0"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Wp0007_03_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.2"
+      },
+      {
+        "ObjectName": "Function'BP_Wp0007_03_C:ReceiveTick'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.1"
+      },
+      {
+        "ObjectName": "Function'BP_Wp0007_03_C:ExecuteUbergraph_BP_Wp0007_03'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Wp0007_03": {
+        "ObjectName": "Function'BP_Wp0007_03_C:ExecuteUbergraph_BP_Wp0007_03'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.0"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_Wp0007_03_C:ReceiveTick'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Wp0007_03_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Wp0007_03_C'Default__BP_Wp0007_03_C'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.4"
+    }
+  },
+  {
+    "Type": "BP_Wp0007_03_C",
+    "Name": "Default__BP_Wp0007_03_C",
+    "Class": "BlueprintGeneratedClass'/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.BP_Wp0007_03_C'",
+    "Template": {
+      "ObjectName": "BP_WeaponBase_C'Default__BP_WeaponBase_C'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.13"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "PlayerID": 7,
+      "Root": {
+        "ObjectName": "SceneComponent'Default__BP_Wp0007_03_C:Root'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.6"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Wp0007_03_C:WeaponMesh'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.9"
+      },
+      "WeaponTbl": {
+        "Data": [
+          {
+            "Key": "0",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_999.SK_Wp0007_999",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "72",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "73",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_001.SK_Wp0007_001",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "74",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_020.SK_Wp0007_020",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "75",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_021.SK_Wp0007_021",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "76",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_050.SK_Wp0007_050",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "77",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_060.SK_Wp0007_060",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "78",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          },
+          {
+            "Key": "79",
+            "Value": {
+              "Mesh": {
+                "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/Models/SK_Wp0007_000.SK_Wp0007_000",
+                "SubPathString": ""
+              },
+              "MultiEquip": false
+            }
+          }
+        ],
+        "Anim": {
+          "AssetPathName": "/Game/Xrd777/Characters/Weapon/Wp0007/ABP_Wp0007_000.ABP_Wp0007_000_C",
+          "SubPathString": ""
+        },
+        "AnimAsset": [
+          {
+            "UsageEnv": "AppCharWeaponUsageEnv::Battle",
+            "Asset": {
+              "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_03_AnimBtl.DA_Wp0007_03_AnimBtl",
+              "SubPathString": ""
+            }
+          },
+          {
+            "UsageEnv": "AppCharWeaponUsageEnv::Field",
+            "Asset": {
+              "AssetPathName": "/Game/Xrd777/Characters/Data/DataAsset/Weapon/DA_Wp0007_03_AnimFld.DA_Wp0007_03_AnimFld",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      "AttachSocketName": "Soc_R_AttachForeArm00_01",
+      "HideMaterialID": 60,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Wp0007_03_C:Root'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.6"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Wp0007_03_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Outer": "Default__BP_Wp0007_03_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_WeaponBase_C:Root'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.15"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Wp0007_03_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.5"
+      },
+      "VariableGuid": "F9220E74-4D3EEFE8-E096EE81-8937D287",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Wp0007_03_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Wp0007_03_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "WeaponMesh",
+    "Outer": "Default__BP_Wp0007_03_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_WeaponBase_C:WeaponMesh'",
+      "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_WeaponBase.18"
+    },
+    "Properties": {
+      "BoundsScale": 15.0,
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Wp0007_03_C:Root'",
+        "ObjectPath": "/Game/Xrd777/Blueprints/Characters/Equipments/BP_Wp0007_03.6"
+      }
+    }
+  }
+]

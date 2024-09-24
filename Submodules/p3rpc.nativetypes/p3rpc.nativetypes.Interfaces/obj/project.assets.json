@@ -1,0 +1,231 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Microsoft.CodeAnalysis.PublicApiAnalyzers/3.3.4": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.CodeAnalysis.PublicApiAnalyzers.props": {},
+          "buildTransitive/Microsoft.CodeAnalysis.PublicApiAnalyzers.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.CodeAnalysis.PublicApiAnalyzers/3.3.4": {
+      "sha512": "kNLTfXtXUWDHVt5iaPkkiPuyHYlMgLI6SOFT4w88bfeI2vqSeGgHunFkdvlaCM8RDfcY0t2+jnesQtidRJJ/DA==",
+      "type": "package",
+      "path": "microsoft.codeanalysis.publicapianalyzers/3.3.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "ThirdPartyNotices.txt",
+        "analyzers/dotnet/Microsoft.CodeAnalysis.PublicApiAnalyzers.CodeFixes.dll",
+        "analyzers/dotnet/Microsoft.CodeAnalysis.PublicApiAnalyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/de/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/es/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/fr/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/it/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/ja/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/ko/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/pl/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/pt-BR/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/ru/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/tr/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/zh-Hans/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "analyzers/dotnet/zh-Hant/Microsoft.CodeAnalysis.PublicApiAnalyzers.resources.dll",
+        "buildTransitive/Microsoft.CodeAnalysis.PublicApiAnalyzers.props",
+        "buildTransitive/Microsoft.CodeAnalysis.PublicApiAnalyzers.targets",
+        "buildTransitive/config/analysislevel_2_9_8_all.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_default.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_minimum.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_none.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_recommended.globalconfig",
+        "buildTransitive/config/analysislevel_2_9_8_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_all.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_default.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_minimum.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_none.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_recommended.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_3_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_all.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_default.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_minimum.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_none.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_recommended.globalconfig",
+        "buildTransitive/config/analysislevel_3_3_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_all.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_default.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_minimum.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_none.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_recommended.globalconfig",
+        "buildTransitive/config/analysislevel_4_3_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_all.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_default.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_minimum.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_none.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_recommended.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_2_9_8_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_all.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_default.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_minimum.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_none.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_recommended.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_3_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_all.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_default.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_minimum.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_none.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_recommended.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_3_3_recommended_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_all.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_all_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_default.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_default_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_minimum.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_minimum_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_none.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_none_warnaserror.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_recommended.globalconfig",
+        "buildTransitive/config/analysislevelapidesign_4_3_recommended_warnaserror.globalconfig",
+        "documentation/Analyzer Configuration.md",
+        "documentation/Microsoft.CodeAnalysis.PublicApiAnalyzers.md",
+        "documentation/Microsoft.CodeAnalysis.PublicApiAnalyzers.sarif",
+        "editorconfig/AllRulesDefault/.editorconfig",
+        "editorconfig/AllRulesDisabled/.editorconfig",
+        "editorconfig/AllRulesEnabled/.editorconfig",
+        "editorconfig/ApiDesignRulesDefault/.editorconfig",
+        "editorconfig/ApiDesignRulesEnabled/.editorconfig",
+        "editorconfig/DataflowRulesDefault/.editorconfig",
+        "editorconfig/DataflowRulesEnabled/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
+        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
+        "microsoft.codeanalysis.publicapianalyzers.3.3.4.nupkg.sha512",
+        "microsoft.codeanalysis.publicapianalyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/ApiDesignRulesDefault.ruleset",
+        "rulesets/ApiDesignRulesEnabled.ruleset",
+        "rulesets/DataflowRulesDefault.ruleset",
+        "rulesets/DataflowRulesEnabled.ruleset",
+        "rulesets/PortedFromFxCopRulesDefault.ruleset",
+        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Microsoft.CodeAnalysis.PublicApiAnalyzers >= 3.3.4"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Cole\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.6.1",
+    "restore": {
+      "projectUniqueName": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj",
+      "projectName": "p3rpc.nativetypes.Interfaces",
+      "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj",
+      "packagesPath": "C:\\Users\\Cole\\.nuget\\packages\\",
+      "outputPath": "S:\\ReloadMods\\P3R.WeaponFramework\\Submodules\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Cole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework\\v4.8": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.PublicApiAnalyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.3.4, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

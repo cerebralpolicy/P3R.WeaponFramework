@@ -17,9 +17,9 @@ public class ArmatureTargets : Collection<EArmature>
     {
     }
 }
-public class ArmatureTuple : Tuple<ArmatureType, ArmatureTargets>
+public class ArmatureTuple : Tuple<ShellType, ArmatureTargets>
 {
-    public ArmatureTuple(ArmatureType item1, ArmatureTargets item2) : base(item1, item2)
+    public ArmatureTuple(ShellType item1, ArmatureTargets item2) : base(item1, item2)
     {
     }
 }
@@ -35,7 +35,7 @@ public class ArmatureTuples : Collection<ArmatureTuple>
     }
 }
 
-public class ArmatureSets : Dictionary<Character,ArmatureTuples>;
+public class ArmatureSets : Dictionary<ECharacter,ArmatureTuples>;
 public class WeaponIdTable<T> : Dictionary<int,T> where T : IWeapon;
 
-public class CategorizedWeaponTable<T> : Dictionary<Character, WeaponIdTable<T>> where T : IWeapon;
+public class CategorizedWeaponTable<T> : Dictionary<ECharacter, WeaponIdTable<T>> where T : IWeapon;

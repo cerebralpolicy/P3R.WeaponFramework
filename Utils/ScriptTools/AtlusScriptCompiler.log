@@ -1,0 +1,27 @@
+14-Sep-2024 4:04:59 PM  Trace: Arguments: -In .\RawBMD\XRD777\BF_EveryTime.uasset -Decompile -InFormat FlowScriptBinary -Encoding UTF-8 -OutFormat V4BE -Library P3RE
+14-Sep-2024 4:04:59 PM  Info: Using UTF-8 encoding
+14-Sep-2024 4:04:59 PM  Info: Input file path is set to .\RawBMD\XRD777\BF_EveryTime_unwrapped.bf
+14-Sep-2024 4:04:59 PM  Info: Output file path is set to .\RawBMD\XRD777\BF_EveryTime_unwrapped.bf.flow
+14-Sep-2024 4:04:59 PM  Info: Loading binary FlowScript file...
+14-Sep-2024 4:04:59 PM  Info: Decompiling FlowScript...
+14-Sep-2024 4:04:59 PM  Info: FlowScript output path set to S:\ReloadMods\P3R.WeaponFramework\Utils\ScriptTools\RawBMD\XRD777\BF_EveryTime_unwrapped.bf.flow
+14-Sep-2024 4:04:59 PM  Info: MessageScript output path set to S:\ReloadMods\P3R.WeaponFramework\Utils\ScriptTools\RawBMD\XRD777\BF_EveryTime_unwrapped.bf.msg
+14-Sep-2024 4:04:59 PM  Info: Start decompiling FlowScript
+14-Sep-2024 4:04:59 PM  Info: Start evaluating FlowScript
+14-Sep-2024 4:04:59 PM  Info: Registering functions
+14-Sep-2024 4:04:59 PM  Info: Registering top level variables
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedures
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'MAIN_EvreyTime'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'EveryMoning'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'EveryAM'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'EveryPM'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'EveryDaytime'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'EveryNight'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'EveryMidnight'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'Theurgia_Point_Setting'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'NpcQuestFlgSetting'
+14-Sep-2024 4:04:59 PM  Info: Evaluating procedure: 'SetElizabethIcon'
+14-Sep-2024 4:04:59 PM  Info: Done evaluating FlowScript
+14-Sep-2024 4:04:59 PM  Info: Decompiling procedure: MAIN_EvreyTime
+14-Sep-2024 4:04:59 PM  Info: Decompiling procedure: EveryMoning
+14-Sep-2024 4:

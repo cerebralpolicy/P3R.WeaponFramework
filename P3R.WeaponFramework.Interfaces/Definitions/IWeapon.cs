@@ -7,7 +7,7 @@ public interface IWeapon : IEquatable<WeaponItem>
     bool IsEnabled { get; set; }
     #endregion
     #region Weapon Table Entry
-    Character Character { get; set; }
+    ECharacter Character { get; set; }
     int WeaponId { get; set; }
     string? Name { get; set; }
     int ModelId { get; set; }
@@ -20,7 +20,7 @@ public interface IWeapon : IEquatable<WeaponItem>
     string Description { get; set; }
     int WeaponItemId { get; set; }
 
-    EArmatureType? TargetArmature { get; }
-
+    ShellType ShellTarget { get; }
+    EpisodeFlag EpisodeFlag { get; set; }
     void SetWeaponItemId(int weaponItemId);
 }

@@ -17,13 +17,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Hooks\Services\**" />
     <Compile Remove="Publish\**" />
     <Compile Remove="Resources\Excel\**" />
-    <EmbeddedResource Remove="Hooks\Services\**" />
     <EmbeddedResource Remove="Publish\**" />
     <EmbeddedResource Remove="Resources\Excel\**" />
-    <None Remove="Hooks\Services\**" />
     <None Remove="Publish\**" />
     <None Remove="Resources\Excel\**" />
   </ItemGroup>
@@ -43,7 +40,10 @@
     <None Remove="Reloaded.Trimming.targets" />
     <None Remove="Reloaded.Checks.targets" />
     <None Remove="Resources\EN\Descriptions.msg" />
+    <None Remove="Resources\EN\Names.json" />
+    <None Remove="Resources\EN\Names_Astrea.json" />
     <None Remove="Resources\weapons.json" />
+    <None Remove="Resources\Weapons_Astrea.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +51,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Resources\EN\Descriptions.msg" />
+    <EmbeddedResource Include="Resources\EN\Names.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EN\Names_Astrea.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Weapons_Astrea.json" />
     <EmbeddedResource Include="Resources\Weapons.json" />
     <None Update="Preview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -58,25 +65,34 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.SmartEnum" Version="8.0.0" />
+    <PackageReference Include="p3rpc.nativetypes.Interfaces" Version="1.6.1" />
     <PackageReference Include="Reloaded.Memory" Version="9.4.2" />
     <PackageReference Include="Reloaded.Memory.SigScan.ReloadedII.Interfaces" Version="1.2.0" />
     <PackageReference Include="Reloaded.Mod.Interfaces" Version="2.4.0" ExcludeAssets="runtime" />
     <PackageReference Include="Reloaded.SharedLib.Hooks" Version="1.9.0" />
+    <PackageReference Include="RyoTune.Reloaded" Version="1.0.1" />
+    <PackageReference Include="SharedScans.Interfaces" Version="1.1.0" />
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
-    <PackageReference Include="YamlDotNet" Version="16.0.0" />
+    <PackageReference Include="Unreal.AtlusScript.Interfaces" Version="1.1.0" />
+    <PackageReference Include="Unreal.ObjectsEmitter.Interfaces" Version="1.2.3" />
+    <PackageReference Include="UnrealEssentials.Interfaces" Version="1.0.0" />
+    <PackageReference Include="YamlDotNet" Version="16.1.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\P3R.WeaponFramework.Interfaces\P3R.WeaponFramework.Interfaces.csproj" />
-    <ProjectReference Include="..\Submodules\p3rpc.nativetypes\p3rpc.nativetypes.Interfaces\p3rpc.nativetypes.Interfaces.csproj" />
-    <ProjectReference Include="..\Submodules\Project.Utils\Project.Utils.csproj" />
-    <ProjectReference Include="..\Submodules\SharedScans\SharedScans.Interfaces\SharedScans.Interfaces.csproj" />
-    <ProjectReference Include="..\Submodules\Unreal.AtlusScript\Unreal.AtlusScript.Interfaces\Unreal.AtlusScript.Interfaces.csproj" />
-    <ProjectReference Include="..\Submodules\Unreal.ObjectsEmitter\Unreal.ObjectsEmitter.Interfaces\Unreal.ObjectsEmitter.Interfaces.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\New\" />
+    <Content Include="Core\**" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Memory\" />
+    <Folder Include="NewFolder\" />
+    <Folder Include="Resources\Invarient\" />
+    <Folder Include="Weapons\Models\Types\" />
   </ItemGroup>
 
 </Project>

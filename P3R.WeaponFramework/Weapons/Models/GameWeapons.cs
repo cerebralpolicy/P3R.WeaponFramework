@@ -1,4 +1,5 @@
-﻿using P3R.WeaponFramework.Types;
+﻿using P3R.WeaponFramework.Hooks;
+using P3R.WeaponFramework.Types;
 using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -7,85 +8,96 @@ using System.Text.Json;
 
 namespace P3R.WeaponFramework.Weapons.Models;
 
-internal class GameWeapons: IReadOnlyDictionary<int, Weapon>
+internal unsafe class GameWeapons: IReadOnlyCollection<Weapon>
 {
-    public const int BASE_MOD_WEAP_ID = 1000;
-    private const int NUM_MOD_WEAPS = 10;
-    private readonly WeaponIdTable<Weapon> weapons = [];
-//    private readonly Dictionary<int, Weapon> weapons = [];
-    private readonly CategorizedWeaponTable<Weapon> categorizedWeapons = [];
-//    private readonly Dictionary<Character, Dictionary<int,Weapon>> categorizedWeapons = [];
-
+    #region Constants
+    /// <summary>
+    /// Each episode's weapon item list has 512 entries, although not all are used setting the mod weapons to begin at 1025 makes the most sense. 
+    /// </summary>
+    public const int BASE_MOD_WEAP_ID   = 1025; //1025
+    private const int NUM_MOD_WEAPS     = 10000;
+    #endregion
+    public readonly List<Weapon> weapons = [];
+    #region EpisodeHook
+    private delegate bool IsAstreaSave();
+    private IsAstreaSave? isAstreaSave;
+    public EpisodeFlag Filter
+    {
+        get
+        {
+            if (isAstreaSave == null)
+            {
+                return EpisodeFlag.None;
+            }
+            else
+            {
+                return isAstreaSave() ? EpisodeFlag.Astrea : EpisodeFlag.Vanilla;
+            }
+        }
+    }
+    #endregion
     public GameWeapons()
     {
+        ScanHooks.Add(
+            "WF_IsAstreaSave",
+                "48 83 EC 28 E8 ?? ?? ?? ?? 48 85 C0 74 ?? E8 ?? ?? ?? ?? 48 8B C8 E8 ?? ?? ?? ?? 3C 01 0F 94 C0 48 83 C4 28 C3 48 83 C4 28 C3",
+                (hooks, result) => this.isAstreaSave = hooks.CreateWrapper<IsAstreaSave>(result, out _));
+        
+        ProcessResource(EpisodeFlag.Vanilla);
+        ProcessResource(EpisodeFlag.Astrea);
+        AddModSlots();
+    }
+
+    public List<Weapon> FilteredWeapons => weapons.Where(x => x.EpisodeFlag.HasFlag(Filter)).ToList();
+
+    public int Count => FilteredWeapons.Count;
+
+
+    internal void ProcessResource(EpisodeFlag episode)
+    {
+        if (episode.WeaponResource == null)
+        {
+            Log.Error("Invalid episode specified");
+            return;
+        }   
         var assembly = Assembly.GetExecutingAssembly();
-        var resourceName = "P3R.WeaponFramework.Resources.Weapons.json";
-        using var stream = assembly.GetManifestResourceStream(resourceName)!;
+        using var stream = assembly.GetManifestResourceStream(episode.WeaponResource)!;
         using var reader = new StreamReader(stream);
         var json = reader.ReadToEnd();
-
-        // Import vanilla weapons
-        var gameWeapons = JsonSerializer.Deserialize<Dictionary<Character,Weapon[]>>(json)!;
+        var gameWeapons = JsonSerializer.Deserialize<Dictionary<ECharacter, Weapon[]>>(json)!;
         foreach (var charWeapons in gameWeapons)
         {
-            var charDict = new WeaponIdTable<Weapon>();
             foreach (var weapon in charWeapons.Value)
             {
-                //Log.Debug($"Weapon: {weapon.Name}");
-                var id = weapon.WeaponId;
-                weapons.Add(id, weapon);
-                charDict.Add(id, weapon);
+                weapon.EpisodeFlag = episode;
+                weapon.ShellTarget = ShellType.FromWeapon(weapon)!;
             }
-            categorizedWeapons.Add(charWeapons.Key, charDict);            
+            weapons.AddRange(charWeapons.Value);
         }
-        // Enable all existing weapons.
-        foreach (var weapon in weapons.Values)
-        {
-            weapon.IsEnabled = true;
-        }
-
+    }
+    public void AddModSlots()
+    {
         for (int i = 0; i < NUM_MOD_WEAPS; i++)
         {
-            var weaponItemId = BASE_MOD_WEAP_ID + i;
-            Log.Debug($"New slot {weaponItemId}");
-            var weapon = new Weapon(weaponItemId) 
-            { 
-                IsVanilla = false,
-                WeaponId = weaponItemId,
-                ModelId = weaponItemId,
+            var weaponId = BASE_MOD_WEAP_ID + i;
+            var weapon = new Weapon(weaponId)
+            {
+                EpisodeFlag = EpisodeFlag.None,
+                WeaponId = weaponId,
+                ModelId = 10,
             };
-            if (weapon is null)
-                break;
-            weapons.Add(weaponItemId, weapon);
-            continue;
+            Log.Debug($"New slot {weaponId}");
+            weapons.Add(weapon);
         }
     }
-    public Weapon this[int key] => throw new NotImplementedException();
 
-    public IEnumerable<int> Keys => weapons.Keys;
-
-    public IEnumerable<Weapon> Values => weapons.Values;
-
-    public int Count => weapons.Count;
-
-    public bool ContainsKey(int key) => weapons.ContainsKey(key);
-
-    public bool TryGetValue(int key, [MaybeNullWhen(false)] out Weapon value)
+    public bool TryGetWeaponByItemId(int itemId, [NotNullWhen(true)] out Weapon? weapon)
     {
-        if (ContainsKey(key))
-        {
-            value = weapons[key];
-            return true;
-        }
-        else
-        value = null;
-        return false;
+        weapon = FilteredWeapons.FirstOrDefault(x => x.WeaponItemId == itemId);
+        return weapon != null;
     }
 
-    IEnumerator IEnumerable.GetEnumerator() => weapons.GetEnumerator();
+    public IEnumerator<Weapon> GetEnumerator() => FilteredWeapons.GetEnumerator();
 
-    IEnumerator<KeyValuePair<int, Weapon>> IEnumerable<KeyValuePair<int, Weapon>>.GetEnumerator()
-    {
-        throw new NotImplementedException();
-    }
+    IEnumerator IEnumerable.GetEnumerator() => FilteredWeapons.GetEnumerator();
 }

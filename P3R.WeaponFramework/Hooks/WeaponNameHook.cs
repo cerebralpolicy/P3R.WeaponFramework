@@ -1,4 +1,5 @@
-﻿using P3R.WeaponFramework.Weapons;
+﻿using P3R.WeaponFramework.Interfaces;
+using P3R.WeaponFramework.Weapons;
 using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Hooks;
@@ -7,7 +8,7 @@ namespace P3R.WeaponFramework.Hooks;
 internal unsafe class WeaponNameHook
 {
 
-    public WeaponNameHook(IUObjects uObjects, IUnreal unreal, WeaponRegistry registry)
+    public WeaponNameHook(IUObjects uObjects, IWFUnreal unreal, WeaponRegistry registry)
     {
         uObjects.FindObject("DatItemWeaponNameDataAsset", obj => 
         { 
@@ -16,7 +17,7 @@ internal unsafe class WeaponNameHook
             var nameCount = nameTable->Data.arr_num;
             for (int i = 0; i < nameCount; i++)
             {
-                var weapon = registry.Weapons.Values.FirstOrDefault(x => x.WeaponId == i);
+                var weapon = registry.Weapons.FirstOrDefault(x => x.WeaponItemId == i);
 
                 if (weapon?.Name != null)
                 {
