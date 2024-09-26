@@ -9,6 +9,7 @@
       "P3R.WeaponFramework.Tools.DataUtils/1.0.0": {
         "dependencies": {
           "AtlusScriptLibrary": "1.0.0",
+          "P3R.WeaponFramework": "1.0.0",
           "P3R.WeaponFramework.Interfaces": "1.0.0",
           "System.Collections.NonGeneric": "4.3.0",
           "YamlDotNet": "16.1.2"
@@ -25,17 +26,6 @@
           "lib/netstandard1.1/Antlr4.Runtime.dll": {
             "assemblyVersion": "4.6.0.0",
             "fileVersion": "4.6.6.0"
-          }
-        }
-      },
-      "Ardalis.SmartEnum/8.0.0": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "5.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/Ardalis.SmartEnum.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
           }
         }
       },
@@ -105,17 +95,6 @@
           "System.Xml.XDocument": "4.0.11"
         }
       },
-      "p3rpc.classconstructor.Interfaces/1.2.0": {
-        "dependencies": {
-          "p3rpc.nativetypes.Interfaces": "1.6.1"
-        },
-        "runtime": {
-          "lib/net8.0/p3rpc.classconstructor.Interfaces.dll": {
-            "assemblyVersion": "1.2.0.0",
-            "fileVersion": "1.2.0.0"
-          }
-        }
-      },
       "p3rpc.nativetypes.Interfaces/1.6.1": {
         "runtime": {
           "lib/net8.0/p3rpc.nativetypes.Interfaces.dll": {
@@ -124,11 +103,19 @@
           }
         }
       },
-      "Reloaded.Hooks.Definitions/1.11.0": {
+      "Reloaded.Hooks.Definitions/1.15.0": {
         "runtime": {
           "lib/net6.0/Reloaded.Hooks.Definitions.dll": {
-            "assemblyVersion": "1.11.0.0",
-            "fileVersion": "1.11.0.0"
+            "assemblyVersion": "1.15.0.0",
+            "fileVersion": "1.15.0.0"
+          }
+        }
+      },
+      "Reloaded.Memory/9.4.2": {
+        "runtime": {
+          "lib/net8.0/Reloaded.Memory.dll": {
+            "assemblyVersion": "9.4.2.0",
+            "fileVersion": "9.4.2.0"
           }
         }
       },
@@ -161,7 +148,7 @@
       },
       "Reloaded.SharedLib.Hooks/1.9.0": {
         "dependencies": {
-          "Reloaded.Hooks.Definitions": "1.11.0"
+          "Reloaded.Hooks.Definitions": "1.15.0"
         },
         "runtime": {
           "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.dll": {
@@ -204,6 +191,17 @@
           "lib/net8.0/RyoTune.Reloaded.dll": {
             "assemblyVersion": "1.0.1.0",
             "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "SharedScans.Interfaces/1.1.0": {
+        "dependencies": {
+          "Reloaded.Hooks.Definitions": "1.15.0"
+        },
+        "runtime": {
+          "lib/net8.0/SharedScans.Interfaces.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         }
       },
@@ -252,7 +250,6 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Console/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -782,11 +779,27 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
+      "Unreal.AtlusScript.Interfaces/1.1.0": {
+        "runtime": {
+          "lib/net8.0/Unreal.AtlusScript.Interfaces.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "Unreal.ObjectsEmitter.Interfaces/1.2.3": {
         "runtime": {
           "lib/net8.0/Unreal.ObjectsEmitter.Interfaces.dll": {
             "assemblyVersion": "1.2.3.0",
             "fileVersion": "1.2.3.0"
+          }
+        }
+      },
+      "UnrealEssentials.Interfaces/1.0.0": {
+        "runtime": {
+          "lib/net7.0/UnrealEssentials.Interfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -808,16 +821,32 @@
           "AtlusScriptLibrary.dll": {}
         }
       },
-      "P3R.WeaponFramework.Interfaces/1.0.0": {
+      "P3R.WeaponFramework/1.0.0": {
         "dependencies": {
-          "Ardalis.SmartEnum": "8.0.0",
+          "P3R.WeaponFramework.Enums": "1.0.0",
+          "P3R.WeaponFramework.Interfaces": "1.0.0",
+          "Reloaded.Memory": "9.4.2",
+          "Reloaded.Memory.SigScan.ReloadedII.Interfaces": "1.2.0",
+          "Reloaded.Mod.Interfaces": "2.4.0",
+          "Reloaded.SharedLib.Hooks": "1.9.0",
           "RyoTune.Reloaded": "1.0.1",
-          "System.Collections.NonGeneric": "4.3.0",
+          "SharedScans.Interfaces": "1.1.0",
+          "Unreal.AtlusScript.Interfaces": "1.1.0",
           "Unreal.ObjectsEmitter.Interfaces": "1.2.3",
+          "UnrealEssentials.Interfaces": "1.0.0",
           "YamlDotNet": "16.1.2",
-          "p3rpc.classconstructor.Interfaces": "1.2.0",
           "p3rpc.nativetypes.Interfaces": "1.6.1"
         },
+        "runtime": {
+          "P3R.WeaponFramework.dll": {}
+        }
+      },
+      "P3R.WeaponFramework.Enums/1.0.0": {
+        "runtime": {
+          "P3R.WeaponFramework.Enums.dll": {}
+        }
+      },
+      "P3R.WeaponFramework.Interfaces/1.0.0": {
         "runtime": {
           "P3R.WeaponFramework.Interfaces.dll": {}
         }
@@ -836,13 +865,6 @@
       "sha512": "sha512-NlbRjkTCidRh1QeWvGfFPKq0sqpPZrAwGaSTV0X2jL8buZxTf9/aQ7PehFAmc7erXLUQ3YMZEVZU86aQwma2+w==",
       "path": "antlr4.runtime/4.6.6",
       "hashPath": "antlr4.runtime.4.6.6.nupkg.sha512"
-    },
-    "Ardalis.SmartEnum/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qGIfpKhSQeLouycBLosGD4qFqgPa5NKzzkH/59oSHyfs3FSbaO6JChpNEMnkslOyQRLbRXj2ImkA0uZdX19IZA==",
-      "path": "ardalis.smartenum/8.0.0",
-      "hashPath": "ardalis.smartenum.8.0.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -886,13 +908,6 @@
       "path": "netstandard.library/1.6.0",
       "hashPath": "netstandard.library.1.6.0.nupkg.sha512"
     },
-    "p3rpc.classconstructor.Interfaces/1.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PlP3jjxUqYlZJSgGLP/+PdiEMZYiraenal61osjmrCvaEZPT3CFsyaHXqz+SOmN/jJj46cTkor+BaR/nxJiseg==",
-      "path": "p3rpc.classconstructor.interfaces/1.2.0",
-      "hashPath": "p3rpc.classconstructor.interfaces.1.2.0.nupkg.sha512"
-    },
     "p3rpc.nativetypes.Interfaces/1.6.1": {
       "type": "package",
       "serviceable": true,
@@ -900,12 +915,19 @@
       "path": "p3rpc.nativetypes.interfaces/1.6.1",
       "hashPath": "p3rpc.nativetypes.interfaces.1.6.1.nupkg.sha512"
     },
-    "Reloaded.Hooks.Definitions/1.11.0": {
+    "Reloaded.Hooks.Definitions/1.15.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/z0AwcCvVTQHlQ9SMMMBqKEIrm5t/yBFPylySW2Rnr7uRGV9jGfoACFe79KZKF976dhtkyy2xl0HIXz5hRUkng==",
-      "path": "reloaded.hooks.definitions/1.11.0",
-      "hashPath": "reloaded.hooks.definitions.1.11.0.nupkg.sha512"
+      "sha512": "sha512-bLY20vYB0fS2xwu6RDQVwlJxt2//KXLigYrCsCuzt5QFQqkvft4abq9FWPeCJYcvEeg/GQpJ3LC+108/4I2l+g==",
+      "path": "reloaded.hooks.definitions/1.15.0",
+      "hashPath": "reloaded.hooks.definitions.1.15.0.nupkg.sha512"
+    },
+    "Reloaded.Memory/9.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yrjimngdXs7evlk/ZFbzP0uppTf0Og+LFFonITgpzZ94HmVOi8b+29YFfYdWTbf68qUzGP0D4s0VsMhaGerg5g==",
+      "path": "reloaded.memory/9.4.2",
+      "hashPath": "reloaded.memory.9.4.2.nupkg.sha512"
     },
     "Reloaded.Memory.Sigscan.Definitions/1.1.0": {
       "type": "package",
@@ -970,6 +992,13 @@
       "path": "ryotune.reloaded/1.0.1",
       "hashPath": "ryotune.reloaded.1.0.1.nupkg.sha512"
     },
+    "SharedScans.Interfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q5ryWCZTR2syRBcYoBm94R1D7AXhx2a7pg7hndd4CzLW8oArZSR1GAoawHoKLz/gV1HrjSudK26+w67c30mKgg==",
+      "path": "sharedscans.interfaces/1.1.0",
+      "hashPath": "sharedscans.interfaces.1.1.0.nupkg.sha512"
+    },
     "System.AppContext/4.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1004,13 +1033,6 @@
       "sha512": "sha512-prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "path": "system.collections.nongeneric/4.3.0",
       "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/5.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
-      "path": "system.componentmodel.annotations/5.0.0",
-      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "System.Console/4.0.0": {
       "type": "package",
@@ -1355,12 +1377,26 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
+    "Unreal.AtlusScript.Interfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8GKV3iRlYX8M9keWd62JKNmQYX8kXuWKvSpS1zcw22+/eW2SsRI7nCnQx0Jtucfr0Cex/q4Q4aV63wU5diRBeg==",
+      "path": "unreal.atlusscript.interfaces/1.1.0",
+      "hashPath": "unreal.atlusscript.interfaces.1.1.0.nupkg.sha512"
+    },
     "Unreal.ObjectsEmitter.Interfaces/1.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-whL0beBUFr4F4cBSj+AfkPT1/kdG2vzN8zFiWb9CVol6Dz3xoqHc7J1ZPdQPLNChelEvRQkhGiLW3Mqh8Ku2YQ==",
       "path": "unreal.objectsemitter.interfaces/1.2.3",
       "hashPath": "unreal.objectsemitter.interfaces.1.2.3.nupkg.sha512"
+    },
+    "UnrealEssentials.Interfaces/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w8/KkU/+hTDXrCXy8o7cZEs3tYVIVleMDP1uOf/hOG17aONyVJEzEOs+qWPaSTY8OvW4CuId2w6vJKnaE7NHYQ==",
+      "path": "unrealessentials.interfaces/1.0.0",
+      "hashPath": "unrealessentials.interfaces.1.0.0.nupkg.sha512"
     },
     "YamlDotNet/16.1.2": {
       "type": "package",
@@ -1370,6 +1406,16 @@
       "hashPath": "yamldotnet.16.1.2.nupkg.sha512"
     },
     "AtlusScriptLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "P3R.WeaponFramework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "P3R.WeaponFramework.Enums/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -48,36 +48,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Ardalis.SmartEnum": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "RyoTune.Reloaded": {
-              "target": "Package",
-              "version": "[1.0.1, )"
-            },
-            "System.Collections.NonGeneric": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "Unreal.ObjectsEmitter.Interfaces": {
-              "target": "Package",
-              "version": "[1.2.3, )"
-            },
-            "YamlDotNet": {
-              "target": "Package",
-              "version": "[16.1.2, )"
-            },
-            "p3rpc.classconstructor.Interfaces": {
-              "target": "Package",
-              "version": "[1.2.0, )"
-            },
-            "p3rpc.nativetypes.Interfaces": {
-              "target": "Package",
-              "version": "[1.6.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

@@ -2,7 +2,7 @@
 
 namespace P3R.WeaponFramework.Weapons;
 
-internal class WeaponOverridesRegistry(WeaponRegistry weapons): IWeaponApi
+internal class WeaponOverridesRegistry(WeaponRegistry weapons) : IWeaponApi
 {
     private readonly WeaponRegistry weapons = weapons;
 

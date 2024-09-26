@@ -1,5 +1,4 @@
 ﻿using P3R.WeaponFramework.Template.Configuration;
-using Reloaded.Mod.Interfaces.Structs;
 using System.ComponentModel;
 
 namespace P3R.WeaponFramework.Configuration

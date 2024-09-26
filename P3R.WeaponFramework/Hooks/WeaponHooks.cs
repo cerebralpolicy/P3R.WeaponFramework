@@ -1,19 +1,16 @@
 ﻿using P3R.WeaponFramework.Hooks.Models;
 using P3R.WeaponFramework.Hooks.Services;
-using P3R.WeaponFramework.Interfaces;
-using P3R.WeaponFramework.Interfaces.Definitions;
-using P3R.WeaponFramework.Types;
 using P3R.WeaponFramework.Weapons;
 using P3R.WeaponFramework.Weapons.Models;
 using Reloaded.Hooks.Definitions;
 using Reloaded.Hooks.Definitions.X64;
-using System.Linq;
 using Unreal.ObjectsEmitter.Interfaces;
 using Unreal.ObjectsEmitter.Interfaces.Types;
 using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
 
 namespace P3R.WeaponFramework.Hooks;
 
+#pragma warning disable CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
 internal unsafe class WeaponHooks
 {
     [Function(CallingConventions.Microsoft)]
@@ -37,24 +34,15 @@ internal unsafe class WeaponHooks
         IUObjects uobjects,
         WeaponRegistry registry,
         WeaponDescService weaponDesc,
-        WeaponShellService shellService,
+        WeaponShellService weaponShells,
         ItemEquipHooks itemEquip)
     {
         this.unreal = unreal;
         this.uobjects = uobjects;
         this.registry = registry;
         this.weaponDesc = weaponDesc;
-        this.weaponShells = shellService;
+        this.weaponShells = weaponShells;
         this.itemEquip = itemEquip;
-
-        foreach (var character in Characters.WFArmed)
-        {
-            if (character > ECharacter.Aigis12) break;
-            foreach (var shell in character.Shells)
-            {
-
-            }
-        }
 
         uobjects.FindObject("DatItemWeaponDataAsset", SetWeaponData);
 
@@ -83,23 +71,24 @@ internal unsafe class WeaponHooks
 
     private void SetWeaponData(UnrealObject obj)
     {
+        Log.Verbose("WeaponTable found");
         var weaponItemList = (UWeaponItemListTable*)obj.Self;
         var activeWeapons = registry.GetActiveWeapons();
-        //var activeAstreaWeapons = registry.GetActiveAstreaWeapons();
-
-
-        //Log.Debug("Manually generating list of valid weapons.");
+        var isAstrea = registry.Weapons.AstreaSave;
+        
         Log.Debug("Setting weapon data.");
-        Dictionary<int, FWeaponItemList> weaponLookupTable = [];
+        List<Weapon> tempList = [];
         for (int i = 0; i < weaponItemList->Count; i++)
         {
             var weaponItem = (*weaponItemList)[i];
-            var existingWeapon = activeWeapons.FirstOrDefault(x => x.Stats.Equals(weaponItem));
+            var existingWeapon = activeWeapons.FirstOrDefault(x => x.WeaponId == i);
             if (existingWeapon != null)
             {
-                existingWeapon.SetWeaponItemId(i);
-                continue;
+                var id = tempList.Count;
+                existingWeapon.SetWeaponItemId(id);
+                tempList.Add(existingWeapon);
             }
+            continue;
         }
         var newItemIndex = 513;
         foreach (var weapon in registry.GetActiveWeapons())
@@ -111,7 +100,7 @@ internal unsafe class WeaponHooks
 
             var newItem = &weaponItemList->Data.allocator_instance[newItemIndex];
             newItem->ModelID = (ushort)weapon.ModelId;
-            newItem->EquipID = (uint)AssetUtils.GetEquipFromChar(weapon.Character);
+            newItem->EquipID = AssetUtils.GetEquipFromChar(weapon.Character);
             weapon.SetWeaponItemId(newItemIndex);
             weaponDesc.SetWeaponDesc(newItemIndex, weapon.Description);
             //this.SetWeaponPaths(weapon);
@@ -125,18 +114,18 @@ internal unsafe class WeaponHooks
     {
         var character = comp->baseObj.Character;
         Character wfCharacter = character;
-        if (character < ECharacter.Player || character > ECharacter.Metis)
+        if (character < Character.Player || character > Character.Metis)
         {
             return;
         }
         if (!Characters.WFArmed.Contains((Character)character))
-                { return; }
+        { return; }
         var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
         this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var weapon);
         if (weapon != null)
         {
             // comp->mSetWeaponType toggles between animation packages
-            comp->mSetWeaponModelID = weaponShells.UpdateWeapon(character, weapon.WeaponId);
+            comp->mSetWeaponModelID = weaponShells.UpdatWeapon(character, weapon.WeaponId);
         }
     }
 }

@@ -30,3 +30,6 @@ bin/*
 /Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc11.uasset
 /Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc11_FR.uasset
 /Example/P3R.WeaponFramework.Hockey/UnrealEssentials/P3R/Content/Cerebral/UI/Allout/T_Btl_AlloutFinishText_Pc12.uasset
+/P3R.WeaponFramework.Tools/P3R.WeaponFramework.Tools.DataUtils/Output/Weapons_Astrea.json
+/P3R.WeaponFramework.Tools/P3R.WeaponFramework.Tools.DataUtils/Output/Weapons_Merged.json
+/P3R.WeaponFramework.Tools/P3R.WeaponFramework.Tools.DataUtils/Output/Weapons_Vanilla.json

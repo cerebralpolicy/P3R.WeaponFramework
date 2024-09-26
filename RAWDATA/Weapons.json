@@ -2,12 +2,13 @@
   "1": [
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 2,
       "Name": "Shortsword",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 4,
         "Tier": 2,
@@ -25,12 +26,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 3,
       "Name": "Long Wakizashi",
       "WeaponType": 2,
       "ModelId": 14,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 4,
         "Tier": 10,
@@ -48,12 +50,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 4,
       "Name": "Saber",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 4,
         "Tier": 10,
@@ -71,12 +74,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 5,
       "Name": "Gladius",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 4,
         "Tier": 2,
@@ -94,12 +98,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 6,
       "Name": "Nikkari Aoe",
       "WeaponType": 2,
       "ModelId": 14,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -117,12 +122,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 7,
       "Name": "Fudo Masamune",
       "WeaponType": 2,
       "ModelId": 14,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -140,12 +146,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 8,
       "Name": "Iron Edge",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -163,12 +170,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 9,
       "Name": "Unused",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -186,12 +194,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 10,
       "Name": "Silver Saber",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -209,12 +218,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 11,
       "Name": "Legendary Cleaver",
       "WeaponType": 2,
       "ModelId": 17,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -232,12 +242,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 12,
       "Name": "Steel Pipe",
       "WeaponType": 2,
       "ModelId": 16,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -255,12 +266,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 13,
       "Name": "Aroundight",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -278,12 +290,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 14,
       "Name": "Tizona",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -301,12 +314,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 15,
       "Name": "Kaneshige",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -324,12 +338,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 16,
       "Name": "Sin Blade",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -347,12 +362,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 17,
       "Name": "Shishiou",
       "WeaponType": 2,
       "ModelId": 14,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -370,12 +386,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 18,
       "Name": "Omokage",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -393,12 +410,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 19,
       "Name": "Kogarasumaru",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -416,12 +434,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 20,
       "Name": "Tajikarao Sword",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -439,12 +458,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 21,
       "Name": "Qi Xing Dao",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -462,12 +482,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 22,
       "Name": "Pulsing Blade",
       "WeaponType": 2,
       "ModelId": 13,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -485,12 +506,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 23,
       "Name": "Gimlet",
       "WeaponType": 2,
       "ModelId": 13,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -508,12 +530,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 24,
       "Name": "Excalibur",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -531,12 +554,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 25,
       "Name": "Deus Xiphos",
       "WeaponType": 2,
       "ModelId": 18,
-      "WeaponModelId": 60,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -554,12 +578,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 26,
       "Name": "Lucifer\u0027s Blade",
       "WeaponType": 2,
       "ModelId": 19,
-      "WeaponModelId": 61,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -577,12 +602,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 27,
       "Name": "Unused",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -600,12 +626,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 28,
       "Name": "Nameless Katana",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -623,12 +650,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 29,
       "Name": "Unused",
       "WeaponType": 2,
       "ModelId": 14,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -646,12 +674,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 30,
       "Name": "Holy Knight Sword",
       "WeaponType": 2,
       "ModelId": 11,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -669,12 +698,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 31,
       "Name": "Unused",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -692,12 +722,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 32,
       "Name": "Dual Sword",
       "WeaponType": 2,
       "ModelId": 13,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -715,12 +746,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 33,
       "Name": "Yggdrasword",
       "WeaponType": 2,
       "ModelId": 12,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -738,12 +770,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 34,
       "Name": "Translucent Blade",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -761,12 +794,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 35,
       "Name": "Envenomed Blade",
       "WeaponType": 2,
       "ModelId": 14,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -784,12 +818,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 36,
       "Name": "Onimaru Kunitsuna",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 11,
         "Tier": 2,
@@ -807,12 +842,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 281,
       "Name": "SEES Sword",
       "WeaponType": 2,
       "ModelId": 10,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -830,12 +866,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 291,
       "Name": "Myohou Muramasa",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -853,12 +890,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 292,
       "Name": "Myoho Masamura",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -876,12 +914,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 293,
       "Name": "Outenta Mitsuyo",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -899,12 +938,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 294,
       "Name": "Fatal Blade",
       "WeaponType": 2,
       "ModelId": 13,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -922,12 +962,13 @@
     },
     {
       "Character": 1,
+      "IsAstrea": false,
       "UniqueID": 295,
       "Name": "Amakuni",
       "WeaponType": 2,
       "ModelId": 15,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 10,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -947,12 +988,13 @@
   "2": [
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 37,
       "Name": "Practice Bow",
       "WeaponType": 4,
       "ModelId": 24,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -970,12 +1012,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 38,
       "Name": "Short Bow",
       "WeaponType": 4,
       "ModelId": 22,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -993,12 +1036,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 39,
       "Name": "Siren\u0027s Song",
       "WeaponType": 4,
       "ModelId": 22,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1016,12 +1060,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 40,
       "Name": "Shigetou-yumi",
       "WeaponType": 4,
       "ModelId": 24,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1039,12 +1084,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 41,
       "Name": "RainBow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 5,
         "Tier": 2,
@@ -1062,12 +1108,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 42,
       "Name": "Uta",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1085,12 +1132,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 43,
       "Name": "Pleiades",
       "WeaponType": 4,
       "ModelId": 22,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1108,12 +1156,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 44,
       "Name": "Bow of Affection",
       "WeaponType": 4,
       "ModelId": 24,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1131,12 +1180,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 45,
       "Name": "Toy Bow",
       "WeaponType": 4,
       "ModelId": 26,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1154,12 +1204,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 46,
       "Name": "Kamatha",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1177,12 +1228,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 47,
       "Name": "Poison Arrow Bow",
       "WeaponType": 4,
       "ModelId": 22,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1200,12 +1252,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 48,
       "Name": "Bold Bow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1223,12 +1276,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 49,
       "Name": "Higo-yumi",
       "WeaponType": 4,
       "ModelId": 24,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1246,12 +1300,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 50,
       "Name": "Heavenly Windbow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1269,12 +1324,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 51,
       "Name": "Composite Bow",
       "WeaponType": 4,
       "ModelId": 23,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1292,12 +1348,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 52,
       "Name": "Magic Bow",
       "WeaponType": 4,
       "ModelId": 23,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1315,12 +1372,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 53,
       "Name": "Great Bow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1338,12 +1396,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 54,
       "Name": "Lightning Bow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1361,12 +1420,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 55,
       "Name": "Hero\u0027s Bow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1384,12 +1444,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 56,
       "Name": "Bow of Serenity",
       "WeaponType": 4,
       "ModelId": 25,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1407,12 +1468,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 57,
       "Name": "Yoichi\u0027s Bow",
       "WeaponType": 4,
       "ModelId": 25,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1430,12 +1492,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 58,
       "Name": "Dhanush",
       "WeaponType": 4,
       "ModelId": 23,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1453,12 +1516,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 59,
       "Name": "Maki\u0027s Resolve",
       "WeaponType": 4,
       "ModelId": 25,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1476,12 +1540,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 60,
       "Name": "Sarnga",
       "WeaponType": 4,
       "ModelId": 27,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1499,12 +1564,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 61,
       "Name": "Quintessence Bow",
       "WeaponType": 4,
       "ModelId": 28,
-      "WeaponModelId": 60,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1522,12 +1588,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 62,
       "Name": "Source Yumi",
       "WeaponType": 4,
       "ModelId": 24,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1545,12 +1612,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 63,
       "Name": "Unused",
       "WeaponType": 4,
       "ModelId": 22,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1568,12 +1636,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 64,
       "Name": "Unused",
       "WeaponType": 4,
       "ModelId": 20,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1591,12 +1660,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 65,
       "Name": "Dreadnought",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1614,12 +1684,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 66,
       "Name": "Kishin Bow",
       "WeaponType": 4,
       "ModelId": 25,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1637,12 +1708,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 67,
       "Name": "Circe\u0027s Bow",
       "WeaponType": 4,
       "ModelId": 23,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1660,12 +1732,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 68,
       "Name": "Whirlwind Bow",
       "WeaponType": 4,
       "ModelId": 23,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1683,12 +1756,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 69,
       "Name": "Gale Bow",
       "WeaponType": 4,
       "ModelId": 21,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1706,12 +1780,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 70,
       "Name": "Unused",
       "WeaponType": 4,
       "ModelId": 22,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1729,12 +1804,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 71,
       "Name": "Calamity Bow",
       "WeaponType": 4,
       "ModelId": 25,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1752,12 +1828,13 @@
     },
     {
       "Character": 2,
+      "IsAstrea": false,
       "UniqueID": 282,
       "Name": "SEES Longbow",
       "WeaponType": 4,
       "ModelId": 20,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 20,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1777,12 +1854,13 @@
   "3": [
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 72,
       "Name": "Imitation Katana",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1800,12 +1878,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 73,
       "Name": "Bastard Sword",
       "WeaponType": 8,
       "ModelId": 32,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1823,12 +1902,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 74,
       "Name": "Kishido Blade",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1846,12 +1926,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 75,
       "Name": "Great Sword",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1869,12 +1950,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 76,
       "Name": "Raikou",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1892,12 +1974,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 77,
       "Name": "Two-Handed Sword",
       "WeaponType": 8,
       "ModelId": 32,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1915,12 +1998,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 78,
       "Name": "All-Purpose Katana",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1938,12 +2022,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 79,
       "Name": "Unused",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1961,12 +2046,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 80,
       "Name": "Spiked Bat",
       "WeaponType": 8,
       "ModelId": 36,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -1984,12 +2070,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 81,
       "Name": "Zanbatou",
       "WeaponType": 8,
       "ModelId": 32,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2007,12 +2094,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 82,
       "Name": "Assassin\u0027s Blade",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2030,12 +2118,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 83,
       "Name": "Tsubaki-maru",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2053,12 +2142,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 84,
       "Name": "Unused",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2076,12 +2166,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 85,
       "Name": "Buster Blade",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2099,12 +2190,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 86,
       "Name": "Mikazuki Munechika",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2122,12 +2214,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 87,
       "Name": "Kaketsushinto",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2145,12 +2238,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 88,
       "Name": "Deathbringer",
       "WeaponType": 8,
       "ModelId": 33,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2168,12 +2262,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 89,
       "Name": "Caladbolg",
       "WeaponType": 8,
       "ModelId": 33,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2191,12 +2286,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 90,
       "Name": "Apocalypse",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2214,12 +2310,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 91,
       "Name": "Tobi-botaru",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2237,12 +2334,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 92,
       "Name": "Elixir Sword",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2260,12 +2358,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 93,
       "Name": "Orochito",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2283,12 +2382,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 94,
       "Name": "Balmung",
       "WeaponType": 8,
       "ModelId": 38,
-      "WeaponModelId": 60,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2306,12 +2406,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 95,
       "Name": "Laevateinn",
       "WeaponType": 8,
       "ModelId": 37,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2329,12 +2430,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 96,
       "Name": "Masakado\u0027s Katana",
       "WeaponType": 8,
       "ModelId": 39,
-      "WeaponModelId": 61,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2352,12 +2454,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 97,
       "Name": "Unused",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2375,12 +2478,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 98,
       "Name": "Claymore",
       "WeaponType": 8,
       "ModelId": 32,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2398,12 +2502,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 99,
       "Name": "Unused",
       "WeaponType": 8,
       "ModelId": 32,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2421,12 +2526,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 100,
       "Name": "Juzumaru",
       "WeaponType": 8,
       "ModelId": 34,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2444,12 +2550,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 101,
       "Name": "Dojigiri Yasutsuna",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2467,12 +2574,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 102,
       "Name": "Berserker",
       "WeaponType": 8,
       "ModelId": 33,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2490,12 +2598,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 103,
       "Name": "Crimson Greatsword",
       "WeaponType": 8,
       "ModelId": 33,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2513,12 +2622,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 104,
       "Name": "Blazing Greatsword",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2536,12 +2646,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 105,
       "Name": "Qingdi Blade",
       "WeaponType": 8,
       "ModelId": 35,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2559,12 +2670,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 106,
       "Name": "Unused",
       "WeaponType": 8,
       "ModelId": 31,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2582,12 +2694,13 @@
     },
     {
       "Character": 3,
+      "IsAstrea": false,
       "UniqueID": 283,
       "Name": "SEES Greatsword",
       "WeaponType": 8,
       "ModelId": 30,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 30,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2607,12 +2720,13 @@
   "4": [
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 107,
       "Name": "Brass Gloves",
       "WeaponType": 16,
       "ModelId": 42,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2630,12 +2744,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 108,
       "Name": "Bladefist",
       "WeaponType": 16,
       "ModelId": 44,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2653,12 +2768,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 109,
       "Name": "Sonic Fist",
       "WeaponType": 16,
       "ModelId": 42,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2676,12 +2792,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 110,
       "Name": "Kaiser Knuckles",
       "WeaponType": 16,
       "ModelId": 42,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2699,12 +2816,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 111,
       "Name": "Beast Fangs",
       "WeaponType": 16,
       "ModelId": 44,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2722,12 +2840,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 112,
       "Name": "Champion Gloves",
       "WeaponType": 16,
       "ModelId": 42,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2745,12 +2864,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 113,
       "Name": "Jack\u0027s Gloves",
       "WeaponType": 16,
       "ModelId": 46,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2768,12 +2888,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 114,
       "Name": "Meteor Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2791,12 +2912,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 115,
       "Name": "Gusto Gloves",
       "WeaponType": 16,
       "ModelId": 42,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2814,12 +2936,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 116,
       "Name": "Fists of Fury",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2837,12 +2960,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 117,
       "Name": "Wicked Cestus",
       "WeaponType": 16,
       "ModelId": 45,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2860,12 +2984,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 118,
       "Name": "Blood Baghnakh",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2883,12 +3008,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 119,
       "Name": "Titanic Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2906,12 +3032,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 120,
       "Name": "Pugilist\u0027s Fists",
       "WeaponType": 16,
       "ModelId": 43,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2929,12 +3056,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 121,
       "Name": "Crusher Fist",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2952,12 +3080,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 122,
       "Name": "Wings of Vanth",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2975,12 +3104,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 123,
       "Name": "Supreme Gloves",
       "WeaponType": 16,
       "ModelId": 43,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -2998,12 +3128,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 124,
       "Name": "Diamond Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3021,12 +3152,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 125,
       "Name": "Golden Gloves",
       "WeaponType": 16,
       "ModelId": 43,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3044,12 +3176,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 126,
       "Name": "Dragon Fangs",
       "WeaponType": 16,
       "ModelId": 45,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3067,12 +3200,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 127,
       "Name": "Double Ziggurat",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3090,12 +3224,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 128,
       "Name": "Sabazios",
       "WeaponType": 16,
       "ModelId": 47,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3113,12 +3248,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 129,
       "Name": "Evil Gloves",
       "WeaponType": 16,
       "ModelId": 48,
-      "WeaponModelId": 60,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3136,12 +3272,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 130,
       "Name": "Root Cestus",
       "WeaponType": 16,
       "ModelId": 44,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3159,12 +3296,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 131,
       "Name": "Unused",
       "WeaponType": 16,
       "ModelId": 42,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3182,12 +3320,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 132,
       "Name": "Unused",
       "WeaponType": 16,
       "ModelId": 40,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3205,12 +3344,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 133,
       "Name": "Heaven\u0027s Fists",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3228,12 +3368,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 134,
       "Name": "Spirit Gloves",
       "WeaponType": 16,
       "ModelId": 43,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3251,12 +3392,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 135,
       "Name": "Rapid Bands",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3274,12 +3416,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 136,
       "Name": "Thunder Knuckles",
       "WeaponType": 16,
       "ModelId": 41,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3297,12 +3440,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 137,
       "Name": "Jack\u0027s Gauntlets",
       "WeaponType": 16,
       "ModelId": 46,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3320,12 +3464,13 @@
     },
     {
       "Character": 4,
+      "IsAstrea": false,
       "UniqueID": 284,
       "Name": "SEES Knuckles",
       "WeaponType": 16,
       "ModelId": 40,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 40,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3345,12 +3490,13 @@
   "5": [
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 142,
       "Name": "SEES Rapier",
       "WeaponType": 32,
       "ModelId": 50,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3368,12 +3514,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 143,
       "Name": "Quarter Pike",
       "WeaponType": 32,
       "ModelId": 54,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3391,12 +3538,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 144,
       "Name": "Flamberge",
       "WeaponType": 32,
       "ModelId": 52,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3414,12 +3562,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 145,
       "Name": "Unused",
       "WeaponType": 32,
       "ModelId": 54,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3437,12 +3586,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 146,
       "Name": "Night Falcon",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3460,12 +3610,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 147,
       "Name": "Elegant Fleuret",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3483,12 +3634,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 148,
       "Name": "Ga Boo",
       "WeaponType": 32,
       "ModelId": 54,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3506,12 +3658,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 149,
       "Name": "Malice Mary",
       "WeaponType": 32,
       "ModelId": 52,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3529,12 +3682,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 150,
       "Name": "Serpent Sword",
       "WeaponType": 32,
       "ModelId": 52,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3552,12 +3706,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 151,
       "Name": "Skrep",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3575,12 +3730,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 152,
       "Name": "Ithuriel Spear",
       "WeaponType": 32,
       "ModelId": 55,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3598,12 +3754,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 153,
       "Name": "Espada Ropera",
       "WeaponType": 32,
       "ModelId": 53,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3621,12 +3778,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 154,
       "Name": "Noble Saber",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3644,12 +3802,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 155,
       "Name": "Main Gauche",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3667,12 +3826,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 156,
       "Name": "Witch Saber",
       "WeaponType": 32,
       "ModelId": 52,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3690,12 +3850,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 157,
       "Name": "Rose Flamberge",
       "WeaponType": 32,
       "ModelId": 53,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3713,12 +3874,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 158,
       "Name": "Damascus Rapier",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3736,12 +3898,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 159,
       "Name": "Brionac",
       "WeaponType": 32,
       "ModelId": 55,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3759,12 +3922,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 160,
       "Name": "Longinus",
       "WeaponType": 32,
       "ModelId": 55,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3782,12 +3946,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 161,
       "Name": "Kokuseki Senjin",
       "WeaponType": 32,
       "ModelId": 56,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3805,12 +3970,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 162,
       "Name": "Snow Queen Whip",
       "WeaponType": 32,
       "ModelId": 57,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3828,12 +3994,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 163,
       "Name": "Cocytus",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3851,12 +4018,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 169,
       "Name": "Ice Saber",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3874,12 +4042,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 170,
       "Name": "Charlotte",
       "WeaponType": 32,
       "ModelId": 55,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3897,12 +4066,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 171,
       "Name": "Illuminati",
       "WeaponType": 32,
       "ModelId": 53,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3920,12 +4090,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 172,
       "Name": "Aristocracy",
       "WeaponType": 32,
       "ModelId": 51,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3943,12 +4114,13 @@
     },
     {
       "Character": 5,
+      "IsAstrea": false,
       "UniqueID": 174,
       "Name": "Erinys",
       "WeaponType": 32,
       "ModelId": 55,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 50,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -3968,12 +4140,13 @@
   "6": [
     {
       "Character": 6,
+      "IsAstrea": false,
       "UniqueID": 277,
       "Name": "No equipment",
       "WeaponType": 0,
       "ModelId": 0,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 0,
+      "stats": {
         "AttrId": 0,
         "Rarity": 0,
         "Tier": 0,
@@ -3993,12 +4166,13 @@
   "7": [
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 177,
       "Name": "Albireo",
       "WeaponType": 64,
       "ModelId": 326,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 326,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4016,12 +4190,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 178,
       "Name": "Six-Shot",
       "WeaponType": 64,
       "ModelId": 326,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 326,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4039,12 +4214,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 179,
       "Name": "Grenade Launcher",
       "WeaponType": 64,
       "ModelId": 586,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4062,12 +4238,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 180,
       "Name": "Orgone Rifle",
       "WeaponType": 64,
       "ModelId": 584,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4085,12 +4262,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 181,
       "Name": "Heavy Cannon X",
       "WeaponType": 64,
       "ModelId": 586,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4108,12 +4286,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 182,
       "Name": "Ingels Cannon",
       "WeaponType": 64,
       "ModelId": 586,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4131,12 +4310,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 183,
       "Name": "Five-Barrel Medusa",
       "WeaponType": 64,
       "ModelId": 326,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 326,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4154,12 +4334,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 184,
       "Name": "Railgun",
       "WeaponType": 64,
       "ModelId": 587,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4177,12 +4358,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 185,
       "Name": "Supersonic Minigun",
       "WeaponType": 64,
       "ModelId": 327,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 326,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4200,12 +4382,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 186,
       "Name": "Rocket Punch",
       "WeaponType": 64,
       "ModelId": 588,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4223,12 +4406,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 187,
       "Name": "Maxima Sniper",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4246,12 +4430,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 188,
       "Name": "Angel Shot",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4269,12 +4454,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 189,
       "Name": "Infanterie",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4292,12 +4478,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 190,
       "Name": "Megido Fire",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4315,12 +4502,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 191,
       "Name": "Antimatter Cannon",
       "WeaponType": 64,
       "ModelId": 587,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4338,12 +4526,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 192,
       "Name": "Metatronius",
       "WeaponType": 64,
       "ModelId": 589,
-      "WeaponModelId": 60,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4361,12 +4550,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 193,
       "Name": "Flash Grenade",
       "WeaponType": 64,
       "ModelId": 587,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4384,12 +4574,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 194,
       "Name": "Kiss of Athena",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4407,12 +4598,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 195,
       "Name": "Frigid Grenade",
       "WeaponType": 64,
       "ModelId": 587,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4430,12 +4622,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 196,
       "Name": "Blast Magnum",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4453,12 +4646,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 197,
       "Name": "Pandemonium",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4476,12 +4670,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 198,
       "Name": "Nucleus Rifle",
       "WeaponType": 64,
       "ModelId": 584,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4499,12 +4694,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 201,
       "Name": "Kyriotes",
       "WeaponType": 64,
       "ModelId": 585,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 584,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4522,12 +4718,13 @@
     },
     {
       "Character": 7,
+      "IsAstrea": false,
       "UniqueID": 287,
       "Name": "Unused",
       "WeaponType": 64,
       "ModelId": 327,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 326,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4547,12 +4744,13 @@
   "8": [
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 227,
       "Name": "SEES Longspear",
       "WeaponType": 128,
       "ModelId": 80,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4570,12 +4768,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 228,
       "Name": "Omega Spear",
       "WeaponType": 128,
       "ModelId": 81,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4593,12 +4792,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 229,
       "Name": "Glaive",
       "WeaponType": 128,
       "ModelId": 84,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4616,12 +4816,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 230,
       "Name": "Sexy Lance",
       "WeaponType": 128,
       "ModelId": 82,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4639,12 +4840,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 231,
       "Name": "Rhongowennan",
       "WeaponType": 128,
       "ModelId": 82,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4662,12 +4864,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 232,
       "Name": "Lance of Death",
       "WeaponType": 128,
       "ModelId": 81,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4685,12 +4888,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 233,
       "Name": "Scrub Brush",
       "WeaponType": 128,
       "ModelId": 86,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4708,12 +4912,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 234,
       "Name": "Ranseur",
       "WeaponType": 128,
       "ModelId": 83,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4731,12 +4936,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 235,
       "Name": "Ningen Mukotsu",
       "WeaponType": 128,
       "ModelId": 81,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4754,12 +4960,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 236,
       "Name": "Ote-gine",
       "WeaponType": 128,
       "ModelId": 83,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4777,12 +4984,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 237,
       "Name": "Voulge",
       "WeaponType": 128,
       "ModelId": 85,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4800,12 +5008,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 238,
       "Name": "Poison Glaive",
       "WeaponType": 128,
       "ModelId": 84,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4823,12 +5032,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 239,
       "Name": "Nihon-gou",
       "WeaponType": 128,
       "ModelId": 83,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4846,12 +5056,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 240,
       "Name": "Romulus\u0027s Spear",
       "WeaponType": 128,
       "ModelId": 85,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4869,12 +5080,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 241,
       "Name": "Tonbo-kiri",
       "WeaponType": 128,
       "ModelId": 83,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4892,12 +5104,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 242,
       "Name": "Gae Bolg",
       "WeaponType": 128,
       "ModelId": 87,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4915,12 +5128,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 243,
       "Name": "Gungnir",
       "WeaponType": 128,
       "ModelId": 88,
-      "WeaponModelId": 60,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4938,12 +5152,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 244,
       "Name": "Pinaka",
       "WeaponType": 128,
       "ModelId": 89,
-      "WeaponModelId": 61,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4961,12 +5176,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 248,
       "Name": "King Spear",
       "WeaponType": 128,
       "ModelId": 81,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -4984,12 +5200,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 249,
       "Name": "Bolt Lance",
       "WeaponType": 128,
       "ModelId": 83,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5007,12 +5224,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 250,
       "Name": "Warlock Lance",
       "WeaponType": 128,
       "ModelId": 85,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5030,12 +5248,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 251,
       "Name": "Blessed Lance",
       "WeaponType": 128,
       "ModelId": 81,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5053,12 +5272,13 @@
     },
     {
       "Character": 8,
+      "IsAstrea": false,
       "UniqueID": 272,
       "Name": "Fauchard",
       "WeaponType": 128,
       "ModelId": 85,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 80,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5078,12 +5298,13 @@
   "9": [
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 202,
       "Name": "SEES Knife",
       "WeaponType": 256,
       "ModelId": 90,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5101,12 +5322,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 203,
       "Name": "Bone",
       "WeaponType": 256,
       "ModelId": 96,
-      "WeaponModelId": 50,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5124,12 +5346,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 204,
       "Name": "Blitz Kunai",
       "WeaponType": 256,
       "ModelId": 92,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5147,12 +5370,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 205,
       "Name": "Lucky Knife",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5170,12 +5394,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 206,
       "Name": "Silver Moon",
       "WeaponType": 256,
       "ModelId": 94,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5193,12 +5418,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 207,
       "Name": "Karasu-maru",
       "WeaponType": 256,
       "ModelId": 92,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5216,12 +5442,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 208,
       "Name": "Sword Breaker",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5239,12 +5466,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 209,
       "Name": "Raven Claw",
       "WeaponType": 256,
       "ModelId": 92,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5262,12 +5490,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 210,
       "Name": "Shadowrend",
       "WeaponType": 256,
       "ModelId": 93,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5285,12 +5514,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 211,
       "Name": "Pesh Kabz",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5308,12 +5538,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 212,
       "Name": "Howl",
       "WeaponType": 256,
       "ModelId": 95,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5331,12 +5562,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 213,
       "Name": "Athame",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5354,12 +5586,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 214,
       "Name": "Full Moon Kunai",
       "WeaponType": 256,
       "ModelId": 93,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5377,12 +5610,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 215,
       "Name": "Grand Slasher",
       "WeaponType": 256,
       "ModelId": 95,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5400,12 +5634,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 216,
       "Name": "Vajra",
       "WeaponType": 256,
       "ModelId": 97,
-      "WeaponModelId": 51,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5423,12 +5658,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 217,
       "Name": "Elementary Mask",
       "WeaponType": 256,
       "ModelId": 94,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5446,12 +5682,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 220,
       "Name": "Carnage Knife",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5469,12 +5706,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 221,
       "Name": "Dagger of Protection",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5492,12 +5730,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 222,
       "Name": "Rai Kunimitsu",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5515,12 +5754,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 223,
       "Name": "Underworld Kunai",
       "WeaponType": 256,
       "ModelId": 93,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5538,12 +5778,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 224,
       "Name": "Hazakura",
       "WeaponType": 256,
       "ModelId": 95,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5561,12 +5802,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 225,
       "Name": "Paring Knife",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5584,12 +5826,13 @@
     },
     {
       "Character": 9,
+      "IsAstrea": false,
       "UniqueID": 226,
       "Name": "Tyrant\u0027s Knife",
       "WeaponType": 256,
       "ModelId": 91,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 90,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5609,12 +5852,13 @@
   "10": [
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 252,
       "Name": "SEES Battle-Axe",
       "WeaponType": 512,
       "ModelId": 100,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5632,12 +5876,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 253,
       "Name": "Ogre Hammer",
       "WeaponType": 512,
       "ModelId": 102,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5655,12 +5900,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 254,
       "Name": "Night Stalker",
       "WeaponType": 512,
       "ModelId": 101,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5678,12 +5924,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 255,
       "Name": "Bus Stop Sign",
       "WeaponType": 512,
       "ModelId": 103,
-      "WeaponModelId": 11,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5701,12 +5948,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 256,
       "Name": "Guillotine Axe",
       "WeaponType": 512,
       "ModelId": 100,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5724,12 +5972,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 257,
       "Name": "Megaton Rod",
       "WeaponType": 512,
       "ModelId": 101,
-      "WeaponModelId": 1,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5747,12 +5996,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 261,
       "Name": "Charun\u0027s Hammer",
       "WeaponType": 512,
       "ModelId": 102,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5770,12 +6020,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 262,
       "Name": "Gaea\u0027s Grace",
       "WeaponType": 512,
       "ModelId": 102,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5793,12 +6044,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 264,
       "Name": "Celtis",
       "WeaponType": 512,
       "ModelId": 100,
-      "WeaponModelId": 0,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5816,12 +6068,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 265,
       "Name": "Golden Crusher",
       "WeaponType": 512,
       "ModelId": 102,
-      "WeaponModelId": 10,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5839,12 +6092,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 266,
       "Name": "Mjolnir",
       "WeaponType": 512,
       "ModelId": 105,
-      "WeaponModelId": 21,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,
@@ -5862,12 +6116,13 @@
     },
     {
       "Character": 10,
+      "IsAstrea": false,
       "UniqueID": 267,
       "Name": "Corpse Rod",
       "WeaponType": 512,
       "ModelId": 104,
-      "WeaponModelId": 20,
-      "Stats": {
+      "ShellType": 100,
+      "stats": {
         "AttrId": 0,
         "Rarity": 1,
         "Tier": 1,

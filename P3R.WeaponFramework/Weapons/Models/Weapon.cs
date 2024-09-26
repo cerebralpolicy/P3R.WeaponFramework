@@ -1,67 +1,96 @@
-﻿using System.Collections;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
+using System.Text.Json.Nodes;
 using Unreal.ObjectsEmitter.Interfaces;
-
+using P3R.WeaponFramework.Utils;
 namespace P3R.WeaponFramework.Weapons.Models;
 
-public class Weapon: IWeapon, IEquatable<Weapon?>
-{ 
+[JsonSourceGenerationOptions(DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
+public class Weapon : IEquatable<Weapon?>
+{
     private const string DEF_DESC = "[f 2 1]A weapon added with Weapon Framework.[n][e]";
     #region ctors
-    public Weapon() { }
+    public Weapon() {
+        ShellTarget = ShellType.None;
+        ShellTargetWrapper = ShellTypeWrapper.None;
+    }
     public Weapon(int weaponItemId)
     {
+        ShellTarget = ShellType.None;
+        ShellTargetWrapper = ShellTypeWrapper.None;;
         WeaponItemId = weaponItemId;
     }
     [JsonConstructor]
-    public Weapon(ECharacter character, int weaponItemId, string name, EquipFlag weaponType, int modelId, EWeaponModelSet weaponModelId, WeaponStats stats)
+    public Weapon(Character character, bool isVanilla, bool isAstrea, int weaponId, string? name, ShellType shellTarget, int modelId, WeaponStats stats)
     {
         Character = character;
-        WeaponItemId = weaponItemId;
+        IsVanilla = isVanilla;
+        IsAstrea = isAstrea;
+        WeaponId = weaponId;
         Name = name;
-        WeaponType = weaponType;
+        ShellTarget = shellTarget;
         ModelId = modelId;
-        WeaponModelId = weaponModelId;
         Stats = stats;
+        SortNum = SortUtils.GetSortNumber(stats, isAstrea);
+        ShellTargetWrapper = ShellExtensions.GetWrapper(modelId, isAstrea);
     }
+
+
     #endregion
     #region status
-    public bool IsVanilla { get; set; } = true;
+    [JsonIgnore]
     public bool IsEnabled { get; set; }
     #endregion
     #region Weapon Table Entry
     // Import
     [JsonPropertyOrder(0)]
-    public ECharacter Character { get; set; } = ECharacter.NONE;
+    [JsonPropertyName(nameof(Character))]
+    public Character Character { get; set; } = Character.NONE;
     [JsonPropertyOrder(1)]
-    public int WeaponId { get; set; }
+    [JsonPropertyName(nameof(IsVanilla))]
+    public bool IsVanilla { get; set; } = true;
     [JsonPropertyOrder(2)]
-    public string? Name {
+    [JsonPropertyName(nameof(IsAstrea))]
+    public bool IsAstrea { get; set; } = false;
+    [JsonPropertyOrder(3)]
+    [JsonPropertyName(nameof(WeaponId))]
+    public int WeaponId { get; set; }
+    [JsonPropertyOrder(4)]
+    [JsonPropertyName(nameof(Name))]
+    public string? Name
+    {
         get => Config.Name;
         set => Config.Name = value;
     }
-    [JsonPropertyOrder(3)]
-    public EquipFlag WeaponType { get; set; } = EquipFlag.NONE;
-    [JsonPropertyOrder(4)]
-    public int ModelId { get; set; }
     [JsonPropertyOrder(5)]
-    public EWeaponModelSet WeaponModelId { get; set; }
+    [JsonPropertyName(nameof(ShellTarget))]
+    public ShellType ShellTarget { get; set; }
     [JsonPropertyOrder(6)]
+    [JsonPropertyName(nameof(ModelId))]
+    public int ModelId { get; set; }
+    [JsonPropertyOrder(7)]
+    [JsonPropertyName(nameof(Stats))]
     public WeaponStats Stats { get; set; }
     #endregion
     #region Creation Variables
+    [JsonIgnore]
     public int WeaponItemId { get; set; }
+    [JsonIgnore]
     public string Description { get; set; } = DEF_DESC;
+    [JsonIgnore]
     public WeaponConfig Config { get; set; } = new();
+    [JsonIgnore]
     public string? OwnerModId { get; set; }
-    public ShellType ShellTarget { get; set; } = ShellType.Player;
-    public EpisodeFlag EpisodeFlag { get; set; } = EpisodeFlag.None;
+    [JsonIgnore]
+    public ShellTypeWrapper ShellTargetWrapper { get; set; }
+    [JsonIgnore]
+    public int SortNum { get; set; }
     #endregion
     #region Utilities
     public void SetWeaponItemId(int weaponItemId)
     {
         this.WeaponItemId = weaponItemId;
+        Log.Debug($"Set Weapon Item ID: {this.Character} || {this.Name} || {this.WeaponItemId}");
     }
     private List<string> GetPaths()
     {
@@ -79,40 +108,12 @@ public class Weapon: IWeapon, IEquatable<Weapon?>
         paths = check ? strings : null;
         return check;
     }
-    public bool TryGetPath(WeaponAssetType assetType,[NotNullWhen(true)] out string? path)
-    {
-        path = null;
-        if (!TryGetPaths(out List<string>? paths)) { return false; }
-        string? str = assetType switch
-        {
-            WeaponAssetType.Base_Mesh => paths.FirstOrDefault(),
-            WeaponAssetType.Base_Mesh2 => paths.LastOrDefault(),
-            _ => throw new NotImplementedException(),
-        };
-        if (str == null) { return false; }
-        path = str;
-        return true;
-    }
-    public bool ActivatePaths(IUnreal unreal, string idName) {  
-        List<string> bases = ShellTarget.GetBasePaths();
-        if (!TryGetPaths(out List<string>? paths)) { return false; }
-        if (paths.Count != bases.Count) { return false; }
-        for (int i = 0; i < bases.Count; i++)
-        {
-            var oldPath = bases[i];
-            var newPath = paths[i];
-            if (newPath == oldPath) { return false; }
-            unreal.AssignFName(idName, oldPath, newPath);
-            continue;
-        }
-        return true;
-    }
 
     public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x8000;
 
     public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
 
-    public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != ECharacter.NONE;
+    public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != Character.NONE;
     #endregion
     #region Comparisons
     public override bool Equals(object? obj)

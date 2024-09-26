@@ -1,14 +1,7 @@
-﻿using P3R.WeaponFramework.Configuration;
-using P3R.WeaponFramework.Hooks.Models;
-using P3R.WeaponFramework.Hooks.Weapons.Models;
-using P3R.WeaponFramework.Interfaces;
+﻿using P3R.WeaponFramework.Hooks.Weapons.Models;
 using P3R.WeaponFramework.Weapons;
 using P3R.WeaponFramework.Weapons.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Concurrent;
 using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Hooks.Services;
@@ -16,11 +9,7 @@ namespace P3R.WeaponFramework.Hooks.Services;
 internal unsafe class WeaponShellService
 {
     const string MODULE = "Weapon Framework - Shell Service";
-    public bool UseAdvanced { get; set; } = false;
-    private readonly Dictionary<ShellType, int> defaultModelIds = [];
-    private readonly Dictionary<ShellType, Weapon> defaultWeapons = [];
     private readonly Dictionary<Character, Dictionary<ShellType, Weapon>> defaultWeaponShells = [];
-    private readonly Dictionary<Character, ShellType[]> defaultShells = [];
     private readonly Dictionary<ShellType, List<string>> baseShellPaths = [];
     private readonly Dictionary<ShellType, List<string>> currShellPaths = [];
     private readonly Dictionary<ShellType, int> currWeapIds = [];
@@ -28,26 +17,29 @@ internal unsafe class WeaponShellService
     private readonly Dictionary<ShellType, int> prevWeapIds = [];
     private readonly Dictionary<ShellType, int> prevWeapModelIds = [];
 
+    private readonly Dictionary<Character, ShellTypeWrapper[]> defaultShells = [];
+    private readonly Dictionary<ShellType, int> defaultModelIds = [];
+    private readonly Dictionary<ShellType, Weapon> defaultWeapons = [];
+
     private readonly IUnreal unreal;
     private readonly WeaponRegistry weapons;
-    public WeaponShellService(IUnreal unreal, IDataTables dt, WeaponRegistry weapons, bool useAdvanced)
+    public WeaponShellService(IUnreal unreal, WeaponRegistry weapons)
     {
         this.weapons = weapons;
         this.unreal = unreal;
-        this.UseAdvanced = useAdvanced;
         foreach (var character in Characters.WFArmed)
         {
-            List<ShellType> shells = [];
+            List<ShellTypeWrapper> shells = [];
             Dictionary<ShellType, Weapon> charWeaps = [];
             foreach (var shellType in character.Shells)
             {
                 var defaultWeapon = new DefaultWeapon(shellType);
                 defaultWeapons[shellType] = defaultWeapon;
                 charWeaps[shellType] = defaultWeapon;
-                defaultModelIds[shellType] = shellType.ShellModelID;
+                defaultModelIds[shellType] = shellType.ShellTableBaseModelId;
                 shells.Add(shellType);
                 baseShellPaths[shellType] = shellType.GetBasePaths();
-                
+
             }
             defaultWeaponShells[character] = charWeaps;
             defaultShells[character] = [.. shells];
@@ -59,18 +51,18 @@ internal unsafe class WeaponShellService
     {
         foreach (var character in Characters.WFArmed)
         {
-            foreach(var shellType in character.Shells)
+            foreach (var shellType in character.Shells)
             {
                 currShellPaths[shellType] = shellType.GetShellPaths();
-                shellType.ResetShells(unreal);
+                shellType.Init(unreal);
             }
         }
     }
 
-    public int UpdateWeapon(Character character, int weaponId)
+    public int UpdatWeapon(Character character, int weaponId)
     {
-        if(!weapons.TryGetWeapon(character, weaponId, out var weapon))
-            return defaultShells[character].First().ShellModelID;
+        if (!weapons.TryGetWeapon(character, weaponId, out var weapon))
+            return defaultShells[character].First().ShellTableBaseModelId;
 
         var shellType = weapon.ShellTarget;
         var SHELL_MODEL_ID = defaultModelIds[shellType];
@@ -80,7 +72,7 @@ internal unsafe class WeaponShellService
         {
             RedirectWeaponShell(weapon, true);
         }
-        
+
         if (weaponId < 1025)
         {
             prevWeapIds[shellType] = currWeapIds[shellType];
@@ -103,7 +95,7 @@ internal unsafe class WeaponShellService
     private void RedirectWeaponShell(Weapon weapon, bool doReset = false)
     {
         SetWeaponAsset(weapon, WeaponAssetType.Weapon_Mesh, doReset);
-        if (weapon.IsMultiModel())
+        if (ShellTypeWrapper.FromWeapon(weapon).GetRequiredMeshes() > 1)
             SetWeaponAsset(weapon, WeaponAssetType.Weapon_Mesh2, doReset);
     }
 
@@ -138,17 +130,14 @@ internal unsafe class WeaponShellService
             return;
         }
     }
-    private void DefaultShells(ShellType shell)
+    private void DefaultShells(ShellTypeWrapper shell)
     {
-        if (shell == null)
-            return;
         currShellPaths[shell] = shell.GetShellPaths();
-        shell.ResetShells(unreal);
+        shell.Init(unreal);
     }
     private void RedirectAsset(Weapon weapon)
     {
-        
-        weapon.ActivatePaths(unreal, MODULE);
+        weapon.ShellTargetWrapper.Apply(weapon,unreal);
     }
     public string? GetDefaultAsset(ShellType shellType, WeaponAssetType assetType)
         => defaultWeapons[shellType].Config.GetAssetFile(assetType);

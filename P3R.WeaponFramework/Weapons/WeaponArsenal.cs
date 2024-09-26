@@ -1,25 +1,18 @@
-﻿using static P3R.WeaponFramework.Interfaces.PriceUtils;
-using P3R.WeaponFramework.Utils;
+﻿using P3R.WeaponFramework.Utils;
 using P3R.WeaponFramework.Weapons.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons
 {
     internal class WeaponArsenal
     {
-   
-        private readonly GameWeapons weapons;    
+
+        private readonly GameWeapons weapons;
         public WeaponArsenal(GameWeapons weapons)
         {
             this.weapons = weapons;
         }
- 
-        public Weapon? Create(WeaponMod mod, string weaponDir, Character character) 
+
+        public Weapon? Create(WeaponMod mod, string weaponDir, Character character)
         {
             var config = GetWeaponConfig(weaponDir);
             var weapon = CreateOrFindWeapon(mod.ModId, character, config.Name ?? Path.GetFileName(weaponDir));
@@ -44,18 +37,17 @@ namespace P3R.WeaponFramework.Weapons
             ModUtils.IfNotNull(config.Shell, shell =>
             {
                 weapon.Config.Shell = shell;
-                var shellType = ShellType.FromValue(shell);
-                weapon.ShellTarget = shellType;
-                weapon.ModelId = shellType.ShellModelID;        
+                weapon.ShellTarget = shell;
+                weapon.ModelId = ShellTypeWrapper.FromEnum(shell).ShellTableBaseModelId;
             });
         }
 
         private void LoadWeaponFiles(WeaponMod mod, Weapon weapon, string weaponDir)
         {
-            
+
             // BASEMESH WILL ALWAYS BE A REF
-//            SetWeaponFile(mod, Path.Join(weaponDir, "base-mesh.uasset"), path => weapon.Config.Base.MeshPath = path);
-//            SetWeaponFile(mod, Path.Join(weaponDir, "base-anim.uasset"), path => weapon.Config.Base.MeshPath = path);
+            //            SetWeaponFile(mod, Path.Join(weaponDir, "base-mesh.uasset"), path => weapon.Config.Base.MeshPath = path);
+            //            SetWeaponFile(mod, Path.Join(weaponDir, "base-anim.uasset"), path => weapon.Config.Base.MeshPath = path);
 
             SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh2.uasset"), path => weapon.Config.Model!.MeshPath2 = path);
             SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh.uasset"), path => weapon.Config.Model!.MeshPath1 = path);
@@ -86,21 +78,12 @@ namespace P3R.WeaponFramework.Weapons
             var newWeapon = weapons.FirstOrDefault(x => x.Character == Character.NONE && x.WeaponItemId > DataUtils.MAX_VANILLA_ID);
             if (newWeapon != null)
             {
-                EpisodeFlag flag = EpisodeFlag.Both;
-                if (Characters.AstreaOnly.Contains(character))
-                {
-                    flag = EpisodeFlag.Astrea;
-                }
-                else if (Characters.VanillaOnly.Contains(character))
-                {
-                    flag = EpisodeFlag.Vanilla;
-                }
+
                 newWeapon.Name = name;
                 newWeapon.Character = character;
                 newWeapon.IsVanilla = false;
                 newWeapon.IsEnabled = true;
                 newWeapon.OwnerModId = ownerId;
-                newWeapon.EpisodeFlag = flag;
             }
             else
             {

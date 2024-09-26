@@ -8,20 +8,5 @@
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Ardalis.SmartEnum" Version="8.0.0" />
-    <PackageReference Include="p3rpc.classconstructor.Interfaces" Version="1.2.0" />
-    <PackageReference Include="p3rpc.nativetypes.Interfaces" Version="1.6.1" />
-    <PackageReference Include="RyoTune.Reloaded" Version="1.0.1" />
-    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
-    <PackageReference Include="Unreal.ObjectsEmitter.Interfaces" Version="1.2.3" />
-    <PackageReference Include="YamlDotNet" Version="16.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="EnumsSys\Validation\" />
-    <Folder Include="Types\Unreal\Pointers\" />
-  </ItemGroup>
-
 
 </Project>

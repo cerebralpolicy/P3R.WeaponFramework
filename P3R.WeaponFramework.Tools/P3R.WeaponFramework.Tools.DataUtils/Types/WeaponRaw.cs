@@ -1,4 +1,6 @@
-﻿namespace P3R.WeaponFramework.Tools.DataUtils;
+﻿using P3R.WeaponFramework.Types;
+
+namespace P3R.WeaponFramework.Tools.DataUtils;
 
 public struct WeaponRaw
 {

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using P3R.WeaponFramework.Utils;
+using System.IO;
 
 namespace P3R.WeaponFramework.Tools.DataUtils
 {
@@ -31,24 +32,24 @@ namespace P3R.WeaponFramework.Tools.DataUtils
             bool endApp = false;
             while (!endApp)
             {
-                string fileType = "";
-                string path = "";
                 string inputAtlusScriptFormat = "";
 
                 ExampleConfig.SetConfigPrices();
 
                 Console.WriteLine("Choose output file type:");
-                fileType = Console.ReadLine()!;
+                string fileType = Console.ReadLine()!;
 
                 FileType type = Enum.Parse<FileType>(fileType, true);
 
                 Console.WriteLine("Specify output directory:");
-                path = Console.ReadLine()!;
+                string path = Console.ReadLine()!;
                 if (type == FileType.Json) {
                     var weapons = Subroutines.GetCharaWeapons();
-                    var weaponsAstrea = Subroutines.GetCharaWeapons(Episode.Astrea);
-                    Subroutines.JsonFileSerializer.SerializeFile(path, weapons, "Weapons");
-                    Subroutines.JsonFileSerializer.SerializeFile(path, weaponsAstrea, "WeaponsAstrea");
+                    var weaponsAstrea = Subroutines.GetCharaWeapons(Episode.ASTREA);
+                    Subroutines.JsonFileSerializer.SerializeFile(path, weapons, "Weapons_Vanilla");
+                    Subroutines.JsonFileSerializer.SerializeFile(path, weaponsAstrea, "Weapons_Astrea");
+                    var weaponsMerged = weapons.MergeDictionaries(weaponsAstrea);
+                    Subroutines.JsonFileSerializer.SerializeFile(path, weaponsMerged, "Weapons_Merged");
                 }
                 if (type == FileType.Yaml) 
                 {
@@ -76,11 +77,10 @@ namespace P3R.WeaponFramework.Tools.DataUtils
                 writer.WriteLine(spacer);
                 var shellHead = Comment("Shell types",1,true);
                 writer.WriteLine(shellHead);
-                foreach (var shell in ShellTypes.shells)
+                foreach (var shell in ShellTypeWrapper.List)
                 {
                     var name = shell.Name;
-                    var desc = shell.Description;
-                    string entry = $"shell: {name}{new string(' ', ALIGN+3 - name!.Length)}{desc}";
+                    string entry = $"shell: {name}";
                     writer.WriteLine(Comment(entry, 2));
                 }
                 var attrHead = Comment("Attr_id types",1,true);

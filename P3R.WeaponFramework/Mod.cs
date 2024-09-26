@@ -1,20 +1,17 @@
-using Ardalis.SmartEnum;
 using P3R.WeaponFramework.Configuration;
+using P3R.WeaponFramework.Enums;
 using P3R.WeaponFramework.Interfaces;
 using P3R.WeaponFramework.Template;
 using P3R.WeaponFramework.Weapons;
-using p3rpc.classconstructor.Interfaces;
-using p3rpc.nativetypes.Interfaces;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
-using System.Diagnostics;
-using System.Drawing;
 using Unreal.AtlusScript.Interfaces;
 using Unreal.ObjectsEmitter.Interfaces;
 using UnrealEssentials.Interfaces;
-using YamlDotNet.Serialization;
+using System.Drawing;
+using P3R.WeaponFramework.Core;
 
 namespace P3R.WeaponFramework
 {
@@ -56,6 +53,7 @@ namespace P3R.WeaponFramework
         /// </summary>
         private readonly IModConfig modConfig;
 
+        private readonly EpisodeHook episodeHook;
         private readonly WeaponService weapons;
         private readonly WeaponRegistry weaponRegistry;
         private readonly WeaponDescService weaponDescService;
@@ -69,27 +67,24 @@ namespace P3R.WeaponFramework
             config = context.Configuration;
             modConfig = context.ModConfig;
 
-            
 
-            Project.Init(modConfig, modLoader, log);
+
+            Project.Init(modConfig, modLoader, log, color: Color.LightGreen);
+            Log.LogLevel = config.LogLevel;
             this.modLoader.GetController<IUnrealEssentials>().TryGetTarget(out var essentials);
             this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
             this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
             this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
             this.modLoader.GetController<IDataTables>().TryGetTarget(out var tables);
-            this.modLoader.GetController<IMemoryMethods>().TryGetTarget(out var memory);
-            this.modLoader.GetController<IObjectMethods>().TryGetTarget(out var objectMethods);
             this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
 
             //if (essentials == null) throw new NullReferenceException(nameof(essentials));
             // INIT DATA //
-            LoadUnrealComponent(essentials!, UnrealComponent.Data);
-            // INIT BP //
-            if (config.BPFlow)
-                LoadUnrealComponent(essentials!, UnrealComponent.Blueprints);
+            LoadUnrealComponent(essentials!, UnrealComponent.Shells);
+            this.episodeHook = new();
             this.weaponRegistry = new();
             this.weaponDescService = new(atlusAssets!);
-            this.weapons = new(tables!, uobjects!, unreal!, weaponRegistry, weaponDescService, config.BPFlow);
+            this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
 
             modLoader.ModLoaded += OnModLoaded;
             Project.Start();
@@ -109,13 +104,12 @@ namespace P3R.WeaponFramework
 
         public enum UnrealComponent
         {
-            Data,
-            Blueprints
+            Shells,
         }
         private void LoadUnrealComponent(IUnrealEssentials essentials, UnrealComponent component)
         {
             Log.Information($"Loading {component}...");
-            var modFolder = Path.Join(modLoader.GetDirectoryForModId(modConfig.ModId),"Core");
+            var modFolder = Path.Join(modLoader.GetDirectoryForModId(modConfig.ModId), "Core");
             if (modFolder == null)
                 return;
             essentials.AddFromFolder(Path.Join(modFolder, $"{component}"));
@@ -129,14 +123,12 @@ namespace P3R.WeaponFramework
             // Apply settings from configuration.
             // ... your code here.
             config = configuration;
-            weapons.UpdateMode(configuration.BPFlow);
             log.WriteLine($"[{modConfig.ModId}] Config Updated: Applying");
         }
 
         public Type[] GetTypes() => [
             typeof(IWeaponApi),
-            typeof(ISmartEnum),
-            typeof(IYamlConvertible)
+            typeof(IWFEnum),
             ];
         #endregion
 

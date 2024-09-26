@@ -1,26 +1,20 @@
-﻿using P3R.WeaponFramework.Interfaces;
-using P3R.WeaponFramework.Interfaces.Definitions;
-using P3R.WeaponFramework.Weapons;
-using P3R.WeaponFramework.Weapons.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using P3R.WeaponFramework.Weapons.Models;
 
 namespace P3R.WeaponFramework.Hooks.Weapons.Models;
 
 internal class DefaultWeapon : Weapon
 {
-    public DefaultWeapon(ShellType shellType)
+    public DefaultWeapon(ShellTypeWrapper shellType)
     {
-        Character = shellType.CharacterFromShell();
+        if(!shellType.TryGetCharacterFromShell(out var character))
+            return;
+        Character = character;
         Config.Shell = shellType;
-        //Config.Base.MeshPath = GetAssetFile(shellType.CharacterFromShell(), EWeaponModelSet.Base, WeaponAssetType.Base_Mesh);
+        //Config.Base.MeshPath = GetAssetFile(shellType.CharacterFromShell(), WeaponModelSet.Base, WeaponAssetType.Base_Mesh);
         var shellPaths = shellType.GetShellPaths();
         Config.Model.MeshPath1 = shellPaths[0];
-        if (shellType.RequiredMeshes == 2)
+        if (shellType.GetRequiredMeshes() == 2)
             Config.Model.MeshPath2 = shellPaths[1];
-        ModelId = shellType.ShellModelID;
+        ModelId = shellType.ShellTableBaseModelId;
     }
 }

@@ -1,19 +1,34 @@
-﻿namespace P3R.WeaponFramework.Tools.DataUtils;
+﻿using System.Text.Json.Serialization;
+
+namespace P3R.WeaponFramework.Tools.DataUtils;
 
 public struct WeaponStats
 {
+    [JsonPropertyName("AttrId")]
     public int AttrId { get; set; }
+    [JsonPropertyName("Rarity")]
     public int Rarity { get; set; } = 1;
+    [JsonPropertyName("Tier")]
     public int Tier { get; set; } = 1;
+    [JsonPropertyName("Attack")]
     public int Attack { get; set; }
+    [JsonPropertyName("Accuracy")]
     public int Accuracy { get; set; }
+    [JsonPropertyName("Strength")]
     public int Strength { get; set; } = 0;
+    [JsonPropertyName("Magic")]
     public int Magic { get; set; } = 0;
+    [JsonPropertyName("Endurance")]
     public int Endurance { get; set; } = 0;
+    [JsonPropertyName("Agility")]
     public int Agility { get; set; } = 0;
+    [JsonPropertyName("Luck")]
     public int Luck { get; set; } = 0;
+    [JsonPropertyName("SkillId")]
     public int SkillId { get; set; } = 0;
+    [JsonPropertyName("Price")]
     public int Price { get; set; } = 400;
+    [JsonPropertyName("SellPrice")]
     public int SellPrice { get; set; } = 100;
 
 

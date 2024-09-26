@@ -2,7 +2,7 @@
 
 internal class WeaponOverride
 {
-    public ECharacter Character { get; set; }
+    public Character Character { get; set; }
     public int OriginalWeaponID { get; set; }
     public string NewWeaponName { get; set; } = string.Empty;
 }

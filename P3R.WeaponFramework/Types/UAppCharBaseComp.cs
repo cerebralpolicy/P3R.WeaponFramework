@@ -38,7 +38,7 @@ public unsafe struct UAppCharBaseComp
     //[FieldOffset(0x0268)] public UAnimMontage* AnimMontage_TurnSlot;
     //[FieldOffset(0x0278)] public UAnimMontage* AnimMontage_HavBagSlot;
     //[FieldOffset(0x0280)] public EAppCharCategoryType CategoryID;
-    [FieldOffset(0x0284)] public ECharacter Character;
+    [FieldOffset(0x0284)] public Character Character;
     //[FieldOffset(0x0288)] public int CostumeID;
     //[FieldOffset(0x028C)] public EAnimPackID AnimPackID;
     //[FieldOffset(0x0290)] public UAppCharAnimDataAsset* AnimPack;

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <LangVersion>12.0</LangVersion>
@@ -39,33 +39,34 @@
     <None Remove="BuildLinked.ps1" />
     <None Remove="Reloaded.Trimming.targets" />
     <None Remove="Reloaded.Checks.targets" />
-    <None Remove="Resources\EN\Descriptions.msg" />
-    <None Remove="Resources\EN\Names.json" />
-    <None Remove="Resources\EN\Names_Astrea.json" />
-    <None Remove="Resources\weapons.json" />
-    <None Remove="Resources\Weapons_Astrea.json" />
+    <None Remove="Resources\Astrea_Weapons.json" />
+    <None Remove="Resources\Vanilla_Weapons.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Hooks\ItemCountHook.cs" />
+    <Content Include="Hooks\ItemEquipHooks.cs" />
+    <Content Include="Hooks\Models\ShellWeapon.cs" />
+    <Content Include="Hooks\Models\UWeaponItemListTable.cs" />
+    <Content Include="Hooks\Services\WeaponShellService.cs" />
+    <Content Include="Hooks\WeaponHooks.cs" />
+    <Content Include="Hooks\WeaponNameHook.cs" />
+    <Content Include="Hooks\Weapons\Collections\DefaultCharWeapons.cs" />
+    <Content Include="Hooks\Weapons\Collections\DefaultWeapons.cs" />
+    <Content Include="Hooks\Weapons\Models\DefaultWeapon.cs" />
     <Content Include="ModConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Resources\EN\Descriptions.msg" />
-    <EmbeddedResource Include="Resources\EN\Names.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\EN\Names_Astrea.json">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Weapons_Astrea.json" />
-    <EmbeddedResource Include="Resources\Weapons.json" />
+    <EmbeddedResource Include="Resources\Vanilla\Descriptions.msg" />
+    <EmbeddedResource Include="Resources\Astrea\Descriptions.msg" />
+    <EmbeddedResource Include="Resources\Vanilla\Weapons.json" />
+    <EmbeddedResource Include="Resources\Astrea\Weapons.json" />
     <None Update="Preview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ardalis.SmartEnum" Version="8.0.0" />
     <PackageReference Include="p3rpc.nativetypes.Interfaces" Version="1.6.1" />
     <PackageReference Include="Reloaded.Memory" Version="9.4.2" />
     <PackageReference Include="Reloaded.Memory.SigScan.ReloadedII.Interfaces" Version="1.2.0" />
@@ -73,7 +74,6 @@
     <PackageReference Include="Reloaded.SharedLib.Hooks" Version="1.9.0" />
     <PackageReference Include="RyoTune.Reloaded" Version="1.0.1" />
     <PackageReference Include="SharedScans.Interfaces" Version="1.1.0" />
-    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
     <PackageReference Include="Unreal.AtlusScript.Interfaces" Version="1.1.0" />
     <PackageReference Include="Unreal.ObjectsEmitter.Interfaces" Version="1.2.3" />
     <PackageReference Include="UnrealEssentials.Interfaces" Version="1.0.0" />
@@ -81,6 +81,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\P3R.WeaponFramework.Enums\P3R.WeaponFramework.Enums.csproj" />
     <ProjectReference Include="..\P3R.WeaponFramework.Interfaces\P3R.WeaponFramework.Interfaces.csproj" />
   </ItemGroup>
 
@@ -89,10 +90,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Memory\" />
-    <Folder Include="NewFolder\" />
-    <Folder Include="Resources\Invarient\" />
+    <Content Remove="Core\EpisodeHook.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Weapons\Models\Types\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Core\EpisodeHook.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>

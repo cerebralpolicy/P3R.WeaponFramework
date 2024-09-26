@@ -1,18 +1,17 @@
-﻿using P3R.WeaponFramework.Hooks;
+﻿using P3R.WeaponFramework.Core;
 using P3R.WeaponFramework.Weapons.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons
 {
     internal class WeaponRegistry
     {
         private readonly WeaponArsenal arsenal;
+        public WeaponRegistry(GameWeapons weapons)
+        {
+            Weapons = weapons;
+            arsenal = new(weapons);
+        }
         public WeaponRegistry()
         {
             Weapons = new();
@@ -35,7 +34,7 @@ namespace P3R.WeaponFramework.Weapons
             weapon = Weapons.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
             return weapon != null;
         }
-        
+
         public void RegisterMod(string modId, string modDir)
         {
             var mod = new WeaponMod(modId, modDir);
@@ -43,7 +42,7 @@ namespace P3R.WeaponFramework.Weapons
             {
                 return;
             }
-            foreach (var character in Character.List)
+            foreach (var character in Characters.WFArmed)
             {
                 var characterDir = Path.Join(mod.WeaponsDir, character.Name);
                 if (!Directory.Exists(characterDir))
@@ -52,14 +51,14 @@ namespace P3R.WeaponFramework.Weapons
                 }
 
                 //Build weapons from folders.
-                foreach(var weaponDir in Directory.EnumerateDirectories(characterDir))
+                foreach (var weaponDir in Directory.EnumerateDirectories(characterDir))
                 {
                     try
                     {
                         arsenal.Create(mod, weaponDir, character);
                         if (character == Character.Aigis)
                         {
-                            arsenal.Create(mod, weaponDir, Character.Aigis12);
+                            //arsenal.Create(mod, weaponDir, CharacterWrapper.AigisReal);
                         }
                     }
                     catch (Exception ex)
@@ -70,12 +69,12 @@ namespace P3R.WeaponFramework.Weapons
             }
         }
 
-        private static bool IsRequestedWeapon(Weapon weapon, ECharacter character, int weaponId)
+        private static bool IsRequestedWeapon(Weapon weapon, Character character, int weaponId)
             => weapon.Character == character && weapon.WeaponId == weaponId && IsActiveWeapon(weapon);
 
-        private static bool IsActiveWeapon(Weapon weapon) 
+        private static bool IsActiveWeapon(Weapon weapon)
             => weapon.IsEnabled
-            && weapon.Character != ECharacter.NONE;
-       
+            && weapon.Character != Character.NONE;
+
     }
 }
