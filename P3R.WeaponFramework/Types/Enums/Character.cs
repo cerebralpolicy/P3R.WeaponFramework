@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Enums;
 using System.Collections;
+using System.Collections.ObjectModel;
 
 namespace P3R.WeaponFramework.Types;
 
@@ -20,45 +21,58 @@ public enum Character : ushort
     AigisReal,
 }
 
-public class CharacterWrapper : WFEnumWrapper<CharacterWrapper, ushort, Character>
+
+public struct CharaDef
 {
-    public static CharacterWrapper NONE{ get; } = new (0);
-    public static CharacterWrapper Player{ get; } = new(Character.Player, [ShellTypeWrapper.Player]);
-    public static CharacterWrapper Yukari{ get; } = new(Character.Yukari, [ShellTypeWrapper.Yukari]);
-    public static CharacterWrapper Stupei{ get; } = new(Character.Stupei, [ShellTypeWrapper.Stupei]);
-    public static CharacterWrapper Akihiko{ get; } = new(Character.Akihiko, [ShellTypeWrapper.Akihiko]);
-    public static CharacterWrapper Mitsuru{ get; } = new(Character.Mitsuru, [ShellTypeWrapper.Mitsuru]);
-    public static CharacterWrapper Fuuka{ get; } = new(Character.Fuuka);
-    public static CharacterWrapper Aigis{ get; } = new(Character.Aigis, [ShellTypeWrapper.Aigis_SmallArms, ShellTypeWrapper.Aigis_LongArms]);
-    public static CharacterWrapper Ken{ get; } = new(Character.Ken, [ShellTypeWrapper.Ken]);
-    public static CharacterWrapper Koromaru{ get; } = new(Character.Koromaru, [ShellTypeWrapper.Koromaru]);
-    public static CharacterWrapper Shinjiro{ get; } = new(Character.Shinjiro, [ShellTypeWrapper.Shinjiro]);
-    public static CharacterWrapper Metis{ get; } = new(Character.Metis, [ShellTypeWrapper.Metis]);
-    public static CharacterWrapper AigisReal{ get; } = new(Character.AigisReal, [ShellTypeWrapper.Aigis_SmallArms, ShellTypeWrapper.Aigis_LongArms]);
+    private Character key;
+    private List<ShellType> value;
+    private bool vanilla;
+    private bool astrea;
+    private bool armed;
 
-    public List<ShellTypeWrapper> Shells = [];
-    
-    public bool IsArmed => Shells.Count > 0;
-    public static List<CharacterWrapper> Armed = List.Where(x => x.IsArmed).ToList();
-    public CharacterWrapper(Character enumValue, List<ShellTypeWrapper> enumValues) : base(enumValue)
+    public CharaDef(Character key, List<ShellType> value, bool vanilla = true, bool astrea = true, bool armed = true)
     {
-        Shells = enumValues;
-    }
-    public CharacterWrapper(Character enumValue) : base(enumValue)
-    {
+        this.key = key;
+        this.value = value;
+        this.vanilla = vanilla;
+        this.astrea = astrea;
+        this.armed = armed;
     }
 
-    public static implicit operator CharacterWrapper(Character value) => FromName(value.ToString());
-    public static implicit operator Character(CharacterWrapper wrapper) => Enum.Parse<Character>(wrapper.Name);
+    public Character Key => key;
+    public List<ShellType> Value => value;
+    public readonly bool IsAstrea => astrea;
+    public readonly bool IsVanilla => vanilla;
+    public readonly bool IsArmed => armed;
 }
-
+public class CharDB : KeyedCollection<Character, CharaDef>
+{
+    public Character this[ShellType shellType] => this.First(x => x.Value.Contains(shellType)).Key;
+    public List<Character> Armed => this.Where(x => x.IsArmed).Select(x => x.Key).ToList();
+    public List<Character> Unarmed => this.Where(x => !x.IsArmed).Select(x => x.Key).ToList();
+    public List<Character> Vanilla => this.Where(x => x.IsVanilla).Select(x => x.Key).ToList();
+    public List<Character> Astrea => this.Where(x => x.IsAstrea).Select(x => x.Key).ToList();
+    protected override Character GetKeyForItem(CharaDef item) => Items.First(x => x.Equals(item)).Key;
+}
 public static class Characters
 {
-    public static List<CharacterWrapper> WFArmed { get; } = CharacterWrapper.Armed;
-    public static List<CharacterWrapper> VanillaOnly { get; } = [CharacterWrapper.Player, CharacterWrapper.Shinjiro];
-    public static List<CharacterWrapper> AstreaOnly { get; } = [CharacterWrapper.Metis];
-    public static bool IsValidCharacter(this Character character, bool isAstrea) => !Unarmed.Contains(character) && (isAstrea ? !AstreaAbsent.Contains(character) : !VanillaAbsent.Contains(character));
-    public static List<Character> Unarmed { get; } = [Character.Fuuka];
-    public static List<Character> AstreaAbsent { get; } = [Character.Player, Character.Shinjiro];
-    public static List <Character> VanillaAbsent { get; } = [Character.Metis, Character.AigisReal];
+    public static CharDB Lookup { get; } =
+        [
+            new (Character.Player, [ShellType.Player], astrea: false),
+            new (Character.Yukari, [ShellType.Yukari]),
+            new (Character.Stupei, [ShellType.Stupei]),
+            new (Character.Akihiko, [ShellType.Akihiko]),
+            new (Character.Mitsuru, [ShellType.Mitsuru]),
+            new (Character.Fuuka, [], armed: false),
+            new (Character.Aigis, [ShellType.Aigis_SmallArms, ShellType.Aigis_LongArms]),
+            new (Character.Ken, [ShellType.Ken]),
+            new (Character.Koromaru, [ShellType.Koromaru]),
+            new (Character.Shinjiro, [ShellType.Shinjiro], astrea: false),
+            new (Character.Metis, [ShellType.Metis], vanilla: false),
+        ];
+    public static bool IsValidCharacter(this Character character, bool isAstrea) => !Unarmed.Contains(character) && (isAstrea ? Astrea.Contains(character) : Vanilla.Contains(character));
+    public static List<Character> Armed => Lookup.Armed;
+    public static List<Character> Unarmed => Lookup.Unarmed;
+    public static List<Character> Astrea => Lookup.Astrea;
+    public static List <Character> Vanilla => Lookup.Vanilla;
 }

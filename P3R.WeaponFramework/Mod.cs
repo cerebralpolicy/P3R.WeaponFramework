@@ -87,6 +87,20 @@ namespace P3R.WeaponFramework
             this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
 
             modLoader.ModLoaded += OnModLoaded;
+
+            foreach (var define in ShellTypeWrapper.List.Where(x => x.Armatures.Count > 0))
+            {
+                foreach (var item in define.Armatures)
+                {
+                    var basePath = item.BasePath;
+                    var shellPath = item.ShellPath;
+                    if (shellPath == null || basePath == null || unreal == null)
+                        continue;
+                    else
+                        unreal.AssignFName("Weapon Framework - Shells",basePath, shellPath);
+                }
+            }
+
             Project.Start();
         }
 

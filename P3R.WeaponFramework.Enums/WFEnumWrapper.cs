@@ -14,7 +14,7 @@ public abstract class WFEnumWrapper<TEnum, EEnum> : WFEnumBase<TEnum, int>, IEqu
     {
     }
 
-    public static TEnum FromEnum(EEnum enumValue) => FromName(enumValue.ToString());
+    public static TEnum FromEnum(EEnum enumValue) => FromValue(enumValue.ToValue());
 
     public int CompareTo(EEnum? other) => Value.CompareTo(other?.ToValue());
 
@@ -31,7 +31,7 @@ public abstract class WFEnumWrapper<TEnum, TValue, EEnum> : WFEnumBase<TEnum, TV
     {
 
     }
-    public static TEnum FromEnum(EEnum enumValue) => FromName(enumValue.ToString());
+    public static TEnum FromEnum(EEnum enumValue) => FromValue(enumValue.ToValue<TValue>());
 
     public int CompareTo(EEnum? other) => Value.CompareTo(other!.ToValue<TValue>());
 

@@ -9,7 +9,7 @@ public unsafe struct FWeaponItemList
     [FieldOffset(0x0010)] public ushort SortNum;
     [FieldOffset(0x0014)] public uint WeaponType;
     [FieldOffset(0x0018)] public EquipFlag EquipID;
-    [FieldOffset(0x001C)] public ushort AttrID;
+    [FieldOffset(0x001C)] public EBtlDataAttr AttrID;
     [FieldOffset(0x001E)] public ushort Rarity;
     [FieldOffset(0x0020)] public ushort Tier;
     [FieldOffset(0x0022)] public ushort Attack;

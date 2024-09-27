@@ -12,12 +12,10 @@ public class Weapon : IEquatable<Weapon?>
     #region ctors
     public Weapon() {
         ShellTarget = ShellType.None;
-        ShellTargetWrapper = ShellTypeWrapper.None;
     }
     public Weapon(int weaponItemId)
     {
         ShellTarget = ShellType.None;
-        ShellTargetWrapper = ShellTypeWrapper.None;;
         WeaponItemId = weaponItemId;
     }
     [JsonConstructor]
@@ -32,7 +30,6 @@ public class Weapon : IEquatable<Weapon?>
         ModelId = modelId;
         Stats = stats;
         SortNum = SortUtils.GetSortNumber(stats, isAstrea);
-        ShellTargetWrapper = ShellExtensions.GetWrapper(modelId, isAstrea);
     }
 
 
@@ -82,8 +79,6 @@ public class Weapon : IEquatable<Weapon?>
     [JsonIgnore]
     public string? OwnerModId { get; set; }
     [JsonIgnore]
-    public ShellTypeWrapper ShellTargetWrapper { get; set; }
-    [JsonIgnore]
     public int SortNum { get; set; }
     #endregion
     #region Utilities
@@ -107,6 +102,27 @@ public class Weapon : IEquatable<Weapon?>
         var check = strings.Count > 0;
         paths = check ? strings : null;
         return check;
+    }
+    public void PopulatePaths()
+    {
+        var suffix = ModelPairsInt[ModelId];
+        var path = GetVanillaAssetFile(Character, suffix);
+        Config.Model.MeshPath1 = path;
+        if (DualModels.Contains(ModelId))
+        {
+            suffix += 200;
+            var path2 = GetVanillaAssetFile(Character, suffix);
+            Log.Debug($"Initializing {Name} || Right Mesh Path: {path} || Left Mesh Path: {path2}");
+            Config.Model.MeshPath2 = path2;
+        }
+        else
+            Log.Debug($"Initializing {Name} || Mesh Path: {path}");
+    }
+    
+    public void InitAtlusWeapon()
+    {
+        IsEnabled = true;
+        PopulatePaths();
     }
 
     public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x8000;

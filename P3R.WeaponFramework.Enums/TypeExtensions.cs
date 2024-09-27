@@ -15,33 +15,6 @@ internal static class TypeExtensions
             .Select(pi => (TFieldType)pi.GetValue(null))
             .ToList();
 
-/*    public static bool TryGetFlagEnumValuesByName<TEnum, TValue>(this Dictionary<string, TEnum> dictionary, string names, [NotNullWhen(true)] out IEnumerable<TEnum>? outputEnums)
-            where TEnum : WFFlagBase<TEnum, TValue>
-            where TValue : IEquatable<TValue>, IComparable<TValue>
-    {
-        var outputList = new List<TEnum>(dictionary.Count);
-
-        var commaSplitNameList = names.Replace(" ", "").Trim().Split(',');
-        Array.Sort(commaSplitNameList);
-
-        foreach (var enumValue in dictionary.Values)
-        {
-            var result = Array.BinarySearch(commaSplitNameList, enumValue.Name);
-            if (result >= 0)
-            {
-                outputList.Add(enumValue);
-            }
-        }
-
-        if (!outputList.Any())
-        {
-            outputEnums = null;
-            return false;
-        }
-
-        outputEnums = outputList.ToList();
-        return true;
-    }*/
     public static T ToValue<T>(this Enum _enum)
         where T : IEquatable<T>, IComparable<T>
     {

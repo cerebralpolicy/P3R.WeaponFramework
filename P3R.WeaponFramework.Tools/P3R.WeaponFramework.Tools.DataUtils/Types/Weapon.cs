@@ -22,7 +22,7 @@ public struct Weapon
         Name = name;
         WeaponType = weaponType;
         ModelId = modelId;
-        ShellType = GetWrapper(modelId, episode == Episode.ASTREA);
+        ShellType = ShellExtensions.GetShellType(this);
         Stats = stats;
     }
 

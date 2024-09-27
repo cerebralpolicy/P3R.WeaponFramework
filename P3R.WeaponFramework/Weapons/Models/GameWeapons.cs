@@ -66,7 +66,7 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
     public readonly List<Weapon> weaponsMerged = [];
     public readonly List<Weapon> weaponsVanilla = [];
     public readonly List<Weapon> weaponsAstrea = [];
-    public List<Weapon> WeaponFilter() => weaponsMerged.Where(x => MatchesFilter(x)).ToList();
+    public List<Weapon> WeaponFilter() => weaponsMerged.Where(MatchesFilter).ToList();
     private bool MatchesFilter (Weapon weapon)
     {
         var save = IsAstreaSave;

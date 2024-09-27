@@ -125,7 +125,7 @@ internal unsafe class WeaponHooks
         if (weapon != null)
         {
             // comp->mSetWeaponType toggles between animation packages
-            comp->mSetWeaponModelID = weaponShells.UpdatWeapon(character, weapon.WeaponId);
+            comp->mSetWeaponModelID = weaponShells.UpdateWeapon(character, weapon.WeaponId);
         }
     }
 }

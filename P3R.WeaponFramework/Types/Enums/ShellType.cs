@@ -1,8 +1,11 @@
 ﻿using P3R.WeaponFramework.Enums;
 using P3R.WeaponFramework.Weapons.Models;
 using System.Collections;
+using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using Unreal.ObjectsEmitter.Interfaces;
+using static P3R.WeaponFramework.Types.Shell;
 
 namespace P3R.WeaponFramework.Types;
 
@@ -21,142 +24,121 @@ public enum ShellType
     Shinjiro = 100,
     Metis = 110,
 }
-
-public class ShellTypeWrapper : WFEnumWrapper<ShellTypeWrapper, ShellType>
+public static class ShellExtensions
 {
-    public static ShellTypeWrapper None { get; } = new(ShellType.None);
-    public static ShellTypeWrapper Player { get; } = new( ShellType.Player, [ArmatureWrapper.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]);
-    public static ShellTypeWrapper Yukari { get; } = new( ShellType.Yukari, [ArmatureWrapper.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28]);
-    public static ShellTypeWrapper Stupei { get; } = new( ShellType.Stupei, [ArmatureWrapper.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]);
-    public static ShellTypeWrapper Akihiko { get; } = new( ShellType.Akihiko, [ArmatureWrapper.Wp0004_01, ArmatureWrapper.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48]);
-    public static ShellTypeWrapper Mitsuru { get; } = new( ShellType.Mitsuru, [ArmatureWrapper.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57]);
-    public static ShellTypeWrapper Aigis_SmallArms { get; } = new( ShellType.Aigis_SmallArms, [ArmatureWrapper.Wp0007_01, ArmatureWrapper.Wp0007_02], [326, 327]);
-    public static ShellTypeWrapper Aigis_LongArms { get; }  = new(ShellType.Aigis_LongArms, [ArmatureWrapper.Wp0007_03], [584, 585, 586, 587, 588, 589]);
-    public static ShellTypeWrapper Ken { get; } = new( ShellType.Ken, [ArmatureWrapper.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]);
-    public static ShellTypeWrapper Koromaru { get; } = new( ShellType.Koromaru, [ArmatureWrapper.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97]);
-    public static ShellTypeWrapper Shinjiro { get; } = new( ShellType.Shinjiro, [ArmatureWrapper.Wp0010_01], [100, 101, 102, 103, 104, 105]);
-    public static ShellTypeWrapper Metis { get; } = new( ShellType.Metis, [ArmatureWrapper.Wp0011_01], [100, 101, 102, 103, 104, 105, 106]);
-    public int ShellTableBaseModelId { get; }
-    public List<ArmatureWrapper> Armatures { get; }
-    public List<int> ShellTableModelIds { get; }
-    public ShellTypeWrapper(ShellType enumValue, List<ArmatureWrapper> armatures, List<int> modelIds) : base(enumValue)
+    public static ShellDB ShellLookup { get; } = [
+        new (ShellType.Player, [Armature.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], astrea: false),
+        new (ShellType.Yukari, [Armature.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28]),
+        new (ShellType.Stupei, [Armature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]),
+        new (ShellType.Akihiko, [Armature.Wp0004_01, Armature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48]),
+        new (ShellType.Mitsuru, [Armature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57]),
+        new (ShellType.Aigis_SmallArms, [Armature.Wp0007_01, Armature.Wp0007_02], [326, 327]),
+        new (ShellType.Aigis_LongArms, [Armature.Wp0007_03], [584, 585, 586, 587, 588, 589]),
+        new (ShellType.Ken, [Armature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]),
+        new (ShellType.Koromaru, [Armature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97]),
+        new (ShellType.Shinjiro, [Armature.Wp0010_01], [100, 101, 102, 103, 104, 105], astrea: false),
+        new (ShellType.Metis, [Armature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], vanilla: false),
+        ];
+    public static ShellType GetShellType(this Weapon weapon) => ShellLookup[weapon].Key;
+    public static Shell AsShell(this ShellType type) => ShellLookup[type];
+    public static bool TryGetCharacterFromShell(this ShellType shell, [NotNullWhen(true)] out Character? character)
     {
-        Armatures = armatures;
-        ShellTableModelIds = modelIds;
-        ShellTableBaseModelId = modelIds.First();
-    }
-    public ShellTypeWrapper(ShellType enumValue) : base(enumValue)
-    {
-        ShellTableModelIds = new List<int>();
-        ShellTableBaseModelId = 0;
-        Armatures = [];
-    }
-    public bool Init(IUnreal unreal)
-    {
-        List<bool> results = [];
-        foreach (var armature in Armatures)
-        {
-            results.Add(armature.InitShellRedirect(unreal));
-        }
-        return results.All(x => true);
-    }
-    public bool Apply(Weapon weapon, IUnreal unreal)
-    {
-
-        var modOwner = weapon.OwnerModId;
-        var shell = FromName(weapon.ShellTarget.ToString());
-        if (shell.ShellTableBaseModelId != ShellTableBaseModelId)
+        character = CharacterFromShell(shell);
+        if (!character.HasValue)
             return false;
-        weapon.TryGetPaths(out var paths);
-        if (paths == null || modOwner == null)
-            return false;
-        if (paths.Count != shell.Armatures.Count)
-            return false;
-        for (int i = 0; i < paths.Count; i++)
-        {
-            shell.Armatures[i].AssignNewRedirect(modOwner, unreal, paths[i]);
-            continue;
-        }
         return true;
     }
-    public static implicit operator ShellTypeWrapper(ShellType shellType) => FromName(shellType.ToString());
-    public static implicit operator ShellType(ShellTypeWrapper shellType) => Enum.Parse<ShellType>(shellType.Name);
+    public static Character? CharacterFromShell(ShellType shell) => Characters.Lookup.First(x => x.Value.Contains(shell)).Key;
+    public static int RequiredMeshes(this ShellType type) => ShellLookup[type].Meshes;
+   
+}
+public struct ArmatureInfo
+{
+    public Armature Self;
+    public string ArmatureBasePath;
+    public string ArmatureShellPath;
 
-    public int GetRequiredMeshes() => Armatures.Count;
-
-    public static ShellTypeWrapper FromWeapon(Weapon weapon)
+    public ArmatureInfo(Armature self)
     {
-        if (weapon.Character == Character.Metis)
-            return Metis;
-        else if (weapon.Character == Character.Shinjiro)
-            return Shinjiro;
-        else
-        {
-            return List.First(x => x.ShellTableModelIds.Contains(weapon.ModelId));
-        }
+        Self = self;
+        ArmatureBasePath = self.GetArmatureBasePath();
+        ArmatureShellPath = self.GetArmatureShellPath();
     }
 
+    public static implicit operator ArmatureInfo(Armature armature) => new ArmatureInfo(armature);
+}
+public struct PathInfo
+{
+    public string BasePath;
+    public string ShellPath;
+
+    public PathInfo(ArmatureInfo info)
+    {
+        BasePath = info.ArmatureBasePath;
+        ShellPath = info.ArmatureShellPath;
+    }
+
+    public PathInfo(string basePath, string shellPath)
+    {
+        BasePath = basePath;
+        ShellPath = shellPath;
+    }
+}
+
+public class ShellData : Tuple<ICollection<ArmatureInfo>, ICollection<PathInfo>, ICollection<int>>
+{
+    public ShellData(ICollection<ArmatureInfo> item1, ICollection<PathInfo> item2, ICollection<int> item3) : base(item1, item2, item3)
+    {
+    }
     public List<string> GetBasePaths()
     {
-        var paths = new List<string>();
-        foreach (var armature in Armatures)
+        List<string> paths = [];
+        foreach (var item in Item2)
         {
-            paths.Add(armature.BasePath);
+            paths.Add(item.BasePath);
         }
         return paths;
     }
     public List<string> GetShellPaths()
     {
-        var paths = new List<string>();
-        foreach (var armature in Armatures)
+        List<string> paths = [];
+        foreach (var item in Item2)
         {
-            paths.Add(armature.ShellPath);
+            paths.Add(item.ShellPath);
         }
         return paths;
     }
 }
-
-public static class ShellExtensions
+public struct Shell
 {
-    public static ShellTypeWrapper GetWrapper(this ShellType shellType, bool isAstrea) => GetWrapper((int)shellType, isAstrea);
-    public static ShellTypeWrapper GetWrapper(int modelId, bool isAstrea)
+    private ShellType key;
+    private ShellData value;
+    private bool vanilla;
+    private bool astrea;
+    public Shell(ShellType shellType, ICollection<ArmatureInfo> armatures, ICollection<int> ids, bool vanilla = true, bool astrea = true) : this()
     {
-        if (modelId >= 584)
-            return ShellTypeWrapper.Aigis_LongArms;
-        else if (modelId >= 326)
-            return ShellTypeWrapper.Aigis_SmallArms;
-        else if (modelId >= 100)
+        this.key = shellType;
+        ICollection<PathInfo> pathInfos = [];
+        foreach (var armature in armatures)
         {
-            if (isAstrea)
-                return ShellTypeWrapper.Metis;
-            else
-                return ShellTypeWrapper.Shinjiro;
+            pathInfos.Add(new PathInfo(armature));
         }
-        else if (modelId >= 90)
-            return ShellTypeWrapper.Koromaru;
-        else if (modelId >= 80)
-            return ShellTypeWrapper.Ken;
-        else if (modelId >= 50)
-            return ShellTypeWrapper.Mitsuru;
-        else if (modelId >= 40)
-            return ShellTypeWrapper.Akihiko;
-        else if (modelId >= 30)
-            return ShellTypeWrapper.Stupei;
-        else if (modelId >= 20)
-            return ShellTypeWrapper.Yukari;
-        else if (modelId >= 10)
-            return ShellTypeWrapper.Player;
-        else
-            return ShellTypeWrapper.None;
+        this.value = new(armatures, pathInfos, ids);
+        this.vanilla = vanilla;
+        this.astrea = astrea;
     }
-    public static bool TryGetCharacterFromShell(this ShellTypeWrapper shell, [NotNullWhen(true)] out CharacterWrapper? character)
-    {
-        character = CharacterFromShell(shell);
-        if (character is null)
-            return false;
-        return character is CharacterWrapper;
-    }
-    public static CharacterWrapper? CharacterFromShell(ShellTypeWrapper wrapper) => Characters.WFArmed.Find(x => x.Shells.Contains(wrapper));
-    public static int RequiredMeshes(this ShellType type) => ShellTypeWrapper.FromEnum(type).Armatures.Count;
-   
+    public int Meshes => value.Item2.Count;
+    public ShellType Key => key;
+    public ShellData Value => value;
+    public List<string> BasePaths => Value.GetBasePaths();
+    public List<string> ShellPaths => Value.GetShellPaths();
+    public List<int> Ids => [.. Value.Item3];
+    public readonly bool IsAstrea => astrea;
+    public readonly bool IsVanilla => vanilla;
+}
+public class ShellDB : KeyedCollection<ShellType, Shell>
+{
+    public Shell this[Weapon weapon] => this[GetShellFromWeapon(weapon)];
+    public ShellType GetShellFromWeapon(Weapon weapon) => Items.First(x => x.Ids.Contains(weapon.ModelId) && x.IsAstrea == weapon.IsAstrea && x.IsVanilla == weapon.IsVanilla).Key;
+    protected override ShellType GetKeyForItem(Shell item) => Items.First(x => x.Equals(item)).Key;
 }

@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
+
 namespace P3R.WeaponFramework.Types;
 
 [StructLayout(LayoutKind.Explicit, Size = 0x5A0)]

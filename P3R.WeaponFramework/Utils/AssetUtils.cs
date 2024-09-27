@@ -14,6 +14,7 @@ public static partial class AssetUtils
         };
         return assetFile;
     }
+    public static string GetVanillaAssetFile(Character chara, int modelSuffix) => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara:D4}/Models/SK_Wp{chara:D4}_{modelSuffix:D3}");
     public static string GetUnrealAssetPath(string assetFile)
     {
         var assetPath = GetAssetPath(assetFile);
@@ -133,8 +134,8 @@ public static partial class AssetUtils
         { 588, 6 },
         { 589, 8 },
     };
-
-    public static Dictionary<int, int> ModelPairsInt = new Dictionary<int, int>()
+    public static List<int> DualModels { get; } = [40, 41, 42, 43, 44, 45, 46, 47, 48, 326, 327];
+    public static Dictionary<int, int> ModelPairsInt { get; } = new Dictionary<int, int>()
     {
         { 0, 0 }, // So Fuuka doesn't fail
         { 10, 0 },
