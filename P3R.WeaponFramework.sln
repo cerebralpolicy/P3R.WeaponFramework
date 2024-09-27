@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unreal.AtlusScript.Interfac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unreal.ObjectsEmitter.Interfaces", "REF\P3R.CostumeFramework\submodules\Unreal.ObjectsEmitter\Unreal.ObjectsEmitter.Interfaces\Unreal.ObjectsEmitter.Interfaces.csproj", "{92A39BF7-1814-450E-9A6F-84256B82CD4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WeaponFramework.Search", "P3R.WeaponFramework.Search\P3R.WeaponFramework.Search.csproj", "{4334E974-01CB-4215-9B2D-B0E6CB5D8615}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WeaponFramework.Tools.DataUtils", "P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\P3R.WeaponFramework.Tools.DataUtils.csproj", "{A424C463-4BDD-4C99-9538-3C7168D16584}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTool", "DataTool", "{063073D9-7693-4326-9FEC-C1EF59FDF735}"
@@ -38,9 +36,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtlusScriptLibrary", "Tools\Atlus-Script-Tools\Source\AtlusScriptLibrary\AtlusScriptLibrary.csproj", "{1D2960B8-D22B-4446-8A1F-8601289D187F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Loose", "Loose", "{CFF802E2-E141-470A-B659-E533D6DE5942}"
-	ProjectSection(SolutionItems) = preProject
-		..\P3R-Project-Weapons2\WeaponTableJSON.json = ..\P3R-Project-Weapons2\WeaponTableJSON.json
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A58A1B62-8C75-42D5-9443-464D113B1DA0}"
 	ProjectSection(SolutionItems) = preProject
@@ -55,9 +50,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p3rpc.nativetypes.Interface
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "p3rpc.nativetypes", "REF\p3rpc.nativetypes\p3rpc.nativetypes\p3rpc.nativetypes.csproj", "{07C05695-05E7-4900-94F7-DC729CEC17AE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UE4SS", "UE4SS", "{46EFE6B1-B38E-443F-BD55-EA23C105C50B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WeaponFramework.Enums", "P3R.WeaponFramework.Enums\P3R.WeaponFramework.Enums.csproj", "{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WeaponFramework.Enums", "P3R.WeaponFramework.Enums\P3R.WeaponFramework.Enums.csproj", "{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,10 +94,6 @@ Global
 		{92A39BF7-1814-450E-9A6F-84256B82CD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92A39BF7-1814-450E-9A6F-84256B82CD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92A39BF7-1814-450E-9A6F-84256B82CD4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4334E974-01CB-4215-9B2D-B0E6CB5D8615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4334E974-01CB-4215-9B2D-B0E6CB5D8615}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4334E974-01CB-4215-9B2D-B0E6CB5D8615}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4334E974-01CB-4215-9B2D-B0E6CB5D8615}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A424C463-4BDD-4C99-9538-3C7168D16584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A424C463-4BDD-4C99-9538-3C7168D16584}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A424C463-4BDD-4C99-9538-3C7168D16584}.Release|Any CPU.ActiveCfg = Release|Any CPU
