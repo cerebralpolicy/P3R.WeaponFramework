@@ -21,12 +21,12 @@ internal unsafe class ItemEquipHooks
             (hooks, result) => this.getGlobalWork = hooks.CreateWrapper<GetGlobalWork>(result, out _));
     }
 
-    public nint GetCharWork(Character character)
+    public nint GetCharWork(ECharacter character)
         => this.getGlobalWork!() + 0x1b0 + ((nint)character * 0x2b4);
 
-    public int GetEquip(Character character, Equip equipId)
+    public int GetEquip(ECharacter character, Equip equipId)
         => *(ushort*)(this.GetCharWork(character) + 0x28c + ((nint)equipId * 2));
-    public bool TryGetEquipWeapon(Character character, [NotNullWhen(true)] out Weapon? weapon)
+    public bool TryGetEquipWeapon(ECharacter character, [NotNullWhen(true)] out Weapon? weapon)
     {
         var equipItemId = this.GetEquip(character, Equip.Weapon);
         return this.weapons.TryGetWeaponByItemId(equipItemId, out weapon);

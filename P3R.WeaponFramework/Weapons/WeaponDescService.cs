@@ -6,59 +6,47 @@ using Unreal.AtlusScript.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons;
 
-internal class WeaponDescService
+internal class WeaponDescService : EpisodeHookBase
 {
-    public delegate bool AstreaSaveCheck();
-    public AstreaSaveCheck? IsAstreaSave;
-    public bool AstreaSave
-    {
-        get
-        {
-            var save = IsAstreaSave;
-            if (save == null)
-                return false;
-            else
-                return save.Invoke();
-        }
-    }
+
     private readonly IAtlusAssets atlusAssets;
     private readonly List<string> entriesVanilla = [];
     private readonly List<string> entriesAstrea = [];
-    public List<string> currentEntries {
-        get
-        {
-            return AstreaSave ? entriesAstrea : entriesVanilla;
-        }       
-     }
 
-    public WeaponDescService(IAtlusAssets atlusAssets)
+    public WeaponDescService(IAtlusAssets atlusAssets) : base()
     {
-        ScanHooks.Listen("WF_IsAstreaSave", (hooks, result) => this.IsAstreaSave = hooks.CreateWrapper<AstreaSaveCheck>(result, out _));
         this.atlusAssets = atlusAssets;
         LoadDescEntries();
         LoadDescEntries(true);
     }
-    public void Init()
+
+    public string BuildStrings()
     {
         var sb = new StringBuilder();
-        if (AstreaSave)
-        {
-            for (int i = 0; i < entriesAstrea.Count; i++)
+        IfAstrea(
+            () =>
             {
-                sb.AppendLine($"[msg Item_{i:D3}]");
-                sb.AppendLine($"[f 2 1]{entriesAstrea[i]}[n][e]");
-            }
-        }
-        else
-        {
-            Log.Verbose($"{entriesVanilla.Count}");
-            for (int i = 0; i < entriesVanilla.Count; i++)
+                for (int i = 0; i < entriesAstrea.Count; i++)
+                {
+                    sb.AppendLine($"[msg Item_{i:D3}]");
+                    sb.AppendLine($"[f 2 1]{entriesAstrea[i]}[n][e]");
+                }
+            },
+            () =>
             {
-                sb.AppendLine($"[msg Item_{i:D3}]");
-                sb.AppendLine($"[f 2 1]{entriesVanilla[i]}[n][e]");
+                for (int i = 0; i < entriesVanilla.Count; i++)
+                {
+                    sb.AppendLine($"[msg Item_{i:D3}]");
+                    sb.AppendLine($"[f 2 1]{entriesVanilla[i]}[n][e]");
+                }
             }
-        }
-        this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", sb.ToString(), AssetType.BMD, AssetMode.Both);
+            );
+        return sb.ToString();
+    }
+
+    public void Init()
+    {
+        this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", BuildStrings(), AssetType.BMD, AssetMode.Both);
     }
     public void SetWeaponDesc(int weaponItemId, string weaponDesc)
     {
@@ -94,7 +82,7 @@ internal class WeaponDescService
             }
 
             // Add placeholder entries.
-            for (int i = 0; i < GameWeapons.NUM_EPISODE_WEAPS; i++)
+            for (int i = 0; i < 100; i++)
             {
                 this.entriesAstrea.Add("[f 2 1]Placeholder.[n][e]");
             }

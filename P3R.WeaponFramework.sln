@@ -40,6 +40,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A58A1B62-8C75-42D5-9443-464D113B1DA0}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CostumeFramework", "CostumeFramework", "{C31A19CE-DCD3-4D8F-9D93-CACBEE8B05A3}"

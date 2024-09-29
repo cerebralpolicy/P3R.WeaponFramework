@@ -25,7 +25,7 @@ internal static partial class Subroutines
             weapons.Add(weapon.Cook(index,episode));
             index++;
         }
-        var weaponArray = weapons.Where(w => (w.WeaponType != 0 && w.Character != Character.Fuuka) || w.Character == Character.Fuuka).ToList();
+        var weaponArray = weapons.Where(w => (w.WeaponType != 0 && w.Character != ECharacter.Fuuka) || w.Character == ECharacter.Fuuka).ToList();
         return weaponArray;
     }
 
@@ -52,25 +52,25 @@ internal static partial class Subroutines
         EpisodeDictionary pairs = [];
         for (int i = 1; i <= (episode == Episode.ASTREA ? 11 : 10); i++)
         {
-            var charWeaps = WeaponList(episode).Where(w => w.Character == (Character)i);
+            var charWeaps = WeaponList(episode).Where(w => w.Character == (ECharacter)i);
             if (charWeaps.Count() > 1)
             {
-                Console.WriteLine($"{Enum.GetName((Character)i)} has {charWeaps.Count()} weapons.");
+                Console.WriteLine($"{Enum.GetName((ECharacter)i)} has {charWeaps.Count()} weapons.");
                 pairs.Add(i, charWeaps.ToArray());
             }
             else if (charWeaps.Count() > 0)
             {
-                Console.WriteLine($"{Enum.GetName((Character)i)} has {charWeaps.Count()} weapon.");
+                Console.WriteLine($"{Enum.GetName((ECharacter)i)} has {charWeaps.Count()} weapon.");
                 pairs.Add(i, charWeaps.ToArray());
             }
         }
         return pairs;
     }
-    private static Character GetCharacter(this EquipFlag flag)
+    private static ECharacter GetCharacter(this EquipFlag flag)
     {
         var val = (int)flag;
         var log = Math.Log2(val);
-        return (Character)log;
+        return (ECharacter)log;
     }
 
     private static Weapon Cook(this WeaponRaw weaponRaw, int index, Episode episode)

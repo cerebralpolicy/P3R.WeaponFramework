@@ -51,8 +51,6 @@
     <Content Include="Hooks\Services\WeaponShellService.cs" />
     <Content Include="Hooks\WeaponHooks.cs" />
     <Content Include="Hooks\WeaponNameHook.cs" />
-    <Content Include="Hooks\Weapons\Collections\DefaultCharWeapons.cs" />
-    <Content Include="Hooks\Weapons\Collections\DefaultWeapons.cs" />
     <Content Include="Hooks\Weapons\Models\DefaultWeapon.cs" />
     <Content Include="ModConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -94,6 +92,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Hooks\Weapons\Collections\" />
     <Folder Include="Weapons\Models\Types\" />
   </ItemGroup>
 

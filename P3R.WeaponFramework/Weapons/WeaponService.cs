@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Hooks;
 using P3R.WeaponFramework.Hooks.Services;
+using System.Reflection;
 using Unreal.ObjectsEmitter.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons;
@@ -13,6 +14,7 @@ internal unsafe class WeaponService
     private readonly WeaponNameHook weaponNameHook;
     private readonly ItemEquipHooks itemEquipHooks;
 
+    public void InitShellService() => shellService.InitRedirects();
     public WeaponService(
         IUObjects uObjects,
         IUnreal unreal,

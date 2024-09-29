@@ -1,8 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
-using System.Text.Json.Nodes;
-using Unreal.ObjectsEmitter.Interfaces;
 using P3R.WeaponFramework.Utils;
+using System.Text;
 namespace P3R.WeaponFramework.Weapons.Models;
 
 [JsonSourceGenerationOptions(DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
@@ -19,7 +18,7 @@ public class Weapon : IEquatable<Weapon?>
         WeaponItemId = weaponItemId;
     }
     [JsonConstructor]
-    public Weapon(Character character, bool isVanilla, bool isAstrea, int weaponId, string? name, ShellType shellTarget, int modelId, WeaponStats stats)
+    public Weapon(ECharacter character, bool isVanilla, bool isAstrea, int weaponId, string? name, ShellType shellTarget, int modelId, WeaponStats stats)
     {
         Character = character;
         IsVanilla = isVanilla;
@@ -37,12 +36,14 @@ public class Weapon : IEquatable<Weapon?>
     #region status
     [JsonIgnore]
     public bool IsEnabled { get; set; }
+    [JsonIgnore]
+    public bool IsModded { get; set; }
     #endregion
     #region Weapon Table Entry
     // Import
     [JsonPropertyOrder(0)]
     [JsonPropertyName(nameof(Character))]
-    public Character Character { get; set; } = Character.NONE;
+    public ECharacter Character { get; set; } = ECharacter.NONE;
     [JsonPropertyOrder(1)]
     [JsonPropertyName(nameof(IsVanilla))]
     public bool IsVanilla { get; set; } = true;
@@ -103,7 +104,7 @@ public class Weapon : IEquatable<Weapon?>
         paths = check ? strings : null;
         return check;
     }
-    public void PopulatePaths()
+    private void PopulatePaths()
     {
         var suffix = ModelPairsInt[ModelId];
         var path = GetVanillaAssetFile(Character, suffix);
@@ -112,15 +113,14 @@ public class Weapon : IEquatable<Weapon?>
         {
             suffix += 200;
             var path2 = GetVanillaAssetFile(Character, suffix);
-            Log.Debug($"Initializing {Name} || Right Mesh Path: {path} || Left Mesh Path: {path2}");
+            //Log.Debug($"Mesh Paths {Name} || Right Mesh Path: {path} || Left Mesh Path: {path2}");
             Config.Model.MeshPath2 = path2;
         }
-        else
-            Log.Debug($"Initializing {Name} || Mesh Path: {path}");
     }
     
     public void InitAtlusWeapon()
     {
+        Log.Verbose($"Activating weapon. || {this}");
         IsEnabled = true;
         PopulatePaths();
     }
@@ -129,7 +129,7 @@ public class Weapon : IEquatable<Weapon?>
 
     public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
 
-    public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != Character.NONE;
+    public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != ECharacter.NONE;
     #endregion
     #region Comparisons
     public override bool Equals(object? obj)
@@ -154,6 +154,22 @@ public class Weapon : IEquatable<Weapon?>
         return other is not null &&
                Character == other.Character &&
                Stats.Equals(other.Stats);
+    }
+
+    public override string? ToString()
+    {
+        var sb = new StringBuilder();
+        sb.Append($"Character: {Character} || Weapon: {Name} || SortNum: {SortNum}\nShell Target: {ShellTarget} || ModelId: {ModelId}");
+        if (BaseModels.Contains(this.ModelId))
+        {
+            sb.AppendLine($"Base Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].BasePaths)}");
+            sb.AppendLine($"Shell Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].ShellPaths)}");
+        }
+        else
+        {
+            sb.AppendLine($"Base Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].WeaponPaths(this))}");
+        }
+        return sb.ToString();
     }
 
     public static bool operator ==(Weapon? left, Weapon? right)

@@ -12,7 +12,7 @@ namespace P3R.WeaponFramework.Weapons
             this.weapons = weapons;
         }
 
-        public Weapon? Create(WeaponMod mod, string weaponDir, Character character)
+        public Weapon? Create(WeaponMod mod, string weaponDir, ECharacter character)
         {
             var config = GetWeaponConfig(weaponDir);
             var weapon = CreateOrFindWeapon(mod.ModId, character, config.Name ?? Path.GetFileName(weaponDir));
@@ -38,7 +38,7 @@ namespace P3R.WeaponFramework.Weapons
             {
                 weapon.Config.Shell = shell;
                 weapon.ShellTarget = shell;
-                weapon.ModelId = ShellTypeWrapper.FromEnum(shell).ShellTableBaseModelId;
+                weapon.ModelId = shell.AsShell().ShellModelId;
             });
         }
 
@@ -67,7 +67,7 @@ namespace P3R.WeaponFramework.Weapons
                 }
             }
         }
-        public Weapon? CreateOrFindWeapon(string ownerId, Character character, string name)
+        public Weapon? CreateOrFindWeapon(string ownerId, ECharacter character, string name)
         {
             var existingWeapon = weapons.FirstOrDefault(x => x.Character == character && x.Name == name);
             if (existingWeapon != null)
@@ -75,7 +75,7 @@ namespace P3R.WeaponFramework.Weapons
                 return existingWeapon;
             }
 
-            var newWeapon = weapons.FirstOrDefault(x => x.Character == Character.NONE && x.WeaponItemId > DataUtils.MAX_VANILLA_ID);
+            var newWeapon = weapons.FirstOrDefault(x => x.Character == ECharacter.NONE && x.WeaponItemId > DataUtils.MAX_VANILLA_ID);
             if (newWeapon != null)
             {
 

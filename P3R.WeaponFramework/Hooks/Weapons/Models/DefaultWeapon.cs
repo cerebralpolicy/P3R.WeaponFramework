@@ -10,11 +10,6 @@ internal class DefaultWeapon : Weapon
             return;
         Character = character.Value;
         Config.Shell = shellType;
-        //Config.Base.MeshPath = GetAssetFile(shellType.CharacterFromShell(), WeaponModelSet.Base, WeaponAssetType.Base_Mesh);
-        var shellPaths = shellType.AsShell().ShellPaths;
-        Config.Model.MeshPath1 = shellPaths[0];
-        if (shellType.AsShell().Meshes == 2)
-            Config.Model.MeshPath2 = shellPaths[1];
-        ModelId = shellType.AsShell().Ids.First();
+        ModelId = shellType.ModelId();
     }
 }

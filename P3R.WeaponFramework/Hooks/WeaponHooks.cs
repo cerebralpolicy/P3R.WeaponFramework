@@ -103,22 +103,21 @@ internal unsafe class WeaponHooks
             newItem->EquipID = AssetUtils.GetEquipFromChar(weapon.Character);
             weapon.SetWeaponItemId(newItemIndex);
             weaponDesc.SetWeaponDesc(newItemIndex, weapon.Description);
-            //this.SetWeaponPaths(weapon);
             Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
             newItemIndex++;
         }
-        this.weaponDesc.Init();
+        //this.weaponDesc.Init();
     }
 
     private void SetWeaponIdImpl(UAppCharacterComp* comp)
     {
         var character = comp->baseObj.Character;
-        Character wfCharacter = character;
-        if (character < Character.Player || character > Character.Metis)
+        ECharacter wfCharacter = character;
+        if (character < ECharacter.Player || character > ECharacter.Metis)
         {
             return;
         }
-        if (!Characters.WFArmed.Contains((Character)character))
+        if (!Characters.Armed.Contains(character))
         { return; }
         var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
         this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var weapon);

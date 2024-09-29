@@ -13,17 +13,6 @@ public enum WeaponModelSet
     LegendaryA = 60,
     LegendaryB = 61,
     LegendaryC = 62,
-    lSEES = 200,
-    lBase = 201,
-    lTier1A = 210,
-    lTier1B = 211,
-    lTier2A = 220,
-    lTier2B = 221,
-    lGimmickA = 250,
-    lGimmickB = 251,
-    lLegendaryA = 260,
-    lLegendaryB = 261,
-    lLegendaryC = 262,
 }
 public static class WeaponModelExtensions
 {

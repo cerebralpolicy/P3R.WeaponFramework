@@ -22,7 +22,7 @@ namespace P3R.WeaponFramework.Weapons
         public Weapon[] GetActiveWeapons() =>
             this.Weapons.Where(IsActiveWeapon).ToArray();
 
-        public bool TryGetWeapon(Character character, int weaponId, [NotNullWhen(true)] out Weapon? weapon)
+        public bool TryGetWeapon(ECharacter character, int weaponId, [NotNullWhen(true)] out Weapon? weapon)
         {
             weapon = Weapons.FirstOrDefault(x => IsRequestedWeapon(x, character, weaponId));
             return weapon != null;
@@ -42,9 +42,9 @@ namespace P3R.WeaponFramework.Weapons
             {
                 return;
             }
-            foreach (var character in Characters.WFArmed)
+            foreach (var character in Characters.Armed)
             {
-                var characterDir = Path.Join(mod.WeaponsDir, character.Name);
+                var characterDir = Path.Join(mod.WeaponsDir, character.ToString());
                 if (!Directory.Exists(characterDir))
                 {
                     continue;
@@ -56,7 +56,7 @@ namespace P3R.WeaponFramework.Weapons
                     try
                     {
                         arsenal.Create(mod, weaponDir, character);
-                        if (character == Character.Aigis)
+                        if (character == ECharacter.Aigis)
                         {
                             //arsenal.Create(mod, weaponDir, CharacterWrapper.AigisReal);
                         }
@@ -69,12 +69,12 @@ namespace P3R.WeaponFramework.Weapons
             }
         }
 
-        private static bool IsRequestedWeapon(Weapon weapon, Character character, int weaponId)
+        private static bool IsRequestedWeapon(Weapon weapon, ECharacter character, int weaponId)
             => weapon.Character == character && weapon.WeaponId == weaponId && IsActiveWeapon(weapon);
 
         private static bool IsActiveWeapon(Weapon weapon)
             => weapon.IsEnabled
-            && weapon.Character != Character.NONE;
+            && weapon.Character != ECharacter.NONE;
 
     }
 }

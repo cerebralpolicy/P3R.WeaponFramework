@@ -7,6 +7,7 @@ using System.Threading;
 using System.Numerics;
 using static P3R.WeaponFramework.Enums.TypeExtensions;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace P3R.WeaponFramework.Enums;
 

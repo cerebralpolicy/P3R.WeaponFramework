@@ -13,7 +13,7 @@ namespace P3R.WeaponFramework.Tools.DataUtils;
 
 public struct Weapon
 {
-    public Weapon(Character character, Episode episode, int uniqueID, string name, int weaponType, int modelId, WeaponStats stats)
+    public Weapon(ECharacter character, Episode episode, int uniqueID, string name, int weaponType, int modelId, WeaponStats stats)
     {
         Character = character;
         IsVanilla = episode == Episode.VANILLA;
@@ -27,7 +27,7 @@ public struct Weapon
     }
 
     [JsonPropertyName("Character")]
-    public Character Character { get; set; }
+    public ECharacter Character { get; set; }
     [JsonPropertyName("IsVanilla")]
     public bool IsVanilla { get; set; }
     [JsonPropertyName("IsAstrea")]

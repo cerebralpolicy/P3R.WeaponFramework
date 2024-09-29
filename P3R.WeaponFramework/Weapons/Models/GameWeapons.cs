@@ -6,22 +6,10 @@ using System.Reflection;
 using System.Text.Json;
 
 namespace P3R.WeaponFramework.Weapons.Models;
-
-internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
+ 
+internal unsafe class GameWeapons : EpisodeHookBase, IReadOnlyCollection<Weapon>
 {
-    public delegate bool AstreaSaveCheck();
-    public AstreaSaveCheck? IsAstreaSave;
-    public bool AstreaSave
-    { 
-        get
-        {
-            var save = IsAstreaSave;
-            if (save == null)
-                return false;
-            else
-                return save.Invoke();
-        }
-    }
+
     #region Constants
     /// <summary>
     /// Each episode's weapon item list has 512 entries, although not all are used setting the mod weapons to begin at 1024 makes the most sense.
@@ -69,22 +57,18 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
     public List<Weapon> WeaponFilter() => weaponsMerged.Where(MatchesFilter).ToList();
     private bool MatchesFilter (Weapon weapon)
     {
-        var save = IsAstreaSave;
-        if (save == null)
-            return weapon.IsVanilla;
-        var saveCheck = save.Invoke();
+        var saveCheck = AstreaSave;
         if (saveCheck)
             return weapon.IsAstrea;
         else
             return weapon.IsVanilla;
     }
-    public GameWeapons()
+    public GameWeapons() : base()
     {
         ProcessEpisode(false);
         ProcessEpisode(true);
         AddModSlots(false);
         AddModSlots(true);
-        ScanHooks.Listen("WF_IsAstreaSave", (hooks, result) => this.IsAstreaSave = hooks.CreateWrapper<AstreaSaveCheck>(result, out _));
     }
     /// <summary>
     /// 
@@ -93,14 +77,18 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
     {
         get
         {
-            if (AstreaSave)
-            {
-                return weaponsAstrea;
-            }
-            else
-            {
-                return weaponsVanilla;
-            }
+            List<Weapon> list = [];
+            IfAstrea(
+                () =>
+                {
+                    list = weaponsAstrea;
+                },
+                () =>
+                {
+                    list = weaponsVanilla;
+                }
+            );
+            return list;
         }
     }
 
@@ -115,7 +103,7 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
             return;
         using var reader = new StreamReader(stream!);
         var json = reader.ReadToEnd();
-        var gameWeapons = JsonSerializer.Deserialize<Dictionary<Character, Weapon[]>>(json)!;
+        var gameWeapons = JsonSerializer.Deserialize<Dictionary<ECharacter, Weapon[]>>(json)!;
         foreach (var charWeapons in gameWeapons)
         {
             weaponsMerged.AddRange(charWeapons.Value);
@@ -132,7 +120,7 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
         var json = reader.ReadToEnd();
         var episode = isAstrea ? "Astrea" : "Vanilla";
         Log.Information($"Processing {episode} weapons.");
-        var gameWeapons = JsonSerializer.Deserialize<Dictionary<Character, Weapon[]>>(json)!;
+        var gameWeapons = JsonSerializer.Deserialize<Dictionary<ECharacter, Weapon[]>>(json)!;
         foreach (var charWeapons in gameWeapons)
         {
             if (isAstrea)
@@ -150,8 +138,7 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
             {
                 if (weapon.Name != "unused" && weapon.Character.IsValidCharacter(isAstrea))
                 {
-                    Log.Verbose($"Activating weapon. || Character: {weapon.Character} || Weapon: {weapon.Name} || SortNum: {weapon.SortNum}");
-                    weapon.IsEnabled = true;
+                    weapon.InitAtlusWeapon();
                 }    
             }
         }
@@ -161,8 +148,7 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
             {
                 if (weapon.Name != "Unused" && weapon.Character.IsValidCharacter(isAstrea))
                 {
-                    Log.Verbose($"Activating weapon. || Character: {weapon.Character} || Weapon: {weapon.Name} || SortNum: {weapon.SortNum}");
-                    weapon.IsEnabled = true;
+                    weapon.InitAtlusWeapon();
                 }
             }
         }
@@ -193,8 +179,10 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
             {
                 IsVanilla = !isAstrea,
                 IsAstrea = isAstrea,
+                IsModded = true,
                 WeaponId = weaponId,
                 ModelId = 10,
+                ShellTarget = ShellType.Unassigned,
             };
             var episode = isAstrea ? "Astrea" : "Vanilla";
             Log.Verbose($"New {episode} slot {weaponId}");
