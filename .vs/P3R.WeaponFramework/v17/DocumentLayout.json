@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "S:\\ReloadMods\\P3R.WeaponFramework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\modconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\modconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A58A1B62-8C75-42D5-9443-464D113B1DA0}|Solution Items{A58A1B62-8C75-42D5-9443-464D113B1DA0}|S:\\ReloadMods\\P3R.WeaponFramework\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A58A1B62-8C75-42D5-9443-464D113B1DA0}|Solution Items{A58A1B62-8C75-42D5-9443-464D113B1DA0}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\shelltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\shelltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\modconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\modconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\utils\\priceutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 500,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,26 +66,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ShellType.cs",
               "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
               "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
               "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
               "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
-              "ViewState": "AQIAAKoAAAAAAAAAAAAowLkAAAAAAAAA",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAcwGwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T05:47:53.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\README.md",
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAkwCwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2024-09-29T05:18:25.458Z",
               "EditorCaption": ""
@@ -131,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ModConfig.json",
               "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\ModConfig.json",
               "RelativeDocumentMoniker": "P3R.WeaponFramework\\ModConfig.json",

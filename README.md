@@ -1,3 +1,10 @@
+| P3WF            | Status Table    |
+|-----------------|-----------------|
+| Latest Version  | 0.3.0           |
+| Shell System    | Semi-Functional |
+| Descriptions    | Non-Functional  |
+| Weapon Creation | Unknown         |
+
 # P3R Weapon Framework
 Welcome to the **P3R Weapon Framework** (P3WF) repository. This mod, when completed, will make it possible to add new weapons to Persona 3 Reload and lay a groundwork for similar mods in Metaphor Refantazio and Persona 6. In spirit, it is similar to Costume Framework - however the weapon system is significantly more cumbersome to hack into. As such, **P3WF is currently non-functional** and the project is currently bloated as I have reached a state of constant trial and error.
 
@@ -9,7 +16,7 @@ Unlike the costumes, all data pertaining to the weapon models is housed within a
 ### Shell System
 Currently **P3R Weapon Framework** is centred around a basic FName redirection system. The system initializes but I have yet to load a save with it enabled. This is necessitated by the inaccessibility of the weapon blueprints. Since we cannot edit the pointers, nor revert assigned FNames to their original values, P3WF uses dummy meshes to emulate such reversion.
 
-All weapons have a defined *ShellType*, and a rich enum system based on SmartEnums extends the *ShellType* into a verbose definition that will tell P3WF which base assets need to be redirected. For the most part a *ShellType* is bound to a single model, meaning any new weapon need only have a single mesh. There are exceptions, as illustrated by P3WF's shell database, where Akihiko and some of Aigis' weapons have two armatures.
+All weapons have a defined `ShellType`, and a rich enum system based on SmartEnums extends the `ShellType` into a verbose definition that will tell P3WF which base assets need to be redirected. For the most part a `ShellType` is bound to a single model, meaning any new weapon need only have a single mesh. There are exceptions, as illustrated by P3WF's shell database, where Akihiko and some of Aigis' weapons have two armatures.
 
 ```csharp
 // using Shell as the following wrapper 
@@ -36,10 +43,15 @@ public static ShellDatabase ShellLookup => [
     new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], vanilla: false),
     ];
 ```
-There are additional systems in the backend that take a given *Shell* and describe it as set of three `List<sting>`'s, consisting of the original paths, the paths to the duplicate shells, and the last paths assigned. The shell system uses this to perform redirections with UnrealObjectsEmitter.
+There are additional systems in the backend that take a given `Shell` and describe it as set of three `List<sting>`'s, consisting of the original paths, the paths to the duplicate shells, and the last paths assigned. The shell system uses this to perform redirections with UnrealObjectsEmitter.
 
 
 ## Known Issues
 
 * Currently crashing when loading saves 
 * Weapon description file doesn't compile
+
+### Suspected causes
+
+* Likely do not have the right item ID range for weapons, so the load-in crash is almost certainly tied to this.
+* Due to how weapons were implemented in *Episode Aigis* P3WF requires two separate weapon and description lists. It is likely that this is causing issues.
