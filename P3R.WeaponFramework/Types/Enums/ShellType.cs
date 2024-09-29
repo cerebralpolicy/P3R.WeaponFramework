@@ -93,7 +93,6 @@ public class Shell : WFEnumWrapper<Shell, ShellType>
 {
     private ArmaturePaths toPaths(Armature armature) => new(armature); 
     private readonly List<Armature> armatures = [];
-    private readonly List<ArmaturePaths> armaturePaths = [];
     private List<int> modelIds;
 
     private bool vanilla;
@@ -105,10 +104,6 @@ public class Shell : WFEnumWrapper<Shell, ShellType>
         foreach (var armature in armatures)
         {
             this.armatures.Add(armature);
-        }
-        foreach (var armatureWrapper in this.armatures)
-        {
-            this.armaturePaths.Add(armatureWrapper);
         }
         this.modelIds = modelIds;
         this.vanilla = vanilla;

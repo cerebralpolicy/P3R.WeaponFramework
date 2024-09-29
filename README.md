@@ -36,6 +36,8 @@ public static ShellDatabase ShellLookup => [
     new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], vanilla: false),
     ];
 ```
+There are additional systems in the backend that take a given *Shell* and describe it as set of three `List<sting>`'s, consisting of the original paths, the paths to the duplicate shells, and the last paths assigned. The shell system uses this to perform redirections with UnrealObjectsEmitter.
+
 
 ## Known Issues
 
