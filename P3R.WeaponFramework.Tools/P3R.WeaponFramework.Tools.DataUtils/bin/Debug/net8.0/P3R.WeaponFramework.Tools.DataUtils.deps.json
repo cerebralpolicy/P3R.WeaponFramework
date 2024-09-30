@@ -10,7 +10,6 @@
         "dependencies": {
           "AtlusScriptLibrary": "1.0.0",
           "P3R.WeaponFramework": "1.0.0",
-          "P3R.WeaponFramework.Interfaces": "1.0.0",
           "System.Collections.NonGeneric": "4.3.0",
           "YamlDotNet": "16.1.2"
         },

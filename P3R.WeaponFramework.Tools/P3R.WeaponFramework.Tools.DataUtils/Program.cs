@@ -48,8 +48,6 @@ namespace P3R.WeaponFramework.Tools.DataUtils
                     var weaponsAstrea = Subroutines.GetCharaWeapons(Episode.ASTREA);
                     Subroutines.JsonFileSerializer.SerializeFile(path, weapons, "Weapons_Vanilla");
                     Subroutines.JsonFileSerializer.SerializeFile(path, weaponsAstrea, "Weapons_Astrea");
-                    var weaponsMerged = weapons.MergeDictionaries(weaponsAstrea);
-                    Subroutines.JsonFileSerializer.SerializeFile(path, weaponsMerged, "Weapons_Merged");
                 }
                 if (type == FileType.Yaml) 
                 {
@@ -77,7 +75,7 @@ namespace P3R.WeaponFramework.Tools.DataUtils
                 writer.WriteLine(spacer);
                 var shellHead = Comment("Shell types",1,true);
                 writer.WriteLine(shellHead);
-                foreach (var shell in ShellTypeWrapper.List)
+                foreach (var shell in ShellExtensions.ShellLookup)
                 {
                     var name = shell.Name;
                     string entry = $"shell: {name}";

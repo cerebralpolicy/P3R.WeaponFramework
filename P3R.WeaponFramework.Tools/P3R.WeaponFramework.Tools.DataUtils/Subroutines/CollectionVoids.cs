@@ -25,8 +25,7 @@ internal static partial class Subroutines
             weapons.Add(weapon.Cook(index,episode));
             index++;
         }
-        var weaponArray = weapons.Where(w => (w.WeaponType != 0 && w.Character != ECharacter.Fuuka) || w.Character == ECharacter.Fuuka).ToList();
-        return weaponArray;
+        return weapons;
     }
 
     internal static Dictionary<string, string> GetRawNameKeys(Episode episode = Episode.VANILLA)
@@ -45,26 +44,23 @@ internal static partial class Subroutines
         return keyMap;
     }
 
-    internal static EpisodeDictionary GetCharaWeapons(Episode episode = Episode.VANILLA)
+    internal static List<Weapon> GetCharaWeapons(Episode episode = Episode.VANILLA)
     {
         Console.WriteLine($"Processing {Enum.GetName(episode)}");
 
-        EpisodeDictionary pairs = [];
-        for (int i = 1; i <= (episode == Episode.ASTREA ? 11 : 10); i++)
+        for (int i = 0; i <= (episode == Episode.ASTREA ? 11 : 10); i++)
         {
             var charWeaps = WeaponList(episode).Where(w => w.Character == (ECharacter)i);
             if (charWeaps.Count() > 1)
             {
                 Console.WriteLine($"{Enum.GetName((ECharacter)i)} has {charWeaps.Count()} weapons.");
-                pairs.Add(i, charWeaps.ToArray());
             }
             else if (charWeaps.Count() > 0)
             {
                 Console.WriteLine($"{Enum.GetName((ECharacter)i)} has {charWeaps.Count()} weapon.");
-                pairs.Add(i, charWeaps.ToArray());
             }
         }
-        return pairs;
+        return WeaponList(episode);
     }
     private static ECharacter GetCharacter(this EquipFlag flag)
     {
@@ -80,8 +76,34 @@ internal static partial class Subroutines
         rawNames.TryGetValue(weaponRaw.Name, out var weaponEnName);
         var name = weaponEnName ?? weaponRaw.Name;
         var uniqueIndex = index;
+
         var weapon = new Weapon(chara, episode, uniqueIndex, name , weaponRaw.WeaponType, weaponRaw.ModelID, weaponRaw.WeaponStats);
         return weapon;
+    }
+    public static ShellDatabase ShellLookup => [
+        new (ShellType.None, [],[0], true, true, true),
+        new (ShellType.Unassigned, [],[], false, false, true),
+        new (ShellType.Player, [EArmature.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]),
+        new (ShellType.Yukari, [EArmature.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28]),
+        new (ShellType.Stupei, [EArmature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]),
+        new (ShellType.Akihiko, [EArmature.Wp0004_01, EArmature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48]),
+        new (ShellType.Mitsuru, [EArmature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57]),
+        new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327]),
+        new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589]),
+        new (ShellType.Ken, [EArmature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]),
+        new (ShellType.Koromaru, [EArmature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97]),
+        new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105]),
+        new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106]),
+        ];
+    public static ShellType ShellFromId(int modelId, bool astrea)
+    {
+        if (ShellLookup.All(x => !x.ModelIds.Contains(modelId)))
+            return ShellType.None;
+        else
+            if (astrea)
+                return ShellLookup.First(x => x.ModelIds.Contains(modelId) && x.Astrea).EnumValue;
+            else
+                return ShellLookup.First(x => x.ModelIds.Contains(modelId) && x.Vanilla).EnumValue;
     }
 
 
@@ -104,15 +126,15 @@ internal static partial class Subroutines
         };
     private static Dictionary<string, string> RawNameKeys_Xrd777 => GetRawNameKeys();
     private static Dictionary<string, string> RawNameKeys_Astrea => GetRawNameKeys(Episode.ASTREA);
-    private static Dictionary<int, Weapon[]> CharaWeapons(Episode episode = Episode.VANILLA)
+    private static List<Weapon> CharaWeapons(Episode episode = Episode.VANILLA)
         => episode switch
         {
             Episode.VANILLA => CharaWeapons_Xrd777,
             Episode.ASTREA => CharaWeapons_Astrea,
             _ => throw new NotImplementedException()
         };
-    private static EpisodeDictionary CharaWeapons_Xrd777 => GetCharaWeapons();
-    private static EpisodeDictionary CharaWeapons_Astrea => GetCharaWeapons(Episode.ASTREA);
+    private static List<Weapon> CharaWeapons_Xrd777 => GetCharaWeapons();
+    private static List<Weapon> CharaWeapons_Astrea => GetCharaWeapons(Episode.ASTREA);
 
     private static string GetResource(JsonFile filetype, Episode episode)
     {
@@ -121,8 +143,7 @@ internal static partial class Subroutines
         string suffix = episode.Equals(Episode.ASTREA) ? "_Astrea" : string.Empty;
         return $"P3R.WeaponFramework.Tools.DataUtils.RawResources.{listtype}{suffix}.json";
     }
-
-    public class EpisodeDictionary : Dictionary<int, Weapon[]>
+    public class EpisodeDictionary : Dictionary<int, List<Weapon>>
     {
         
     }

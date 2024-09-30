@@ -74,7 +74,6 @@ internal unsafe class WeaponHooks
         Log.Verbose("WeaponTable found");
         var weaponItemList = (UWeaponItemListTable*)obj.Self;
         var activeWeapons = registry.GetActiveWeapons();
-        var isAstrea = registry.Weapons.AstreaSave;
         
         Log.Debug("Setting weapon data.");
         List<Weapon> tempList = [];
@@ -106,7 +105,7 @@ internal unsafe class WeaponHooks
             Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
             newItemIndex++;
         }
-        //this.weaponDesc.Init();
+        this.weaponDesc.Init();
     }
 
     private void SetWeaponIdImpl(UAppCharacterComp* comp)
@@ -120,10 +119,10 @@ internal unsafe class WeaponHooks
         if (!Characters.Armed.Contains(character))
         { return; }
         var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
+        Log.Verbose($"{character}'s current weapon has an id of: {equipWeaponItemId}");
         this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var weapon);
         if (weapon != null)
         {
-            // comp->mSetWeaponType toggles between animation packages
             comp->mSetWeaponModelID = weaponShells.UpdateWeapon(character, weapon.WeaponId);
         }
     }

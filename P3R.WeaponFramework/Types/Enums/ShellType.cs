@@ -148,12 +148,12 @@ public class Shell : WFEnumWrapper<Shell, ShellType>
 }
 public class ShellDatabase : KeyedCollection<ShellType, Shell>
 {
-    public Shell this[Weapon weapon] => shellFromWeapon(weapon);
+    public Shell this[IWeapon weapon] => shellFromWeapon(weapon);
     protected override ShellType GetKeyForItem(Shell item) => item.EnumValue;
     public int GetShellModelId(Weapon weapon) => this[weapon].ModelIds.Min();
 
     public int GetShellModelId(ShellType shell) => this[shell].ModelIds.Min();
-    private Shell shellFromWeapon(Weapon weapon) => shellsOfEpisode(weapon.IsAstrea)
+    private Shell shellFromWeapon(IWeapon weapon) => shellsOfEpisode(weapon.IsAstrea)
         .shellsWithModel(weapon.ModelId)
         .First();
     private List<ShellType> shellsOfList(List<Shell> list) => list
@@ -197,14 +197,20 @@ public static class ShellExtensions
         new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105], astrea: false),
         new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], vanilla: false),
         ];
-
+    public static ShellType ShellFromId(int modelId, bool astrea)
+    {
+        if (ShellLookup.All(x => !x.ModelIds.Contains(modelId)))
+            return ShellType.None;
+        else
+            return ShellLookup.First(x => x.ModelIds.Contains(modelId) && x.Astrea == astrea).EnumValue;
+    }
     public static int ModelId(this ShellType shellType) => ShellLookup.GetShellModelId(shellType);
     public static List<Shell> shellsWithModel(this List<Shell> list, int modelId) => list
         .Where(x => x.ModelIds.Contains(modelId))
         .ToList();
     public static List<string> BasePaths(this ShellType shellType) => ShellLookup[shellType].Paths.Select(p => p.BasePath).ToList();
     public static List<string> ShellPaths(this ShellType shellType) => ShellLookup[shellType].Paths.Select(p => p.ShellPath).ToList();
-    public static ShellType GetShellType(this Weapon weapon) => ShellLookup[weapon].EnumValue;
+    public static ShellType GetShellType(this IWeapon weapon) => ShellLookup[weapon].EnumValue;
     public static Shell AsShell(this ShellType type) => ShellLookup[type];
     public static bool TryGetCharacterFromShell(this ShellType shell, [NotNullWhen(true)] out ECharacter? character)
     {

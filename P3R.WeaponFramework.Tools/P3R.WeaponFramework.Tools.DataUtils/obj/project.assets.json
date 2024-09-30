@@ -4922,7 +4922,6 @@
     "net8.0": [
       "AtlusScriptLibrary >= 1.0.0",
       "P3R.WeaponFramework >= 1.0.0",
-      "P3R.WeaponFramework.Interfaces >= 1.0.0",
       "System.Collections.NonGeneric >= 4.3.0",
       "YamlDotNet >= 16.1.2"
     ]
@@ -4959,9 +4958,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Interfaces\\P3R.WeaponFramework.Interfaces.csproj": {
-              "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Interfaces\\P3R.WeaponFramework.Interfaces.csproj"
-            },
             "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj": {
               "projectPath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj"
             },

@@ -30,7 +30,17 @@ internal class WeaponDescService : EpisodeHookBase
 
     public void Init()
     {
-        this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", BuildStrings(), AssetType.BMD, AssetMode.Both);
+        var sb = new StringBuilder();
+        for (int i = 0; i < Descriptions.Count; i++)
+        {
+            sb.AppendLine($"[msg Item_{i:D3}]");
+            sb.AppendLine($"[uf 0 5 65278][uf 2 1]{Descriptions[i]}[n][e]");
+            Log.Verbose($"Description {i:D3}: {Descriptions[i]}");
+
+        }
+        Log.Debug($"{Descriptions.Count} descriptions found.");
+        var output = sb.ToString();
+        this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", output, AssetType.BMD, AssetMode.Both);
     }
     public void SetWeaponDesc(int weaponItemId, string weaponDesc)
     {

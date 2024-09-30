@@ -3,124 +3,88 @@
   "WorkspaceRootPath": "S:\\ReloadMods\\P3R.WeaponFramework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\flag\\wfflagenumbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\flag\\wfflagenumbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\fepisode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\fepisode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\shelltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\shelltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\subroutines\\collectionvoids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\subroutines\\collectionvoids.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\echaracter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\echaracter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\output\\weapons_vanilla.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\output\\weapons_vanilla.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\rawresources\\weapons.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\rawresources\\weapons.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\models\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\models\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\utils\\assetutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\utils\\assetutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\typeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\typeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\core\\episodehook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\core\\episodehook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\equipflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\equipflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\weaponhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\weaponhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\fepisode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\fepisode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\models\\gameweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\models\\gameweapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\resources\\vanilla\\weapons.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\resources\\vanilla\\weapons.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\resources\\astrea\\weapons.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\resources\\astrea\\weapons.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\output\\weapons_astrea.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\output\\weapons_astrea.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\types\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\types\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\shelltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\shelltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\output\\weapons_merged.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\output\\weapons_merged.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\rawresources\\names_astrea.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A424C463-4BDD-4C99-9538-3C7168D16584}|P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\P3R.WeaponFramework.Tools.DataUtils.csproj|solutionrelative:p3r.weaponframework.tools\\p3r.weaponframework.tools.datautils\\rawresources\\names_astrea.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C041A004-29A9-449B-A3A4-0FBB771B27AD}|REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\P3R.CostumeFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\p3r.costumeframework\\p3r.costumeframework\\hooks\\itemequip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C041A004-29A9-449B-A3A4-0FBB771B27AD}|REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\P3R.CostumeFramework.csproj|solutionrelative:ref\\p3r.costumeframework\\p3r.costumeframework\\hooks\\itemequip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\iweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\iweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\weapondescservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\weapondescservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\enum\\wfenumbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\enum\\wfenumbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\flag\\wfflagwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\flag\\wfflagwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\flag\\wfflagengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\flag\\wfflagengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\smartflagengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\smartflagengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\enum\\wfenumwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\enum\\wfenumwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\allowunsafeflagenumvaluesattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\allowunsafeflagenumvaluesattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\smartflagenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\smartflagenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\throwhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\throwhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\core\\smartenumwhen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\core\\smartenumwhen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\smartenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\smartenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\core\\smartenumthen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\core\\smartenumthen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\p3r.weaponframework.enums.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\p3r.weaponframework.enums.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\exceptions\\invalidflagenumvalueparseexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\exceptions\\invalidflagenumvalueparseexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\exceptions\\smartflagenumcontainsnegativevalueexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\exceptions\\smartflagenumcontainsnegativevalueexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\smartenum\\src\\smartenum\\exceptions\\smartenumnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD94A111-C77B-4644-AAA6-2FAF837B0489}|REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.csproj|solutionrelative:ref\\smartenum\\src\\smartenum\\exceptions\\smartenumnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework.enums\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{8DE52E4A-97B2-4A9E-AFFC-9FE4E12B5739}|P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj|solutionrelative:p3r.weaponframework.enums\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\enums\\eappcharweapontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\enums\\eappcharweapontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\modconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\modconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\services\\weaponshellservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\services\\weaponshellservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C041A004-29A9-449B-A3A4-0FBB771B27AD}|REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\P3R.CostumeFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\p3r.costumeframework\\p3r.costumeframework\\costumes\\costumedescservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C041A004-29A9-449B-A3A4-0FBB771B27AD}|REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\P3R.CostumeFramework.csproj|solutionrelative:ref\\p3r.costumeframework\\p3r.costumeframework\\costumes\\costumedescservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,405 +94,292 @@
       "DocumentGroups": [
         {
           "DockedHeight": 496,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AssetUtils.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\AssetUtils.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Utils\\AssetUtils.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\AssetUtils.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Utils\\AssetUtils.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAhwIwAAAAuAAAA",
+              "Title": "ECharacter.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ECharacter.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\ECharacter.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ECharacter.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\ECharacter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:37:36.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WFFlagWrapper.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Flag\\WFFlagWrapper.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\Flag\\WFFlagWrapper.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Flag\\WFFlagWrapper.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\Flag\\WFFlagWrapper.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAUwBgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:08:35.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SmartEnumWhen.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumWhen.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumWhen.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumWhen.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumWhen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:07:32.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ThrowHelper.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\ThrowHelper.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\ThrowHelper.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\ThrowHelper.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\ThrowHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:47:19.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GameWeapons.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T04:27:53.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WeaponDescService.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T01:52:56.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EpisodeHook.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Core\\EpisodeHook.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Core\\EpisodeHook.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Core\\EpisodeHook.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Core\\EpisodeHook.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T03:57:25.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeaponHooks.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAUwGoAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T03:50:35.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShellType.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAApwIkAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T05:47:53.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SmartEnum.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\SmartEnum.cs",
-              "ViewState": "AQIAACsBAAAAAAAAAAAIwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:07:12.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SmartEnumThen.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumThen.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumThen.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumThen.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\Core\\SmartEnumThen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:07:03.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "P3R.WeaponFramework.Enums",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\P3R.WeaponFramework.Enums.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-29T18:33:19.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "InvalidFlagEnumValueParseException.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\InvalidFlagEnumValueParseException.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\InvalidFlagEnumValueParseException.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\InvalidFlagEnumValueParseException.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\InvalidFlagEnumValueParseException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T18:03:35.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "EAppCharWeaponType.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\EAppCharWeaponType.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\EAppCharWeaponType.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\EAppCharWeaponType.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\EAppCharWeaponType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:07:09.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ModConfig.json",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\ModConfig.json",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\ModConfig.json",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\ModConfig.json",
-              "RelativeToolTip": "P3R.WeaponFramework\\ModConfig.json",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-29T05:16:44.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Mod.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Mod.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Mod.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Mod.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Mod.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAFIAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T04:08:42.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "WeaponShellService.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T03:58:04.674Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 504,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Weapon.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAywKEAAACHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:35:22.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AllowUnsafeFlagEnumValuesAttribute.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\AllowUnsafeFlagEnumValuesAttribute.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\AllowUnsafeFlagEnumValuesAttribute.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\AllowUnsafeFlagEnumValuesAttribute.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\AllowUnsafeFlagEnumValuesAttribute.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:22:30.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FEpisode.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
-              "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAkwBEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:07:10.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "WFEnumWrapper.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Enum\\WFEnumWrapper.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\Enum\\WFEnumWrapper.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Enum\\WFEnumWrapper.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\Enum\\WFEnumWrapper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:09:01.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WFFlagEnumBase.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Flag\\WFFlagEnumBase.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\Flag\\WFFlagEnumBase.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Flag\\WFFlagEnumBase.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\Flag\\WFFlagEnumBase.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBgAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:41:00.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WFFlagEngine.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Flag\\WFFlagEngine.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\Flag\\WFFlagEngine.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Flag\\WFFlagEngine.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\Flag\\WFFlagEngine.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:13:21.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SmartFlagEngine.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEngine.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEngine.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEngine.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEngine.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAiwH8AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:31:14.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TypeExtensions.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\TypeExtensions.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\TypeExtensions.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\TypeExtensions.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\TypeExtensions.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAkwB8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:14:26.496Z",
+              "WhenOpened": "2024-09-30T19:25:32.2Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "WFEnumBase.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Enum\\WFEnumBase.cs",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\Enum\\WFEnumBase.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\Enum\\WFEnumBase.cs",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\Enum\\WFEnumBase.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAmwD4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T18:18:50.584Z",
+              "Title": "Weapons.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Resources\\Vanilla\\Weapons.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Resources\\Vanilla\\Weapons.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Resources\\Vanilla\\Weapons.json",
+              "RelativeToolTip": "P3R.WeaponFramework\\Resources\\Vanilla\\Weapons.json",
+              "ViewState": "AQIAAOYYAAAAAAAAAAAIwPwYAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:39:05.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SmartFlagEnumContainsNegativeValueException.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartFlagEnumContainsNegativeValueException.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartFlagEnumContainsNegativeValueException.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartFlagEnumContainsNegativeValueException.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartFlagEnumContainsNegativeValueException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAmAAAA",
+              "DocumentIndex": 11,
+              "Title": "Weapons.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Resources\\Astrea\\Weapons.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Resources\\Astrea\\Weapons.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Resources\\Astrea\\Weapons.json",
+              "RelativeToolTip": "P3R.WeaponFramework\\Resources\\Astrea\\Weapons.json",
+              "ViewState": "AQIAANknAAAAAAAAAAAIwO8nAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:13:03.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ItemEquip.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Hooks\\ItemEquip.cs",
+              "RelativeDocumentMoniker": "REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Hooks\\ItemEquip.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Hooks\\ItemEquip.cs",
+              "RelativeToolTip": "REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Hooks\\ItemEquip.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowCYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:48:00.742Z",
+              "WhenOpened": "2024-09-30T21:42:07.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CostumeDescService.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Costumes\\CostumeDescService.cs",
+              "RelativeDocumentMoniker": "REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Costumes\\CostumeDescService.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Costumes\\CostumeDescService.cs",
+              "RelativeToolTip": "REF\\P3R.CostumeFramework\\P3R.CostumeFramework\\Costumes\\CostumeDescService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T20:39:01.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 504,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WeaponDescService.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\WeaponDescService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAUwCQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T20:39:41.915Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Program.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Program.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Program.cs*",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Program.cs*",
+              "ViewState": "AQIAACcAAAAAAAAAAAAjwDIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:53:36.62Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeaponHooks.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowFMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T22:42:27.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FEpisode.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\FEpisode.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAjwFYAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T22:40:44.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GameWeapons.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\Models\\GameWeapons.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAkwAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T22:40:14.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CollectionVoids.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Subroutines\\CollectionVoids.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Subroutines\\CollectionVoids.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Subroutines\\CollectionVoids.cs",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Subroutines\\CollectionVoids.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAIAywJEAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:55:22.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Weapons_Merged.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Merged.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Merged.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Merged.json",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Merged.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:14:48.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Weapons.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Weapons.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Weapons.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Weapons.json",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Weapons.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:14:30.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "SmartFlagEnum.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEnum.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEnum.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEnum.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\SmartFlagEnum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:40:13.81Z",
+              "Title": "Names_Astrea.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Names_Astrea.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Names_Astrea.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Names_Astrea.json",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\RawResources\\Names_Astrea.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:14:26.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SmartEnumNotFoundException.cs",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartEnumNotFoundException.cs",
-              "RelativeDocumentMoniker": "REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartEnumNotFoundException.cs",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartEnumNotFoundException.cs",
-              "RelativeToolTip": "REF\\SmartEnum\\src\\SmartEnum\\Exceptions\\SmartEnumNotFoundException.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T17:48:45.495Z",
+              "DocumentIndex": 4,
+              "Title": "Weapons_Vanilla.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Vanilla.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Vanilla.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Vanilla.json",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Vanilla.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:13:35.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "README.md",
-              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\README.md",
-              "RelativeDocumentMoniker": "P3R.WeaponFramework.Enums\\README.md",
-              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Enums\\README.md",
-              "RelativeToolTip": "P3R.WeaponFramework.Enums\\README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAhAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-09-29T17:32:46.098Z",
+              "DocumentIndex": 12,
+              "Title": "Weapons_Astrea.json",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Astrea.json",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Astrea.json",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Astrea.json",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Output\\Weapons_Astrea.json",
+              "ViewState": "AQIAAAAyAAAAAAAAAAAuwBkyAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T22:12:10.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IWeapon.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\IWeapon.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\IWeapon.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\IWeapon.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Types\\IWeapon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T22:03:03.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ShellType.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Types\\Enums\\ShellType.cs",
+              "ViewState": "AQIAALYAAAAAAAAAAAAcwLgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T22:01:47.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EquipFlag.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\EquipFlag.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\EquipFlag.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\EquipFlag.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Types\\EquipFlag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T22:00:21.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAmwH4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:59:44.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Types\\Weapon.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Types\\Weapon.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Types\\Weapon.cs",
+              "RelativeToolTip": "P3R.WeaponFramework.Tools\\P3R.WeaponFramework.Tools.DataUtils\\Types\\Weapon.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAIwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T21:57:23.668Z",
               "EditorCaption": ""
             }
           ]

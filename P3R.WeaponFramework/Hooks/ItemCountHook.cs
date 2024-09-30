@@ -23,8 +23,10 @@ internal class ItemCountHook
 
     private int Hook(int itemId)
     {
-        if (this.registry.TryGetWeaponByItemId(itemId, out _))
+        if (this.registry.TryGetWeaponByItemId(itemId, out var weapon))
         {
+            if (weapon.Name == "Unused" || weapon.ModelId < 10)
+                return 0;
             return 1;
         }
 

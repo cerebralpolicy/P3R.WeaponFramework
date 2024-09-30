@@ -23,26 +23,30 @@ public enum ECharacter : ushort
 }
 public class Character : WFEnumWrapper<Character,ushort,ECharacter>
 {
+    private int armbandId;
     private List<ShellType> shells;
     private bool vanilla;
     private bool astrea;
     private bool armed;
 
-    public Character(ECharacter enumValue, List<ShellType> shells, bool vanilla = true, bool astrea = true, bool armed = true) : base(enumValue)
+    public Character(ECharacter enumValue, List<ShellType> shells, bool vanilla = true, bool astrea = true, bool armed = true, int armbandId = -1) : base(enumValue)
     {
+        this.armbandId = armbandId;
         this.shells = shells;
         this.vanilla = vanilla;
         this.astrea = astrea;
         this.armed = armed;
     }
 
-    public Character(string name, ushort value, List<ShellType> shells, bool vanilla = true, bool astrea = true, bool armed = true) : base(name, value)
+    public Character(string name, ushort value, List<ShellType> shells, bool vanilla = true, bool astrea = true, bool armed = true, int armbandId = -1) : base(name, value)
     {
+        this.armbandId = armbandId;
         this.shells = shells;
         this.vanilla = vanilla;
         this.astrea = astrea;
         this.armed = armed;
     }
+    public int ArmbandId => armbandId;
     public List<ShellType> ShellTypes => shells;
     public List<Shell> Shells => shells
       .ConvertAll<Shell>(new(s => s.AsShell()));
@@ -91,16 +95,16 @@ public static class Characters
 {
     public static CharacterDB Lookup => [
             new (ECharacter.NONE, [ShellType.None], false, false, false),
-            new (ECharacter.Player, [ShellType.Player], astrea: false),
-            new (ECharacter.Yukari, [ShellType.Yukari]),
-            new (ECharacter.Stupei, [ShellType.Stupei]),
-            new (ECharacter.Akihiko, [ShellType.Akihiko]),
-            new (ECharacter.Mitsuru, [ShellType.Mitsuru]),
-            new (ECharacter.Fuuka, [], armed: false),
-            new (ECharacter.Aigis, [ShellType.Aigis_SmallArms, ShellType.Aigis_LongArms]),
-            new (ECharacter.Ken, [ShellType.Ken]),
-            new (ECharacter.Koromaru, [ShellType.Koromaru]),
-            new (ECharacter.Shinjiro, [ShellType.Shinjiro], astrea: false),
+            new (ECharacter.Player, [ShellType.Player], astrea: false, armbandId: 3),
+            new (ECharacter.Yukari, [ShellType.Yukari], armbandId: 4),
+            new (ECharacter.Stupei, [ShellType.Stupei], armbandId: 5),
+            new (ECharacter.Akihiko, [ShellType.Akihiko], armbandId: 1),
+            new (ECharacter.Mitsuru, [ShellType.Mitsuru], armbandId: 0),
+            new (ECharacter.Fuuka, [], armed: false, armbandId: 6),
+            new (ECharacter.Aigis, [ShellType.Aigis_SmallArms, ShellType.Aigis_LongArms], armbandId: 7),
+            new (ECharacter.Ken, [ShellType.Ken], armbandId: 9),
+            new (ECharacter.Koromaru, [ShellType.Koromaru], armbandId: 8),
+            new (ECharacter.Shinjiro, [ShellType.Shinjiro], astrea: false, armbandId: 2),
             new (ECharacter.Metis, [ShellType.Metis], vanilla: false),
         ];
     public static bool IsValidCharacter(this ECharacter character, bool isAstrea) => Lookup.Valid(isAstrea).Contains(character);

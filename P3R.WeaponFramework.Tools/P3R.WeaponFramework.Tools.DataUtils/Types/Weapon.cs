@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 
 namespace P3R.WeaponFramework.Tools.DataUtils;
 
+
+
 public struct Weapon
 {
     public Weapon(ECharacter character, Episode episode, int uniqueID, string name, int weaponType, int modelId, WeaponStats stats)
@@ -22,8 +24,8 @@ public struct Weapon
         Name = name;
         WeaponType = weaponType;
         ModelId = modelId;
-        ShellType = ShellExtensions.GetShellType(this);
         Stats = stats;
+        ShellType = Subroutines.ShellFromId(modelId, episode == Episode.ASTREA);
     }
 
     [JsonPropertyName("Character")]
@@ -44,35 +46,35 @@ public struct Weapon
     public ShellType ShellType { get; set; }
     [JsonPropertyName("Stats")]
     public WeaponStats Stats { get; set; }
-    public static ShellTypeWrapper GetWrapper(int modelId, bool isAstrea)
+    public static ShellType GetShell(int modelId, bool isAstrea)
     {
         if (modelId >= 584)
-            return ShellTypeWrapper.Aigis_LongArms;
+            return ShellType.Aigis_LongArms;
         else if (modelId >= 326)
-            return ShellTypeWrapper.Aigis_SmallArms;
+            return ShellType.Aigis_SmallArms;
         else if (modelId >= 100)
         {
             if (isAstrea)
-                return ShellTypeWrapper.Metis;
+                return ShellType.Metis;
             else
-                return ShellTypeWrapper.Shinjiro;
+                return ShellType.Shinjiro;
         }
         else if (modelId >= 90)
-            return ShellTypeWrapper.Koromaru;
+            return ShellType.Koromaru;
         else if (modelId >= 80)
-            return ShellTypeWrapper.Ken;
+            return ShellType.Ken;
         else if (modelId >= 50)
-            return ShellTypeWrapper.Mitsuru;
+            return ShellType.Mitsuru;
         else if (modelId >= 40)
-            return ShellTypeWrapper.Akihiko;
+            return ShellType.Akihiko;
         else if (modelId >= 30)
-            return ShellTypeWrapper.Stupei;
+            return ShellType.Stupei;
         else if (modelId >= 20)
-            return ShellTypeWrapper.Yukari;
+            return ShellType.Yukari;
         else if (modelId >= 10)
-            return ShellTypeWrapper.Player;
+            return ShellType.Player;
         else
-            return ShellTypeWrapper.None;
+            return ShellType.None;
     }
 }
 internal partial class Subroutines

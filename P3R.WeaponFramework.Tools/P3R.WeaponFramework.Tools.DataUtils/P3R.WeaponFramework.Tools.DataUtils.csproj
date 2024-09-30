@@ -35,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\P3R.WeaponFramework.Interfaces\P3R.WeaponFramework.Interfaces.csproj" />
     <ProjectReference Include="..\..\P3R.WeaponFramework\P3R.WeaponFramework.csproj" />
     <ProjectReference Include="..\..\Tools\Atlus-Script-Tools\Source\AtlusScriptLibrary\AtlusScriptLibrary.csproj" />
   </ItemGroup>

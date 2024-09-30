@@ -73,8 +73,7 @@ namespace P3R.WeaponFramework.Weapons
             => weapon.Character == character && weapon.WeaponId == weaponId && IsActiveWeapon(weapon);
 
         private static bool IsActiveWeapon(Weapon weapon)
-            => weapon.IsEnabled
-            && weapon.Character != ECharacter.NONE;
+            => weapon.IsEnabled;
 
     }
 }

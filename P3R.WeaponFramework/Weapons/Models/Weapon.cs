@@ -4,10 +4,11 @@ using P3R.WeaponFramework.Utils;
 using System.Text;
 namespace P3R.WeaponFramework.Weapons.Models;
 
+
 [JsonSourceGenerationOptions(DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
-public class Weapon : IEquatable<Weapon?>
+public class Weapon : IEquatable<Weapon?>, IWeapon
 {
-    private const string DEF_DESC = "[f 2 1]A weapon added with Weapon Framework.[n][e]";
+    private const string DEF_DESC = "[uf 0 5 65278][uf 2 1]A weapon added with Weapon Framework.[n][e]";
     #region ctors
     public Weapon() {
         ShellTarget = ShellType.None;
@@ -86,6 +87,8 @@ public class Weapon : IEquatable<Weapon?>
     public void SetWeaponItemId(int weaponItemId)
     {
         this.WeaponItemId = weaponItemId;
+        if (this.Character == ECharacter.NONE || this.Name == "Unused")
+            return;
         Log.Debug($"Set Weapon Item ID: {this.Character} || {this.Name} || {this.WeaponItemId}");
     }
     private List<string> GetPaths()
@@ -120,8 +123,17 @@ public class Weapon : IEquatable<Weapon?>
     
     public void InitAtlusWeapon()
     {
-        Log.Verbose($"Activating weapon. || {this}");
+        var sb = new StringBuilder();
+        sb.Append($"Activating weapon {WeaponId:X3}");
         IsEnabled = true;
+        if (Name == "Unused" || Character == ECharacter.Fuuka || Character == ECharacter.NONE)
+        {
+            sb.Append(" || Unused.");
+            Log.Verbose(sb.ToString());
+            return; 
+        }
+        sb.Append($" || {this}");
+        Log.Verbose(sb.ToString());
         PopulatePaths();
     }
 
@@ -159,16 +171,27 @@ public class Weapon : IEquatable<Weapon?>
     public override string? ToString()
     {
         var sb = new StringBuilder();
+        void ForEachPath(List<string> paths)
+        {
+            foreach (var path in paths)
+            {
+                sb.AppendLine($"\t{path}");
+            }
+        }
         sb.Append($"Character: {Character} || Weapon: {Name} || SortNum: {SortNum}\nShell Target: {ShellTarget} || ModelId: {ModelId}\n");
         if (BaseModels.Contains(this.ModelId))
         {
-            sb.AppendLine($"Base Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].BasePaths)}");
-            sb.AppendLine($"Shell Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].ShellPaths)}");
+            sb.AppendLine($"Base Paths:");
+            ForEachPath(ShellExtensions.ShellLookup[ShellTarget].BasePaths);
+            sb.AppendLine($"Shell Paths:");
+            ForEachPath(ShellExtensions.ShellLookup[ShellTarget].ShellPaths);
         }
         else
         {
-            sb.AppendLine($"Base Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].WeaponPaths(this))}");
+            sb.AppendLine($"Base Paths:");
+            ForEachPath(ShellExtensions.ShellLookup[ShellTarget].WeaponPaths(this));
         }
+
         return sb.ToString();
     }
 

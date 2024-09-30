@@ -67,30 +67,30 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
     {
         var assembly = Assembly.GetExecutingAssembly();
         var name = flagValue.ToString();
+        Log.Debug($"Initializing {name} episode resources.");
         var weapResPath = $"P3R.WeaponFramework.Resources.{name}.Weapons.json";
         var descResPath = $"P3R.WeaponFramework.Resources.{name}.Descriptions.msg";
 
-        Log.Information($"Processing {name} descriptions.");
         weapons = LoadWeapons(assembly, weapResPath, name);
-        descriptions = LoadDescriptions(assembly, descResPath);
+        descriptions = LoadDescriptions(assembly, descResPath, name);
     }
     private List<Weapon> LoadWeapons(Assembly assembly, string path, string name)
     {
-        var weapons = new List<Weapon>();
+        Log.Debug($"Initializing {name} weapons.");
+
         using var stream = assembly.GetManifestResourceStream(path);
         if (stream == null)
             throw new NullReferenceException(nameof(stream));
         using var reader = new StreamReader(stream);
         var json = reader.ReadToEnd();
-        var gameWeapons = JsonSerializer.Deserialize<Dictionary<ECharacter, Weapon[]>>(json);
+        var gameWeapons = JsonSerializer.Deserialize<List<Weapon>>(json);
         if (gameWeapons == null || gameWeapons.Count == 0)
             throw new NullReferenceException($"No weapons found for {path}");
-        foreach (var charWeapons in gameWeapons)
-            weapons.AddRange(charWeapons.Value);
+        Log.Debug($"Total weapon defs: {gameWeapons.Count} (Should be 511).");
+        var weapons = gameWeapons;
         var isAstrea = name == "Astrea";
         foreach (var weapon in weapons)
-            if (weapon.Name != "Unused" && weapon.Name != "No Equipment" && weapon.Character.IsValidCharacter(isAstrea))
-                weapon.InitAtlusWeapon();
+            weapon.InitAtlusWeapon();
         for (int i = 0; i < NUM_EPISODE_WEAPS; i++)
         {
             var weaponId = BASE_EPISODE_WEAP_ID + i;
@@ -107,26 +107,9 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         }
         return weapons;
     }
-    private void AddModSlots(bool isAstrea = false)
+    private List<string> LoadDescriptions(Assembly assembly, string path, string name)
     {
-        for (int i = 0; i < NUM_EPISODE_WEAPS; i++)
-        {
-            var weaponId = BASE_EPISODE_WEAP_ID + i;
-            var weapon = new Weapon(weaponId)
-            {
-                IsVanilla = !isAstrea,
-                IsAstrea = isAstrea,
-                IsModded = true,
-                WeaponId = weaponId,
-                ModelId = 10,
-                ShellTarget = ShellType.Unassigned,
-            };
-
-        }
-    }
-    private List<string> LoadDescriptions(Assembly assembly, string path)
-    {
-        
+        Log.Debug($"Initializing {name} descriptions.");
         List<string> entries = new List<string>();
         using var stream = assembly.GetManifestResourceStream(path);
         if (stream == null)
@@ -135,12 +118,13 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         while (!reader.EndOfStream)
         {
             var line = reader.ReadLine();
-            if (line?.StartsWith("[f") == true)
+            if (line?.StartsWith("[uf") == true)
             {
                 if (!line.EndsWith("[n][e]"))
                 {
                     line = $"{line}[n][e]";
                 }
+                
                 entries.Add(line);
             }
         }
@@ -148,7 +132,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         // Add placeholder entries.
         for (int i = 0; i < 100; i++)
         {
-            entries.Add("[f 2 1]Placeholder.[n][e]");
+            entries.Add("[uf 0 5 65278][uf 2 1]未使用[n][e]");
         }
         return entries;
     }

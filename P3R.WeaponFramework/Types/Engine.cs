@@ -58,10 +58,9 @@ public unsafe struct FName : IEquatable<FName>, IEquatable<Emitter.FName>, IMapH
         return (block << 19) + block + (offset << 0x10) + offset + (offset >> 4) + field04;
     }
 
-    public override bool Equals(object obj)
-    {
-        return obj is FName && Equals((FName)obj);
-    }
+    public override bool Equals(object? obj) => obj is not null && obj is FName && Equals((FName)obj);
+
+    public override int GetHashCode() => (int)GetTypeHash();
 }
 [StructLayout(LayoutKind.Sequential)]
 public unsafe struct FString
