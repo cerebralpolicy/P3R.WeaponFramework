@@ -123,16 +123,20 @@ public class Shell : WFEnumWrapper<Shell, ShellType>
         .ToList();
     public List<string> WeaponPaths(Weapon weapon)
     {
-        var modelSet = weapon.SetFromWeapon();
         if (BaseModels.Contains(weapon.ModelId))
         {
             return BasePaths;
         }
         else
         {
-            var suffix = (int)modelSet;
+            var chara = weapon.Character;
+            var set = ModelPairsInt[weapon.ModelId];
             var m = BasePaths;
-            m.ForEach(p => { _ = p.Remove(p.Length - 3).Concat($"{(suffix + m.IndexOf(p)*200):000}"); }) ;
+            for (var i = 0; i < m.Count; i++)
+            {
+                var suffix = set + 200*(i);
+                m[i] = GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{suffix:000}");
+            }
             return m;
         }
 

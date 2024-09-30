@@ -22,3 +22,6 @@
 [submodule "REF/p3rpc.nativetypes"]
 	path = REF/p3rpc.nativetypes
 	url = https://github.com/rirurin/p3rpc.nativetypes.git
+[submodule "REF/SmartEnum"]
+	path = REF/SmartEnum
+	url = https://github.com/ardalis/SmartEnum.git

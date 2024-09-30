@@ -159,7 +159,7 @@ public class Weapon : IEquatable<Weapon?>
     public override string? ToString()
     {
         var sb = new StringBuilder();
-        sb.Append($"Character: {Character} || Weapon: {Name} || SortNum: {SortNum}\nShell Target: {ShellTarget} || ModelId: {ModelId}");
+        sb.Append($"Character: {Character} || Weapon: {Name} || SortNum: {SortNum}\nShell Target: {ShellTarget} || ModelId: {ModelId}\n");
         if (BaseModels.Contains(this.ModelId))
         {
             sb.AppendLine($"Base Paths:\n{string.Join('\n', ShellExtensions.ShellLookup[ShellTarget].BasePaths)}");

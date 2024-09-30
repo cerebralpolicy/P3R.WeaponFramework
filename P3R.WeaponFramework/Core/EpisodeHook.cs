@@ -1,9 +1,26 @@
-﻿namespace P3R.WeaponFramework.Core;
+﻿using P3R.WeaponFramework.Weapons.Models;
+
+namespace P3R.WeaponFramework.Core;
 
 internal unsafe class EpisodeHookBase
 {
     public delegate bool IsAstreaSave();
     public IsAstreaSave? isAstreaSave;
+
+    public static Episode Vanilla = new(FEpisode.Vanilla);
+    public static Episode Astrea = new(FEpisode.Astrea);
+
+    public Episode GetCurrentEpisode()
+    {
+        if (AstreaSave)
+            return Astrea;
+        else
+            return Vanilla;
+    }
+
+    public List<Weapon> Weapons => GetCurrentEpisode().Weapons;
+    public List<string> Descriptions => GetCurrentEpisode().Descriptions;
+
     public bool InvokeAstreaSave() { return isAstreaSave != null && isAstreaSave.Invoke(); }
     public bool AstreaSave => InvokeAstreaSave();
     public EpisodeHookBase()

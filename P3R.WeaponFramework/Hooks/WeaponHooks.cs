@@ -93,7 +93,7 @@ internal unsafe class WeaponHooks
         var newItemIndex = 513;
         foreach (var weapon in registry.GetActiveWeapons())
         {
-            if (weapon.WeaponId < GameWeapons.BASE_MOD_WEAP_ID)
+            if (weapon.WeaponId < Episode.BASE_EPISODE_WEAP_ID)
             {
                 continue;
             }

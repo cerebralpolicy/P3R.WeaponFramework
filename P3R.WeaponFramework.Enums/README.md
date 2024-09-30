@@ -1,0 +1,1 @@
+﻿This module is by and large an adaptation of [Ardalis' SmartEnum](https://github.com/ardalis/SmartEnum). Some tweaking was needed to fit their system to the mod, and the methodology is slightly altered such that P3WF Enums are wrappers that contain (and thus extend) `System.Enum` objects.

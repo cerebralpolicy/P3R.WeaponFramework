@@ -28,4 +28,57 @@ internal static class TypeExtensions
             return (int)TypeDescriptor.GetConverter(_enum).ConvertTo(_enum, typeof(int))!;
         return 0;
     }
+    public static bool IsWFFlagEnum(this Type type) =>
+    IsWFFlagEnum(type, out var _);
+    public static bool IsWFFlagEnum(this Type type, out Type[]? genericArguments)
+    {
+        if (type is null || type.IsAbstract || type.IsGenericTypeDefinition)
+        {
+            genericArguments = null;
+            return false;
+        }
+
+        do
+        {
+            if (type.IsGenericType &&
+                type.GetGenericTypeDefinition() == typeof(WFFlagEnumBase<,>))
+            {
+                genericArguments = type.GetGenericArguments();
+                return true;
+            }
+
+            type = type.BaseType;
+        }
+        while (!(type is null));
+
+        genericArguments = null;
+        return false;
+    }
+    public static bool TryGetFlagEnumValuesByName<TEnum, TValue>(this Dictionary<string, TEnum> dictionary, string names, [NotNullWhen(true)] out IEnumerable<TEnum>? outputEnums)
+            where TEnum : WFFlagEnumBase<TEnum, TValue>
+            where TValue : IEquatable<TValue>, IComparable<TValue>
+    {
+        var outputList = new List<TEnum>(dictionary.Count);
+
+        var commaSplitNameList = names.Replace(" ", "").Trim().Split(',');
+        Array.Sort(commaSplitNameList);
+
+        foreach (var enumValue in dictionary.Values)
+        {
+            var result = Array.BinarySearch(commaSplitNameList, enumValue.Name);
+            if (result >= 0)
+            {
+                outputList.Add(enumValue);
+            }
+        }
+
+        if (!outputList.Any())
+        {
+            outputEnums = null;
+            return false;
+        }
+
+        outputEnums = outputList.ToList();
+        return true;
+    }
 }

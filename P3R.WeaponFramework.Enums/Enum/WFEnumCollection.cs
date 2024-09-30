@@ -15,6 +15,8 @@ public abstract class WFEnumCollection<TEnum, TValue, EEnum> : KeyedCollection<E
     where EEnum : struct, Enum
 {
 
+    public EEnum WrapperToEnum(TEnum tEnum) => Items.Where(item => item.Equals(tEnum)).Select(item => item.EnumValue).FirstOrDefault();
+    public TEnum EnumToWrapper(EEnum eEnum) => Items.Where(item => item.Equals(eEnum)).First();
 
     protected WFEnumCollection()
     {

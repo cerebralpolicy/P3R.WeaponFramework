@@ -6,6 +6,7 @@ public abstract class WFEnumWrapper<TEnum, EEnum> : WFEnumBase<TEnum, int>, IEqu
     where TEnum : WFEnumBase<TEnum, int>
     where EEnum : struct, Enum
 {
+    
     private readonly EEnum _enumValue;
     public EEnum EnumValue => _enumValue;
     public WFEnumWrapper(EEnum enumValue) : base(enumValue.ToString(), enumValue.ToValue())
