@@ -61,9 +61,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestMod", "TestMod", "{5E7CCDE3-B3EC-4240-BDCA-9356684BA4F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WF.HockeyNightInTartarus", "P3R.WF.HockeyNightInTartarus\P3R.WF.HockeyNightInTartarus.csproj", "{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WF.HockeyNightInTartarus", "P3R.WF.HockeyNightInTartarus\P3R.WF.HockeyNightInTartarus.csproj", "{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{9ABB46D7-B3FE-426D-8353-4B3610658924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WeaponFramework.Types", "P3R.WeaponFramework.Types\P3R.WeaponFramework.Types.csproj", "{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WeaponFramework.DataGUI", "P3R.WeaponFramework.Tools\P3R.WeaponFramework.DataGUI\P3R.WeaponFramework.DataGUI.csproj", "{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +143,14 @@ Global
 		{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +177,7 @@ Global
 		{337E6983-BA47-444F-8747-42BD1AF06C4F} = {02A87AE7-DDE7-4C23-ABCD-70487FE378E6}
 		{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9} = {5E7CCDE3-B3EC-4240-BDCA-9356684BA4F9}
 		{9ABB46D7-B3FE-426D-8353-4B3610658924} = {5E7CCDE3-B3EC-4240-BDCA-9356684BA4F9}
+		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8} = {063073D9-7693-4326-9FEC-C1EF59FDF735}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E93B0DD-08AB-4E6E-A817-7A7060208A23}

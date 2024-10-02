@@ -131,7 +131,8 @@ internal unsafe class WeaponHooks
             newItem->GetFLG = 0;
             newItem->ModelID = (ushort)weapon.ModelId;
             newItem->Flags = 0;
-            weaponDesc.AddDescription(weapon.Description);
+            //weaponDesc.AddDescription(weapon.Description);
+            weaponDesc.SetWeaponDesc(weapon.WeaponItemId, weapon.Description);
             Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
             newItemIndex++;
         }

@@ -1,7 +1,7 @@
 ﻿name: Wood Stick
 shell: Player
 model:
-  mesh_path1:
+  mesh_path1: weapon-mesh
   mesh_path2:
 stats:
   attr_id: BTL_DATA_ATTR_STRIKE

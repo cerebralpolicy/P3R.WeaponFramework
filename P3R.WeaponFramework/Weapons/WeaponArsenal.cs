@@ -54,7 +54,7 @@ namespace P3R.WeaponFramework.Weapons
             ApplyWeaponConfig(weapon, config);
             OutputStep("Loading files");
             LoadWeaponFiles(mod, weapon, weaponDir);
-            Log.Information($"Weapon created: {weapon.Character} || {weapon.Name} || Weapon ID: {weapon.WeaponItemId}\nFolder: {weaponDir}");
+            Log.Information($"Weapon created: {weapon.Character} || {weapon.Name} || Weapon ID: {weapon.WeaponItemId}\nFolder: {weaponDir}\nStats: {weapon.Stats.Attack} ATK, {weapon.Stats.Accuracy} ACC\nShell Target: {weapon.ShellTarget}\nDescription: {weapon.Description}");
             if (!weapon.IsEnabled)
                 weapon.IsEnabled = true;
             return weapon;
@@ -65,6 +65,7 @@ namespace P3R.WeaponFramework.Weapons
             ModUtils.IfNotNull(config.Model, model => weapon.Config.Model = model);
             ModUtils.IfNotNull(config.Stats, stats =>
             {
+                Log.Debug($"{nameof(WeaponConfig)}.Stats");
                 weapon.Config.Stats = stats;
                 weapon.VerifyPrices();
             });
