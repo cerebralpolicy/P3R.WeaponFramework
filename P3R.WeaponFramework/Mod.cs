@@ -53,9 +53,12 @@ namespace P3R.WeaponFramework
         /// </summary>
         private readonly IModConfig modConfig;
 
+        private readonly EpisodeHook episodeHook;
         private readonly WeaponService weapons;
         private readonly WeaponRegistry weaponRegistry;
         private readonly WeaponDescService weaponDescService;
+
+        private List<Task> modQueue = new List<Task>();
 
         public Mod(ModContext context)
         {
@@ -70,6 +73,10 @@ namespace P3R.WeaponFramework
 
             Project.Init(modConfig, modLoader, log, color: Color.LightGreen);
             Log.LogLevel = config.LogLevel;
+
+            Episode vanilla = new(FEpisode.Vanilla);
+            Episode astrea = new(FEpisode.Astrea);
+
             this.modLoader.GetController<IUnrealEssentials>().TryGetTarget(out var essentials);
             this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
             this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
@@ -80,17 +87,31 @@ namespace P3R.WeaponFramework
             //if (essentials == null) throw new NullReferenceException(nameof(essentials));
             // INIT DATA //
             LoadUnrealComponent(essentials!, UnrealComponent.Shells);
-            this.weaponRegistry = new();
-            this.weaponDescService = new(atlusAssets!);
+            this.episodeHook = new(astrea,vanilla);
+            this.weaponRegistry = new(episodeHook);
+            this.weaponDescService = new(episodeHook,atlusAssets!);
             this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
 
-            modLoader.ModLoaded += OnModLoaded;
-            modLoader.OnModLoaderInitialized += this.weapons.InitShellService;
+            modLoader.OnModLoaderInitialized += AllModsLoaded;
+            //modLoader.ModLoaded += OnModLoaded;
+            //modLoader.OnModLoaderInitialized += this.weapons.InitShellService;
 
             Project.Start();
         }
-
-        private void OnModLoaded(IModV1 mod, IModConfigV1 config)
+        private List<Task> ModsToLoad = new List<Task>();
+        private void AllModsLoaded()
+        {
+            var mods = modLoader.GetActiveMods();
+            foreach (var mod in mods)
+            {
+                LoadMod(mod.Mod, mod.Generic);
+            }
+        }
+        public async Task QueueMod(IModV1 mod, IModConfigV1 config)
+        {
+            await Task.Run(() => { LoadMod(mod, config); });
+        }
+        private void LoadMod(IModV1 mod, IModConfigV1 config)
         {
             if (!config.ModDependencies.Contains(this.modConfig.ModId))
             {

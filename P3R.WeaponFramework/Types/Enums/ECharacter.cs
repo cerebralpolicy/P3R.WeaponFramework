@@ -28,9 +28,18 @@ public class Character : WFEnumWrapper<Character,ushort,ECharacter>
     private bool vanilla;
     private bool astrea;
     private bool armed;
+    private EEquipFlag equipId;
+    private EWeaponType? weaponType;
 
     public Character(ECharacter enumValue, List<ShellType> shells, bool vanilla = true, bool astrea = true, bool armed = true, int armbandId = -1) : base(enumValue)
     {
+        equipId = Enum.Parse<EEquipFlag>(enumValue.ToString());
+        if (Enum.TryParse(enumValue.ToString(), out EWeaponType weaponType))
+        {
+            this.weaponType = weaponType;
+        }
+        else
+            this.weaponType = null;
         this.armbandId = armbandId;
         this.shells = shells;
         this.vanilla = vanilla;
@@ -40,6 +49,13 @@ public class Character : WFEnumWrapper<Character,ushort,ECharacter>
 
     public Character(string name, ushort value, List<ShellType> shells, bool vanilla = true, bool astrea = true, bool armed = true, int armbandId = -1) : base(name, value)
     {
+        equipId = Enum.Parse<EEquipFlag>(name);
+        if (Enum.TryParse(name, out EWeaponType weaponType))
+        {
+            this.weaponType = weaponType;
+        }
+        else
+            this.weaponType = null;
         this.armbandId = armbandId;
         this.shells = shells;
         this.vanilla = vanilla;
@@ -53,7 +69,8 @@ public class Character : WFEnumWrapper<Character,ushort,ECharacter>
     public bool IsAstrea => astrea;
     public bool IsVanilla => vanilla;
     public bool IsArmed => armed;
-
+    public EEquipFlag EquipID => equipId;
+    public EWeaponType WeaponType => (EWeaponType)weaponType!;
 }
 
 public class CharacterDB : WFEnumCollection<Character, ushort, ECharacter>
@@ -108,6 +125,14 @@ public static class Characters
             new (ECharacter.Metis, [ShellType.Metis], vanilla: false),
         ];
     public static bool IsValidCharacter(this ECharacter character, bool isAstrea) => Lookup.Valid(isAstrea).Contains(character);
+    public static EWeaponType ToWeaponType(this ECharacter character) 
+    {
+        if (character == ECharacter.Fuuka)
+            return EWeaponType.NONE;
+        else
+            return Enum.Parse<EWeaponType>(character.ToString());
+    }
+    public static EEquipFlag ToEquipID(this ECharacter character) => Enum.Parse<EEquipFlag>(character.ToString());
     public static List<ECharacter> Armed => Lookup.Armed;
     public static List<ECharacter> Unarmed => Lookup.Unarmed;
     public static List<ECharacter> Astrea => Lookup.Astrea;

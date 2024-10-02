@@ -1,0 +1,21 @@
+{
+  "ModId": "P3R.WF.HockeyNightInTartarus",
+  "ModName": "Hockey Night in Tartarus",
+  "ModAuthor": "CerebralPolicy",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Description",
+  "ModDll": "P3R.WF.HockeyNightInTartarus.dll",
+  "ModIcon": "Logo.png",
+  "ModR2RManagedDll32": "x86/P3R.WF.HockeyNightInTartarus.dll",
+  "ModR2RManagedDll64": "x64/P3R.WF.HockeyNightInTartarus.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "P3R.WF.HockeyNightInTartarus.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [ "UnrealEssentials", "P3R.WeaponFramework" ],
+  "OptionalDependencies": [],
+  "SupportedAppId": ["p3r.exe"],
+  "ProjectUrl": ""
+}

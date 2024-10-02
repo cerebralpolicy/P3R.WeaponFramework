@@ -96,11 +96,12 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
             var weaponId = BASE_EPISODE_WEAP_ID + i;
             var weapon = new Weapon(weaponId)
             {
+                Character = ECharacter.NONE,
                 IsVanilla = !isAstrea,
                 IsAstrea = isAstrea,
                 IsModded = true,
                 WeaponId = weaponId,
-                ModelId = 10,
+                ModelId = 8,
                 ShellTarget = ShellType.Unassigned,
             };
             weapons.Add(weapon);

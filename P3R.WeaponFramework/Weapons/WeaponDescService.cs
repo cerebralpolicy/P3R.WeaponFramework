@@ -6,14 +6,18 @@ using Unreal.AtlusScript.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons;
 
-internal class WeaponDescService : EpisodeHookBase
+internal class WeaponDescService
 {
-
+    private EpisodeHook episodeHook;
     private readonly IAtlusAssets atlusAssets;
     
-    public WeaponDescService(IAtlusAssets atlusAssets) : base()
-    {
+    private List<string> Descriptions => episodeHook.Descriptions;
 
+    public void AddDescription(string description) => Descriptions.Add(description);
+
+    public WeaponDescService(EpisodeHook episodeHook, IAtlusAssets atlusAssets)
+    {
+        this.episodeHook = episodeHook;
         this.atlusAssets = atlusAssets;
     }
 

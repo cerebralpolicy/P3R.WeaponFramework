@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Core;
 using P3R.WeaponFramework.Weapons.Models;
+using Reloaded.Hooks.Definitions.Structs;
 using System.Diagnostics.CodeAnalysis;
 
 namespace P3R.WeaponFramework.Weapons
@@ -12,9 +13,9 @@ namespace P3R.WeaponFramework.Weapons
             Weapons = weapons;
             arsenal = new(weapons);
         }
-        public WeaponRegistry()
+        public WeaponRegistry(EpisodeHook episodeHook)
         {
-            Weapons = new();
+            Weapons = new(episodeHook);
             arsenal = new(this.Weapons);
         }
         public GameWeapons Weapons { get; }
@@ -34,7 +35,12 @@ namespace P3R.WeaponFramework.Weapons
             weapon = Weapons.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
             return weapon != null;
         }
-
+        public Task RegisterModToQueue(string modId, string modDir)
+        {
+            return Task.Run(() => { 
+                RegisterMod(modId, modDir);
+            });
+        }
         public void RegisterMod(string modId, string modDir)
         {
             var mod = new WeaponMod(modId, modDir);
@@ -42,7 +48,9 @@ namespace P3R.WeaponFramework.Weapons
             {
                 return;
             }
-            foreach (var character in Characters.Armed)
+            var validChars = Characters.Armed;
+            Log.Debug($"{validChars.Count}");
+            foreach (var character in Characters.Lookup.Armed)
             {
                 var characterDir = Path.Join(mod.WeaponsDir, character.ToString());
                 if (!Directory.Exists(characterDir))
@@ -56,14 +64,10 @@ namespace P3R.WeaponFramework.Weapons
                     try
                     {
                         arsenal.Create(mod, weaponDir, character);
-                        if (character == ECharacter.Aigis)
-                        {
-                            //arsenal.Create(mod, weaponDir, CharacterWrapper.AigisReal);
-                        }
                     }
                     catch (Exception ex)
                     {
-                        Log.Error($"{ex.Message} - Failed to create weapon from folder.\nFolder: {weaponDir}");
+                        Log.Error($"{ex.Message}\n{ex.Source}\n Failed to create weapon from folder.\nFolder: {weaponDir}");
                     }
                 }
             }

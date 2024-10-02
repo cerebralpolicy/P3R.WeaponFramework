@@ -62,7 +62,7 @@ internal static partial class Subroutines
         }
         return WeaponList(episode);
     }
-    private static ECharacter GetCharacter(this EquipFlag flag)
+    private static ECharacter GetCharacter(this EEquipFlag flag)
     {
         var val = (int)flag;
         var log = Math.Log2(val);

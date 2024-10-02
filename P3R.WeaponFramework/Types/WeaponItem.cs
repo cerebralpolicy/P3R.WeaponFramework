@@ -1,16 +1,17 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text.Json.Serialization;
 using P3R.WeaponFramework.Utils;
+using FString = Unreal.ObjectsEmitter.Interfaces.Types.FString;
 
 namespace P3R.WeaponFramework.Types;
 
 [StructLayout(LayoutKind.Explicit)]
 public class WeaponItem : IEquatable<WeaponItem?>
 {
-    [FieldOffset(0x0000)] public FString ItemDef;
+    [FieldOffset(0x0000)] public Emitter.FString ItemDef;
     [FieldOffset(0x0010)] public ushort SortNum;
-    [FieldOffset(0x0014)] public uint WeaponType;
-    [FieldOffset(0x0018)] public EquipFlag EquipID;
+    [FieldOffset(0x0014)] public EWeaponType WeaponType;
+    [FieldOffset(0x0018)] public EEquipFlag EquipID;
     [FieldOffset(0x001C)] public EBtlDataAttr AttrID;
     [FieldOffset(0x001E)] public ushort Rarity;
     [FieldOffset(0x0020)] public ushort Tier;
@@ -31,7 +32,7 @@ public class WeaponItem : IEquatable<WeaponItem?>
     public WeaponItem()
     {
     }
-    public WeaponItem(FString itemDef, ushort sortNum, uint weaponType, EquipFlag equipID, EBtlDataAttr attrID, ushort rarity, ushort tier, ushort attack, ushort accuracy, ushort strength, ushort magic, ushort endurance, ushort agility, ushort luck, EItemSkillId skillID, uint? price, uint? sellPrice, ushort getFLG, ushort modelID, uint flags)
+    public WeaponItem(FString itemDef, ushort sortNum, EWeaponType weaponType, EEquipFlag equipID, EBtlDataAttr attrID, ushort rarity, ushort tier, ushort attack, ushort accuracy, ushort strength, ushort magic, ushort endurance, ushort agility, ushort luck, EItemSkillId skillID, uint? price, uint? sellPrice, ushort getFLG, ushort modelID, uint flags)
     {
         ItemDef = itemDef;
         SortNum = sortNum;
@@ -107,7 +108,7 @@ public class WeaponItem : IEquatable<WeaponItem?>
             ItemDef = fWeaponItem.ItemDef,
             SortNum = fWeaponItem.SortNum,
             WeaponType = fWeaponItem.WeaponType,
-            EquipID = (EquipFlag)fWeaponItem.EquipID,
+            EquipID = (EEquipFlag)fWeaponItem.EquipID,
             AttrID = (EBtlDataAttr)fWeaponItem.AttrID,
             Rarity = fWeaponItem.Rarity,
             Tier = fWeaponItem.Tier,

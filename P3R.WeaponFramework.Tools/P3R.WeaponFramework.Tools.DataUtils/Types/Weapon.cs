@@ -73,6 +73,8 @@ public struct Weapon
             return ShellType.Yukari;
         else if (modelId >= 10)
             return ShellType.Player;
+        else if (modelId == 8)
+            return ShellType.Unassigned;
         else
             return ShellType.None;
     }

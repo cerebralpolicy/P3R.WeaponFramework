@@ -11,10 +11,25 @@ internal unsafe class WeaponNameHook
     {
         uObjects.FindObject("DatItemWeaponNameDataAsset", obj =>
         {
+
             var nameTable = (UItemNameListTable*)obj.Self;
             var nameEntries = nameTable->Data;
+            void SetName(int index, string name = "Unused")
+            {
+                nameTable->Data.allocator_instance[index] = unreal.FString(name);
+            }
+            var firstNameCount = nameTable->Data.arr_num;
+            var weapCount = registry.Weapons.Count;
+            var entriesToAdd = 100;
+            Log.Debug($"Generating {entriesToAdd} additional name slots.");
+            for (int i = 0; i < entriesToAdd; i++)
+            {
+                var idx = firstNameCount + i;
+                SetName(idx);
+            }
+
             var nameCount = nameTable->Data.arr_num;
-            for (int i = 0; i < nameCount; i++)
+            for (int i = 0; i < registry.Weapons.Count; i++)
             {
                 var weapon = registry.Weapons.FirstOrDefault(x => x.WeaponItemId == i);
 

@@ -2,6 +2,7 @@
 using System.Text.Json.Serialization;
 using P3R.WeaponFramework.Utils;
 using System.Text;
+using System.IO;
 namespace P3R.WeaponFramework.Weapons.Models;
 
 
@@ -94,9 +95,9 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
     private List<string> GetPaths()
     {
         List<string> strings = [];
-        ModUtils.IfNotNull(Config.Model.MeshPath1, path =>
+        ModUtils.IfNotNull(Config.GetOrParseAssetPath(Config.Model.MeshPath1), path =>
         { strings.Add(path!); });
-        ModUtils.IfNotNull(Config.Model.MeshPath2, path =>
+        ModUtils.IfNotNull(Config.GetOrParseAssetPath(Config.Model.MeshPath2), path =>
         { strings.Add(path!); });
         return strings;
     }

@@ -7,6 +7,7 @@ using Reloaded.Hooks.Definitions.X64;
 using Unreal.ObjectsEmitter.Interfaces;
 using Unreal.ObjectsEmitter.Interfaces.Types;
 using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
+using static P3R.WeaponFramework.Types.Characters;
 
 namespace P3R.WeaponFramework.Hooks;
 
@@ -89,33 +90,56 @@ internal unsafe class WeaponHooks
             }
             continue;
         }
-        var newItemIndex = 513;
+        ushort NullableField(int? statField)
+        {
+            if (statField == null)
+                return 0;
+            else
+                return (ushort)statField.Value;
+        }
+        uint NullablePrice(int? statField)
+        {
+            if (statField == null)
+                return 0;
+            else
+                return (uint)statField.Value;
+        }
+        var newItemIndex = 512;
         foreach (var weapon in registry.GetActiveWeapons())
         {
             if (weapon.WeaponId < Episode.BASE_EPISODE_WEAP_ID)
             {
                 continue;
             }
-
+            var item = new FWeaponItemList(weapon);
             var newItem = &weaponItemList->Data.allocator_instance[newItemIndex];
+            newItem->SortNum = (ushort)weapon.SortNum;
+            newItem->WeaponType = weapon.Character.ToWeaponType();
+            newItem->EquipID = weapon.Character.ToEquipID();
+            var stats = weapon.Stats;
+            newItem->Rarity = (ushort)stats.Rarity;
+            newItem->Tier = (ushort)stats.Tier;
+            newItem->Attack = (ushort)stats.Attack;
+            newItem->Accuracy = (ushort)stats.Accuracy;
+            newItem->Strength = NullableField(stats.Strength);
+            newItem->Magic = NullableField(stats.Magic);
+            newItem->Endurance = NullableField(stats.Endurance);
+            newItem->Agility = NullableField(stats.Agility);
+            newItem->Luck = NullableField(stats.Luck);
+            newItem->Price = NullablePrice(stats.Price);
+            newItem->SellPrice = NullablePrice(stats.SellPrice);
+            newItem->GetFLG = 0;
             newItem->ModelID = (ushort)weapon.ModelId;
-            newItem->EquipID = AssetUtils.GetEquipFromChar(weapon.Character);
-            weapon.SetWeaponItemId(newItemIndex);
-            weaponDesc.SetWeaponDesc(newItemIndex, weapon.Description);
+            newItem->Flags = 0;
+            weaponDesc.AddDescription(weapon.Description);
             Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
             newItemIndex++;
         }
         this.weaponDesc.Init();
     }
-
     private void SetWeaponIdImpl(UAppCharacterComp* comp)
     {
         var character = comp->baseObj.Character;
-        ECharacter wfCharacter = character;
-        if (character < ECharacter.Player || character > ECharacter.Metis)
-        {
-            return;
-        }
         if (!Characters.Armed.Contains(character))
         { return; }
         var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
@@ -123,7 +147,12 @@ internal unsafe class WeaponHooks
         this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var weapon);
         if (weapon != null)
         {
-            comp->mSetWeaponModelID = weaponShells.UpdateWeapon(character, weapon.WeaponId);
+            //var shellUpdate = weaponShells.UpdateWeapon(character, equipWeaponItemId);
+            //if (shellUpdate != weapon.ModelId)
+                //Log.Error("Model Id Mismatch");
+            comp->mSetWeaponModelID = weapon.ModelId;
+            weaponShells.RedirectHandler(weapon);
+            //weaponShells.UpdateWeapon(weapon.Character, equipWeaponItemId);
         }
     }
 }

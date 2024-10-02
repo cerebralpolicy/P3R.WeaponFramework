@@ -9,6 +9,7 @@ public static partial class AssetUtils
         {
             WeaponAssetType.Base_Mesh => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/SKEL_Wp{chara.Format()}"),
             WeaponAssetType.Weapon_Mesh => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{model.Format()}"),
+            WeaponAssetType.Weapon_Mesh2 => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{(model + 200):D3}"),
 
             WeaponAssetType.Base_Anim => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/SKEL_Wp{chara.Format()}"),
             WeaponAssetType.Weapon_Anim => null,
@@ -16,17 +17,18 @@ public static partial class AssetUtils
         };
         return assetFile;
     }
+    public static string GetModAssetFile(ECharacter chara, string subfolder, string modelTypeName, int modelTypeIndex) => GetAssetPath($"$/Game/Xrd777/Characters/Weapon/{subfolder}/SK_Wp{chara.Format()}_{modelTypeName}{modelTypeIndex}");
     public static string GetVanillaAssetFile(ECharacter chara, int modelSuffix) => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{modelSuffix:000}");
     public static string GetUnrealAssetPath(string assetFile)
     {
         var assetPath = GetAssetPath(assetFile);
         return $"{assetPath}.{Path.GetFileName(assetPath)}";
     }
-    public static ECharacter GetCharFromEquip(EquipFlag flag)
+    public static ECharacter GetCharFromEquip(EEquipFlag flag)
     => Enum.Parse<ECharacter>(flag.ToString());
 
-    public static EquipFlag GetEquipFromChar(ECharacter character)
-        => Enum.Parse<EquipFlag>(character.ToString());
+    public static EEquipFlag GetEquipFromChar(ECharacter character)
+        => Enum.Parse<EEquipFlag>(character.ToString());
 
     public static string Format(this ECharacter character) => ((int)character).ToString("0000");
     public static string Format(this WeaponModelSet weaponModelSet) => ((int)weaponModelSet).ToString("000");

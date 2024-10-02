@@ -93,6 +93,8 @@
 
   <ItemGroup>
     <Folder Include="Hooks\Weapons\Collections\" />
+    <Folder Include="Types\Collections\" />
+    <Folder Include="Types\Native\" />
     <Folder Include="Weapons\Models\Types\" />
   </ItemGroup>
 

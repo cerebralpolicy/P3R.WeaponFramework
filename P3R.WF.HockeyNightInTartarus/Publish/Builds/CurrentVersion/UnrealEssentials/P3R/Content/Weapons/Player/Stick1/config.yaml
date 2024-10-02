@@ -1,0 +1,16 @@
+﻿name: Wood Stick
+shell: Player
+stats:
+  attr_id: BTL_DATA_ATTR_STRIKE
+  rarity: 1
+  tier: 1
+  attack: 122
+  accuracy: 95
+  strength: 0
+  magic: 0
+  endurance: 0
+  agility: 0
+  luck: 0
+  skill_id: Freeze_Med
+  price: 11360
+  sell_price: 2840

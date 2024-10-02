@@ -19,6 +19,7 @@ internal struct ShellPathEntry
 
     public ShellPathEntry(ShellType shellType)
     {
+
         basePaths = shellType.AsShell().BasePaths;
         defaultPaths = shellType.AsShell().ShellPaths;
         nowPaths = shellType.AsShell().BasePaths;
@@ -56,14 +57,19 @@ internal struct ShellPathEntry
 internal class ShellPathLibrary: IEnumerable<KeyValuePair<ShellType, ShellPathEntry>>, IReadOnlyCollection<KeyValuePair<ShellType, ShellPathEntry>>
 {
     private Dictionary<ShellType, ShellPathEntry> mainDict;
+    private readonly Dictionary<ShellType, bool> redirectStatus;
+    private readonly Dictionary<ShellType, int> currentWeaponIds;
     private readonly Dictionary<ShellType, List<string>> baseShellPaths;
     private readonly Dictionary<ShellType, List<string>> defaultShellPaths;
     private readonly Dictionary<ShellType, List<string>> nowShellPaths;
+
     private readonly List<IDictionary> allDicts; 
 
     public ShellPathLibrary() 
     {
         mainDict = [];
+        redirectStatus = [];
+        currentWeaponIds = [];
         baseShellPaths = [];
         defaultShellPaths = [];
         nowShellPaths = [];
@@ -96,6 +102,8 @@ internal class ShellPathLibrary: IEnumerable<KeyValuePair<ShellType, ShellPathEn
     {
         var entry = new ShellPathEntry(item);
         mainDict.Add(item, entry);
+        redirectStatus.Add(item, false);
+        currentWeaponIds.Add(item, (int)item);
         baseShellPaths.Add(item, entry.BasePaths);
         defaultShellPaths.Add(item, entry.DefaultPaths);
         nowShellPaths.Add(item, entry.NowPaths);
@@ -120,15 +128,23 @@ internal class ShellPathLibrary: IEnumerable<KeyValuePair<ShellType, ShellPathEn
         return !Contains(type);
     }
 
-    public void Update(ShellType shellType, List<string> newPaths)
+    public void Update(ShellType shellType, int weaponId, List<string> newPaths)
     {
         mainDict[shellType].Update(newPaths);
+        currentWeaponIds[shellType] = weaponId;
+        if (newPaths == defaultShellPaths[shellType])
+            redirectStatus[shellType] = false;
+        else 
+            redirectStatus[shellType] = true;
         nowShellPaths[shellType] = newPaths;
     }
+    public bool RedirectStatus(ShellType type) => redirectStatus[type];
+    public int CurrentWeaponId(ShellType type) => currentWeaponIds[type];
     public List<string> BasePaths(ShellType type) => baseShellPaths.Where(s => s.Key == type).SelectMany(s => s.Value).ToList();
     public List<string> DefaultPaths(ShellType type) => defaultShellPaths.Where(s => s.Key == type).SelectMany(s => s.Value).ToList();
     public List<string> NowPaths(ShellType type) => nowShellPaths.Where(s => s.Key == type).SelectMany(s => s.Value).ToList();
 }
+
 internal unsafe class WeaponShellService
 {
     const string MODULE = "Weapon Framework - Shell Service";
@@ -177,47 +193,12 @@ internal unsafe class WeaponShellService
             DefaultShells(shell);
         }
     }
-
-    public int UpdateWeapon(ECharacter character, int weaponId)
-    {
-        if (!weapons.TryGetWeapon(character, weaponId, out var weapon))
-            return defaultModelIds[defaultShells[character].First()];
-
-        var shellType = weapon.ShellTarget;
-        var SHELL_MODEL_ID = defaultModelIds[shellType];
-        var modelId = weapon.ModelId;
-
-        if (modelId == SHELL_MODEL_ID && currWeapModelIds[shellType] != modelId)
-        {
-            RedirectHandler(weapon);
-        }
-
-        if (weaponId < 512)
-        {
-            prevWeapIds[shellType] = currWeapIds[shellType];
-            currWeapIds[shellType] = weaponId;
-            prevWeapModelIds[shellType] = currWeapModelIds[shellType];
-            currWeapModelIds[shellType] = modelId;
-            return weaponId;
-        }
-
-        var shouldRedirectShell = prevWeapIds[shellType] != weaponId;
-        if (shouldRedirectShell)
-        {
-            RedirectHandler(weapon);
-        }
-        prevWeapModelIds[shellType] = currWeapIds[shellType];
-        currWeapModelIds[shellType] = SHELL_MODEL_ID;
-        return SHELL_MODEL_ID;
-    }
-
-
     private void DefaultShells(ShellType shellType)
     {
         var entry = shellPathLib[shellType];
         var basePaths = entry.BasePaths;
         var shellPaths = entry.DefaultPaths;
-        shellPathLib.Update(shellType, shellPaths);
+        shellPathLib.Update(shellType, (int)shellType, shellPaths);
         var bp1 = basePaths[0];
         var sp1 = shellPaths[0];
         unreal.AssignFName(MODULE, bp1, sp1);
@@ -246,7 +227,7 @@ internal unsafe class WeaponShellService
         var entry = shellPathLib[weapon.ShellTarget];
         var basePaths = entry.BasePaths;
         var shellPaths = entry.DefaultPaths;
-        shellPathLib.Update(weapon.ShellTarget, shellPaths);
+        shellPathLib.Update(weapon.ShellTarget, weapon.WeaponId, shellPaths);
         var bp1 = basePaths[0];
         var sp1 = shellPaths[0];
         unreal.AssignFName(MODULE, bp1, sp1);
@@ -269,7 +250,7 @@ internal unsafe class WeaponShellService
             return;
         if (weapPaths != null && weapPaths.Count == basePaths.Count) 
         {
-            shellPathLib.Update(weapon.ShellTarget, weapPaths);
+            shellPathLib.Update(weapon.ShellTarget, weapon.WeaponItemId, weapPaths);
             var bp1 = basePaths[0];
             var wp1 = weapPaths[0];
             unreal.AssignFName(MODULE, bp1, wp1);

@@ -8,5 +8,9 @@
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Exception\" />
+  </ItemGroup>
+
 
 </Project>
