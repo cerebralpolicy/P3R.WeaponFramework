@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Weapons.Models;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace P3R.WeaponFramework.Types;
 
@@ -26,4 +27,17 @@ public struct FWeaponItemList
     [FieldOffset(0x003C)] public ushort GetFLG;
     [FieldOffset(0x003E)] public ushort ModelID;
     [FieldOffset(0x0040)] public uint Flags;
+
+    public override string ToString()
+    {
+        var sb = new StringBuilder();
+        sb.Append("");
+        var fields = typeof(FWeaponItemList).GetFields();
+        foreach ( var field in fields )
+        {
+            var info = $"{field.Name} {field.GetValue(this)}\n";
+            sb.Append(info);
+        }
+        return sb.ToString();
+    }
 }

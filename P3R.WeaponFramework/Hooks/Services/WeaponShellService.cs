@@ -6,6 +6,7 @@ using P3R.WeaponFramework.Weapons.Models;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Metadata.Ecma335;
 using Unreal.ObjectsEmitter.Interfaces;
 
 using static P3R.WeaponFramework.Types.ShellExtensions;
@@ -145,12 +146,14 @@ internal class ShellPathLibrary: IEnumerable<KeyValuePair<ShellType, ShellPathEn
     public List<string> NowPaths(ShellType type) => nowShellPaths.Where(s => s.Key == type).SelectMany(s => s.Value).ToList();
 }
 
+
+
+
 internal unsafe class WeaponShellService
 {
     const string MODULE = "Weapon Framework - Shell Service";
+
     private readonly Dictionary<ECharacter, Dictionary<ShellType, Weapon>> defaultWeaponShells = [];
-    private readonly Dictionary<ShellType, int> currWeapIds = [];
-    private readonly Dictionary<ShellType, int> currWeapModelIds = [];
     private readonly Dictionary<ShellType, int> prevWeapIds = [];
     private readonly Dictionary<ShellType, int> prevWeapModelIds = [];
 
@@ -185,35 +188,18 @@ internal unsafe class WeaponShellService
         }
     }
 
-    public void InitRedirects()
+    public int UpdateWeapon(Weapon weapon, int oldItemId, int oldModelId)
     {
-        foreach (var shell in activeShells)
-        {
-            Log.Debug($"Initializing {shell} shell.");
-            DefaultShells(shell);
-        }
-    }
-    private void DefaultShells(ShellType shellType)
-    {
-        var entry = shellPathLib[shellType];
-        var basePaths = entry.BasePaths;
-        var shellPaths = entry.DefaultPaths;
-        shellPathLib.Update(shellType, (int)shellType, shellPaths);
-        var bp1 = basePaths[0];
-        var sp1 = shellPaths[0];
-        unreal.AssignFName(MODULE, bp1, sp1);
-        if (basePaths.Count != 2)
-        {
-            return;
-        }
-        else
-        {
-            var bp2 = basePaths[1];
-            var sp2 = shellPaths[1];
-            unreal.AssignFName(MODULE, bp2, sp2);
-        }
-    }
+        var shell = weapon.ShellTarget;
+        var newModelId = weapon.ModelId;
+        prevWeapModelIds[shell] = oldModelId;
 
+        if (weapon.ModelId != oldModelId)
+        {
+            Log.Debug($"Model changing from {oldModelId} to {newModelId}");
+        }
+        return oldModelId;
+    }
     public void RedirectHandler(Weapon weapon)
     {
         var shell = weapon.ShellTarget;

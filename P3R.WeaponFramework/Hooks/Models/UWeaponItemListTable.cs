@@ -9,9 +9,16 @@ public unsafe struct UWeaponItemListTable : IEnumerable<FWeaponItemList>, IReadO
     //[FieldOffset(0x0000)] public UAppDataAsset baseObj;
     [FieldOffset(0x0030)] public TArray<FWeaponItemList> Data;
 
-    public FWeaponItemList this[int index] => Data.allocator_instance[index];
+    public TArrayWrapper<FWeaponItemList> Wrapper => new TArrayWrapper<FWeaponItemList>(Data);
+
+    public FWeaponItemList this[int index]
+    {
+        get { return Data.allocator_instance[index]; }
+        set { Data.allocator_instance[index] = value; }
+    }
 
     public readonly int Count => Data.arr_num;
+
 
     public readonly IEnumerator<FWeaponItemList> GetEnumerator() => new TArrayWrapper<FWeaponItemList>(Data).GetEnumerator();
 

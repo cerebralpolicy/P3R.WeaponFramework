@@ -1,5 +1,4 @@
 ﻿using System.Runtime.InteropServices;
-
 namespace P3R.WeaponFramework.Types;
 
 [StructLayout(LayoutKind.Explicit, Size = 0x300)]
@@ -45,7 +44,7 @@ public unsafe struct UAppCharBaseComp
     //[FieldOffset(0x0298)] public UAppCharFaceAnimDataAsset* FaceAnimPack;
     [FieldOffset(0x02A0)] public EAppCharWeaponType WeaponType;
     [FieldOffset(0x02A4)] public int WeaponId;
-    [FieldOffset(0x02A8)] public TArray<IntPtr> Weapons;
+    [FieldOffset(0x02A8)] public Emitter.TArray<IntPtr> Weapons;
     //[FieldOffset(0x02B8)] public bool bBagEnable;
     //[FieldOffset(0x02BC)] public int ShoesID;
     //[FieldOffset(0x02C0)] public EAppCharState State;

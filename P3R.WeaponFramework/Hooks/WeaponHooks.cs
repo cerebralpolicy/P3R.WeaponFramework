@@ -8,6 +8,7 @@ using Unreal.ObjectsEmitter.Interfaces;
 using Unreal.ObjectsEmitter.Interfaces.Types;
 using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
 using static P3R.WeaponFramework.Types.Characters;
+using System.Text;
 
 namespace P3R.WeaponFramework.Hooks;
 
@@ -69,7 +70,6 @@ internal unsafe class WeaponHooks
             });
     }
 
-
     private void SetWeaponData(UnrealObject obj)
     {
         Log.Verbose("WeaponTable found");
@@ -90,20 +90,7 @@ internal unsafe class WeaponHooks
             }
             continue;
         }
-        ushort NullableField(int? statField)
-        {
-            if (statField == null)
-                return 0;
-            else
-                return (ushort)statField.Value;
-        }
-        uint NullablePrice(int? statField)
-        {
-            if (statField == null)
-                return 0;
-            else
-                return (uint)statField.Value;
-        }
+        weaponDesc.Prime(); // Get descriptions for given episode
         var newItemIndex = 512;
         foreach (var weapon in registry.GetActiveWeapons())
         {
@@ -112,48 +99,77 @@ internal unsafe class WeaponHooks
                 continue;
             }
             var item = new FWeaponItemList(weapon);
+//            weaponItemList->Data.allocator_instance[newItemIndex] = item;
             var newItem = &weaponItemList->Data.allocator_instance[newItemIndex];
-            newItem->SortNum = (ushort)weapon.SortNum;
-            newItem->WeaponType = weapon.Character.ToWeaponType();
-            newItem->EquipID = weapon.Character.ToEquipID();
-            var stats = weapon.Stats;
-            newItem->Rarity = (ushort)stats.Rarity;
-            newItem->Tier = (ushort)stats.Tier;
-            newItem->Attack = (ushort)stats.Attack;
-            newItem->Accuracy = (ushort)stats.Accuracy;
-            newItem->Strength = NullableField(stats.Strength);
-            newItem->Magic = NullableField(stats.Magic);
-            newItem->Endurance = NullableField(stats.Endurance);
-            newItem->Agility = NullableField(stats.Agility);
-            newItem->Luck = NullableField(stats.Luck);
-            newItem->Price = NullablePrice(stats.Price);
-            newItem->SellPrice = NullablePrice(stats.SellPrice);
+            newItem->SortNum = item.SortNum;
+            newItem->WeaponType = item.WeaponType;
+            newItem->EquipID = item.EquipID;
+            newItem->Rarity = item.Rarity;
+            newItem->Tier = item.Tier;
+            newItem->Attack = item.Attack;
+            newItem->Accuracy = item.Accuracy;
+            newItem->Strength = item.Strength;
+            newItem->Magic = item.Magic;
+            newItem->Endurance = item.Endurance;
+            newItem->Agility = item.Agility;
+            newItem->Luck = item.Luck;
+            newItem->Price = item.Price;
+            newItem->SellPrice = item.SellPrice;
             newItem->GetFLG = 0;
             newItem->ModelID = (ushort)weapon.ModelId;
             newItem->Flags = 0;
+            Log.Verbose(item.ToString()!);
             //weaponDesc.AddDescription(weapon.Description);
-            weaponDesc.SetWeaponDesc(weapon.WeaponItemId, weapon.Description);
-            Log.Debug($"Added weapon item: {weapon.Name} || Weapon Item ID: {newItemIndex} || Weapon ID: {weapon.WeaponId}");
+            weapon.SetWeaponItemId(newItemIndex);
+            weaponDesc.SetWeaponDesc(newItemIndex, weapon.Description);
+            Log.Debug($"Added weapon item: {weapon.Name} || Weapon Type {weapon.Character.ToWeaponType()} || Attack: {item.Attack} || Weapon ID: {weapon.WeaponId}");
             newItemIndex++;
         }
         this.weaponDesc.Init();
     }
+    private void LogWeaponVariables(UAppCharacterComp* comp)
+    {
+        var character = comp->baseObj.Character;
+        var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
+        var weaponId = comp->baseObj.WeaponId; // Updates with each change
+        var weaponModelId = comp->mSetWeaponModelID; // returns the LAST modelId
+        var weaponType = comp->mSetWeaponType;
+        if (!this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var finalWeapon))
+            return;
+        var sb = new StringBuilder();
+        sb.AppendLine($"Character: {character}");
+        sb.AppendLine($"Weapon:\n\tID: {equipWeaponItemId} [{weaponId}]\n\tName: {finalWeapon.Name}\n\tType: {weaponType}\n\tModelID: {weaponModelId}");
+        Log.Debug(sb.ToString());
+    }
     private void SetWeaponIdImpl(UAppCharacterComp* comp)
     {
         var character = comp->baseObj.Character;
+        var weaponId = comp->baseObj.WeaponId; // Updates with each change
+        const string noModel = "NONE";
+        var arrayWrapper = new Emitter.TArrayWrapper<nint>(comp->baseObj.Weapons);
+        var weaponModelId = comp->mSetWeaponModelID; // returns the LAST modelId
+        var weaponType = comp->mSetWeaponType;
+        Log.Debug($"Previous model ID {(weaponModelId > 0 ? weaponModelId : noModel)}");
         if (!Characters.Armed.Contains(character))
         { return; }
         var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
-        Log.Verbose($"{character}'s current weapon has an id of: {equipWeaponItemId}");
-        this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var weapon);
-        if (weapon != null)
+        Log.Debug($"{character}'s current weapon has an id of: {equipWeaponItemId}");
+        if (!this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var finalWeapon))
         {
-            //var shellUpdate = weaponShells.UpdateWeapon(character, equipWeaponItemId);
-            //if (shellUpdate != weapon.ModelId)
-                //Log.Error("Model Id Mismatch");
-            comp->mSetWeaponModelID = weapon.ModelId;
-            weaponShells.RedirectHandler(weapon);
-            //weaponShells.UpdateWeapon(weapon.Character, equipWeaponItemId);
+            Log.Debug($"Weapon modelId: {weaponModelId}");
+            comp->mSetWeaponModelID = weaponModelId;
+            //comp->mSetWeaponModelID = weaponShells.UpdateWeapon(ShellExtensions.ShellFromId(finalWeapon.ModelId, character == ECharacter.Metis), finalWeapon.ModelId, equipWeaponItemId);
+            //weaponShells.UpdateWeapon(finalWeapon.Character, equipWeaponItemId);
         }
+        else
+        {
+            //var finalModelId = weaponShells.UpdateWeapon(finalWeapon.ShellTarget, finalWeapon.ModelId, equipWeaponItemId);
+            var update = weaponShells.UpdateWeapon(finalWeapon, weaponId, weaponModelId);
+            comp->mSetWeaponModelID = weaponModelId;
+            //Log.Debug($"Result: {finalWeapon.Name}\nModel ID: {comp->mSetWeaponModelID}\nNew ModelID: {finalWeapon.ModelId}");
+            //LogWeaponVariables(comp);
+            weaponShells.RedirectHandler(finalWeapon); 
+        }
+
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P3R.WeaponFramework.DataGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e12d3aefc2636d7392878397aa64bbcb83fa100")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+538a3ce9d0d57fa1483f2e2257082a8c70aeb067")]
 [assembly: System.Reflection.AssemblyProductAttribute("P3R.WeaponFramework.DataGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P3R.WeaponFramework.DataGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

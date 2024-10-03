@@ -14,7 +14,6 @@ internal unsafe class WeaponService
     private readonly WeaponNameHook weaponNameHook;
     private readonly ItemEquipHooks itemEquipHooks;
 
-    public void InitShellService() => shellService.InitRedirects();
     public WeaponService(
         IUObjects uObjects,
         IUnreal unreal,

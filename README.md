@@ -1,9 +1,10 @@
 | P3WF            | Status Table    |
 |-----------------|-----------------|
-| Latest Version  | 0.3.0           |
-| Shell System    | Semi-Functional |
+| Latest Version  | 0.3.1           |
+| Shell System    | Functional      |
 | Descriptions    | Non-Functional  |
-| Weapon Creation | Unknown         |
+| Weapon Creation | Non-Functional  |
+| Stat Assignment | Non-Functional  |
 
 # P3R Weapon Framework
 Welcome to the **P3R Weapon Framework** (P3WF) repository. This mod, when completed, will make it possible to add new weapons to Persona 3 Reload and lay a groundwork for similar mods in Metaphor Refantazio and Persona 6. In spirit, it is similar to Costume Framework - however the weapon system is significantly more cumbersome to hack into. As such, **P3WF is currently non-functional** and the project is currently bloated as I have reached a state of constant trial and error.
@@ -23,24 +24,24 @@ All weapons have a defined `ShellType`, and a rich enum system based on SmartEnu
 // Shell(ShellType enumValue,              -- Enum wrapped 
 //       ICollection<EArmature> armatures, -- Armatures of shell
 //       List<int> modelIds,               -- Original ModelIds linked to shell
+//       int defaultItemId,
 //       bool vanilla,                     -- Is shell used by main game
 //       bool astrea,                      -- Is shell used by Episode Aigis
 //       bool cancels                      -- Is the shell a placeholder
 //       )
 public static ShellDatabase ShellLookup => [
-    new (ShellType.None, [],[], false, false, true),
-    new (ShellType.Unassigned, [],[], false, false, true),
-    new (ShellType.Player, [EArmature.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], astrea: false),
-    new (ShellType.Yukari, [EArmature.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28]),
-    new (ShellType.Stupei, [EArmature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]),
-    new (ShellType.Akihiko, [EArmature.Wp0004_01, EArmature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48]),
-    new (ShellType.Mitsuru, [EArmature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57]),
-    new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327]),
-    new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589]),
-    new (ShellType.Ken, [EArmature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]),
-    new (ShellType.Koromaru, [EArmature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97]),
-    new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105], astrea: false),
-    new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], vanilla: false),
+    new (ShellType.None, [],[], 0, false, false, true),
+    new (ShellType.Unassigned, [],[], 0, false, false, true),
+    new (ShellType.Player, [EArmature.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 280, astrea: false),
+    new (ShellType.Yukari, [EArmature.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28], 281),
+    new (ShellType.Stupei, [EArmature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], 282),
+    new (ShellType.Akihiko, [EArmature.Wp0004_01, EArmature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48], 283),
+    new (ShellType.Mitsuru, [EArmature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57], 141),
+    new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327], 176),
+    new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589], 179),
+    new (ShellType.Ken, [EArmature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], 226),
+    new (ShellType.Koromaru, [EArmature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97], 201),
+    new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105], 251, astrea: false),
     ];
 ```
 There are additional systems in the backend that take a given `Shell` and describe it as set of three `List<sting>`'s, consisting of the original paths, the paths to the duplicate shells, and the last paths assigned. The shell system uses this to perform redirections with UnrealObjectsEmitter.
@@ -48,10 +49,5 @@ There are additional systems in the backend that take a given `Shell` and descri
 
 ## Known Issues
 
-* Currently crashing when loading saves 
-* Weapon description file doesn't compile
-
-### Suspected causes
-
-* Likely do not have the right item ID range for weapons, so the load-in crash is almost certainly tied to this.
-* Due to how weapons were implemented in *Episode Aigis* P3WF requires two separate weapon and description lists. It is likely that this is causing issues.
+* Weapon descriptions do not compile
+* New weapons are not assigned any values, thus they crash the game

@@ -10,8 +10,8 @@ internal class WeaponDescService
 {
     private EpisodeHook episodeHook;
     private readonly IAtlusAssets atlusAssets;
-    
-    private List<string> Descriptions => episodeHook.Descriptions;
+
+    private List<string> Descriptions = new();
 
     public void AddDescription(string description) => Descriptions.Add(description);
 
@@ -20,18 +20,11 @@ internal class WeaponDescService
         this.episodeHook = episodeHook;
         this.atlusAssets = atlusAssets;
     }
-
-    public string BuildStrings()
+    public void Prime()
     {
-        var sb = new StringBuilder();
-        for (int i = 0; i < Descriptions.Count; i++)
-        {
-            sb.AppendLine($"[msg Item_{i:D3}]");
-            sb.AppendLine($"[f 2 1]{Descriptions[i]}[n][e]");
-        }
-        return sb.ToString();
+        Descriptions.Clear();
+        Descriptions = episodeHook.Descriptions;
     }
-
     public void Init()
     {
         var sb = new StringBuilder();
@@ -46,8 +39,5 @@ internal class WeaponDescService
         var output = sb.ToString();
         this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", output, AssetType.BMD, AssetMode.Both);
     }
-    public void SetWeaponDesc(int weaponItemId, string weaponDesc)
-    {
-        Descriptions[weaponItemId] = weaponDesc;
-    }
+    public void SetWeaponDesc(int weaponItemId, string weaponDesc) => Descriptions[weaponItemId] = weaponDesc;
 }

@@ -86,7 +86,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         var gameWeapons = JsonSerializer.Deserialize<List<Weapon>>(json);
         if (gameWeapons == null || gameWeapons.Count == 0)
             throw new NullReferenceException($"No weapons found for {path}");
-        Log.Debug($"Total weapon defs: {gameWeapons.Count} (Should be 511).");
+        Log.Debug($"Total weapon defs: {gameWeapons.Count} (Should be 512).");
         var weapons = gameWeapons;
         var isAstrea = name == "Astrea";
         foreach (var weapon in weapons)
