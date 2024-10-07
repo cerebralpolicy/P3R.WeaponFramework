@@ -283,7 +283,7 @@
           "lib/net8.0/RyoTune.Reloaded.dll": {}
         }
       },
-      "SharedScans.Interfaces/1.1.0": {
+      "SharedScans.Interfaces/1.2.0": {
         "type": "package",
         "dependencies": {
           "Reloaded.Hooks.Definitions": "1.15.0"
@@ -1384,7 +1384,7 @@
           "lib/net7.0/UnrealEssentials.Interfaces.dll": {}
         }
       },
-      "YamlDotNet/16.1.2": {
+      "YamlDotNet/16.1.3": {
         "type": "package",
         "compile": {
           "lib/net8.0/YamlDotNet.dll": {
@@ -1423,11 +1423,11 @@
           "Reloaded.Mod.Interfaces": "2.4.0",
           "Reloaded.SharedLib.Hooks": "1.9.0",
           "RyoTune.Reloaded": "1.0.1",
-          "SharedScans.Interfaces": "1.1.0",
+          "SharedScans.Interfaces": "1.2.0",
           "Unreal.AtlusScript.Interfaces": "1.1.0",
           "Unreal.ObjectsEmitter.Interfaces": "1.2.3",
           "UnrealEssentials.Interfaces": "1.0.0",
-          "YamlDotNet": "16.1.2",
+          "YamlDotNet": "16.1.3",
           "p3rpc.nativetypes.Interfaces": "1.6.1"
         },
         "compile": {
@@ -1847,10 +1847,10 @@
         "ryotune.reloaded.nuspec"
       ]
     },
-    "SharedScans.Interfaces/1.1.0": {
-      "sha512": "q5ryWCZTR2syRBcYoBm94R1D7AXhx2a7pg7hndd4CzLW8oArZSR1GAoawHoKLz/gV1HrjSudK26+w67c30mKgg==",
+    "SharedScans.Interfaces/1.2.0": {
+      "sha512": "L3V7i8M/tclXF96tke2k0pha3Auep7wC0bdmvUk8AlmaxfPXehioB8HwxjGDd3TMIalHNfL9OZUfzs0OGjhfMw==",
       "type": "package",
-      "path": "sharedscans.interfaces/1.1.0",
+      "path": "sharedscans.interfaces/1.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1859,7 +1859,7 @@
         "lib/net7.0/SharedScans.Interfaces.xml",
         "lib/net8.0/SharedScans.Interfaces.dll",
         "lib/net8.0/SharedScans.Interfaces.xml",
-        "sharedscans.interfaces.1.1.0.nupkg.sha512",
+        "sharedscans.interfaces.1.2.0.nupkg.sha512",
         "sharedscans.interfaces.nuspec"
       ]
     },
@@ -4874,10 +4874,10 @@
         "unrealessentials.interfaces.nuspec"
       ]
     },
-    "YamlDotNet/16.1.2": {
-      "sha512": "VHBamNzHIKqkdWgYrGk48mEos+lVDFHzJyk0JiFYydoViSiCNIdoDTL3kaqAh+exQ2m2ZgZQphBgaOngR1fYjg==",
+    "YamlDotNet/16.1.3": {
+      "sha512": "gtHGiDvU9VTtWte8f0thIM38cL1oowOjStKpeAEKKfA+Rc4AvekJzqFDZiiPcc4kw00ZiwR4OTJS56L16q98DQ==",
       "type": "package",
-      "path": "yamldotnet/16.1.2",
+      "path": "yamldotnet/16.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4893,7 +4893,7 @@
         "lib/netstandard2.0/YamlDotNet.xml",
         "lib/netstandard2.1/YamlDotNet.dll",
         "lib/netstandard2.1/YamlDotNet.xml",
-        "yamldotnet.16.1.2.nupkg.sha512",
+        "yamldotnet.16.1.3.nupkg.sha512",
         "yamldotnet.nuspec"
       ]
     },
@@ -4923,7 +4923,7 @@
       "AtlusScriptLibrary >= 1.0.0",
       "P3R.WeaponFramework >= 1.0.0",
       "System.Collections.NonGeneric >= 4.3.0",
-      "YamlDotNet >= 16.1.2"
+      "YamlDotNet >= 16.1.3"
     ]
   },
   "packageFolders": {
@@ -4988,7 +4988,7 @@
           },
           "YamlDotNet": {
             "target": "Package",
-            "version": "[16.1.2, )"
+            "version": "[16.1.3, )"
           }
         },
         "imports": [

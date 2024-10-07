@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace P3R.WeaponFramework.Weapons
 {
-    internal class WeaponRegistry
+    public class WeaponRegistry
     {
         private readonly WeaponArsenal arsenal;
         public WeaponRegistry(GameWeapons weapons)
@@ -35,12 +35,6 @@ namespace P3R.WeaponFramework.Weapons
             weapon = Weapons.FirstOrDefault(x => x.WeaponItemId == itemId && IsActiveWeapon(x));
             return weapon != null;
         }
-        public Task RegisterModToQueue(string modId, string modDir)
-        {
-            return Task.Run(() => { 
-                RegisterMod(modId, modDir);
-            });
-        }
         public void RegisterMod(string modId, string modDir)
         {
             var mod = new WeaponMod(modId, modDir);
@@ -69,6 +63,22 @@ namespace P3R.WeaponFramework.Weapons
                     {
                         Log.Error($"{ex.Message}\n{ex.Source}\n Failed to create weapon from folder.\nFolder: {weaponDir}");
                     }
+                }
+            }
+            if (!Directory.Exists(mod.OverrideDir))
+            {
+                return;
+            }
+            foreach (var proxyFile in Directory.EnumerateFiles(mod.OverrideDir))
+            {
+                try
+                {
+                    
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"{ex.Message}\n{ex.Source}\n Failed to create weapon from folder.\nFolder: {proxyFile}");
+
                 }
             }
         }

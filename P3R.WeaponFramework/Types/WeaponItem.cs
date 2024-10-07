@@ -49,8 +49,8 @@ public class WeaponItem : IEquatable<WeaponItem?>
         Agility = agility;
         Luck = luck;
         SkillID = skillID;
-        Price = price ?? (uint)PriceUtils.GetBuyPrice(attack,accuracy);
-        SellPrice = sellPrice ?? (uint)PriceUtils.GetSellPrice(attack,accuracy);
+        Price = price ?? (uint)PriceUtils.GetPrice(attack,accuracy);
+        SellPrice = sellPrice ?? (uint)PriceUtils.GetPrice(attack,accuracy)/4;
         GetFLG = getFLG;
         ModelID = modelID;
         Flags = flags;
@@ -71,8 +71,8 @@ public class WeaponItem : IEquatable<WeaponItem?>
         Agility = Agility,
         Luck = Luck,
         SkillId = SkillID,
-        Price = (int?)Price ?? PriceUtils.GetBuyPrice(Attack, Accuracy),
-        SellPrice = (int?)SellPrice ?? PriceUtils.GetSellPrice(Attack, Accuracy),
+        Price = (int?)Price ?? PriceUtils.GetPrice(Attack, Accuracy),
+        SellPrice = (int?)SellPrice ?? PriceUtils.GetPrice(Attack, Accuracy)/4,
     };
 
     public override bool Equals(object? obj)
@@ -107,7 +107,7 @@ public class WeaponItem : IEquatable<WeaponItem?>
         {
             ItemDef = fWeaponItem.ItemDef,
             SortNum = fWeaponItem.SortNum,
-            WeaponType = fWeaponItem.WeaponType,
+            WeaponType = (EWeaponType)fWeaponItem.WeaponType,
             EquipID = (EEquipFlag)fWeaponItem.EquipID,
             AttrID = (EBtlDataAttr)fWeaponItem.AttrID,
             Rarity = fWeaponItem.Rarity,
@@ -119,6 +119,7 @@ public class WeaponItem : IEquatable<WeaponItem?>
             Endurance = fWeaponItem.Endurance,
             Agility = fWeaponItem.Agility,
             Luck = fWeaponItem.Luck,
+            SkillID = (EItemSkillId)fWeaponItem.SkillID,
             Price = fWeaponItem.Price,
             SellPrice = fWeaponItem.SellPrice,
             GetFLG = fWeaponItem.GetFLG,

@@ -54,7 +54,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
     /// <b>Int</b>: <c>3584</c><br/>
     /// <b>Hex</b>: <c>E00</c>
     /// </remarks>
-    public const int NUM_EPISODE_WEAPS = 3584; //3072
+    public const int NUM_EPISODE_WEAPS = 100; //3072
     #endregion
 
     private readonly List<Weapon> weapons;
@@ -86,7 +86,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         var gameWeapons = JsonSerializer.Deserialize<List<Weapon>>(json);
         if (gameWeapons == null || gameWeapons.Count == 0)
             throw new NullReferenceException($"No weapons found for {path}");
-        Log.Debug($"Total weapon defs: {gameWeapons.Count} (Should be 511).");
+        Log.Debug($"Total weapon defs: {gameWeapons.Count} (Should be 512).");
         var weapons = gameWeapons;
         var isAstrea = name == "Astrea";
         foreach (var weapon in weapons)

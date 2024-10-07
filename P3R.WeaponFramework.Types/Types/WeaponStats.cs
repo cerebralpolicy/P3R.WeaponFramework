@@ -1,4 +1,5 @@
-﻿using YamlDotNet.Serialization;
+﻿using System.Text;
+using YamlDotNet.Serialization;
 
 namespace P3R.WeaponFramework.Types;
 [YamlSerializable]
@@ -49,6 +50,24 @@ public class WeaponStats : IEquatable<WeaponStats>
     public int Price { get; set; } = 400;
     [YamlMember]
     public int SellPrice { get; set; } = 100;
+
+    public string Summarize()
+    {
+        var sb = new StringBuilder();
+        sb.Append($"\n\t{nameof(AttrId)}: {AttrId}");
+        sb.Append($"\n\t{nameof(Rarity)}: {Rarity}");
+        sb.Append($"\n\t{nameof(Tier)}: {Tier}");
+        sb.Append($"\n\t{nameof(Attack)}: {Attack}");
+        sb.Append($"\n\t{nameof(Accuracy)}: {Accuracy}");
+        sb.Append($"\n\t{nameof(Strength)}: {Strength}");
+        sb.Append($"\n\t{nameof(Magic)}: {Magic}");
+        sb.Append($"\n\t{nameof(Endurance)}: {Endurance}");
+        sb.Append($"\n\t{nameof(Agility)}: {Agility}");
+        sb.Append($"\n\t{nameof(Luck)}: {Luck}");
+        sb.Append($"\n\t{nameof(SkillId)}: {SkillId}");
+        sb.Append($"\n\t{nameof(Price)}: {Price}");
+        return sb.ToString();
+    }
 
     public override bool Equals(object? obj)
     {

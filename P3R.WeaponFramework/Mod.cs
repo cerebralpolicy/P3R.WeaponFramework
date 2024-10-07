@@ -12,6 +12,8 @@ using Unreal.ObjectsEmitter.Interfaces;
 using UnrealEssentials.Interfaces;
 using System.Drawing;
 using P3R.WeaponFramework.Core;
+using System.Diagnostics.CodeAnalysis;
+using P3R.WeaponFramework;
 
 namespace P3R.WeaponFramework
 {
@@ -77,27 +79,58 @@ namespace P3R.WeaponFramework
             Episode vanilla = new(FEpisode.Vanilla);
             Episode astrea = new(FEpisode.Astrea);
 
-            this.modLoader.GetController<IUnrealEssentials>().TryGetTarget(out var essentials);
-            this.modLoader.GetController<IStartupScanner>().TryGetTarget(out var scanner);
-            this.modLoader.GetController<IUnreal>().TryGetTarget(out var unreal);
-            this.modLoader.GetController<IUObjects>().TryGetTarget(out var uobjects);
-            this.modLoader.GetController<IDataTables>().TryGetTarget(out var tables);
-            this.modLoader.GetController<IAtlusAssets>().TryGetTarget(out var atlusAssets);
+            if (!TryGetController<IUnrealEssentials>(out var essentials, out var essentialEx))
+                throw essentialEx;
+            if (!TryGetController<IStartupScanner>(out var scanner, out var scannerEx))
+                throw scannerEx;
+            if (!TryGetController<IUnreal>(out var unreal, out var unrealEx))
+                throw unrealEx;
+            if (!TryGetController<IUObjects>(out var uObjects, out var uObjectsEx))
+                throw uObjectsEx;
+            if (!TryGetController<IMemoryMethods>(out var memory, out var memoryEx))
+                throw memoryEx;
+            if (!TryGetController<IDataTables>(out var tables, out var tablesEx))
+                throw tablesEx;
+            if (!TryGetController<IAtlusAssets>(out var atlusAssets, out var atlusAssetsEx))
+                throw atlusAssetsEx;
 
-            //if (essentials == null) throw new NullReferenceException(nameof(essentials));
             // INIT DATA //
-            LoadUnrealComponent(essentials!, UnrealComponent.Shells);
+            LoadUnrealComponent(essentials, UnrealComponent.Shells);
+            // Expanding the data assets produces a crash on launch
+            if (config.ExpandedDataAssets == true)
+            {
+                //LoadUnrealComponent(essentials, UnrealComponent.DataAssets);
+            }
             this.episodeHook = new(astrea,vanilla);
             this.weaponRegistry = new(episodeHook);
-            this.weaponDescService = new(episodeHook,atlusAssets!);
-            this.weapons = new(uobjects!, unreal!, weaponRegistry, weaponDescService);
+            this.weaponDescService = new(episodeHook,atlusAssets);
+            this.weapons = new(uObjects,
+                               unreal,
+                               memory,
+                               weaponRegistry,
+                               weaponDescService);
 
             modLoader.OnModLoaderInitialized += AllModsLoaded;
-            //modLoader.ModLoaded += OnModLoaded;
+//            modLoader.ModLoaded += LoadMod;
             //modLoader.OnModLoaderInitialized += this.weapons.InitShellService;
 
             Project.Start();
         }
+        private bool InterfaceNullCheck(object?[] ifaces)
+        {
+            List<string> messages = new List<string>();
+            List<object?> nullInterfaces = [];
+            foreach (var iface in ifaces)
+            {
+                if (iface == null)
+                {
+                    messages.Add(nameof(iface));
+                    nullInterfaces.Add(iface);
+                }
+            }
+            return nullInterfaces.Any();
+        }
+
         private List<Task> ModsToLoad = new List<Task>();
         private void AllModsLoaded()
         {
@@ -106,10 +139,6 @@ namespace P3R.WeaponFramework
             {
                 LoadMod(mod.Mod, mod.Generic);
             }
-        }
-        public async Task QueueMod(IModV1 mod, IModConfigV1 config)
-        {
-            await Task.Run(() => { LoadMod(mod, config); });
         }
         private void LoadMod(IModV1 mod, IModConfigV1 config)
         {
@@ -126,6 +155,7 @@ namespace P3R.WeaponFramework
         public enum UnrealComponent
         {
             Shells,
+            DataAssets,
         }
         private void LoadUnrealComponent(IUnrealEssentials essentials, UnrealComponent component)
         {
@@ -137,6 +167,20 @@ namespace P3R.WeaponFramework
             Log.Information($"Loaded {component}");
         }
 
+        public bool TryGetController<T>([NotNullWhen(true)]out T? output, [NotNullWhen(false)] out Exception? exception)
+            where T : class
+        {
+            var iName = typeof(T).Name;
+            exception = null;
+            var attempt = this.modLoader.GetController<T>().TryGetTarget(out var target);
+            output = target;
+            if (!attempt)
+            {
+                Log.Error($"{NAME} could not load the controller for {iName}.");
+                exception = new NullReferenceException();
+            }
+            return attempt;
+        }
 
         #region Standard Overrides
         public override void ConfigurationUpdated(Config configuration)
@@ -150,6 +194,7 @@ namespace P3R.WeaponFramework
         public Type[] GetTypes() => [
             typeof(IWeaponApi),
             typeof(IWFEnum),
+            typeof(ICommonMethods),
             ];
         #endregion
 

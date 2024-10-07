@@ -2,7 +2,7 @@
 
 namespace P3R.WeaponFramework.Types;
 [YamlSerializable]
-public class WeaponConfig
+public class WeaponConfig : IWeaponConfig
 {
     public WeaponConfig()
     {
@@ -20,14 +20,42 @@ public class WeaponConfig
 
     [YamlMember(Description = "Specifies the shell type used by the new weapon.")]
     public ShellType Shell { get; set; }
+    /*    [YamlMember(Description = "Path to a model not inside the weapon folder.")]
+        public string? MeshPath1 { get; set; } = null;
+        [YamlMember(Description = "Path to a model not inside the weapon folder. Only need if adding a weapon to Akihiko or a dual-wield weapon to Aigis.")]
+        public string? MeshPath2 { get; set; } = null;*/
     [YamlMember(Description = "Specifies the model being used by the new weapon.")]
     public WeaponMeshPart Model { get; set; } = new();
     [YamlMember(Description = "Defines the stats for the weapon.")]
     public WeaponStats? Stats { get; set; } = new();
 
-    [YamlIgnore]
-    public int? SortNum => Stats?.Attack;
-    [YamlIgnore]
+    /*    [YamlMember]
+        public EBtlDataAttr AttrId { get; set; } = EBtlDataAttr.BTL_DATA_ATTR_SLASH;
+        [YamlMember]
+        public int Rarity { get; set; } = 1;
+        [YamlMember]
+        public int Tier { get; set; } = 1;
+        [YamlMember]
+        public int Attack { get; set; } = 30;
+        [YamlMember]
+        public int Accuracy { get; set; } = 85;
+        [YamlMember]
+        public int Strength { get; set; } = 0;
+        [YamlMember]
+        public int Magic { get; set; } = 0;
+        [YamlMember]
+        public int Endurance { get; set; } = 0;
+        [YamlMember]
+        public int Agility { get; set; } = 0;
+        [YamlMember]
+        public int Luck { get; set; } = 0;
+        [YamlMember]
+        public EItemSkillId SkillId { get; set; } = 0;
+        [YamlMember]
+        public int Price { get; set; } = 400;
+        [YamlMember]
+        public int SellPrice { get; set; } = 100;
+        [YamlIgnore]*/
     public bool? HasMultipleModels => Shell.RequiredMeshes() > 1;
     public string? GetAssetFile(WeaponAssetType assetType)
         => assetType switch
@@ -74,52 +102,9 @@ public class WeaponConfig
             var modelTypeName = parts[2];
             _ = int.TryParse(parts[3], out var modelTypeIndex);
 
-            return AssetUtils.GetModAssetFile(character,subfolder,modelTypeName,modelTypeIndex);
+            return AssetUtils.GetModAssetFile(character, subfolder, modelTypeName, modelTypeIndex);
         }
 
         return assetPath;
     }
-}
-
-
-
-[YamlStaticContext]
-[YamlSerializable(typeof(string))]
-public class MeshPath(string path) : IEquatable<MeshPath?>
-{
-    #region Formatter
-    static string format(string path) => AssetUtils.FormatAssetPath(path);
-    #endregion
-    #region Equals & Hashcode
-    public override bool Equals(object? obj) => Equals(obj as MeshPath);
-
-    public bool Equals(MeshPath? other) => other is not null &&
-               _path == other._path;
-    
-    public override int GetHashCode() => HashCode.Combine(_path);
-    #endregion
-    [YamlConverter(typeof(string))]
-    private readonly string _path = format(path);
-    public override string ToString() => _path;
-    #region Operators
-    public static implicit operator MeshPath(string path) => new MeshPath(path);
-
-    public static bool operator ==(MeshPath? left, MeshPath? right) => EqualityComparer<MeshPath>.Default.Equals(left, right);
-
-    public static bool operator !=(MeshPath? left, MeshPath? right) => !(left == right);
-    #endregion
-}
-
-[YamlSerializable]
-public class WeaponMeshPart
-{
-    [YamlMember(Description = "Path to a model not inside the weapon folder.")]
-    public string? MeshPath1 { get; set; } = null;
-    [YamlMember(Description = "Path to a model not inside the weapon folder. Only need if adding a weapon to Akihiko or a dual-wield weapon to Aigis.")]
-    public string? MeshPath2 { get; set; } = null;
- }
-
-public class WeaponBasePart
-{
-    public string? MeshPath { get; set; }
 }

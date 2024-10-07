@@ -8,7 +8,7 @@ using System.Text.Json;
 
 namespace P3R.WeaponFramework.Weapons.Models;
  
-internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
+public unsafe class GameWeapons : IReadOnlyCollection<Weapon>
 {
     public EpisodeHook EpisodeHook;
     public List<Weapon> Weapons => EpisodeHook.Weapons;
@@ -20,13 +20,14 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
     }
     public int Count => Weapons.Count;
 
+
     public bool TryGetFirstWeaponOfPredicate(Func<Weapon,bool> predicate, [NotNullWhen(true)] out Weapon? weapon)
     {
         weapon = null;
         weapon = Weapons.FirstOrDefault(predicate!,null);
         if (weapon == null)
         {
-            Log.Verbose(ThrowHelper.NoMatchingPredicateMessage(EpisodeName, predicate!));
+            //Log.Verbose(ThrowHelper.NoMatchingPredicateMessage(EpisodeName, predicate!));
             return false;
         }
         Log.Debug($"Weapon found at {weapon.WeaponItemId}");
@@ -34,9 +35,9 @@ internal unsafe class GameWeapons : IReadOnlyCollection<Weapon>
     }
     public bool TryGetFirstAssignableWeapon([NotNullWhen(true)] out Weapon? weapon)
     {
-        Func<Weapon,bool> predicate = (x => x.ShellTarget == ShellType.Unassigned);
+        Func<Weapon,bool> predicate = (x => x.IsModded == true);
         weapon = null;
-        if (!Weapons.Any(x => x.ShellTarget == ShellType.Unassigned))
+        if (!Weapons.Any(x => x.IsModded == true))
         {
             Log.Error(new NoEmptySlotException(), ThrowHelper.NoEmptySlotMessage(EpisodeName));
             return false;

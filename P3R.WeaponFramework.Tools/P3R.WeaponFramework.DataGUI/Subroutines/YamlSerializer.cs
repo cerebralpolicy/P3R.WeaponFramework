@@ -6,6 +6,7 @@ namespace P3R.WeaponFramework.DataGUI;
 
 internal static partial class Subroutines
 {
+
     internal static class YamlSerializer
     {
         private static readonly IDeserializer deserializer = new DeserializerBuilder()

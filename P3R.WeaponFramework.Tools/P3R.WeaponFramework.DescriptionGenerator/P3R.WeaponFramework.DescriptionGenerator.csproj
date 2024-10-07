@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp.uasset" />
+    <None Remove="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd" />
+    <None Remove="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg" />
+    <None Remove="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp.uasset" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp.uasset" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg" />
+    <None Remove="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h" />
+    <None Remove="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp.uasset" />
+    <None Remove="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd" />
+    <None Remove="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg" />
+    <None Remove="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp.uasset">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AtlusData\P3R\Content\Xrd777\Help\BMD_ItemWeaponHelp_unwrapped.bmd.msg.h">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

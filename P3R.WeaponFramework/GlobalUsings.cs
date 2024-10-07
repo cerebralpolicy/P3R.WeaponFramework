@@ -5,3 +5,4 @@ global using UAppCharacterComp = P3R.WeaponFramework.Types.UAppCharacterComp;
 global using P3R.WeaponFramework.Types;
 
 global using Emitter = Unreal.ObjectsEmitter.Interfaces.Types;
+global using Native = p3rpc.nativetypes.Interfaces;

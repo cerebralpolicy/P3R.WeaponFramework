@@ -9,6 +9,7 @@ using Unreal.ObjectsEmitter.Interfaces.Types;
 using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
 using static P3R.WeaponFramework.Types.Characters;
 using System.Text;
+using P3R.WeaponFramework.Extensions;
 
 namespace P3R.WeaponFramework.Hooks;
 
@@ -26,6 +27,8 @@ internal unsafe class WeaponHooks
 
     private readonly IUnreal unreal;
     private readonly IUObjects uobjects;
+    //private readonly ICommonMethods common;
+    private readonly IMemoryMethods memory;
     private readonly WeaponRegistry registry;
     private readonly WeaponDescService weaponDesc;
     private readonly WeaponShellService weaponShells;
@@ -34,6 +37,7 @@ internal unsafe class WeaponHooks
     public WeaponHooks(
         IUnreal unreal,
         IUObjects uobjects,
+        IMemoryMethods memory,
         WeaponRegistry registry,
         WeaponDescService weaponDesc,
         WeaponShellService weaponShells,
@@ -41,6 +45,7 @@ internal unsafe class WeaponHooks
     {
         this.unreal = unreal;
         this.uobjects = uobjects;
+        this.memory = memory;
         this.registry = registry;
         this.weaponDesc = weaponDesc;
         this.weaponShells = weaponShells;
@@ -72,59 +77,78 @@ internal unsafe class WeaponHooks
 
     private void SetWeaponData(UnrealObject obj)
     {
-        Log.Verbose("WeaponTable found");
+        //Log.Verbose("WeaponTable found");
+        weaponDesc.Prime(); // Get descriptions for given episode
         var weaponItemList = (UWeaponItemListTable*)obj.Self;
+        var weaponItemArray = weaponItemList->Data.GetRef;
+        var allWeapons = registry.Weapons;
         var activeWeapons = registry.GetActiveWeapons();
-        
-        Log.Debug("Setting weapon data.");
-        List<Weapon> tempList = [];
+        var managedItemList = new TWeaponItemListTable(memory, &weaponItemList->Data);
+        //FWeaponItemList? managedItem(int index) => managedArray[index];
+        var weaponCount = 0;
+        List<Weapon> unusedWeaps = [];
+        List<int> unusedIDs = [];
         for (int i = 0; i < weaponItemList->Count; i++)
         {
+            var id = i;
             var weaponItem = (*weaponItemList)[i];
+            var slotWeapon = allWeapons.FirstOrDefault(x => x.WeaponId == id);
             var existingWeapon = activeWeapons.FirstOrDefault(x => x.WeaponId == i);
             if (existingWeapon != null)
             {
-                var id = tempList.Count;
+                if (existingWeapon.Name == "Unused" || existingWeapon.ModelId < 10)
+                {
+                    if (id != 0)
+                    {
+                        unusedIDs.Add(id);
+                    }
+                }
                 existingWeapon.SetWeaponItemId(id);
-                tempList.Add(existingWeapon);
+            }
+            weaponCount++;
+            continue;
+        }
+        Log.Debug($"{unusedIDs.Count} unused weapons");
+        for (int i = weaponCount; i < 2048;  i++)
+        {
+//            var weaponItem = (*weaponItemList)[i];
+            var existingWeapon = activeWeapons.FirstOrDefault(x => x.WeaponId == i);
+            if (existingWeapon != null)
+            {
+                //var weaponItemInstance = weaponItemArray(i);
+                //weaponItemInstance->SetFromWeapon(existingWeapon);
+                // Apply to
+                var newItem = new FWeaponItemList(existingWeapon).Malloc(memory);
+                //newItem->EquipID = (uint)existingWeapon.Character.ToEquipID();
+                //managedItemList.Add(*newItem);
+                if (unusedIDs.Count != 0)
+                {
+                    var id = unusedIDs.FirstOrDefault();
+                    var oldWeapon = activeWeapons.FirstOrDefault(x => x.WeaponItemId == id);
+                    if (oldWeapon == null)
+                    {
+                        Log.Error("No slot available");
+                        continue;
+                    }
+                    //managedItemList.Swap(id, i);
+                    managedItemList.Overwrite(id, *newItem);
+                    existingWeapon.SetWeaponItemId(id,true,i);
+                    oldWeapon.SetWeaponItemId(i);
+                    unusedIDs.RemoveAt(0);
+                    this.weaponDesc.SetWeaponDesc(id, existingWeapon.Description);
+                }
             }
             continue;
         }
-        weaponDesc.Prime(); // Get descriptions for given episode
-        var newItemIndex = 512;
-        foreach (var weapon in registry.GetActiveWeapons())
+        var managedCount = managedItemList.Count;
+        managedItemList.Dispose();
+        weaponCount = weaponItemList->Count;
+        if (managedCount != weaponCount)
         {
-            if (weapon.WeaponId < Episode.BASE_EPISODE_WEAP_ID)
-            {
-                continue;
-            }
-            var item = new FWeaponItemList(weapon);
-//            weaponItemList->Data.allocator_instance[newItemIndex] = item;
-            var newItem = &weaponItemList->Data.allocator_instance[newItemIndex];
-            newItem->SortNum = item.SortNum;
-            newItem->WeaponType = item.WeaponType;
-            newItem->EquipID = item.EquipID;
-            newItem->Rarity = item.Rarity;
-            newItem->Tier = item.Tier;
-            newItem->Attack = item.Attack;
-            newItem->Accuracy = item.Accuracy;
-            newItem->Strength = item.Strength;
-            newItem->Magic = item.Magic;
-            newItem->Endurance = item.Endurance;
-            newItem->Agility = item.Agility;
-            newItem->Luck = item.Luck;
-            newItem->Price = item.Price;
-            newItem->SellPrice = item.SellPrice;
-            newItem->GetFLG = 0;
-            newItem->ModelID = (ushort)weapon.ModelId;
-            newItem->Flags = 0;
-            Log.Verbose(item.ToString()!);
-            //weaponDesc.AddDescription(weapon.Description);
-            weapon.SetWeaponItemId(newItemIndex);
-            weaponDesc.SetWeaponDesc(newItemIndex, weapon.Description);
-            Log.Debug($"Added weapon item: {weapon.Name} || Weapon Type {weapon.Character.ToWeaponType()} || Attack: {item.Attack} || Weapon ID: {weapon.WeaponId}");
-            newItemIndex++;
+            Log.Warning("Failed to apply new weapons.");
         }
+        Log.Debug($"{weaponCount}");
+        //managedArray.Dispose();
         this.weaponDesc.Init();
     }
     private void LogWeaponVariables(UAppCharacterComp* comp)
@@ -145,6 +169,7 @@ internal unsafe class WeaponHooks
     {
         var character = comp->baseObj.Character;
         var weaponId = comp->baseObj.WeaponId; // Updates with each change
+        var weapons = comp->baseObj.Weapons;
         const string noModel = "NONE";
         var arrayWrapper = new Emitter.TArrayWrapper<nint>(comp->baseObj.Weapons);
         var weaponModelId = comp->mSetWeaponModelID; // returns the LAST modelId

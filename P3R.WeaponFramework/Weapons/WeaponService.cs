@@ -17,13 +17,20 @@ internal unsafe class WeaponService
     public WeaponService(
         IUObjects uObjects,
         IUnreal unreal,
+        IMemoryMethods memoryMethods,
         WeaponRegistry registry,
         WeaponDescService weaponDesc)
     {
 
         shellService = new(unreal, registry);
         itemEquipHooks = new(registry);
-        weaponHooks = new(unreal, uObjects, registry, weaponDesc, shellService, itemEquipHooks);
+        weaponHooks = new(unreal,
+                          uObjects,
+                          memoryMethods,
+                          registry,
+                          weaponDesc,
+                          shellService,
+                          itemEquipHooks);
         itemCountHook = new(registry);
         weaponNameHook = new(uObjects, unreal, registry);
     }

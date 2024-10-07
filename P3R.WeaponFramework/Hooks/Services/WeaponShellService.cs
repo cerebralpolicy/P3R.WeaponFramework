@@ -203,7 +203,7 @@ internal unsafe class WeaponShellService
     public void RedirectHandler(Weapon weapon)
     {
         var shell = weapon.ShellTarget;
-        if (weapon.ModelId == (int)shell && weapon.ModelId < 512)
+        if (weapon.ModelId == (int)shell && !weapon.IsModded)
             DefaultShells(weapon);
         else if (weapon.ModelId == (int)shell)
             RedirectShells(weapon);

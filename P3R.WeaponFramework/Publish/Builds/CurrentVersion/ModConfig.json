@@ -2,7 +2,7 @@
   "ModId": "P3R.WeaponFramework",
   "ModName": "Weapon Framework",
   "ModAuthor": "CerebralPolicy",
-  "ModVersion": "0.3.0",
+  "ModVersion": "0.3.1",
   "ModDescription": "Description",
   "ModDll": "P3R.WeaponFramework.dll",
   "ModIcon": "Preview.png",

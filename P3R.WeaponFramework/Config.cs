@@ -28,9 +28,9 @@ namespace P3R.WeaponFramework.Configuration
         [DefaultValue(LogLevel.Information)]
         public LogLevel LogLevel { get; set; } = LogLevel.Information;
 
-        [DisplayName("Use Modified Blueprint Flow")]
+        [DisplayName("Use Expanded Data Assets")]
         [DefaultValue(false)]
-        public bool BPFlow { get; set; } = false;
+        public bool ExpandedDataAssets { get; set; } = false;
     }
 
     /// <summary>

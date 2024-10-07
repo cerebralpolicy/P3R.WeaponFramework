@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>TryGetController</Title>
+      <Shortcut>getControl</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[if (!TryGetController<$Interface$>(out var $Output$, out var $Output$Ex))]]>
+        <![CDATA[    throw $Output$Ex;]]>
+      </Code>
+      <Declarations>
+        <Object>
+          <ID>Interface</ID>
+        </Object>
+        <Object>
+          <ID>Output</ID>
+        </Object>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>P3R.WeaponFramework</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -87,12 +87,15 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
     public int SortNum { get; set; }
     #endregion
     #region Utilities
-    public void SetWeaponItemId(int weaponItemId)
+    public void SetWeaponItemId(int weaponItemId, bool isOverwriting = false, int oldItemId = 0)
     {
         this.WeaponItemId = weaponItemId;
         if (this.Character == ECharacter.NONE || this.Name == "Unused")
             return;
-        Log.Debug($"Set Weapon Item ID: {this.Character} || {this.Name} || {this.WeaponItemId}");
+        if (isOverwriting)
+            Log.Debug($"Assigned Unused Weapon Item ID: {this.Character} || {this.Name} || {this.WeaponItemId} [{oldItemId}]");
+        else
+            Log.Debug($"Set Weapon Item ID: {this.Character} || {this.Name} || {this.WeaponItemId}");
     }
     private List<string> GetPaths()
     {
@@ -132,12 +135,37 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
         if (Name == "Unused" || Character == ECharacter.Fuuka || Character == ECharacter.NONE)
         {
             sb.Append(" || Unused.");
-            Log.Verbose(sb.ToString());
+            //Log.Verbose(sb.ToString());
             return; 
         }
         sb.Append($" || {this}");
-        Log.Verbose(sb.ToString());
+        //Log.Verbose(sb.ToString());
         PopulatePaths();
+    }
+    public void InitSlotWeapon(bool Astrea)
+    {
+        Character = ECharacter.NONE;
+        ShellTarget = ShellType.Unassigned; 
+        IsVanilla = !Astrea;
+        IsAstrea = Astrea;
+        IsModded = true;
+    }
+
+    public static Weapon SlotWeapon(bool Astrea, int index)
+    {
+        var newWeap = new Weapon()
+        {
+            Name = "Weapon Framework Slot",
+            Character = ECharacter.NONE,
+            IsVanilla = !Astrea,
+            IsAstrea = Astrea,
+            IsModded = true,
+            WeaponId = index,
+            IsEnabled = true,
+            ModelId = 8,
+            ShellTarget = ShellType.Unassigned,
+        };
+        return newWeap;
     }
 
     public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x8000;

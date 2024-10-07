@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Enums;
 using P3R.WeaponFramework.Weapons.Models;
+using Reloaded.Memory.Extensions;
 using System.Reflection;
 using System.Text.Json;
 using Unreal.AtlusScript.Interfaces;
@@ -12,7 +13,18 @@ public enum FEpisode
     Vanilla = 1 << 1,
     Astrea = 1 << 2,
 }
-
+public static class EpFlag
+{
+    public const FEpisode Both = FEpisode.Vanilla & FEpisode.Astrea;
+    public static FEpisode Parse(string value, bool ignoreCase)
+    {
+        var comparison = ignoreCase ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
+        if (value.Equals("Both",comparison))
+            return Both;
+        else
+            return Enum.Parse<FEpisode>(value,ignoreCase);
+    }
+}
 public class Episode : WFFlagWrapper<Episode, FEpisode>
 {
     #region Constants
@@ -54,7 +66,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
     /// <b>Int</b>: <c>3584</c><br/>
     /// <b>Hex</b>: <c>E00</c>
     /// </remarks>
-    public const int NUM_EPISODE_WEAPS = 3584; //3072
+    public const int NUM_EPISODE_WEAPS = 1536; //3072
     #endregion
 
     private readonly List<Weapon> weapons;
@@ -91,9 +103,9 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         var isAstrea = name == "Astrea";
         foreach (var weapon in weapons)
             weapon.InitAtlusWeapon();
-        for (int i = 0; i < NUM_EPISODE_WEAPS; i++)
+        for (int i = weapons.Count; i < 2048; i++)
         {
-            var weaponId = BASE_EPISODE_WEAP_ID + i;
+            var weaponId = i;
             var weapon = new Weapon(weaponId)
             {
                 Character = ECharacter.NONE,
@@ -105,6 +117,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
                 ShellTarget = ShellType.Unassigned,
             };
             weapons.Add(weapon);
+            Log.Debug(weapons.Count.ToString());
         }
         return weapons;
     }
@@ -131,7 +144,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
         }
 
         // Add placeholder entries.
-        for (int i = 0; i < 100; i++)
+        for (int i = entries.Count; i < 2048; i++)
         {
             entries.Add("[uf 0 5 65278][uf 2 1]未使用[n][e]");
         }

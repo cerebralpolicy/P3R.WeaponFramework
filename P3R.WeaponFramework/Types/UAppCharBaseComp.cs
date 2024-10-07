@@ -44,6 +44,9 @@ public unsafe struct UAppCharBaseComp
     //[FieldOffset(0x0298)] public UAppCharFaceAnimDataAsset* FaceAnimPack;
     [FieldOffset(0x02A0)] public EAppCharWeaponType WeaponType;
     [FieldOffset(0x02A4)] public int WeaponId;
+    /// <summary>
+    /// Determines what weapons can be assigned.
+    /// </summary>
     [FieldOffset(0x02A8)] public Emitter.TArray<IntPtr> Weapons;
     //[FieldOffset(0x02B8)] public bool bBagEnable;
     //[FieldOffset(0x02BC)] public int ShoesID;

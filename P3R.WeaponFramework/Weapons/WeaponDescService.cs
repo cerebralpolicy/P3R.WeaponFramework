@@ -6,7 +6,7 @@ using Unreal.AtlusScript.Interfaces;
 
 namespace P3R.WeaponFramework.Weapons;
 
-internal class WeaponDescService
+public class WeaponDescService
 {
     private EpisodeHook episodeHook;
     private readonly IAtlusAssets atlusAssets;
@@ -32,7 +32,7 @@ internal class WeaponDescService
         {
             sb.AppendLine($"[msg Item_{i:D3}]");
             sb.AppendLine($"[uf 0 5 65278][uf 2 1]{Descriptions[i]}[n][e]");
-            Log.Verbose($"Description {i:D3}: {Descriptions[i]}");
+            //Log.Verbose($"Description {i:D3}: {Descriptions[i]}");
 
         }
         Log.Debug($"{Descriptions.Count} descriptions found.");

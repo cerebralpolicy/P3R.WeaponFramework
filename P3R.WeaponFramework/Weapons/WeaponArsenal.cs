@@ -10,29 +10,13 @@ namespace P3R.WeaponFramework.Weapons
 
         private readonly GameWeapons weapons;
 
-        #region Task Queue
-        private static LimitedConcurrencyLevelTaskScheduler lcts = new LimitedConcurrencyLevelTaskScheduler(2);
-        public List<Task<Weapon?>> WeaponQueue = new List<Task<Weapon?>>();
-        private static TaskFactory<Weapon?> Arsenal = new(lcts);
-        private static CancellationTokenSource cts = new();
-        #endregion
+   
 
         public WeaponArsenal(GameWeapons weapons)
         {
             this.weapons = weapons;
         }
 
-        public void CreateAll() => Task.WaitAll(WeaponQueue.ToArray());
-
-        public void Queue(WeaponMod mod, string weaponDir, ECharacter character)
-        {
-            Task<Weapon?> t = Arsenal.StartNew(() =>
-            {
-                return Create(mod, weaponDir, character);
-            }, cts.Token);
-            Log.Debug("QueuedWeaponCreation");
-            WeaponQueue.Add(t);
-        }
 
         public Weapon? Create(WeaponMod mod, string weaponDir, ECharacter character)
         {
@@ -65,8 +49,25 @@ namespace P3R.WeaponFramework.Weapons
             ModUtils.IfNotNull(config.Model, model => weapon.Config.Model = model);
             ModUtils.IfNotNull(config.Stats, stats =>
             {
-                Log.Debug($"{nameof(WeaponConfig)}.Stats");
-                weapon.Config.Stats = stats;
+                
+                if (stats is null)
+                {
+                    return;
+                }
+                Log.Debug($"{stats.Summarize()}");
+                weapon.Stats.AttrId = stats.AttrId;
+                weapon.Stats.Tier = stats.Tier;
+                weapon.Stats.Rarity = stats.Rarity;
+                weapon.Stats.Attack = stats.Attack;
+                weapon.Stats.Accuracy = stats.Accuracy;
+                weapon.Stats.Strength = stats.Strength;
+                weapon.Stats.Magic = stats.Magic;
+                weapon.Stats.Endurance = stats.Endurance;
+                weapon.Stats.Agility = stats.Agility;
+                weapon.Stats.Luck = stats.Luck;
+                weapon.Stats.SkillId = stats.SkillId;
+                weapon.Stats.Price = stats.Price;
+                weapon.Stats.SellPrice = stats.SellPrice;
                 weapon.VerifyPrices();
             });
             ModUtils.IfNotNull(config.Shell, shell =>

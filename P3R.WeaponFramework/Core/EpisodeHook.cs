@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace P3R.WeaponFramework.Core;
 
-internal unsafe class EpisodeHook
+public unsafe class EpisodeHook
 {
     public delegate bool IsAstreaSave();
     public IsAstreaSave? isAstreaSave;

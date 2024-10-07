@@ -95,16 +95,18 @@ public class Shell : WFEnumWrapper<Shell, ShellType>
     private readonly List<Armature> armatures = [];
     private List<int> modelIds;
 
+    private int defaultItemId;
     private bool vanilla;
     private bool astrea;
     private bool cancels;
 
-    public Shell(ShellType enumValue,ICollection<EArmature> armatures, List<int> modelIds, bool vanilla = true, bool astrea = true, bool cancels = false) : base(enumValue)
+    public Shell(ShellType enumValue,ICollection<EArmature> armatures, List<int> modelIds, int defaultItemId = 0, bool vanilla = true, bool astrea = true, bool cancels = false) : base(enumValue)
     {
         foreach (var armature in armatures)
         {
             this.armatures.Add(armature);
         }
+        this.defaultItemId = defaultItemId;
         this.modelIds = modelIds;
         this.vanilla = vanilla;
         this.astrea = astrea;
@@ -141,6 +143,7 @@ public class Shell : WFEnumWrapper<Shell, ShellType>
         }
 
     }
+    public int DefaultItemId => defaultItemId;
     public List<int> ModelIds => modelIds;
     public bool Vanilla => this.vanilla;
     public bool Astrea => this.astrea;
@@ -150,8 +153,8 @@ public class ShellDatabase : KeyedCollection<ShellType, Shell>
 {
     public Shell this[IWeapon weapon] => shellFromWeapon(weapon);
     protected override ShellType GetKeyForItem(Shell item) => item.EnumValue;
+    public int GetShellItemId(ShellType shell) => this[shell].DefaultItemId;
     public int GetShellModelId(Weapon weapon) => this[weapon].ModelIds.Min();
-
     public int GetShellModelId(ShellType shell) => this[shell].ModelIds.Min();
     private Shell shellFromWeapon(IWeapon weapon) => shellsOfEpisode(weapon.IsAstrea)
         .shellsWithModel(weapon.ModelId)
@@ -183,19 +186,19 @@ public class ShellDatabase : KeyedCollection<ShellType, Shell>
 public static class ShellExtensions
 {
     public static ShellDatabase ShellLookup => [
-        new (ShellType.None, [],[], false, false, true),
-        new (ShellType.Unassigned, [],[], false, false, true),
-        new (ShellType.Player, [EArmature.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], astrea: false),
-        new (ShellType.Yukari, [EArmature.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28]),
-        new (ShellType.Stupei, [EArmature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39]),
-        new (ShellType.Akihiko, [EArmature.Wp0004_01, EArmature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48]),
-        new (ShellType.Mitsuru, [EArmature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57]),
-        new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327]),
-        new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589]),
-        new (ShellType.Ken, [EArmature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89]),
-        new (ShellType.Koromaru, [EArmature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97]),
-        new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105], astrea: false),
-        new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], vanilla: false),
+        new (ShellType.None, [],[], 0, false, false, true),
+        new (ShellType.Unassigned, [],[], 0, false, false, true),
+        new (ShellType.Player, [EArmature.Wp0001_01], [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], 280, astrea: false),
+        new (ShellType.Yukari, [EArmature.Wp0002_01], [20, 21, 22, 23, 24, 25, 26, 27, 28], 281),
+        new (ShellType.Stupei, [EArmature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], 282),
+        new (ShellType.Akihiko, [EArmature.Wp0004_01, EArmature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48], 283),
+        new (ShellType.Mitsuru, [EArmature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57], 141),
+        new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327], 176),
+        new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589], 179),
+        new (ShellType.Ken, [EArmature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], 226),
+        new (ShellType.Koromaru, [EArmature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97], 201),
+        new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105], 251, astrea: false),
+        new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], 477, vanilla: false),
         ];
     public static ShellType ShellFromId(int modelId, bool astrea)
     {
@@ -204,6 +207,7 @@ public static class ShellExtensions
         else
             return ShellLookup.First(x => x.ModelIds.Contains(modelId) && x.Astrea == astrea).EnumValue;
     }
+    public static int ItemId(this ShellType shellType) => ShellLookup.GetShellItemId(shellType);
     public static int ModelId(this ShellType shellType) => ShellLookup.GetShellModelId(shellType);
     public static List<Shell> shellsWithModel(this List<Shell> list, int modelId) => list
         .Where(x => x.ModelIds.Contains(modelId))

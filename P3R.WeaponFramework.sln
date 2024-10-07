@@ -35,8 +35,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlusScriptCompiler", "Tool
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtlusScriptLibrary", "Tools\Atlus-Script-Tools\Source\AtlusScriptLibrary\AtlusScriptLibrary.csproj", "{1D2960B8-D22B-4446-8A1F-8601289D187F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Loose", "Loose", "{CFF802E2-E141-470A-B659-E533D6DE5942}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A58A1B62-8C75-42D5-9443-464D113B1DA0}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -65,9 +63,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WF.HockeyNightInTartaru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{9ABB46D7-B3FE-426D-8353-4B3610658924}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WeaponFramework.Types", "P3R.WeaponFramework.Types\P3R.WeaponFramework.Types.csproj", "{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WeaponFramework.Types", "P3R.WeaponFramework.Types\P3R.WeaponFramework.Types.csproj", "{CE47705C-FFD5-4EF1-8F47-EC5D4FA8144B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WeaponFramework.DataGUI", "P3R.WeaponFramework.Tools\P3R.WeaponFramework.DataGUI\P3R.WeaponFramework.DataGUI.csproj", "{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3R.WeaponFramework.DataGUI", "P3R.WeaponFramework.Tools\P3R.WeaponFramework.DataGUI\P3R.WeaponFramework.DataGUI.csproj", "{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{9F038CCD-9B16-4EA8-A1A6-39D6FDC16ADD}"
+	ProjectSection(SolutionItems) = preProject
+		Snippets\TryGetController.snippet = Snippets\TryGetController.snippet
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3R.WeaponFramework.DescriptionGenerator", "P3R.WeaponFramework.Tools\P3R.WeaponFramework.DescriptionGenerator\P3R.WeaponFramework.DescriptionGenerator.csproj", "{4A77C4F8-875C-4178-98A8-EC0E42BB103C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +156,10 @@ Global
 		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A77C4F8-875C-4178-98A8-EC0E42BB103C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A77C4F8-875C-4178-98A8-EC0E42BB103C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A77C4F8-875C-4178-98A8-EC0E42BB103C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A77C4F8-875C-4178-98A8-EC0E42BB103C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,6 +187,8 @@ Global
 		{3D11B65E-97DD-4DB6-9A7D-2B0B17073AA9} = {5E7CCDE3-B3EC-4240-BDCA-9356684BA4F9}
 		{9ABB46D7-B3FE-426D-8353-4B3610658924} = {5E7CCDE3-B3EC-4240-BDCA-9356684BA4F9}
 		{63FB5A4D-8C93-4C34-BEFF-D247EFDC5EB8} = {063073D9-7693-4326-9FEC-C1EF59FDF735}
+		{9F038CCD-9B16-4EA8-A1A6-39D6FDC16ADD} = {A58A1B62-8C75-42D5-9443-464D113B1DA0}
+		{4A77C4F8-875C-4178-98A8-EC0E42BB103C} = {063073D9-7693-4326-9FEC-C1EF59FDF735}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E93B0DD-08AB-4E6E-A817-7A7060208A23}
