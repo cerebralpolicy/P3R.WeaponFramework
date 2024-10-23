@@ -47,7 +47,7 @@ public unsafe struct UAppCharBaseComp
     /// <summary>
     /// Determines what weapons can be assigned.
     /// </summary>
-    [FieldOffset(0x02A8)] public Emitter.TArray<IntPtr> Weapons;
+    [FieldOffset(0x02A8)] public TArray<IntPtr> Weapons;
     //[FieldOffset(0x02B8)] public bool bBagEnable;
     //[FieldOffset(0x02BC)] public int ShoesID;
     //[FieldOffset(0x02C0)] public EAppCharState State;

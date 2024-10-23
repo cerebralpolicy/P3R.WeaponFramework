@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uz7D0BgEzXPyNEoTWnsBmX8D07Fh2EIeVFuQBvCwzFFyj8TQFfQVCo9vftOh1GxZIflo2cAR1Q6JyKSA/eQbzA==",
+  "dgSpecHash": "45ILLM+8txw=",
   "success": true,
   "projectFilePath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Cole\\.nuget\\packages\\p3rpc.classconstructor.interfaces\\1.2.0\\p3rpc.classconstructor.interfaces.1.2.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\p3rpc.nativetypes.interfaces\\1.6.1\\p3rpc.nativetypes.interfaces.1.6.1.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.hooks.definitions\\1.15.0\\reloaded.hooks.definitions.1.15.0.nupkg.sha512",
     "C:\\Users\\Cole\\.nuget\\packages\\reloaded.memory\\9.4.2\\reloaded.memory.9.4.2.nupkg.sha512",

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P3R.WeaponFramework.Weapons.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -141,10 +142,7 @@ public class TManagedArray<T> : TManagedArrayBase<T>, IEnumerable where T : unma
         return -1;
     }
 
-    public unsafe override void Insert(int index, T item)
-    {
-        throw new NotImplementedException();
-    }
+    public unsafe override void Insert(int index, T item) => MemoryMethods.TArray_Insert(Self, item, index);
 
     public unsafe override bool Remove(T item)
     {
@@ -158,6 +156,28 @@ public class TManagedArray<T> : TManagedArrayBase<T>, IEnumerable where T : unma
     }
 
     public unsafe override void RemoveAt(int index) => MemoryMethods.TArray_Delete(Self, index);
+
+    public override string? ToString()
+    {
+        bool first = true;
+        var sb = new StringBuilder();
+        foreach (var el in this)
+        {
+            if (first)
+            {
+                sb.Append(el.ToString());
+                first = false;
+                continue;
+            }
+            sb.AppendJoin(", ", el.ToString());
+        }
+        var output = sb.ToString();
+        if (string.IsNullOrEmpty(output))
+        {
+            return null;
+        }
+        return sb.ToString();
+    }
 }
 public class TManagedArrayEnumerator<T> : TManagedArrayBaseEnumerator<T>, IEnumerator<T> where T : unmanaged
 {
@@ -183,9 +203,25 @@ public unsafe class TWeaponItemListTable : TManagedArray<FWeaponItemList>
     public TWeaponItemListTable(IMemoryMethods memoryMethods, TArray<FWeaponItemList>* self) : base(memoryMethods, self)
     {
     }
-    public unsafe void Overwrite(int index, FWeaponItemList fWeapon)
+
+
+    FWeaponItemList NewItem(Weapon weapon) => new(MemoryMethods, weapon);
+    public unsafe void AddWeapon(Weapon weapon)
     {
-        MemoryMethods.TArray_Insert(Self,fWeapon, index);
+        var item = NewItem(weapon);
+        _ = item.Malloc(MemoryMethods);
+        Add(item);
+    }
+    public unsafe void InsertWeapon(int index, Weapon weapon)
+    {
+        var item = NewItem(weapon);
+        _ = item.Malloc(MemoryMethods);
+        Insert(index, item);
+    }
+    public unsafe void Overwrite(int index, FWeaponItemList newItem)
+    {
+        //MemoryMethods.TArray_Insert(Self,newItem, index);
+        this[index].ApplyData(newItem);
     }
     public unsafe void Swap(int unusedIndex, int modIndex)
     {
@@ -194,5 +230,10 @@ public unsafe class TWeaponItemListTable : TManagedArray<FWeaponItemList>
         Log.Debug($"Swapping ID: {unusedIndex}\nEquip ID: {mod.EquipID}");
         this[unusedIndex] = this[modIndex];
         this[modIndex] = temp;
+    }
+    public unsafe void SummarizeItem(int index)
+    {
+        var item = this[index];
+        Log.Information($"{item}");
     }
 }

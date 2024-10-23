@@ -45,9 +45,9 @@ namespace P3R.WeaponFramework.Tools.DataUtils
                 string path = Console.ReadLine()!;
                 if (type == FileType.Json) {
                     var weapons = Subroutines.GetCharaWeapons();
-                    var weaponsAstrea = Subroutines.GetCharaWeapons(Episode.ASTREA);
-                    Subroutines.JsonFileSerializer.SerializeFile(path, weapons, "Weapons_Vanilla");
-                    Subroutines.JsonFileSerializer.SerializeFile(path, weaponsAstrea, "Weapons_Astrea");
+                    var weaponsAstrea = Subroutines.GetCharaWeapons(Episode.Astrea);
+                    Subroutines.JsonFileSerializer.SerializeFile(path, weapons);
+                    Subroutines.JsonFileSerializer.SerializeFile(path, weaponsAstrea, Episode.Astrea);
                 }
                 if (type == FileType.Yaml) 
                 {

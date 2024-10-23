@@ -3,8 +3,6 @@
  * to make it easier to upgrade to newer versions of the template.
 */
 
-using P3R.WF.HockeyNightInTartarus.Configuration;
-using P3R.WF.HockeyNightInTartarus.Template.Configuration;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
@@ -23,17 +21,13 @@ namespace P3R.WF.HockeyNightInTartarus.Template
         /// </summary>
         private IModLoader _modLoader = null!;
 
-        /// <summary>
-        /// Stores the contents of your mod's configuration. Automatically updated by template.
-        /// </summary>
-        private Config _configuration = null!;
 
         /// <summary>
         /// An interface to Reloaded's the function hooks/detours library.
         /// See: https://github.com/Reloaded-Project/Reloaded.Hooks
         ///      for documentation and samples. 
         /// </summary>
-        private IReloadedHooks? _hooks;
+        //private IReloadedHooks? _hooks;
 
         /// <summary>
         /// Configuration of the current mod.
@@ -53,40 +47,19 @@ namespace P3R.WF.HockeyNightInTartarus.Template
             _modLoader = (IModLoader)loaderApi;
             _modConfig = (IModConfig)modConfig;
             _logger = (ILogger)_modLoader.GetLogger();
-            _modLoader.GetController<IReloadedHooks>()?.TryGetTarget(out _hooks!);
-
-            // Your config file is in Config.json.
-            // Need a different name, format or more configurations? Modify the `Configurator`.
-            // If you do not want a config, remove Configuration folder and Config class.
-            var configurator = new Configurator(_modLoader.GetModConfigDirectory(_modConfig.ModId));
-            _configuration = configurator.GetConfiguration<Config>(0);
-            _configuration.ConfigurationUpdated += OnConfigurationUpdated;
+            //_modLoader.GetController<IReloadedHooks>()?.TryGetTarget(out _hooks!);
 
             // Please put your mod code in the class below,
             // use this class for only interfacing with mod loader.
             _mod = new Mod(new ModContext()
             {
                 Logger = _logger,
-                Hooks = _hooks,
+                //Hooks = _hooks,
                 ModLoader = _modLoader,
                 ModConfig = _modConfig,
                 Owner = this,
-                Configuration = _configuration,
             });
         }
-
-        private void OnConfigurationUpdated(IConfigurable obj)
-        {
-            /*
-                This is executed when the configuration file gets 
-                updated by the user at runtime.
-            */
-
-            // Replace configuration with new.
-            _configuration = (Config)obj;
-            _mod.ConfigurationUpdated(_configuration);
-        }
-
         /* Mod loader actions. */
         public void Suspend() => _mod.Suspend();
         public void Resume() => _mod.Resume();

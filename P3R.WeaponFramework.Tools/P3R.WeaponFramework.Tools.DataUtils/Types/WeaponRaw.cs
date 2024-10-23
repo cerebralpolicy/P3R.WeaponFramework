@@ -1,4 +1,5 @@
 ﻿using P3R.WeaponFramework.Types;
+using System.Runtime.InteropServices;
 
 namespace P3R.WeaponFramework.Tools.DataUtils;
 

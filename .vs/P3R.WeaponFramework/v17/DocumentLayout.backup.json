@@ -1,0 +1,356 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "S:\\ReloadMods\\P3R.WeaponFramework\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\models\\weaponmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\models\\weaponmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0B710F-DDB8-452D-BFEF-7C292E7D32D7}|P3R.WF.HockeyNightInTartarus\\P3R.WF.HockeyNightInTartarus.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.wf.hockeynightintartarus\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0B710F-DDB8-452D-BFEF-7C292E7D32D7}|P3R.WF.HockeyNightInTartarus\\P3R.WF.HockeyNightInTartarus.csproj|solutionrelative:p3r.wf.hockeynightintartarus\\mod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\services\\weaponredirectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\services\\weaponredirectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\utils\\assetutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\utils\\assetutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\weaponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\services\\weaponshellserviceold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\services\\weaponshellserviceold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\weapons\\weapontableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\weapons\\weapontableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\weaponoverridesregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\weaponoverridesregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\weaponarsenal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\weaponarsenal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\weaponregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\weaponregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\p3r.weaponframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\p3r.weaponframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\weaponhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\weaponhooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\utils\\weapontableutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\utils\\weapontableutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\utils\\yamlserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\utils\\yamlserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\types\\weaponconfig\\weaponconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\types\\weaponconfig\\weaponconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\weapons\\models\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\weapons\\models\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|s:\\reloadmods\\p3r.weaponframework\\p3r.weaponframework\\hooks\\services\\weaponshellservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D933F994-0A34-4996-85CF-54A33DE3E96F}|P3R.WeaponFramework\\P3R.WeaponFramework.csproj|solutionrelative:p3r.weaponframework\\hooks\\services\\weaponshellservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D1D5AFF-223F-412D-9FAB-D8B5D393D2AD}|REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\p3rpc.nativetypes\\p3rpc.nativetypes.interfaces\\icommonmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D1D5AFF-223F-412D-9FAB-D8B5D393D2AD}|REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj|solutionrelative:ref\\p3rpc.nativetypes\\p3rpc.nativetypes.interfaces\\icommonmethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D1D5AFF-223F-412D-9FAB-D8B5D393D2AD}|REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj|s:\\reloadmods\\p3r.weaponframework\\ref\\p3rpc.nativetypes\\p3rpc.nativetypes.interfaces\\imemorymethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D1D5AFF-223F-412D-9FAB-D8B5D393D2AD}|REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\p3rpc.nativetypes.Interfaces.csproj|solutionrelative:ref\\p3rpc.nativetypes\\p3rpc.nativetypes.interfaces\\imemorymethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 510,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssetUtils.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\AssetUtils.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Utils\\AssetUtils.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\AssetUtils.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Utils\\AssetUtils.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAewEQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:21:23.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeaponService.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponService.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\WeaponService.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponService.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\WeaponService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwCIAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T20:14:03.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "YamlSerializer.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\YamlSerializer.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Utils\\YamlSerializer.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\YamlSerializer.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Utils\\YamlSerializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T20:24:16.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WeaponConfig.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\WeaponConfig\\WeaponConfig.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Types\\WeaponConfig\\WeaponConfig.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Types\\WeaponConfig\\WeaponConfig.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Types\\WeaponConfig\\WeaponConfig.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T20:20:26.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeaponMod.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\WeaponMod.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\Models\\WeaponMod.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\WeaponMod.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\Models\\WeaponMod.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T20:16:05.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WeaponHooks.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\WeaponHooks.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwDUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T03:15:54.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Weapon.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\Models\\Weapon.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAwKEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:29:56.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mod.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Mod.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Mod.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Mod.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Mod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T03:17:06.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "P3R.WeaponFramework.csproj",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
+              "RelativeToolTip": "P3R.WeaponFramework\\P3R.WeaponFramework.csproj",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-21T20:49:58.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WeaponTableUtils.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\WeaponTableUtils.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Utils\\WeaponTableUtils.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Utils\\WeaponTableUtils.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Utils\\WeaponTableUtils.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:27:17.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "WeaponShellService.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\Services\\WeaponShellService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAADwv3AAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:16:34.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ICommonMethods.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\ICommonMethods.cs",
+              "RelativeDocumentMoniker": "REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\ICommonMethods.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\ICommonMethods.cs",
+              "RelativeToolTip": "REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\ICommonMethods.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:18:25.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IMemoryMethods.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\IMemoryMethods.cs",
+              "RelativeDocumentMoniker": "REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\IMemoryMethods.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\IMemoryMethods.cs",
+              "RelativeToolTip": "REF\\p3rpc.nativetypes\\p3rpc.nativetypes.Interfaces\\IMemoryMethods.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T02:18:22.747Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 580,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mod.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WF.HockeyNightInTartarus\\Mod.cs",
+              "RelativeDocumentMoniker": "P3R.WF.HockeyNightInTartarus\\Mod.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WF.HockeyNightInTartarus\\Mod.cs",
+              "RelativeToolTip": "P3R.WF.HockeyNightInTartarus\\Mod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T20:00:58.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeaponShellServiceOld.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponShellServiceOld.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\Services\\WeaponShellServiceOld.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponShellServiceOld.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\Services\\WeaponShellServiceOld.cs",
+              "ViewState": "AgIAAHMBAAAAAAAAAAAAAHoBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T23:53:50.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeaponTableService.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Weapons\\WeaponTableService.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\Weapons\\WeaponTableService.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Weapons\\WeaponTableService.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\Weapons\\WeaponTableService.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAnwF8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T23:53:40.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeaponArsenal.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponArsenal.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\WeaponArsenal.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponArsenal.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\WeaponArsenal.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:36:39.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeaponRegistry.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponRegistry.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\WeaponRegistry.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponRegistry.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\WeaponRegistry.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAD0AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T17:44:16.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeaponRedirectService.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponRedirectService.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Hooks\\Services\\WeaponRedirectService.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Hooks\\Services\\WeaponRedirectService.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Hooks\\Services\\WeaponRedirectService.cs",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAqwAwBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T17:24:51.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeaponOverridesRegistry.cs",
+              "DocumentMoniker": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponOverridesRegistry.cs",
+              "RelativeDocumentMoniker": "P3R.WeaponFramework\\Weapons\\WeaponOverridesRegistry.cs",
+              "ToolTip": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework\\Weapons\\WeaponOverridesRegistry.cs",
+              "RelativeToolTip": "P3R.WeaponFramework\\Weapons\\WeaponOverridesRegistry.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:19:32.805Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -119,38 +120,86 @@ public unsafe struct UDataAsset
     [FieldOffset(0x28)] public UDataAsset* nativeClass;
 }
 
-[StructLayout(LayoutKind.Explicit, Size = 0x3A0)]
-public unsafe struct USkeletalMesh
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct TMap<KeyType, ValueType> : IEnumerable<TMapElement<KeyType, ValueType>>
+    where KeyType : unmanaged
+    where ValueType : unmanaged
 {
-    //[FieldOffset(0x0000)] public UStreamableRenderAsset baseObj;
-    //[FieldOffset(0x0080)] public USkeleton* Skeleton;
-    //[FieldOffset(0x0088)] public FBoxSphereBounds ImportedBounds;
-    //[FieldOffset(0x00A4)] public FBoxSphereBounds ExtendedBounds;
-    //[FieldOffset(0x00C0)] public FVector PositiveBoundsExtension;
-    //[FieldOffset(0x00CC)] public FVector NegativeBoundsExtension;
-    //[FieldOffset(0x00D8)] public TArray<FSkeletalMaterial> Materials;
-    //[FieldOffset(0x00E8)] public TArray<FBoneMirrorInfo> SkelMirrorTable;
-    //[FieldOffset(0x00F8)] public TArray<FSkeletalMeshLODInfo> LODInfo;
-    //[FieldOffset(0x0158)] public FPerPlatformInt MinLOD;
-    //[FieldOffset(0x015C)] public FPerPlatformBool DisableBelowMinLodStripping;
-    //[FieldOffset(0x015D)] public EAxis SkelMirrorAxis;
-    //[FieldOffset(0x015E)] public EAxis SkelMirrorFlipAxis;
-    //[FieldOffset(0x015F)] public byte bUseFullPrecisionUVs;
-    //[FieldOffset(0x015F)] public byte bUseHighPrecisionTangentBasis;
-    //[FieldOffset(0x015F)] public byte bHasBeenSimplified;
-    //[FieldOffset(0x015F)] public byte bHasVertexColors;
-    //[FieldOffset(0x015F)] public byte bEnablePerPolyCollision;
-    //[FieldOffset(0x0160)] public UBodySetup* BodySetup;
-    //[FieldOffset(0x0168)] public UPhysicsAsset* PhysicsAsset;
-    //[FieldOffset(0x0170)] public UPhysicsAsset* ShadowPhysicsAsset;
-    //[FieldOffset(0x0178)] public TArray<IntPtr> NodeMappingData;
-    //[FieldOffset(0x0188)] public byte bSupportRayTracing;
-    //[FieldOffset(0x0190)] public TArray<IntPtr> MorphTargets;
-    //[FieldOffset(0x0318)] public TSubclassOf<UAnimInstance> PostProcessAnimBlueprint;
-    //[FieldOffset(0x0320)] public TArray<IntPtr> MeshClothingAssets;
-    //[FieldOffset(0x0330)] public FSkeletalMeshSamplingInfo SamplingInfo;
-    //[FieldOffset(0x0360)] public TArray<IntPtr> AssetUserData;
-    //[FieldOffset(0x0370)] public TArray<IntPtr> Sockets;
-    //[FieldOffset(0x0390)] public TArray<FSkinWeightProfileInfo> SkinWeightProfiles;
+    public TMapElement<KeyType, ValueType>* elements;
+    public int mapNum;
+    public int mapMax;
+
+    public ValueType* TryGet(KeyType key)
+    {
+        if (mapNum == 0 || elements == null) return null;
+        ValueType* value = null;
+        for (int i = 0; i < mapNum; i++)
+        {
+            var currElem = &elements[i];
+            if (currElem->Key.Equals(key))
+            {
+                value = &currElem->Value;
+                break;
+            }
+        }
+        return value;
+    }
+
+    public TMapElement<KeyType, ValueType>* TryGetElement(KeyType key)
+    {
+        if (mapNum == 0 || elements == null) return null;
+        TMapElement<KeyType, ValueType>* value = null;
+        for (int i = 0; i < mapNum; i++)
+        {
+            var currElem = &elements[i];
+            if (currElem->Key.Equals(key))
+            {
+                value = currElem;
+                break;
+            }
+        }
+
+        return value;
+    }
+
+    public bool TryGet(KeyType key, out ValueType* value)
+    {
+        value = TryGet(key);
+        return value != null;
+    }
+
+    public ValueType* GetByIndex(int idx)
+    {
+        if (idx < 0 || idx > mapNum) return null;
+        return &elements[idx].Value;
+    }
+
+    public IEnumerator<TMapElement<KeyType, ValueType>> GetEnumerator()
+    {
+        var items = new List<TMapElement<KeyType, ValueType>>();
+        for (int i = 0; i < this.mapNum; i++)
+        {
+            items.Add(elements[i]);
+        }
+
+        return items.GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 }
 
+[StructLayout(LayoutKind.Sequential)]
+public unsafe struct TMapElement<KeyType, ValueType>
+    where KeyType : unmanaged
+    where ValueType : unmanaged
+{
+    public KeyType Key;
+    public ValueType Value;
+    public uint HashNextId;
+    public uint HashIndex;
+}
+
+public interface IMapHashable
+{
+    public uint GetTypeHash();
+}

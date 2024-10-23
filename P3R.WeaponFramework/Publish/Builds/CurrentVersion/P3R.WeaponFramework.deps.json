@@ -20,10 +20,22 @@
           "Unreal.ObjectsEmitter.Interfaces": "1.2.3",
           "UnrealEssentials.Interfaces": "1.0.0",
           "YamlDotNet": "16.1.3",
+          "p3rpc.classconstructor.Interfaces": "1.2.0",
           "p3rpc.nativetypes.Interfaces": "1.6.1"
         },
         "runtime": {
           "P3R.WeaponFramework.dll": {}
+        }
+      },
+      "p3rpc.classconstructor.Interfaces/1.2.0": {
+        "dependencies": {
+          "p3rpc.nativetypes.Interfaces": "1.6.1"
+        },
+        "runtime": {
+          "lib/net8.0/p3rpc.classconstructor.Interfaces.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
         }
       },
       "p3rpc.nativetypes.Interfaces/1.6.1": {
@@ -139,12 +151,18 @@
       },
       "P3R.WeaponFramework.Enums/1.0.0": {
         "runtime": {
-          "P3R.WeaponFramework.Enums.dll": {}
+          "P3R.WeaponFramework.Enums.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "P3R.WeaponFramework.Interfaces/1.0.0": {
         "runtime": {
-          "P3R.WeaponFramework.Interfaces.dll": {}
+          "P3R.WeaponFramework.Interfaces.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -154,6 +172,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "p3rpc.classconstructor.Interfaces/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PlP3jjxUqYlZJSgGLP/+PdiEMZYiraenal61osjmrCvaEZPT3CFsyaHXqz+SOmN/jJj46cTkor+BaR/nxJiseg==",
+      "path": "p3rpc.classconstructor.interfaces/1.2.0",
+      "hashPath": "p3rpc.classconstructor.interfaces.1.2.0.nupkg.sha512"
     },
     "p3rpc.nativetypes.Interfaces/1.6.1": {
       "type": "package",

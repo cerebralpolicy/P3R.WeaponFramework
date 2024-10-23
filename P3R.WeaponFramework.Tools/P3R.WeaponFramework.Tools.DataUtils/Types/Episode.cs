@@ -2,6 +2,6 @@
 
 public enum Episode
 {
-    VANILLA,
-    ASTREA
+    Xrd777,
+    Astrea
 }

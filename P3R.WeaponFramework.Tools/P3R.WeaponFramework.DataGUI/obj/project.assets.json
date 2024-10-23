@@ -129,6 +129,22 @@
           "System.Xml.XDocument": "4.0.11"
         }
       },
+      "p3rpc.classconstructor.Interfaces/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "p3rpc.nativetypes.Interfaces": "1.4.2"
+        },
+        "compile": {
+          "lib/net8.0/p3rpc.classconstructor.Interfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/p3rpc.classconstructor.Interfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "p3rpc.nativetypes.Interfaces/1.6.1": {
         "type": "package",
         "compile": {
@@ -1432,6 +1448,7 @@
           "Unreal.ObjectsEmitter.Interfaces": "1.2.3",
           "UnrealEssentials.Interfaces": "1.0.0",
           "YamlDotNet": "16.1.3",
+          "p3rpc.classconstructor.Interfaces": "1.2.0",
           "p3rpc.nativetypes.Interfaces": "1.6.1"
         },
         "compile": {
@@ -1683,6 +1700,19 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.0.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "p3rpc.classconstructor.Interfaces/1.2.0": {
+      "sha512": "PlP3jjxUqYlZJSgGLP/+PdiEMZYiraenal61osjmrCvaEZPT3CFsyaHXqz+SOmN/jJj46cTkor+BaR/nxJiseg==",
+      "type": "package",
+      "path": "p3rpc.classconstructor.interfaces/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/p3rpc.classconstructor.Interfaces.dll",
+        "lib/net8.0/p3rpc.classconstructor.Interfaces.xml",
+        "p3rpc.classconstructor.interfaces.1.2.0.nupkg.sha512",
+        "p3rpc.classconstructor.interfaces.nuspec"
       ]
     },
     "p3rpc.nativetypes.Interfaces/1.6.1": {
@@ -4921,6 +4951,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Cole\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -4933,10 +4964,12 @@
       "outputPath": "S:\\ReloadMods\\P3R.WeaponFramework\\P3R.WeaponFramework.Tools\\P3R.WeaponFramework.DataGUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Cole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4971,8 +5004,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -5002,8 +5036,30 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Net.Http' 4.1.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
+      "libraryId": "System.Net.Http",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Security.Cryptography.X509Certificates' 4.1.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-7mfr-774f-w5r9",
+      "libraryId": "System.Security.Cryptography.X509Certificates",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

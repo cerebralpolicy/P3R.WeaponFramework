@@ -1,5 +1,4 @@
-﻿using P3R.WF.HockeyNightInTartarus.Configuration;
-using P3R.WF.HockeyNightInTartarus.Template;
+﻿using P3R.WF.HockeyNightInTartarus.Template;
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 
@@ -19,7 +18,7 @@ namespace P3R.WF.HockeyNightInTartarus
         /// Provides access to the Reloaded.Hooks API.
         /// </summary>
         /// <remarks>This is null if you remove dependency on Reloaded.SharedLib.Hooks in your mod.</remarks>
-        private readonly IReloadedHooks? _hooks;
+        //private readonly IReloadedHooks? _hooks;
 
         /// <summary>
         /// Provides access to the Reloaded logger.
@@ -32,11 +31,6 @@ namespace P3R.WF.HockeyNightInTartarus
         private readonly IMod _owner;
 
         /// <summary>
-        /// Provides access to this mod's configuration.
-        /// </summary>
-        private Config _configuration;
-
-        /// <summary>
         /// The configuration of the currently executing mod.
         /// </summary>
         private readonly IModConfig _modConfig;
@@ -44,10 +38,9 @@ namespace P3R.WF.HockeyNightInTartarus
         public Mod(ModContext context)
         {
             _modLoader = context.ModLoader;
-            _hooks = context.Hooks;
+            //_hooks = context.Hooks;
             _logger = context.Logger;
             _owner = context.Owner;
-            _configuration = context.Configuration;
             _modConfig = context.ModConfig;
 
 
@@ -60,15 +53,6 @@ namespace P3R.WF.HockeyNightInTartarus
             // TODO: Implement some mod logic
         }
 
-        #region Standard Overrides
-        public override void ConfigurationUpdated(Config configuration)
-        {
-            // Apply settings from configuration.
-            // ... your code here.
-            _configuration = configuration;
-            _logger.WriteLine($"[{_modConfig.ModId}] Config Updated: Applying");
-        }
-        #endregion
 
         #region For Exports, Serialization etc.
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.

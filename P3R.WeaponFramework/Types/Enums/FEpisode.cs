@@ -117,7 +117,7 @@ public class Episode : WFFlagWrapper<Episode, FEpisode>
                 ShellTarget = ShellType.Unassigned,
             };
             weapons.Add(weapon);
-            Log.Debug(weapons.Count.ToString());
+            //Log.Debug(weapons.Count.ToString());
         }
         return weapons;
     }

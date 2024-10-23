@@ -39,5 +39,9 @@ public class WeaponDescService
         var output = sb.ToString();
         this.atlusAssets.AddAsset("BMD_ItemWeaponHelp", output, AssetType.BMD, AssetMode.Both);
     }
-    public void SetWeaponDesc(int weaponItemId, string weaponDesc) => Descriptions[weaponItemId] = weaponDesc;
+    public void SetWeaponDesc(int weaponItemId, string weaponDesc)
+    {
+        Log.Debug($"Weapon description applied || Weapon Item ID: {weaponItemId}");
+        Descriptions[weaponItemId] = weaponDesc;
+    }
 }

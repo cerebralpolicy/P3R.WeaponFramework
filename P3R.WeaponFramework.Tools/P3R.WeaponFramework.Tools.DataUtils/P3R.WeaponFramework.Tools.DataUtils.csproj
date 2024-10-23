@@ -10,6 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FModel\Astrea\Names.json" />
+    <None Remove="FModel\Astrea\Weapons.json" />
+    <None Remove="FModel\Xrd777\Names.json" />
     <None Remove="RawResources\Names.json" />
     <None Remove="RawResources\Names_Astrea.json" />
     <None Remove="RawResources\Weapons.json" />
@@ -17,10 +20,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="FModel\Astrea\Names.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModel\Astrea\Weapons.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModel\Xrd777\Names.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="RawResources\Names_Astrea.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="RawResources\Names.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FModel\Xrd777\Weapons.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="RawResources\Weapons.json">
@@ -46,8 +61,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dump\NewFolder\" />
-    <Folder Include="Output\" />
+    <Folder Include="Dump\P3R\NewFolder\" />
+    <Folder Include="Output\Astrea\" />
+    <Folder Include="Output\Xrd777\" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P3R.WeaponFramework.DescriptionGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5604e3642741d2475be1a2e9f2a0bf6498bd173")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e76a5680954ce82a46f2180cdbb975e0b031e29f")]
 [assembly: System.Reflection.AssemblyProductAttribute("P3R.WeaponFramework.DescriptionGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P3R.WeaponFramework.DescriptionGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

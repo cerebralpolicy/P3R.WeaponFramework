@@ -28,9 +28,9 @@ namespace P3R.WeaponFramework.Configuration
         [DefaultValue(LogLevel.Information)]
         public LogLevel LogLevel { get; set; } = LogLevel.Information;
 
-        [DisplayName("Use Expanded Data Assets")]
+        [DisplayName("Mod Asset Test")]
         [DefaultValue(false)]
-        public bool ExpandedDataAssets { get; set; } = false;
+        public bool TestAssets { get; set; } = false;
     }
 
     /// <summary>

@@ -5,3 +5,4 @@ public enum JsonFile
     Weapons,
     Names
 }
+

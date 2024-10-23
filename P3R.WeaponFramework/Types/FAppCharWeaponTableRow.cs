@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace P3R.WeaponFramework.Types;
 
-[StructLayout(LayoutKind.Explicit, Size = 0x144)]
+[StructLayout(LayoutKind.Explicit, Size = 144)]
 public unsafe struct FAppCharWeaponTableRow: IEnumerable<TMapElement<int, FAppCharWeaponMeshData>>
 {
     [FieldOffset(0x008)] public TMap<int,FAppCharWeaponMeshData> Data;

@@ -21,7 +21,9 @@ public enum ShellType
     Akihiko = 40,
     Mitsuru = 50,
     Aigis_SmallArms = 326,
+    Aigis_SmallArms_Astrea = 1326,
     Aigis_LongArms = 584,
+    Aigis_LongArms_Astrea = 1584,
     Ken = 80,
     Koromaru = 90,
     Shinjiro = 100,
@@ -193,12 +195,14 @@ public static class ShellExtensions
         new (ShellType.Stupei, [EArmature.Wp0003_01], [30, 31, 32, 33, 34, 35, 36, 37, 38, 39], 282),
         new (ShellType.Akihiko, [EArmature.Wp0004_01, EArmature.Wp0004_02], [40, 41, 42, 43, 44, 45, 46, 47, 48], 283),
         new (ShellType.Mitsuru, [EArmature.Wp0005_01], [50, 51, 52, 53, 54, 55, 56, 57], 141),
-        new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327], 176),
-        new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589], 179),
+        new (ShellType.Aigis_SmallArms, [EArmature.Wp0007_01, EArmature.Wp0007_02], [326, 327], 176, astrea: false),
+        new (ShellType.Aigis_LongArms, [EArmature.Wp0007_03], [584, 585, 586, 587, 588, 589], 179, astrea: false),
         new (ShellType.Ken, [EArmature.Wp0008_01], [80, 81, 82, 83, 84, 85, 86, 87, 88, 89], 226),
         new (ShellType.Koromaru, [EArmature.Wp0009_01], [90, 91, 92, 93, 94, 95, 96, 97], 201),
         new (ShellType.Shinjiro, [EArmature.Wp0010_01], [100, 101, 102, 103, 104, 105], 251, astrea: false),
         new (ShellType.Metis, [EArmature.Wp0011_01], [100, 101, 102, 103, 104, 105, 106], 477, vanilla: false),
+        new (ShellType.Aigis_SmallArms_Astrea, [EArmature.Wp0012_01, EArmature.Wp0012_02], [326, 327], 176, vanilla: false),
+        new (ShellType.Aigis_LongArms_Astrea, [EArmature.Wp0012_03], [584, 585, 586, 587, 588, 589], 179, vanilla: false),
         ];
     public static ShellType ShellFromId(int modelId, bool astrea)
     {
@@ -226,5 +230,7 @@ public static class ShellExtensions
 
     public static ECharacter CharacterFromShell(ShellType shell) => Lookup.FirstOfList(Lookup.HasShell(shell));
     public static int RequiredMeshes(this ShellType type) => ShellLookup[type].Meshes;
+
+
 
 }

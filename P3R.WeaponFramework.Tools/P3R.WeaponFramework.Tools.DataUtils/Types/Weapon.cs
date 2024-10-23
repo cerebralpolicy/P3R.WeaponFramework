@@ -18,14 +18,31 @@ public struct Weapon
     public Weapon(ECharacter character, Episode episode, int uniqueID, string name, int weaponType, int modelId, WeaponStats stats)
     {
         Character = character;
-        IsVanilla = episode == Episode.VANILLA;
-        IsAstrea = episode == Episode.ASTREA;
+        IsVanilla = episode == Episode.Xrd777;
+        IsAstrea = episode == Episode.Astrea;
         WeaponId = uniqueID;
+        ItemDef = name;
         Name = name;
         WeaponType = weaponType;
         ModelId = modelId;
         Stats = stats;
-        ShellType = Subroutines.ShellFromId(modelId, episode == Episode.ASTREA);
+        ShellType = Subroutines.ShellFromId(modelId, episode == Episode.Astrea);
+    }
+
+    public Weapon(ECharacter character, Episode episode, int weaponId, string name, string itemDef, int weaponType, int getFLG, int modelId, int flags, WeaponStats stats) : this()
+    {
+        Character = character;
+        IsVanilla = episode == Episode.Xrd777;
+        IsAstrea = episode == Episode.Astrea;
+        WeaponId = weaponId;
+        ItemDef = itemDef;
+        Name = name;
+        WeaponType = weaponType;
+        GetFLG = getFLG;
+        ModelId = modelId;
+        ShellType = Subroutines.ShellFromId(modelId, episode == Episode.Astrea);
+        Flags = flags;
+        Stats = stats;
     }
 
     [JsonPropertyName("Character")]
@@ -36,12 +53,18 @@ public struct Weapon
     public bool IsAstrea { get; set; }
     [JsonPropertyName("WeaponId")]
     public int WeaponId { get; set; }
+    [JsonPropertyName("ItemDef")]
+    public string ItemDef { get; set; }
     [JsonPropertyName("Name")]
     public string Name { get; set; }
     [JsonPropertyName("WeaponType")]
     public int WeaponType { get; set; }
+    [JsonPropertyName("GetFLG")]
+    public int GetFLG {  get; set; }
     [JsonPropertyName("ModelId")]
     public int ModelId { get; set; }
+    [JsonPropertyName("Flags")]
+    public int Flags {  get; set; }
     [JsonPropertyName("ShellTarget")]
     public ShellType ShellType { get; set; }
     [JsonPropertyName("Stats")]

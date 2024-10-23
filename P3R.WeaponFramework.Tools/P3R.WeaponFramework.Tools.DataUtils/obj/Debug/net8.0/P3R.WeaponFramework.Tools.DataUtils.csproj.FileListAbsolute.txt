@@ -149,3 +149,12 @@ S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.
 S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\obj\Debug\net8.0\P3R.WeaponFramework.Tools.DataUtils.pdb
 S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\obj\Debug\net8.0\P3R.WeaponFramework.Tools.DataUtils.genruntimeconfig.cache
 S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\obj\Debug\net8.0\ref\P3R.WeaponFramework.Tools.DataUtils.dll
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\Astrea\Help\BMD_ItemWeaponHelp.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\Astrea\UI\Tables\DatItemWeaponDataAsset.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\Astrea\UI\Tables\DatItemWeaponNameDataAsset.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\L10N\en\Astrea\Help\BMD_ItemWeaponHelp.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\L10N\en\Astrea\UI\Tables\DatItemWeaponNameDataAsset.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\L10N\en\Xrd777\Help\BMD_ItemWeaponHelp.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\L10N\en\Xrd777\UI\Tables\DatItemWeaponNameDataAsset.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\Xrd777\UI\Tables\DatItemWeaponDataAsset.uasset
+S:\ReloadMods\P3R.WeaponFramework\P3R.WeaponFramework.Tools\P3R.WeaponFramework.Tools.DataUtils\bin\Debug\net8.0\Core\DataAssets\P3R\Content\Xrd777\UI\Tables\DatItemWeaponNameDataAsset.uasset

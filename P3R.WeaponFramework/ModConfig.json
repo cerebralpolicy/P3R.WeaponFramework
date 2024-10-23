@@ -2,7 +2,7 @@
   "ModId": "P3R.WeaponFramework",
   "ModName": "Weapon Framework",
   "ModAuthor": "CerebralPolicy",
-  "ModVersion": "0.3.1",
+  "ModVersion": "0.3.2",
   "ModDescription": "Description",
   "ModDll": "P3R.WeaponFramework.dll",
   "ModIcon": "Preview.png",
@@ -21,6 +21,7 @@
     "Unreal.ObjectsEmitter.Reloaded",
     "UnrealEssentials",
     "p3rpc.nativetypes",
+    "p3rpc.classconstructor",
     "SharedScans.Reloaded"
   ],
   "OptionalDependencies": [],

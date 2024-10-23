@@ -55,16 +55,34 @@ internal static partial class Subroutines {
             var json = reader.ReadToEnd();
             return JsonSerializer.Deserialize<T>(json)!;
         }
-        public static void SerializeFile<T>(string path, T obj, string? name = null)
+        public static void SerializeFile<T>(string path, T obj, Episode episode = Episode.Xrd777, string? name = "Weapons")
         {
             var fileName = name ?? nameof(obj);
-            var outputFile = Path.Join(path, $"{fileName}.json");
-            if (File.Exists(outputFile))
+            if (!Directory.Exists(path))
             {
-                File.Delete(outputFile);
+                Directory.CreateDirectory(path);
             }
+            var filePath = Path.Join(path, episode.ToString(), $"{fileName}.json");
             var jsonOut = JsonSerializer.Serialize(obj, SerializerOptions);
-            File.WriteAllText(outputFile, jsonOut);
+            if (File.Exists(filePath))
+            {
+                var fs = File.Open(filePath, FileMode.Open, FileAccess.ReadWrite);
+                fs.SetLength(0);
+                fs.Flush();
+                fs.Close();
+            }
+            else
+            {
+                File.Create(filePath).Close();
+            }
+            var file = File.Open(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            lock (file)
+            {
+                var buffer = new StreamWriter(file);
+                buffer.Write(jsonOut);
+                buffer.Flush();
+                file.Close();
+            }
         } 
     }
 } 

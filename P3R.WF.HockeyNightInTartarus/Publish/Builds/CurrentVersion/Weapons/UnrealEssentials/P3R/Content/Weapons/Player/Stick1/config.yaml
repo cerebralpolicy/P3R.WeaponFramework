@@ -1,0 +1,19 @@
+﻿name: Wood Stick
+shell: Player
+model:
+  mesh_path1:
+  mesh_path2:
+stats:
+  attr_id: BTL_DATA_ATTR_SLASH
+  rarity: 10
+  tier: 10
+  attack: 122
+  accuracy: 95
+  strength: 0
+  magic: 0
+  endurance: 0
+  agility: 0
+  luck: 0
+  skill_id: None
+  price: 11360
+  sell_price: 2840

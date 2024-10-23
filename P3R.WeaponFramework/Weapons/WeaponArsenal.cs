@@ -1,5 +1,6 @@
 ﻿using P3R.WeaponFramework.Utils;
 using P3R.WeaponFramework.Weapons.Models;
+using Reloaded.Memory.Extensions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,15 +11,12 @@ namespace P3R.WeaponFramework.Weapons
 
         private readonly GameWeapons weapons;
 
-   
-
         public WeaponArsenal(GameWeapons weapons)
         {
             this.weapons = weapons;
         }
 
-
-        public Weapon? Create(WeaponMod mod, string weaponDir, ECharacter character)
+        public Weapon? Create(WeaponMod mod, string weaponDir, ECharacter character, int modWeapId)
         {
             int step = 1;
             void OutputStep(string message)
@@ -38,6 +36,8 @@ namespace P3R.WeaponFramework.Weapons
             ApplyWeaponConfig(weapon, config);
             OutputStep("Loading files");
             LoadWeaponFiles(mod, weapon, weaponDir);
+/*            OutputStep("Generating itemDef");
+            weapon.ItemDef = new(mod.ModId, modWeapId);*/
             Log.Information($"Weapon created: {weapon.Character} || {weapon.Name} || Weapon ID: {weapon.WeaponItemId}\nFolder: {weaponDir}\nStats: {weapon.Stats.Attack} ATK, {weapon.Stats.Accuracy} ACC\nShell Target: {weapon.ShellTarget}\nDescription: {weapon.Description}");
             if (!weapon.IsEnabled)
                 weapon.IsEnabled = true;
@@ -84,11 +84,22 @@ namespace P3R.WeaponFramework.Weapons
             // BASEMESH WILL ALWAYS BE A REF
             //            SetWeaponFile(mod, Path.Join(weaponDir, "base-mesh.uasset"), path => weapon.Config.Base.MeshPath = path);
             //            SetWeaponFile(mod, Path.Join(weaponDir, "base-anim.uasset"), path => weapon.Config.Base.MeshPath = path);
+            var multiMesh = weapon.Config.HasMultipleModels.GetValueOrDefault(false);
 
-            if (weapon.Config.HasMultipleModels.GetValueOrDefault(false))
-                SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh2.uasset"), path => weapon.Config.Model!.MeshPath2 = path);
-            SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh.uasset"), path => weapon.Config.Model!.MeshPath1 = path);
+            if (multiMesh)
+            {
+                //SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh2.uasset"), path => weapon.Config.Model!.MeshPath2 = path);
+                GetWeaponAsset(weapon, mod, weaponDir, path => weapon.Config.Model!.MeshPath2 = path, WeaponAssetType.Weapon_Mesh2);
+            }
+            //SetWeaponFile(mod, Path.Join(weaponDir, "weapon-mesh.uasset"), path => weapon.Config.Model!.MeshPath1 = path);
+            GetWeaponAsset(weapon, mod, weaponDir, path => weapon.Config.Model!.MeshPath1 = path);
             SetWeaponFile(mod, Path.Join(weaponDir, "description.msg"), path => weapon.Description = File.ReadAllText(path), SetType.Full);
+        }
+        private static void GetWeaponAsset(Weapon weapon, WeaponMod mod, string weaponDir, Action<string> setPath, WeaponAssetType type = WeaponAssetType.Weapon_Mesh)
+        {
+            var weaponFolder = Path.GetFileName(weaponDir);
+            var chara = weapon.Character;
+            setPath(GetWFAssetFile(chara, type, mod.ModTag, weaponFolder));
         }
         private static void SetWeaponFile(WeaponMod mod, string modFile, Action<string> setFile, SetType type = SetType.Relative)
         {
@@ -123,6 +134,7 @@ namespace P3R.WeaponFramework.Weapons
                 newWeapon.IsAstrea = true;
                 newWeapon.IsEnabled = true;
                 newWeapon.ShellTarget = shellType;
+                newWeapon.WeaponType = (short)character.ToWeaponType();
                 newWeapon.ModelId = shellType.ModelId();
                 newWeapon.OwnerModId = ownerId;
                 return newWeapon;

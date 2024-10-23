@@ -1,8 +1,16 @@
 ﻿using P3R.WeaponFramework.Weapons.Models;
+using Reloaded.Memory.Extensions;
 
 namespace P3R.WeaponFramework;
 public static partial class AssetUtils
 {
+    public static bool HasValidModelId(this Weapon weapon)
+    {
+        var modelId = weapon.ModelId;
+        const int MIN_ID = 10;
+        const int MAX_ID = 587;
+        return MIN_ID <= modelId && modelId <= MAX_ID;
+    }
     public static string? GetAssetFile(ECharacter chara, WeaponModelSet model, WeaponAssetType type)
     {
         string? assetFile = type switch
@@ -17,8 +25,45 @@ public static partial class AssetUtils
         };
         return assetFile;
     }
+    public static string GetWFAssetFile(ECharacter chara, WeaponAssetType type, string modTag, string? weaponFolder = null)
+    {
+        var folder = weaponFolder;
+        string AssetFile = type switch
+        {
+            WeaponAssetType.Weapon_Mesh => GetAssetPath($"/Game/Weapons/{chara}/{folder}/{modTag}-{chara}-{folder}-weapon-mesh"),
+            WeaponAssetType.Weapon_Mesh2 => GetAssetPath($"/Game/Weapons/{chara}/{folder}/{modTag}-{chara}-{folder}-weapon-mesh2"),
+            _ => string.Empty,
+        };
+        return AssetFile;
+    }
+    public static int ToMeshId(this Weapon weapon) => ModelIDtoMeshID(weapon.ShellTarget, weapon.ModelId);
+    public static int ModelIDtoMeshID(this ShellType shell, int modelId)
+    {
+        if (shell.IsAigisLongArm())
+        {
+            return modelId - 0x200;
+        }
+        else if (shell.IsAigisSmallArm())
+        {
+            return modelId - 0x100;
+        }
+        return modelId;
+    }
+    public static int KeyIDtoModel(this ShellType shell, int keyID)
+    {
+        if (shell.IsAigisLongArm())
+        {
+            return keyID + 0x200;
+        }
+        else if (shell.IsAigisSmallArm())
+        {
+            return keyID + 0x100;
+        }
+        return keyID;
+    }
     public static string GetModAssetFile(ECharacter chara, string subfolder, string modelTypeName, int modelTypeIndex) => GetAssetPath($"$/Game/Xrd777/Characters/Weapon/{subfolder}/SK_Wp{chara.Format()}_{modelTypeName}{modelTypeIndex}");
     public static string GetVanillaAssetFile(ECharacter chara, int modelSuffix) => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Wp{chara.Format()}/Models/SK_Wp{chara.Format()}_{modelSuffix:000}");
+    public static string GetShellAssetFile(ECharacter chara, int modelSuffix) => GetAssetPath($"/Game/Xrd777/Characters/Weapon/Shells/SK_Wp{chara.Format()}_{modelSuffix:000}_Shell");
     public static string GetUnrealAssetPath(string assetFile)
     {
         var assetPath = GetAssetPath(assetFile);
@@ -258,6 +303,4 @@ public static partial class AssetUtils
         { 588, 50 },
         { 589, 60 },
     };
-
-
 }

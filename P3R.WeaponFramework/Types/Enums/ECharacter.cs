@@ -1,6 +1,7 @@
 ﻿using P3R.WeaponFramework.Enums;
 using System.Collections;
 using System.Collections.ObjectModel;
+using System.Text;
 using YamlDotNet.Core.Tokens;
 
 namespace P3R.WeaponFramework.Types;
@@ -125,14 +126,41 @@ public static class Characters
             new (ECharacter.Metis, [ShellType.Metis], vanilla: false),
         ];
     public static bool IsValidCharacter(this ECharacter character, bool isAstrea) => Lookup.Valid(isAstrea).Contains(character);
-    public static EWeaponType ToWeaponType(this ECharacter character) 
+    #region Interactive
+    public static EWeaponType ToWeaponType(this ECharacter character)
     {
+        double val = (double)character;
         if (character == ECharacter.Fuuka)
             return EWeaponType.NONE;
         else
-            return Enum.Parse<EWeaponType>(character.ToString());
+            if (character > ECharacter.Fuuka)
+        {
+            val = val - 1;
+        }
+        return (EWeaponType)Math.Pow(2, val);
     }
     public static EEquipFlag ToEquipID(this ECharacter character) => Enum.Parse<EEquipFlag>(character.ToString());
+    public static ECharacter[] CharacterList()
+    {
+        List<ECharacter> results = [];
+        for (int i = 1; i < 11; i++)
+        {
+            results.Add((ECharacter)i);
+        }
+        return results.ToArray();
+    }
+    public static void Summarize(this ECharacter character)
+    {
+        var equip = character.ToEquipID();
+        var type = character.ToWeaponType();
+        var sb = new StringBuilder();
+        sb.AppendLine($"{character}");
+        sb.AppendLine($"EquipID: {equip} ({(int)equip})");
+        sb.AppendLine($"WeaponType: {type} ({(int)type})");
+        var result = sb.ToString();
+        Console.WriteLine(result);
+    } 
+    #endregion
     public static List<ECharacter> Armed => Lookup.Armed;
     public static List<ECharacter> Unarmed => Lookup.Unarmed;
     public static List<ECharacter> Astrea => Lookup.Astrea;

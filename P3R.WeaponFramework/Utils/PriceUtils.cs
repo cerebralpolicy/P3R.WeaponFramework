@@ -9,25 +9,25 @@ public static class PriceUtils
     const double stDev = 12864.4951913;
     const double tolerance = 0.25;
     static double composite(this WeaponStats weaponStats) => weaponStats.Attack * weaponStats.Accuracy;
-    static int price(this WeaponStats weaponStats)
+    static uint price(this WeaponStats weaponStats)
     {
         var m = slope;
         var e = power;
         var x = weaponStats.composite();
         var p = Math.Pow(x,e);
         var result = m * p;
-        return (int)result;
+        return (uint)result;
     }
-    public static int GetPrice(int attack, int accuracy)
+    public static uint GetPrice(ushort attack, ushort accuracy)
     {
         var m = slope;
         var e = power;
         var x = attack * accuracy;
         var p = Math.Pow(x,e);
         var result = m * p;
-        return (int)result;
+        return (uint)result;
     }
-    static int sellPrice(this WeaponStats stats) => stats.price() / 4;
+    static uint sellPrice(this WeaponStats stats) => stats.price() / 4;
     public static void VerifyPrices(this Weapon weapon)
     {
         if (IsPriceValid(weapon.Stats))
@@ -75,5 +75,18 @@ public static class PriceUtils
         var stats = weapon.Stats;
         stats.Price = stats.price();
         stats.SellPrice = stats.sellPrice();
+    }
+}
+internal static class StatUtils
+{
+    public static ushort NullableField(ushort? @ushort)
+    {
+        if (@ushort == null) return 0;
+        else return @ushort.Value;
+    }
+    public static uint NullableField(uint? @uint)
+    {
+        if (@uint == null) return 0;
+        else return @uint.Value;
     }
 }

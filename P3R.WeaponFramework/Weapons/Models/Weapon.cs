@@ -21,7 +21,6 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
         WeaponItemId = weaponItemId;
         Stats = new();
     }
-    [JsonConstructor]
     public Weapon(ECharacter character, bool isVanilla, bool isAstrea, int weaponId, string? name, ShellType shellTarget, int modelId, WeaponStats stats)
     {
         Character = character;
@@ -31,6 +30,24 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
         Name = name;
         ShellTarget = shellTarget;
         ModelId = modelId;
+        Stats = stats;
+        SortNum = SortUtils.GetSortNumber(stats, isAstrea);
+    }
+    [JsonConstructor]
+    public Weapon(bool isEnabled, ECharacter character, bool isVanilla, bool isAstrea, int weaponId, ItemDef? itemDef, string? name, short weaponType, short getFLG, int modelId, short flags, ShellType shellTarget, WeaponStats stats)
+    {
+        IsEnabled = isEnabled;
+        Character = character;
+        IsVanilla = isVanilla;
+        IsAstrea = isAstrea;
+        WeaponId = weaponId;
+        ItemDef = itemDef;
+        Name = name;
+        WeaponType = weaponType;
+        GetFLG = getFLG;
+        ModelId = modelId;
+        Flags = flags;
+        ShellTarget = shellTarget;
         Stats = stats;
         SortNum = SortUtils.GetSortNumber(stats, isAstrea);
     }
@@ -58,23 +75,37 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
     [JsonPropertyName(nameof(WeaponId))]
     public int WeaponId { get; set; }
     [JsonPropertyOrder(4)]
+    [JsonPropertyName(nameof(ItemDef))]
+    public ItemDef? ItemDef { get; set; }
+    [JsonPropertyOrder(5)]
     [JsonPropertyName(nameof(Name))]
     public string? Name
     {
         get => Config.Name;
         set => Config.Name = value;
     }
-    [JsonPropertyOrder(5)]
-    [JsonPropertyName(nameof(ShellTarget))]
-    public ShellType ShellTarget { get; set; }
     [JsonPropertyOrder(6)]
+    [JsonPropertyName(nameof(WeaponType))]
+    public short WeaponType { get; set; }
+    [JsonPropertyOrder(7)]
+    [JsonPropertyName(nameof(GetFLG))]
+    public short GetFLG { get; set; }
+    [JsonPropertyOrder(8)]
     [JsonPropertyName(nameof(ModelId))]
     public int ModelId { get; set; }
-    [JsonPropertyOrder(7)]
+    [JsonPropertyOrder(9)]
+    [JsonPropertyName(nameof(Flags))]
+    public short Flags { get; set; }
+    [JsonPropertyOrder(10)]
+    [JsonPropertyName(nameof(ShellTarget))]
+    public ShellType ShellTarget { get; set; }
+    [JsonPropertyOrder(11)]
     [JsonPropertyName(nameof(Stats))]
     public WeaponStats Stats { get; set; }
     #endregion
     #region Creation Variables
+    [JsonIgnore]
+    public bool IsUnused { get; set; }
     [JsonIgnore]
     public int WeaponItemId { get; set; }
     [JsonIgnore]
@@ -87,6 +118,8 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
     public int SortNum { get; set; }
     #endregion
     #region Utilities
+    public bool UsesShell => this.ModelId == ShellTarget.ModelId();
+    public bool IsAtlus => !IsModded;
     public void SetWeaponItemId(int weaponItemId, bool isOverwriting = false, int oldItemId = 0)
     {
         this.WeaponItemId = weaponItemId;
@@ -134,6 +167,10 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
         IsEnabled = true;
         if (Name == "Unused" || Character == ECharacter.Fuuka || Character == ECharacter.NONE)
         {
+            if (Character != ECharacter.Fuuka && WeaponId > 0)
+            {
+                IsUnused = true;
+            }
             sb.Append(" || Unused.");
             //Log.Verbose(sb.ToString());
             return; 
@@ -171,7 +208,6 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
     public static bool IsItemIdWeapon(int itemId) => itemId >= 0x7000 && itemId < 0x8000;
 
     public static int GetWeaponItemId(int itemId) => itemId - 0x7000;
-
     public static bool IsActive(Weapon weapon) => weapon.IsEnabled && weapon.Character != ECharacter.NONE;
     #endregion
     #region Comparisons
@@ -190,13 +226,6 @@ public class Weapon : IEquatable<Weapon?>, IWeapon
     public override int GetHashCode()
     {
         return HashCode.Combine(Character, Stats);
-    }
-
-    public bool Equals(WeaponItem? other)
-    {
-        return other is not null &&
-               Character == other.Character &&
-               Stats.Equals(other.Stats);
     }
 
     public override string? ToString()

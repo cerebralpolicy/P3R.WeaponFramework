@@ -10,12 +10,15 @@ using static Reloaded.Hooks.Definitions.X64.FunctionAttribute;
 using static P3R.WeaponFramework.Types.Characters;
 using System.Text;
 using P3R.WeaponFramework.Extensions;
+using P3R.WeaponFramework.Utils;
 
 namespace P3R.WeaponFramework.Hooks;
 
 #pragma warning disable CS8500 // This takes the address of, gets the size of, or declares a pointer to a managed type
 internal unsafe class WeaponHooks
 {
+    private const string Separator = " || ";
+
     [Function(CallingConventions.Microsoft)]
     private delegate void UAppCharacterComp_Update(UAppCharacterComp* comp);
     private UAppCharacterComp_Update? characterCompUpdate;
@@ -29,29 +32,56 @@ internal unsafe class WeaponHooks
     private readonly IUObjects uobjects;
     //private readonly ICommonMethods common;
     private readonly IMemoryMethods memory;
-    private readonly WeaponRegistry registry;
+    private WeaponRegistry registry;
+    private WeaponOverridesRegistry overrides;
     private readonly WeaponDescService weaponDesc;
-    private readonly WeaponShellService weaponShells;
+    private WeaponRedirectService redirects;
     private ItemEquipHooks itemEquip;
+
+
+    private List<FWeaponItemList> ModifiedWeapons = [];
+    /// <summary>
+    /// Checks to see if any overrides point to a weapon created with Weapon Framework and overwrites the original data.
+    /// </summary>
+    /// <param name="weapon"></param>
+    /// <param name="applyOverride">Action to apply the data found in <paramref name="weapon"/> to the weapons it overrides (if any).</param>
+    private void CheckForOverrides(Weapon weapon, Action<Weapon,Weapon> applyOverride)
+    {
+        // First we get every override that points to the new weapon
+        if (overrides.TryGetWeaponOverridesTo(weapon, out var overridenWeapons))
+        {
+            // If the above is true, iterate through each override
+            foreach (var weaponItem in overridenWeapons)
+            {
+                /// Apply the name and description (see below)
+                applyOverride(weaponItem, weapon);
+            }
+        }
+    }
 
     public WeaponHooks(
         IUnreal unreal,
         IUObjects uobjects,
         IMemoryMethods memory,
         WeaponRegistry registry,
+        WeaponOverridesRegistry overrides,
         WeaponDescService weaponDesc,
-        WeaponShellService weaponShells,
+        WeaponRedirectService redirects,
         ItemEquipHooks itemEquip)
     {
         this.unreal = unreal;
         this.uobjects = uobjects;
         this.memory = memory;
         this.registry = registry;
+        this.overrides = overrides;
         this.weaponDesc = weaponDesc;
-        this.weaponShells = weaponShells;
+        this.redirects = redirects;
         this.itemEquip = itemEquip;
 
+
         uobjects.FindObject("DatItemWeaponDataAsset", SetWeaponData);
+
+        
 
         ScanHooks.Add(
             nameof(UAppCharacterComp_Update),
@@ -75,28 +105,40 @@ internal unsafe class WeaponHooks
             });
     }
 
+    private static void LogItem(FWeaponItemList logItem)
+    {
+        Log.Debug($"New WeaponItem\n" +
+            $"WeaponType: {logItem.WeaponType} " +
+            Separator +
+            $"EquipFlag: {logItem.EquipID}" +
+            $"\n" +
+            $"Attack: {logItem.Attack}" +
+            Separator +
+            $"Accuracy: {logItem.Accuracy}");
+    }
+    private static void LogItem(FWeaponItemList* logPtr)
+    {
+        var logItem = *logPtr;
+        LogItem(logItem);
+    }
     private void SetWeaponData(UnrealObject obj)
     {
         //Log.Verbose("WeaponTable found");
         weaponDesc.Prime(); // Get descriptions for given episode
         var weaponItemList = (UWeaponItemListTable*)obj.Self;
-        var weaponItemArray = weaponItemList->Data.GetRef;
-        var allWeapons = registry.Weapons;
         var activeWeapons = registry.GetActiveWeapons();
-        var managedItemList = new TWeaponItemListTable(memory, &weaponItemList->Data);
+        //var managedItemList = new TWeaponItemListTable(memory, &weaponItemList->Data);
         //FWeaponItemList? managedItem(int index) => managedArray[index];
         var weaponCount = 0;
-        List<Weapon> unusedWeaps = [];
         List<int> unusedIDs = [];
         for (int i = 0; i < weaponItemList->Count; i++)
         {
             var id = i;
             var weaponItem = (*weaponItemList)[i];
-            var slotWeapon = allWeapons.FirstOrDefault(x => x.WeaponId == id);
             var existingWeapon = activeWeapons.FirstOrDefault(x => x.WeaponId == i);
             if (existingWeapon != null)
             {
-                if (existingWeapon.Name == "Unused" || existingWeapon.ModelId < 10)
+                if (existingWeapon.IsUnused)
                 {
                     if (id != 0)
                     {
@@ -109,44 +151,29 @@ internal unsafe class WeaponHooks
             continue;
         }
         Log.Debug($"{unusedIDs.Count} unused weapons");
-        for (int i = weaponCount; i < 2048;  i++)
+        if ( weaponCount != 512 )
         {
-//            var weaponItem = (*weaponItemList)[i];
-            var existingWeapon = activeWeapons.FirstOrDefault(x => x.WeaponId == i);
-            if (existingWeapon != null)
+            Log.Error("Invalid weapon count");
+            weaponCount = 512;
+        }
+        foreach (var existingWeapon in activeWeapons)
+        {
+            if (existingWeapon.WeaponItemId < weaponCount)
             {
-                //var weaponItemInstance = weaponItemArray(i);
-                //weaponItemInstance->SetFromWeapon(existingWeapon);
-                // Apply to
-                var newItem = new FWeaponItemList(existingWeapon).Malloc(memory);
-                //newItem->EquipID = (uint)existingWeapon.Character.ToEquipID();
-                //managedItemList.Add(*newItem);
-                if (unusedIDs.Count != 0)
-                {
-                    var id = unusedIDs.FirstOrDefault();
-                    var oldWeapon = activeWeapons.FirstOrDefault(x => x.WeaponItemId == id);
-                    if (oldWeapon == null)
-                    {
-                        Log.Error("No slot available");
-                        continue;
-                    }
-                    //managedItemList.Swap(id, i);
-                    managedItemList.Overwrite(id, *newItem);
-                    existingWeapon.SetWeaponItemId(id,true,i);
-                    oldWeapon.SetWeaponItemId(i);
-                    unusedIDs.RemoveAt(0);
-                    this.weaponDesc.SetWeaponDesc(id, existingWeapon.Description);
-                }
+                Log.Verbose($"{existingWeapon.Name} already exists.");
+                continue;
             }
-            continue;
+            var newFItem = new FWeaponItemList(existingWeapon);
+            //Log.Debug(newFItem.ToString());
+            var weaponItem = &weaponItemList->Data.allocator_instance[weaponCount];
+            weaponItem->Update(newFItem);
+            existingWeapon.SetWeaponItemId(weaponCount);
+            weaponDesc.SetWeaponDesc(weaponCount,existingWeapon.Description);
+            weaponCount++;
         }
-        var managedCount = managedItemList.Count;
-        managedItemList.Dispose();
-        weaponCount = weaponItemList->Count;
-        if (managedCount != weaponCount)
-        {
-            Log.Warning("Failed to apply new weapons.");
-        }
+        //var managedCount = managedItemList.Count;
+        //managedItemList.Dispose();
+        //weaponCount = weaponItemList->Count;
         Log.Debug($"{weaponCount}");
         //managedArray.Dispose();
         this.weaponDesc.Init();
@@ -171,30 +198,38 @@ internal unsafe class WeaponHooks
         var weaponId = comp->baseObj.WeaponId; // Updates with each change
         var weapons = comp->baseObj.Weapons;
         const string noModel = "NONE";
-        var arrayWrapper = new Emitter.TArrayWrapper<nint>(comp->baseObj.Weapons);
+
+        //var arrayWrapper = new Emitter.TArrayWrapper<nint>(comp->baseObj.Weapons);
         var weaponModelId = comp->mSetWeaponModelID; // returns the LAST modelId
+        var astrea = character > ECharacter.Shinjiro;
+        var shell = ShellExtensions.ShellFromId(weaponModelId, astrea);
         var weaponType = comp->mSetWeaponType;
         Log.Debug($"Previous model ID {(weaponModelId > 0 ? weaponModelId : noModel)}");
         if (!Characters.Armed.Contains(character))
-        { return; }
+        { 
+            return; 
+        }
+        if (character == ECharacter.Akihiko || character == ECharacter.Aigis || character == ECharacter.AigisReal)
+        {
+            Log.Warning("Akihiko and Aigis do not have reconstructed BPs");
+            comp->mSetWeaponModelID = weaponModelId;
+        }
         var equipWeaponItemId = this.itemEquip.GetEquip(character, Equip.Weapon);
+        //weaponId = equipWeaponItemId;
         Log.Debug($"{character}'s current weapon has an id of: {equipWeaponItemId}");
-        if (!this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var finalWeapon))
-        {
-            Log.Debug($"Weapon modelId: {weaponModelId}");
-            comp->mSetWeaponModelID = weaponModelId;
-            //comp->mSetWeaponModelID = weaponShells.UpdateWeapon(ShellExtensions.ShellFromId(finalWeapon.ModelId, character == ECharacter.Metis), finalWeapon.ModelId, equipWeaponItemId);
-            //weaponShells.UpdateWeapon(finalWeapon.Character, equipWeaponItemId);
-        }
-        else
-        {
-            //var finalModelId = weaponShells.UpdateWeapon(finalWeapon.ShellTarget, finalWeapon.ModelId, equipWeaponItemId);
-            var update = weaponShells.UpdateWeapon(finalWeapon, weaponId, weaponModelId);
-            comp->mSetWeaponModelID = weaponModelId;
-            //Log.Debug($"Result: {finalWeapon.Name}\nModel ID: {comp->mSetWeaponModelID}\nNew ModelID: {finalWeapon.ModelId}");
-            //LogWeaponVariables(comp);
-            weaponShells.RedirectHandler(finalWeapon); 
-        }
 
+        /*if(this.overrides.TryGetWeaponOverrideFrom(character, equipWeaponItemId, out var weaponOverride))
+        {
+            weaponId = weaponOverride.WeaponId;
+        }*/
+
+        /*        if (this.registry.TryGetWeaponByItemId(equipWeaponItemId, out var finalWeapon))
+                {
+                    this.OnWeaponChanged.Invoke(finalWeapon);
+                }*/
+
+        comp->mSetWeaponModelID = this.redirects.UpdateFromEquippedWeapon(character, equipWeaponItemId, weaponModelId);
+        var resultModelId = comp->mSetWeaponModelID;
+        Log.Debug($"Final model id: {resultModelId}");
     }
 }

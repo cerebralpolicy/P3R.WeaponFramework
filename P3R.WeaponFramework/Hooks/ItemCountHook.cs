@@ -32,8 +32,11 @@ internal class ItemCountHook
         if (this.registry.TryGetWeaponByItemId(itemId, out var weapon))
         {
             Log.Verbose($"Attempting to retrieve one of {weapon.Character}'s weapons with an ID of {itemId}");
-            if ((weapon.Name == "Unused" || weapon.ModelId < 10))
-                return 0;
+            /*if (weapon.IsUnused)
+                return 0;*/
+
+            /*if (this.registry.ModifedWeapons.Any(x => x.SortNum == weapon.SortNum && x.SellPrice == weapon.Stats.SellPrice))
+                Log.Debug($"{this.registry.ModifedWeapons.First(x => x.SortNum == weapon.SortNum && x.SellPrice == weapon.Stats.SellPrice)}");*/
             return 1;
         }
 

@@ -1,5 +1,4 @@
-﻿using P3R.WF.HockeyNightInTartarus.Configuration;
-
+﻿
 namespace P3R.WF.HockeyNightInTartarus.Template
 {
     /// <summary>
@@ -62,10 +61,5 @@ namespace P3R.WF.HockeyNightInTartarus.Template
             */
         }
 
-        public virtual void ConfigurationUpdated(Config configuration)
-        {
-            // Apply settings from configuration.
-            // ... your code here.
-        }
     }
 }
